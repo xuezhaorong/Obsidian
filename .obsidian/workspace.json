@@ -6,7 +6,6 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 72.75204359673025,
         "children": [
           {
             "id": "fc3ca05950677e78",
@@ -28,35 +27,18 @@
             "id": "d92cd3e71a5486db",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
-                "mode": "source",
-                "source": false
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "page": 33,
+                "left": 627,
+                "top": 196,
+                "zoom": 1.6793177471016325
               }
-            },
-            "group": "d04af8f4f19cbb94"
+            }
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "5603cbd7b2f88c17",
-        "type": "tabs",
-        "dimension": 27.247956403269757,
-        "children": [
-          {
-            "id": "4d2568edf2b89105",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
-              }
-            },
-            "group": "d04af8f4f19cbb94"
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
               }
             }
           },
@@ -195,8 +177,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4d2568edf2b89105",
+  "active": "d92cd3e71a5486db",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
+    "IOT/物联网/应用层/Qt/Qt实例.md",
     "物联网/感知层/STM32/SMT32.md",
     "物联网/感知层/Clion配置/STM32标准库配置.md",
     "物联网/感知层/Clion配置/51单片机配置.md",
@@ -222,7 +208,6 @@
     "Linux",
     "物联网/应用层/Qt",
     "物联网/应用层/安卓/Android.md",
-    "物联网/应用层/安卓/Bluetooth.md",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
@@ -238,9 +223,6 @@
     "物联网/感知层/51单片机",
     "物联网/应用层/安卓",
     "物联网/应用层",
-    "物联网/感知层",
-    "物联网/平台层",
-    "机器学习/SVM支持向量机.md",
-    "机器学习/神经网络.md"
+    "物联网/感知层"
   ]
 }
