@@ -1,0 +1,238 @@
+{
+  "main": {
+    "id": "bee1b80d9afd5713",
+    "type": "split",
+    "children": [
+      {
+        "id": "a026176e27ae56d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc3ca05950677e78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "物联网/应用层/Qt/Clion配置Qt.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d190a33b5ffc35b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "物联网/应用层/Qt/Qt.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d92cd3e71a5486db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/交叉编译.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e2ef03505572a4a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b8a6eb72c93726d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "96b0a9eee13e568c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3fc2f6a68603c536",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "554caa7a724d86dc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 254.5
+  },
+  "right": {
+    "id": "590141be52da20df",
+    "type": "split",
+    "children": [
+      {
+        "id": "358034af5ac76741",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c7b43fe91456916",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Linux/交叉编译.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "57275f52c50a7aa0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Linux/交叉编译.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aeec394602d7c2d0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d215f8f63b065979",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Linux/交叉编译.md"
+              }
+            }
+          },
+          {
+            "id": "32dbbe61b5174e6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "物联网/感知层/51单片机/80C51单片机.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
+    }
+  },
+  "active": "d92cd3e71a5486db",
+  "lastOpenFiles": [
+    "物联网/感知层/STM32/SMT32.md",
+    "物联网/感知层/Clion配置/STM32标准库配置.md",
+    "物联网/感知层/Clion配置/51单片机配置.md",
+    "物联网/感知层/Clion配置/Esp8266配置.md",
+    "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+    "物联网/应用层/Qt/Qt交叉编译配置.md",
+    "物联网/应用层/Qt/Qt.md",
+    "物联网/应用层/Qt/Clion配置Qt.md",
+    "树莓派/PyCham专业版远程开发.md",
+    "Linux/交叉编译.md",
+    "树莓派/安装qt5.md",
+    "树莓派/换源.md",
+    "物联网/感知层/51单片机/80C51单片机.md",
+    "物联网/感知层/Clion配置/STM32标准库FreeRtos配置.md",
+    "树莓派/frp远程连接.md",
+    "物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
+    "物联网/感知层/Clion配置/STM32Hal库配置.md",
+    "物联网/应用层/安卓/Mqtt.md",
+    "物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+    "2024-07-20.md",
+    "未命名.md",
+    "().md",
+    "Linux",
+    "物联网/应用层/Qt",
+    "物联网/应用层/安卓/Android.md",
+    "物联网/应用层/安卓/Bluetooth.md",
+    "物联网/感知层/51单片机/51单片机内部结构.png",
+    "物联网/感知层/51单片机/字符帧.png",
+    "物联网/感知层/51单片机/中断嵌套.png",
+    "物联网/感知层/51单片机/中断结构.png",
+    "物联网/感知层/51单片机/中断查询次序.png",
+    "物联网/感知层/51单片机/指令运行5.webp",
+    "物联网/感知层/51单片机/指令运行4.webp",
+    "物联网/感知层/51单片机/指令运行3.webp",
+    "物联网/感知层/51单片机/指令运行2.webp",
+    "物联网/感知层/51单片机/指令运行1.webp",
+    "树莓派",
+    "物联网/感知层/STM32",
+    "物联网/感知层/51单片机",
+    "物联网/应用层/安卓",
+    "物联网/应用层",
+    "物联网/感知层",
+    "物联网/平台层",
+    "机器学习/SVM支持向量机.md",
+    "机器学习/神经网络.md"
+  ]
+}

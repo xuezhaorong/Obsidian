@@ -1,0 +1,5 @@
+{
+  "minimal-style@@tabs-style": "tabs-modern",
+  "minimal-style@@callouts-style": "callouts-default",
+  "minimal-style@@callout-blend-mode": "var(--highlight-mix-blend-mode)"
+}
