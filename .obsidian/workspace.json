@@ -11,36 +11,24 @@
             "id": "fc3ca05950677e78",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "物联网/应用层/Qt/Clion配置Qt.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
             "id": "d190a33b5ffc35b6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "物联网/应用层/Qt/Qt.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
             "id": "d92cd3e71a5486db",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/交叉编译.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -110,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/交叉编译.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/交叉编译.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,21 +135,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Linux/交叉编译.md"
-              }
+              "state": {}
             }
           },
           {
             "id": "32dbbe61b5174e6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "物联网/感知层/51单片机/80C51单片机.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
