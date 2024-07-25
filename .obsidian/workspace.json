@@ -27,11 +27,13 @@
             "id": "d92cd3e71a5486db",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
-                "mode": "source",
-                "source": false
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "page": 35,
+                "left": 627,
+                "top": 405,
+                "zoom": 1.6793177471016325
               }
             }
           }
@@ -102,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md"
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
               }
             }
           },
@@ -177,11 +179,11 @@
   },
   "active": "d92cd3e71a5486db",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-    "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
+    "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "物联网/感知层/STM32/SMT32.md",
     "物联网/感知层/Clion配置/STM32标准库配置.md",
     "物联网/感知层/Clion配置/51单片机配置.md",
