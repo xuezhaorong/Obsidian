@@ -14,6 +14,7 @@
 * 下载Qt源码， 旧版需要点击**Archive**筛选，勾选**Sources**选项点击下一步，等待安装
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/08-55-02-0e4d01bcf9a4614c33ff2fa92cc22c1b-20240725085502-4ce654.png)
 
+
 #### 文件修改
 * 下载完成后，在对应版本的目录下可以看到，进入Src源码文件进行修改
 	![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/08-57-25-d17822f2ed8f8da0234fa73159a0feb4-20240725085725-34333c.png)
