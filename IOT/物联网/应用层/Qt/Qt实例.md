@@ -47,11 +47,43 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
    QString username = ui->lineEdit_username->text();  
    QString pwd = ui->lineEdit_pwd->text();  
    if(username=="xuezhaorong" && pwd=="123456" ){  
-       QMessageBox::StandardButton result=QMessageBox::warning(this, "提示","登录成功"); // 登录成功 
+       // 登录成功
    }  
   
 });
 ```
 
 ## 界面跳转
+新建一个menu类，演示页面跳转的逻辑，要实现登录界面-菜单界面的双向跳转，则登录界面为父类，承载着菜单界面子类，在销毁或隐藏子类之前，父类有且只有一个，且不能销毁，所以父类跳转到子类只需要触发条件后实例化子类对象并且调用show方法跳转，自身可以选择隐藏但不能销毁，而子类返回父类则需要通过发送信号的方法通知父类，而不是新建一个新的父类跳转，这样不是返回而是进入到一个新的界面中，导致内存冗杂，头文件互相包含以及数据错误等问题。
+1. 新建一个菜单界面menu，加入返回按钮并且重命名。
+2. 在menu.h中定义自定义信号`void signal_menu_return();`在menu.cpp中添加信号槽，实现按下按钮发送自定义信号，并且调用close方法关闭自身。
+```cpp
+// .h
+signals:  
+    void signal_menu_return();
+```
 
+```cpp
+// .cpp
+connect(ui->pushButton_return,&QPushButton::clicked,[=](){  
+   emit signal_menu_return();  
+   this->close();  
+});
+```
+
+3. 在login.cpp中添加点击登录按钮验证成功后跳出menu界面以及自身隐藏的业务代码，实例化menu时，需要用new指针的方法创建在堆区，以保证生命周期以及调用qt的ui自动回收机制，调用close方法之后回收内存，然后为其绑定槽函数，以便自身重新show出来。
+```cpp
+// 登录按钮  
+connect(ui->pushButton_login,&QPushButton::clicked,[=](){  
+   QString username = ui->lineEdit_username->text();  
+   QString pwd = ui->lineEdit_pwd->text();  
+   if(username=="xuezhaorong" && pwd=="123456" ){  
+       menu *m = new menu();  
+       m->show();     
+       connect(m,&menu::signal_menu_return,[=](){  
+           this->show();  
+       });  
+       this->hide();  
+   }  
+});
+```
