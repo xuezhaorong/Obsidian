@@ -27,13 +27,11 @@
             "id": "d92cd3e71a5486db",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-                "page": 33,
-                "left": 627,
-                "top": 196,
-                "zoom": 1.6793177471016325
+                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -104,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/物联网/应用层/Qt/Qt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/物联网/应用层/Qt/Qt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "IOT/物联网/应用层/Qt/Qt.md"
               }
             }
           },
@@ -179,9 +177,10 @@
   },
   "active": "d92cd3e71a5486db",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/Qt.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+    "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "物联网/感知层/STM32/SMT32.md",
     "物联网/感知层/Clion配置/STM32标准库配置.md",
@@ -207,7 +206,6 @@
     "().md",
     "Linux",
     "物联网/应用层/Qt",
-    "物联网/应用层/安卓/Android.md",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
