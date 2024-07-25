@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 ```
 	main()函数是 C++程序的入口。它的主要功能是定义并创建应用程序，定义并创建窗口对象和显示窗口，运行应用程序，开始应用程序的消息循环和事件处理。 QApplication 是 Qt 的标准应用程序类，main()函数里的第一行代码定义了一个 QApplication，它就是应用程序对象。然后定义了一个 Widget 类型的变量 w，Widget 是本示例设计的窗口的类名称，定义变量 w 就是创建窗口对象，然后用 w.show()显示此窗口。函数里最后一行用 a.exec()启动应用程序，开始应用程序的消息循环和事件处理。GUI 应用程序是事件驱动的，窗口上的各种组件接收鼠标或键盘的操作，并进行相应的处理。
 
-## 窗口类
+### 窗口类
 一个窗口类由4个文件组成，刚开始创建时有.cpp，.h，.ui文件，ui.h文件则是由.ui文件通过UIC工具生成。
 * widget.h： 定义了窗口类 Widget widget.cpp 实现 Widget 类的功能的源程序文件 
 * widget.ui： 窗口 UI 文件，用于在 Qt Designer 中进行 UI 可视化设计。
@@ -56,7 +56,7 @@ private:
 #include "widget.h"  
   
 widget::widget(QWidget *parent) :  
-        QWidget(parent), ui(new Ui::LoginWidget) {  
+        QWidget(parent), ui(new Ui::widget) {  
     ui->setupUi(this);    
 }  
   
@@ -65,3 +65,54 @@ widget::~widget() {
 }
 ```
 
+Widget 类目前只有构造函数和析构函数。其中构造函数头部语句如下： Widget::Widget(QWidget *parent): QWidget(parent), ui(new Ui::Widget) 这行代码的功能是运行父类 QWidget 的构造函数，创建一个 Ui::Widget 类的对象 ui。这个 ui 就是 Widget 类的 private 部分定义的指针变量 ui。构造函数里只有一行代码： ui->setupUi(this); 它表示运行了 Ui::Widget 类的 setupUi()函数，并且以 this 作为函数 setupUi()的输入参数，而 this 就是 Widget 类对象的实例，也就是一个窗口。setupUi()函数里会创建窗口上所有的界面组件， 并且以 Widget 窗口作为所有组件的父容器。所以，在文件 ui_widget.h 里有一个名字空间 Ui，里面有一个类 Widget，记作 Ui::Widget，它是窗口 UI 类。文件 widget.h 里的类 Widget 是完整的窗口类。在 Widget 类里访问 Ui::Widget 类的成员变量或函数需要通过 Widget 类里的指针 ui 来实现，例如构造函数里运行的 ui-> setupUi(this)。
+
+### 封装窗口类
+当Qt现存的窗口类无法满足需求时，则可以选择继承封装重写窗口类，流程如下：
+1. 新建类，可以根据需求选择新建UI类或者cpp类（不需要UI或者由代码分成UI）
+2. 在头文件中引入要继承类的头文件
+```cpp
+#include<QMainWindow>
+```
+3. 修改头文件中的继承类名
+```cpp
+#ifndef PROJECT_LOGINWIDGET_H  
+#define PROJECT_LOGINWIDGET_H  
+  
+#include <QMainWindow>  
+#include "ui_widget.h"  
+  
+QT_BEGIN_NAMESPACE  
+namespace Ui { class widget; }  
+QT_END_NAMESPACE  
+  
+class widget : public QMainWindow {  
+Q_OBJECT  
+  
+public:  
+    explicit widget(QWidget *parent = NULL);  
+  
+    ~LoginWidget();  
+  
+private:  
+    Ui::widget *ui;  
+};  
+  
+  
+#endif //PROJECT_LOGINWIDGET_H
+```
+
+4. cpp中的构造函数修改
+```cpp
+#include "widget.h"  
+  
+widget::widget(QWidget *parent) :  
+        QMainWindow(parent), ui(new Ui::widget) {  
+    ui->setupUi(this);    
+}  
+  
+widget::~widget() {  
+    delete ui;  
+}
+```
+如果只需要Cpp类需要删除.h文件中引入的ui头文件以及cpp中构造函数中的`ui(new Ui::widget)`和`ui->setupUi(this)`
