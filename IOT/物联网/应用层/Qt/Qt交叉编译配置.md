@@ -6,7 +6,7 @@
 * 下载交叉编译工具包，并且设置环境变量
 ![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/08-46-56-d74d544e6a09dbe0a9457b1c4b3aacaf-20240725084655-f242ee.png)
 
-* 安装Q（[[Clion配置Qt]]）进入到Qt目录下，使用加速打开**MaintenanceTool.exe**
+* 安装并配置Qt（[[Clion配置Qt]]）进入到Qt目录下，使用加速打开**MaintenanceTool.exe**
 ```bash
 .\MaintenanceTool.exe --mirror https://mirrors.cloud.tencent.com/qt/
 ```
