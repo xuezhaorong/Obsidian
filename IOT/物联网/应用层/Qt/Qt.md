@@ -48,7 +48,7 @@ private:
 #endif //PROJECT_LOGINWIDGET_H
 ```
 1. 窗口 UI 类 Ui::Widget 的声明。文件中有如下几行代码： QT_BEGIN_NAMESPACE namespace Ui { class Widget; } //一个名字空间 Ui，包含一个类 Widget QT_END_NAMESPACE 上述代码声明了一个名称为 Ui 的名字空间（namespace），它包含一个类 Widget。
-2. 窗口类 Widget 的定义。文件 widget.h 的主体部分是一个继承自 QWidget 的类 Widget 的定义。Widget 类中包含创建窗口界面，实现窗口上界面组件的交互操作，以及其他业务逻辑。 Widget 类定义的第一行语句插入了一个宏 Q_OBJECT，**这是使用 Qt 元对象系统的类时必须插入的一个宏。插入了这个宏之后，Widget 类中就可以使用信号与槽、属性等功能。** Widget 类的 private 部分定义了一个指针，代码如下： Ui::Widget *ui; 这个指针是用前面声明的名字空间 Ui 里的类 Widget 定义的，所以 ui 是窗口 UI 类的对象指针，它指向可视化设计的窗口界面。要访问界面上的组件，就需要通过这个指针来实现。
+2. 窗口类 Widget 的定义。文件 widget.h 的主体部分是一个继承自 QWidget 的类 Widget 的定义。Widget 类中包含创建窗口界面，实现窗口上界面组件的交互操作，以及其他业务逻辑。 Widget 类定义的第一行语句插入了一个宏 Q_OBJECT，**这是使用 Qt 元对象系统的类时必须插入的一个宏。插入了这个宏之后，Widget 类中就可以使用信号与槽、属性等功能。** Widget 类的 private 部分定义了一个指针，代码如下： Ui::Widget *ui; 这个指针是用前面声明的名字空间 Ui 里的类 Widget 定义的，所以 ui 是窗口 UI 类的对象指针，它指向可视化设计的窗口界面。**要访问界面上的组件，就需要通过这个指针来实现。**
 3.  在这个文件的开头部分自动加入了如下的一行包含语句： `#include "ui_widget.h"` 文件 ui_widget.h 是 UI 文件 widget.ui 被 UIC 编译后生成的文件，这个文件里定义了窗口 UI 类。
 
 **widget.cpp**：
@@ -65,7 +65,7 @@ widget::~widget() {
 }
 ```
 
-Widget 类目前只有构造函数和析构函数。其中构造函数头部语句如下： Widget::Widget(QWidget *parent): QWidget(parent), ui(new Ui::Widget) 这行代码的功能是运行父类 QWidget 的构造函数，创建一个 Ui::Widget 类的对象 ui。这个 ui 就是 Widget 类的 private 部分定义的指针变量 ui。构造函数里只有一行代码： ui->setupUi(this); 它表示运行了 Ui::Widget 类的 setupUi()函数，并且以 this 作为函数 setupUi()的输入参数，而 this 就是 Widget 类对象的实例，也就是一个窗口。setupUi()函数里会创建窗口上所有的界面组件， 并且以 Widget 窗口作为所有组件的父容器。所以，在文件 ui_widget.h 里有一个名字空间 Ui，里面有一个类 Widget，记作 Ui::Widget，它是窗口 UI 类。文件 widget.h 里的类 Widget 是完整的窗口类。在 Widget 类里访问 Ui::Widget 类的成员变量或函数需要通过 Widget 类里的指针 ui 来实现，例如构造函数里运行的 ui-> setupUi(this)。
+Widget 类目前只有构造函数和析构函数。其中构造函数头部语句如下： Widget::Widget(QWidget *parent): QWidget(parent), ui(new Ui::Widget) 这行代码的功能是运行父类 QWidget 的构造函数，创建一个 Ui::Widget 类的对象 ui。这个 ui 就是 Widget 类的 private 部分定义的指针变量 ui。构造函数里只有一行代码： ui->setupUi(this); 它表示运行了 Ui::Widget 类的 setupUi()函数，并且以 this 作为函数 setupUi()的输入参数，而 this 就是 Widget 类对象的实例，也就是一个窗口。setupUi()函数里会创建窗口上所有的界面组件， 并且以 Widget 窗口作为所有组件的父容器。在 Widget 类里访问 Ui::Widget 类的成员变量或函数需要通过 Widget 类里的指针 ui 来实现，例如构造函数里运行的 ui-> setupUi(this)。
 
 ### 封装窗口类
 当Qt现存的窗口类无法满足需求时，则可以选择继承封装重写窗口类，流程如下：
@@ -201,3 +201,17 @@ emit signal_();
 
 ## 本地存储
 ### 文件操作
+QFile 主要的功能是进行文件读写，它可以读写文本文件或二进制文件。主要流程是：创建QFile类，绑定文件路径，打开文件，操作文件和关闭文件。
+#### 创建QFile类和绑定文件路径
+QFile提供了两种方式：
+*  先创建QFile类，然后使用`setFileName`方法绑定文件路径
+```cpp
+QFile aFile;  
+aFile.setFileName(aFileName);
+```
+
+*  创建QFile类的同时绑定文件路径：
+```cpp
+QFile aFile(aFileName);
+```
+  
