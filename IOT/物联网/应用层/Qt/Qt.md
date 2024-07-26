@@ -201,7 +201,11 @@ emit signal_();
 
 ## 本地存储
 ### 文件操作
-QFile 主要的功能是进行文件读写，它可以读写文本文件或二进制文件。主要流程是：创建QFile类，绑定文件路径，打开文件，操作文件和关闭文件。
+实例[[Qt实例#文件操作]]
+QFile 主要的功能是进行文件读写，它可以读写文本文件或二进制文件。用 QFile 进行文件内容读写的基本操作步骤是：
+（1）调用函数 open()打开或创建文件；
+（2）用读写函数读写文件内容；
+（3）调用函数 close()关闭文件。调用 close()会将缓存的数据写入文件，如果不能正常调用 close()，可能会导致文件数据丢失。
 #### 创建QFile类和绑定文件路径
 QFile提供了两种方式：
 *  先创建QFile类，然后使用`setFileName`方法绑定文件路径
@@ -214,4 +218,77 @@ aFile.setFileName(aFileName);
 ```cpp
 QFile aFile(aFileName);
 ```
-  
+
+#### 打开文件
+QFile 的函数 open()的原型定义如下：
+`bool QFile::open(QIODeviceBase::OpenMode mode)`
+参数 mode 决定了文件以什么模式打开，mode 是标志类型 `QIODeviceBase::OpenMode`，它是枚举类型`QIODeviceBase::OpenModeFlag` 的枚举值的组合，其各主要枚举值的含义如下：
+1. QIODevice::ReadOnly：以只读模式打开文件，加载文件时使用此模式。 
+2. QIODevice::WriteOnly：以只写模式打开文件，保存文件时使用此模式。 
+3. QIODevice::ReadWrite：以读写模式打开文件。 
+4. QIODevice::Append：以添加模式打开文件，新写入文件的数据添加到文件尾部。
+5. QIODevice::Truncate：以截取模式打开文件，文件原有的内容全部被删除。 
+6. QIODevice::Text：以文本模式打开文件，读取时“\n”被自动翻译为一行的结束符，写入时字符串结束符会被自动翻译为系统平台的编码，如 Windows 平台上是“\r\n”。
+在给函数 open()传递参数时，可以使用枚举值的组合，例如 QIODevice::ReadOnly | QIODevice::Text 表示以只读和文本模式打开文件。
+* 在读文件时，需要判断文件是否存在，再使用`open`打开文件。
+```cpp
+if (!aFile.exists()) //文件不存在  
+         return false;  
+    if (!aFile.open(QIODevice::ReadOnly | QIODevice::Text)) // 以只读，文本方式打开文件  
+        return false;  
+```
+
+* 在写文件时，直接以写文本方式打开文件。
+```cpp
+    if (!aFile.open(QIODevice::WriteOnly | QIODevice::Text)) // 只写文本方式打开  
+        return false;  
+```
+
+#### 读写文件
+在读写文件时，读出的是`QByteArray`类型，要转换成QString类型的要使用`QString::fromUtf8`方法，写文件时，要写入`QByteArray`类型，所以要使用`toUtf8()`方法将`QString`类型转换。
+* 读文件，分为全部读取和按行读取
+```cpp
+bool MainWindow::openByIO_Whole(const QString &aFileName) {//整体读取 
+	QFile aFile(aFileName); 
+	if (!aFile.exists()) //文件不存在 
+		return false; 
+	if (!aFile.open(QIODevice::ReadOnly | QIODevice::Text)) 
+			return false; QByteArray all_Lines = aFile.readAll(); //读取全部内容 
+	QString text(all_Lines); //将字节数组转换为字符串 
+	aFile.close();
+	return true; 
+	
+}
+```
+
+```cpp
+bool MainWindow::openByIO_Lines(const QString &aFileName) {//逐行读取 
+	QFile aFile; 
+	aFile.setFileName(aFileName); 
+	if (!aFile.exists()) //文件不存在 
+		return false; 
+	if (!aFile.open(QIODevice::ReadOnly | QIODevice::Text)) 
+		return false; 
+	while (!aFile.atEnd()) { 
+		QByteArray line = aFile.readLine(); //读取一行文字，自动添加“\0” 
+		QString str= QString::fromUtf8(line); //从字节数组转换为字符串，文件必须采用 UTF-8 编码 
+		str.truncate(str.length()-1); //去除增加的空行 
+	}
+	aFile.close();  
+	return true; 
+}
+```
+
+* 写文件
+```cpp
+bool MainWindow::saveByIO_Whole(const QString &aFileName) { 
+	QFile aFile(aFileName); 
+	if (!aFile.open(QIODevice::WriteOnly | QIODevice::Text)) 
+	return false; 
+	
+	QByteArray strBytes= str.toUtf8(); //转换为字节数组，UTF-8 编码 
+	aFile.write(strBytes,strBytes.length()); //写入文件 
+	aFile.close(); 
+	return true; 
+}
+```
