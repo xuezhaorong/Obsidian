@@ -146,7 +146,7 @@ connect(ui.btnOpnen, &QPushButton::clicked, [=](){ //具体代码 });
 
 
 C++ lambda表达式的本质就是重载了operator()，lambda表达式会被编译器翻译成类进行处理，在调用时会进行编译展开，因此lambda表达式对象其实就是一个匿名的函数对象，所以lambda表达式也叫做匿名函数对象。==Qt槽函数可以使用lambda函数来写==。
-**C++ lambda表达式的构成**：
+#### C++ lambda表达式的构成**：
 ```cpp
 [caputer list] (parameters) mutable throw() -> return type{ statement }
 ```
@@ -198,3 +198,6 @@ C++ lambda表达式的本质就是重载了operator()，lambda表达式会被编
 ```cpp
 emit signal_();
 ```
+
+## 本地存储
+### 文件操作

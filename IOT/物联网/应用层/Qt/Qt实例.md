@@ -87,3 +87,76 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
    }  
 });
 ```
+
+## 文件操作
+
+1. 添加注册按钮，实现点击注册，打开对应文件（没有则创建一个），写入注册信息（按符号分隔的账号和密码）。
+2. 首先需要读取文件，按行查找当前注册的信息是否注册过，避免重复注册，新增读取文件函数`bool openByIO_Lines(const QString &aFileName,QString mUsername,QString mPwd);`，参数为注册文件的路径，要注册的用户名和密码，使用`split`方法分割一行里面的账号和密码，因为密码后面跟着是`\n`换行符，所以在判断时要加一个`\n`换行符号。
+```cpp
+bool LoginWidget::openByIO_Lines(const QString &aFileName,QString mUsername,QString mPwd){ // 逐行读取  
+    QFile aFile;  
+    aFile.setFileName(aFileName);  
+    if (!aFile.exists()) //文件不存在  
+         return false;  
+    if (!aFile.open(QIODevice::ReadOnly | QIODevice::Text)) // 以只读，文本方式打开文件  
+        return false;  
+  
+    while (!aFile.atEnd()) {  
+        QByteArray line = aFile.readLine(); //读取一行文字，自动添加“\0”  
+        QString str= QString::fromUtf8(line); //从字节数组转换为字符串，文件必须采用 UTF-8 编码  
+        QStringList strList = str.split("|"); // 分割字符串  
+        QString username = strList[0];  
+        QString pwd = strList[1];  
+        if(username == mUsername && pwd == mPwd+"\n") {  
+            aFile.close();  
+            return true;  
+        }  
+    }  
+    aFile.close(); // 关闭文件  
+    return false;  
+}
+```
+3. 接着是写入注册信息的函数`bool saveByIO_Whole(const QString &aFileName,QString mUsername,QString mPwd);`。
+```cpp
+bool LoginWidget::saveByIO_Whole(const QString &aFileName,QString mUsername,QString mPwd){  
+    QFile aFile(aFileName);  
+    if (!aFile.open(QIODevice::Append | QIODevice::Text)) // 只写文本方式打开  
+        return false;  
+  
+    QString str = mUsername + "|" + mPwd + "\n";  
+    QByteArray strBytes = str.toUtf8(); // 转换成字节数组  
+  
+    aFile.write(strBytes,strBytes.length());  
+    aFile.close();  
+    return true;  
+}
+```
+4. 整合两个函数，为注册按钮触发绑定信号槽。
+```cpp
+// 注册按钮  
+connect(ui->pushButton_register,&QPushButton::clicked,[=](){  
+    QString username = ui->lineEdit_username->text();  
+    QString pwd = ui->lineEdit_pwd->text();  
+    bool registerResult = openByIO_Lines(loginFiFo,username,pwd);  
+    if (!registerResult) // 未注册  
+        saveByIO_Whole(loginFiFo,username,pwd);  
+  
+});
+```
+5. 登录按钮时，改为读取注册文件，比较当前的账号密码。
+```cpp
+// 登录按钮  
+connect(ui->pushButton_login,&QPushButton::clicked,[=](){  
+   QString username = ui->lineEdit_username->text();  
+   QString pwd = ui->lineEdit_pwd->text();  
+   bool loginResult = openByIO_Lines(loginFiFo,username,pwd);  
+   if(loginResult){ // 登录成功  
+       menu *m = new menu();  
+       m->show();  
+       connect(m,&menu::signal_menu_return,[=](){  
+           this->show();  
+       });  
+       this->hide();  
+   }  
+});
+```
