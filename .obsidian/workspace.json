@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 84.52012383900929,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -25,14 +26,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/Clion配置Qt.md",
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "1e49674f519da1fd"
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "d718b4e0d6624b87",
+        "type": "tabs",
+        "dimension": 15.479876160990713,
+        "children": [
+          {
+            "id": "f900012b0d2c6f2e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "IOT/物联网/应用层/Qt/Clion配置Qt.md"
+              }
+            },
+            "group": "1e49674f519da1fd"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/Clion配置Qt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
+                "file": "IOT/物联网/应用层/Qt/Clion配置Qt.md"
               }
             }
           },
@@ -153,7 +173,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "939af7c0a07e33b5",
+  "active": "f900012b0d2c6f2e",
   "lastOpenFiles": [
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",

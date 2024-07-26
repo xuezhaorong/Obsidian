@@ -121,6 +121,9 @@ qrc中填写prefix虚拟路径，和file实际路径（以resource为根目录�
 palette.setBrush(QPalette::Background,QBrush(QPixmap(":/images/pic/menuUi.jpg")));
 ```
 
+在Designer中添加资源时不会自动识别，需要手动添加一下
+![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/26/16-14-31-6eec79db4a384d2155a9494d971b6272-20240726161430-534ac3.png)
+
 ## 移植
 将Clion中的Qt项目移植到Qt Create中
 1.  Qt Create新建项目
