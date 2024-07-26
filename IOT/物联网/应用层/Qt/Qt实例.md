@@ -162,3 +162,5 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
 ```
 
 ## 事件处理
+
+以虚拟键盘为例，掌握事件处理的过程，包括重写事件和事件过滤
