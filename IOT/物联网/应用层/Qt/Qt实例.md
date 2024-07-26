@@ -164,3 +164,6 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
 ## 事件处理
 
 以虚拟键盘为例，掌握事件处理的过程，包括重写事件和事件过滤。
+1. 新建`frmKeyBoard`类，设计UI界面，布局并且更改对象名称。
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/26/20-56-02-25d1574b76caeb2806762f6709938351-20240726205601-73827c.png)
+2. 
