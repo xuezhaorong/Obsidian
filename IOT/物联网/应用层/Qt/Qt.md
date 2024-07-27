@@ -293,4 +293,13 @@ bool MainWindow::saveByIO_Whole(const QString &aFileName) {
 }
 ```
 
-## 事件处理
+## 事件系统
+窗口系统是由事件驱动的，Qt为事件处理编程提供了完善的支持。QWidget类是所有界面组 件类的基类，QWidget类定义了大量与事件处理相关的数据类型和接口函数。
+### 事件的产生和派发
+1. 事件产生
+事件表示应用程序中发生的操作或变化，如移动鼠标、点击鼠标、按下按键等。在Qt中，事 件是对象，是QEvent 类或其派生类的实例，例如QKeyEvent 是按键事件类，QMouseEvent 是鼠 标事件类，QPaintEvent是绘制事件类，QTimerEvent是定时器事件类。
+按事件的来源，可以将事件划分为3类。 
+• 自生事件（spontaneous event）：是由窗口系统产生的事件。例如，QKeyEvent事件、QMouseEvent 事件。自生事件会进入系统队列，然后被应用程序的事件循环逐个处理。
+• 发布事件（posted event）：是由 Qt或应用程序产生的事件。例如，QTimer定时器发生定时溢 出时Qt会自动发布QTimerEvent事件。应用程序使用静态函数`QCoreApplication::postEvent()` 产生发布事件。发布事件会进入Qt事件队列，然后由应用程序的事件循环进行处理。 
+• 发送事件（sent event）：是由Qt或应用程序定向发送给某个对象的事件。应用程序使用静 态函数`QCoreApplication::sendEvent()`产生发送事件，由对象的event()函数直接处理。窗口系统产生的自生事件自动进入系统队列，应用程序发布的事件进入Qt事件队列。自生事件 和发布事件的处理是异步的，也就是事件进入队列后由系统去处理，程序不会在产生事件的地方停止 进行等待。
+2. 事件派发
