@@ -293,3 +293,4 @@ bool MainWindow::saveByIO_Whole(const QString &aFileName) {
 }
 ```
 
+## 事件处理
