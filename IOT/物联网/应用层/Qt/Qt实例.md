@@ -163,7 +163,7 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
 
 ## 事件处理
 
-以虚拟键盘为例，掌握事件处理的过程，包括重写事件和事件过滤。
+以虚拟键盘为例，掌握事件处理的过程，包括重写事件和事件过滤，要求点击编辑框时跳出虚拟键盘。
 1. 新建`frmKeyBoard`类，设计UI界面，布局并且更改对象名称。
 ![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/26/20-56-02-25d1574b76caeb2806762f6709938351-20240726205601-73827c.png)
 2. `frmKeyBoard`类需要继承`Dialog`类进行重写[[Qt#封装窗口类]]。
@@ -174,8 +174,8 @@ this->setWindowTitle("屏幕键盘");
 this->setWindowModality(Qt::WindowModal);  
 this->setAttribute(Qt::WA_DeleteOnClose);
 ```
-4. 要实现点击按钮，在主窗口编辑框输出的效果，需要在按按钮时手动发送事件信息，这样事件信息就会被主窗口获取触发对应按钮事件。
-
+4. 要实现点击按钮，在主窗口编辑框输出的效果，需要在按按钮时手动发送事件信息，这样事件信息就会被主窗口获取触发对应按钮事件
+	`sendEvent`对象为主窗口中的聚焦对象`m_focusWidget->focusWidget()`如编辑框等，一开始为按钮设置重复发送的功能方便长按连续输出，同时为按钮取消焦点，防止`sendEvent`对象转移。
 ```cpp
 void frmKeyBoard::initFrm(){  
     // 找到所有的按钮  
@@ -186,7 +186,7 @@ void frmKeyBoard::initFrm(){
         pbtn->setFocusPolicy(Qt::NoFocus);  
   
   
-        if (pbtn->text() >= 'a' && pbtn->text() <= 'z') {  
+        if (pbtn->text() >= 'a' && pbtn->text() <= 'z') {  // 字母
             connect(pbtn, &QPushButton::clicked, [=](){  
                 QKeyEvent keyPress(QEvent::KeyPress, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
                 QKeyEvent keyRelease(QEvent::KeyRelease, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
@@ -195,7 +195,7 @@ void frmKeyBoard::initFrm(){
             });  
             letterBtnVec.push_back(pbtn);  
         }  
-        else if (pbtn->text().toInt() > 0 && pbtn->text().toInt() <= 9 || pbtn->text() == "0") {  
+        else if (pbtn->text().toInt() > 0 && pbtn->text().toInt() <= 9 || pbtn->text() == "0") {  // 数字
             connect(pbtn, &QPushButton::clicked, [=](){  
   
                 QKeyEvent keyPress(QEvent::KeyPress, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
@@ -212,7 +212,7 @@ void frmKeyBoard::initFrm(){
                    emit signal_emit_close();  
                 });  
             }  
-            else if(pbtn == ui->pushButton_backspace){  
+            else if(pbtn == ui->pushButton_backspace){  // 删除按钮
                 connect(pbtn,&QPushButton::clicked,[=](){  
                     QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Backspace, Qt::NoModifier);  
                     QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Backspace, Qt::NoModifier);  
@@ -220,7 +220,7 @@ void frmKeyBoard::initFrm(){
                     QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
                 });  
             }  
-            else if(pbtn == ui->pushButton_sapce){  
+            else if(pbtn == ui->pushButton_sapce){  // 空格按钮
                 connect(pbtn,&QPushButton::clicked,[=](){  
                     QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Space, Qt::NoModifier, " ");  
                     QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Space, Qt::NoModifier, " ");  
@@ -238,7 +238,7 @@ void frmKeyBoard::initFrm(){
                     QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
                 });  
             }  
-            else if(pbtn == ui->pushButton_capslk){  
+            else if(pbtn == ui->pushButton_capslk){  // 大小写转换
   
                 connect(pbtn,&QPushButton::clicked,[=](){  
                     static bool capFlag = false;  
@@ -259,5 +259,5 @@ void frmKeyBoard::initFrm(){
         }  
     }  
   
-}
-```
+}```
+
