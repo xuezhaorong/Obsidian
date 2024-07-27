@@ -175,4 +175,6 @@ if(UNIX AND NOT APPLE)
 endif()
 ```
 
-![|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-50-42-d6e321ba28a323cb365efcad7333767b-20240727145042-dbedd2.png)
+![|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-50-42-d6e321ba28a323cb365efcad7333767b-20240727145042-dbedd2.png)\
+
+重新cmake，导入wiringPi库成功

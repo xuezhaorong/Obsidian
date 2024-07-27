@@ -165,5 +165,99 @@ connect(ui->pushButton_login,&QPushButton::clicked,[=](){
 
 以虚拟键盘为例，掌握事件处理的过程，包括重写事件和事件过滤。
 1. 新建`frmKeyBoard`类，设计UI界面，布局并且更改对象名称。
-![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/26/20-56-02-25d1574b76caeb2806762f6709938351-20240726205601-73827c.png)
-2. 
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/26/20-56-02-25d1574b76caeb2806762f6709938351-20240726205601-73827c.png)
+2. `frmKeyBoard`类需要继承`Dialog`类进行重写[[Qt#封装窗口类]]。
+3. 作为虚拟键盘，不能影响主窗口的焦点，需要设置成无焦点窗口，同时隐藏标题框。
+```cpp
+this->setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint | Qt::WindowDoesNotAcceptFocus);  
+this->setWindowTitle("屏幕键盘");  
+this->setWindowModality(Qt::WindowModal);  
+this->setAttribute(Qt::WA_DeleteOnClose);
+```
+4. 要实现点击按钮，在主窗口编辑框输出的效果，需要在按按钮时手动发送事件信息，这样事件信息就会被主窗口获取触发对应按钮事件。
+
+```cpp
+void frmKeyBoard::initFrm(){  
+    // 找到所有的按钮  
+    QList<QPushButton*> pbtns = this->findChildren<QPushButton*>();  
+    foreach(QPushButton * pbtn, pbtns) {  
+        pbtn->setAutoRepeat(true);    //允许自动重复  
+        pbtn->setAutoRepeatDelay(500);//设置重复操作的时延  
+        pbtn->setFocusPolicy(Qt::NoFocus);  
+  
+  
+        if (pbtn->text() >= 'a' && pbtn->text() <= 'z') {  
+            connect(pbtn, &QPushButton::clicked, [=](){  
+                QKeyEvent keyPress(QEvent::KeyPress, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
+                QKeyEvent keyRelease(QEvent::KeyRelease, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
+                QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
+                QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
+            });  
+            letterBtnVec.push_back(pbtn);  
+        }  
+        else if (pbtn->text().toInt() > 0 && pbtn->text().toInt() <= 9 || pbtn->text() == "0") {  
+            connect(pbtn, &QPushButton::clicked, [=](){  
+  
+                QKeyEvent keyPress(QEvent::KeyPress, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
+                QKeyEvent keyRelease(QEvent::KeyRelease, pbtn->text().toInt() + 48, Qt::NoModifier, pbtn->text());  
+                QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
+                QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
+            });  
+  
+        }  
+        else{  
+            if(pbtn == ui->pushButton_closeKeyboard){ // 退出按钮  
+                connect(pbtn,&QPushButton::clicked,[=](){  
+                   this->close();  
+                   emit signal_emit_close();  
+                });  
+            }  
+            else if(pbtn == ui->pushButton_backspace){  
+                connect(pbtn,&QPushButton::clicked,[=](){  
+                    QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Backspace, Qt::NoModifier);  
+                    QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Backspace, Qt::NoModifier);  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
+                });  
+            }  
+            else if(pbtn == ui->pushButton_sapce){  
+                connect(pbtn,&QPushButton::clicked,[=](){  
+                    QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Space, Qt::NoModifier, " ");  
+                    QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Space, Qt::NoModifier, " ");  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
+                });  
+            }  
+            else if(pbtn == ui->pushButton_shift){  
+                connect(pbtn,&QPushButton::clicked,[=](){  
+  
+  
+                    QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Shift, Qt::NoModifier);  
+                    QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Shift, Qt::NoModifier);  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
+                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
+                });  
+            }  
+            else if(pbtn == ui->pushButton_capslk){  
+  
+                connect(pbtn,&QPushButton::clicked,[=](){  
+                    static bool capFlag = false;  
+                    capFlag = !capFlag;  
+                    if (capFlag) {  
+  
+                            foreach(QPushButton * letterBtn,letterBtnVec){  
+                                letterBtn->setText(letterBtn->text().toUpper());  
+                            }  
+                    }  
+                    else {  
+                            foreach(QPushButton * letterBtn,letterBtnVec){  
+                                letterBtn->setText(letterBtn->text().toLower());  
+                            }  
+                    }  
+                });  
+            }  
+        }  
+    }  
+  
+}
+```
