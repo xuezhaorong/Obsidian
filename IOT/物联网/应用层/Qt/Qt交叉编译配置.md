@@ -131,3 +131,48 @@ cmake
 ![image.png|557](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-29-01-21c859956a7fcfef7ce501dae8c89a96-20240725102900-186f67.png)
 
 ### 加入WiringPi库
+WiringPi库链接：https://wwl.lanzn.com/im5pV25orqrc
+下载WiringPi库，放到项目根目录下：
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-42-25-decb0ad8322c975ecc898701b6717e90-20240727144224-b07864.png)
+修改交叉工具包中gpio.h的代码以适配wiringPi库，进入路径:`D:\Program\gcc-arm-mingw-w64-i686-aarch64-none-linux-gnu\aarch64-none-linux-gnu\libc\usr\include\linux`，打开`gpio.h`文件，再65到68行加入三行代码。
+```c
+#define GPIOHANDLE_REQUEST_BIAS_PULL_UP (1UL << 5)
+#define GPIOHANDLE_REQUEST_BIAS_PULL_DOWN (1UL << 6)
+#define GPIOHANDLE_REQUEST_BIAS_DISABLE (1UL << 7)
+```
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-46-16-9b3fb9e817f0b8986d17ceb22e59d4ea-20240727144616-1390f0.png)
+
+在项目中导入wiringPi库，打开`CmakeLists.txt`文件，加入三行代码导入库。
+```cmake
+set(WIRINGPI_PATHS ${PROJECT_SOURCE_DIR}/wiringPi)  
+  
+FILE(GLOB_RECURSE WIRINGPI_HEADER_FILES ${WIRINGPI_PATHS}/include/*.h)  
+  
+aux_source_directory(${WIRINGPI_PATHS}/src WIRINGPI_SOURCE_FILES)
+```
+
+![|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-48-03-a2e6732fd1674534054c901f00a8b3ae-20240727144803-ba609b.png)
+
+加入判断交叉编译时，加入库生成可执行文件的代码。
+```cmake
+# 检测是否交叉编译  
+if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL CMAKE_SYSTEM_NAME)  
+    message(STATUS "Cross compiling detected")  
+    list(APPEND SOURCE_FILES ${WIRINGPI_SOURCE_FILES})  
+    list(APPEND HEADER_FILES ${WIRINGPI_HEADER_FILES})  
+else()  
+    message(STATUS "Native compiling detected")  
+endif()
+```
+
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-49-41-dda96ec2658dadfe283f4a90460ae7e8-20240727144940-0b0e52.png)
+
+在交叉编译环境下需要显性导入crypt链接库，加入代码
+```cmake
+# 如果是在类 Unix 系统上编译，添加 crypt 库  
+if(UNIX AND NOT APPLE)  
+    target_link_libraries(Project crypt)  
+endif()
+```
+
+![|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-50-42-d6e321ba28a323cb365efcad7333767b-20240727145042-dbedd2.png)
