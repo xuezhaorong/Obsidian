@@ -142,7 +142,7 @@ WiringPi库链接：https://wwl.lanzn.com/im5pV25orqrc
 ```
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-46-16-9b3fb9e817f0b8986d17ceb22e59d4ea-20240727144616-1390f0.png)
 
-在项目中导入wiringPi库，打开`CmakeLists.txt`文件，加入三行代码导入库。
+在项目中导入wiringPi库，打开`CmakeLists.txt`文件，加入代码导入库。
 ```cmake
 set(WIRINGPI_PATHS ${PROJECT_SOURCE_DIR}/wiringPi)  
   
@@ -150,8 +150,10 @@ FILE(GLOB_RECURSE WIRINGPI_HEADER_FILES ${WIRINGPI_PATHS}/include/*.h)
   
 aux_source_directory(${WIRINGPI_PATHS}/src WIRINGPI_SOURCE_FILES)
 ```
+同时在`include_directories`要引入
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/18-25-28-3c78bb2b054c53cede3a895176f2c187-20240727182527-687b29.png)
 
-![|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-48-03-a2e6732fd1674534054c901f00a8b3ae-20240727144803-ba609b.png)
+
 
 加入判断交叉编译时，加入库生成可执行文件的代码。
 ```cmake
