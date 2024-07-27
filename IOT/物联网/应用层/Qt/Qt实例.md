@@ -228,16 +228,6 @@ void frmKeyBoard::initFrm(){
                     QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
                 });  
             }  
-            else if(pbtn == ui->pushButton_shift){  
-                connect(pbtn,&QPushButton::clicked,[=](){  
-  
-  
-                    QKeyEvent keyPress(QEvent::KeyPress, Qt::Key_Shift, Qt::NoModifier);  
-                    QKeyEvent keyRelease(QEvent::KeyRelease, Qt::Key_Shift, Qt::NoModifier);  
-                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyPress);  
-                    QApplication::sendEvent(m_focusWidget->focusWidget(), &keyRelease);  
-                });  
-            }  
             else if(pbtn == ui->pushButton_capslk){  // 大小写转换
   
                 connect(pbtn,&QPushButton::clicked,[=](){  
@@ -261,3 +251,52 @@ void frmKeyBoard::initFrm(){
   
 }```
 
+5. 要实现点击编辑框弹出虚拟键盘窗口的功能，原始的方式则是监测其发出的信号，绑定对应的槽函数，但是编辑框控件的点击信号并不完全，无法完全实现功能，**面对控件信号无法实现功能的问题有两种方式可以解决**：1. 使用事件过滤器，获取更丰富的事件，进行处理;2. 直接重新封装控件，自定义功能，前面的虚拟键盘则是采用这种方式。这里采用第一种方法。
+* 首先为编辑框安装事件过滤器：
+```cpp
+ui->lineEdit_username->installEventFilter(this);  
+ui->lineEdit_pwd->installEventFilter(this);
+```
+
+* 重写事件过滤器，在实例化虚拟键盘时，将自身传入，设为父对象，同时使用`setFocus`方法为编辑框设置焦点。
+```cpp
+bool LoginWidget::eventFilter(QObject *watched, QEvent *event){  
+    if((watched == ui->lineEdit_username || watched == ui->lineEdit_pwd) && event->type() == QEvent::MouseButtonPress){  
+        QLineEdit *mlineEdit = (QLineEdit *)watched;  
+        if(f != NULL){  
+            delete f;  
+            f = NULL;  
+        }else{  
+            f = new frmKeyBoard(this);  
+            mlineEdit->setFocus();  
+  
+            connect(f,&frmKeyBoard::signal_emit_close,[=](){  
+                delete f;  
+                f = NULL;  
+            });  
+            f->show();  
+        }  
+    }  
+  
+    return QWidget::eventFilter(watched,event);  
+}
+```
+
+* 另外还需要为虚拟键盘实现可以移动的功能，可以重写`void mousePressEvent(QMouseEvent* event)`和`void mouseMoveEvent(QMouseEvent* event)`方法来通过计算移动和点击按钮之间的偏移量来实现移动。
+```cpp
+void frmKeyBoard::mousePressEvent(QMouseEvent* event){  
+    m_dragPosition = event->pos();  
+  
+    QDialog::mousePressEvent(event);  
+}  
+  
+void frmKeyBoard::mouseMoveEvent(QMouseEvent* event){  
+  
+    QPoint currentPoint = mapTo(m_focusWidget,QPoint(0,0));  // 将点在窗口的坐标转换为在对象上的坐标
+  
+    QPoint movePoint = currentPoint + (event->pos() - m_dragPosition);  
+    move(movePoint);  
+  
+    QDialog::mouseMoveEvent(event);  
+}
+```
