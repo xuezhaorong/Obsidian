@@ -315,3 +315,43 @@ int main(int argc, char *argv[]) {
 这段代码创建了一个QApplication对象a，还创建了一个窗口w，运行 w.show()显示窗口，最 后运行a.exec()，开始应用程序的事件循环。
 函数`QApplication::exec()`的主要功能就是不断地检查系统队列和Qt事件队列里是否有未处理的 自生事件和发布事件，如果有事件就派发（dispatch）给接收事件的对象去处理。应用程序的事件循 环还可以对队列中的相同事件进行合并处理，例如如果队列中有一个界面组件的多个 `QPaintEvent `事件（绘制事件），应用程序就只派发一次`QPaintEvent`事件，因为界面只需要绘制一次。 注意，应用程序的事件循环只处理自生事件和发布事件，而不会处理发送事件，因为发送事 件由应用程序直接派发给某个对象，是以同步模式运行的。 一般情况下，应用程序都能及时处理队列里的事件，用户操作时不会感觉到响应迟滞。但是 在某些情况下，例如执行一个大的循环，并且在循环内进行大量的计算或数据传输，同时又要求 更新界面显示内容，这时就可能出现界面响应迟滞甚至无响应的情况，
 这是因为事件队列未能被 及时处理。要解决这样的问题可以采用**多线程方法**，例如一般的涉及网络大量数据传输的程序都会使用 多线程，将界面更新与网络数据传输分别用两个线程去处理，这样就不会出现界面无响应的情况。
+
+### 事件处理
+任何从QObject 派生的类都可以处理事件，但其中主要是从QWidget派生的窗口类和界面组 件类需要处理事件，因为大多数事件都是通过界面操作产生的，例如鼠标事件、按键事件等。 一个类接收到应用程序派发来的事件后，首先会由函数event()处理。event()是 QObject 类中 定义的一个虚函数，其函数原型定义如下：
+```cpp
+bool QObject::event(QEvent *e)
+```
+其中，参数e是事件对象，通过`e->type()`就可以得到事件的具体类型。 任何从QObject 派生的类都可以重新实现函数`event()`，以便在接收到事件时进行处理。如果 一个类重新实现了函数event()，需要在函数event()的实现代码里设置是否接受事件。QEvent类有 两个函数，函数 accept()接受事件，表示事件接收者会对事件进行处理；函数 ignore()忽略事件， 表示事件接收者不接受此事件。被接受的事件由事件接收者处理，被忽略的事件则传播到事件接 收者的父容器组件，由父容器组件的event()函数去处理，这称为事件的传播（propagation），事件 最后可能会传播给窗口。
+以鼠标移动事件为例，演示如何处理事件[[Qt实例#事件处理]]。
+1. 在头文件的`protected`域中声明该函数:
+```cpp
+void mousePressEvent(QMouseEvent* event);
+```
+ 2. 在源文件中实现对应功能，加入处理业务代码后，可以选择给基类处理事件以正常响应：
+```cpp
+void frmKeyBoard::mousePressEvent(QMouseEvent* event){  
+    m_dragPosition = event->pos();  
+  
+    QDialog::mousePressEvent(event);  
+}
+```
+
+### 事件过滤器
+如果要对一个标签的某些事件进行处理，需要重新定义一个标签类，在标签类里重新实现函数event()或对应的事件处理函数。 QObject 还提供了另一种处理事件的方法：事件过滤器。它可以将一个对象的事件委托给另 一个对象来监视并处理。例如，一个窗口可以作为其界面上的QLabel组件的事件过滤器，派发给 QLabel 组件的事件由窗口去处理，这样，就不需要为了处理某种事件而新定义一个标签类。
+要实现事件过滤器功能，需要完成两项操作。 
+（1）被监视对象使用函数`installEventFilter()`将自己注册给监视对象，监视对象就是事件过滤器。 
+（2）监视对象重新实现函数`eventFilter()`，对监视到的事件进行处理。
+如要实现点击编辑框响应的功能：
+1. 在Widget中为编辑框安装事件过滤器
+```cpp
+ui->lineEdit_username->installEventFilter(this);  
+```
+2. 重写`eventFilter()`函数，可以根据`wathed`判断事件的对象，`event->type()` 判断事件类型
+```cpp
+bool LoginWidget::eventFilter(QObject *watched, QEvent *event){  
+    if(watched == ui->lineEdit_username  && event->type() == QEvent::MouseButtonPress){  
+
+  
+    return QWidget::eventFilter(watched,event);  
+}
+```
