@@ -180,3 +180,40 @@ endif()
 ![|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/27/14-50-42-d6e321ba28a323cb365efcad7333767b-20240727145042-dbedd2.png)\
 
 重新cmake，导入wiringPi库成功
+
+### 使用交叉工具链编译opencv
+1. 树莓派安装`aarch64-linux-gnu`交叉编译工具。
+```bash
+sudo apt-get install g++-aarch64-linux-gnu
+```
+2. 下载`opencv`源码
+```bash
+	git clone https://github.com/opencv/opencv.git
+```
+3.  进入opecv目录下，新建build目录
+```bash
+cd opencv
+mkdir build && cd build
+```
+4. 配置编译，生成静态库
+```bash
+cmake -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/aarch64-linux-gnu.toolchain.cmake .. -DCMAKE_CXX_FLAGS="-march=armv8-a --static" -DCMAKE_C_FLAGS="-march=armv8-a --static" -DBUILD_SHARED_LIBS=OFF
+```
+5. 编译和安装
+```bash
+make -j2 && make install
+```
+6. 在`build/install` 下生成编译后的文件，移动到window下
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/29/12-40-34-f7a71c6ae9d97cf808181d3a5e0c1e4e-20240729124033-8ded5d.png)
+7. 查看`D:\Program\opencv_install\lib\cmake\opencv4`下的`OpenCVConfig.cmake`文档，在Clion中添加库依赖
+```bash
+set(OpenCV_DIR D:/Program/opencv_install)
+
+find_package(  
+        OpenCV REQUIRED  
+)
+
+target_link_libraries(Project  
+        ${OpenCV_LIBS}  
+)
+```
