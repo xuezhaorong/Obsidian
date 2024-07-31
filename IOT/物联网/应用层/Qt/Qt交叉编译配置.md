@@ -197,7 +197,7 @@ mkdir build && cd build
 ```
 4. 配置编译，生成静态库
 ```bash
-cmake -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/aarch64-linux-gnu.toolchain.cmake .. -DCMAKE_CXX_FLAGS="-march=armv8-a --static" -DCMAKE_C_FLAGS="-march=armv8-a --static" -DBUILD_SHARED_LIBS=OFF
+cmake -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/aarch64-gnu.toolchain.cmake .. -DBUILD_SHARED_LIBS=OFF
 ```
 5. 编译和安装
 ```bash

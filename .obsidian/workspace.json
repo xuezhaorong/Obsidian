@@ -6,7 +6,6 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 84.52012383900929,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -30,8 +29,7 @@
                 "mode": "preview",
                 "source": false
               }
-            },
-            "group": "1e49674f519da1fd"
+            }
           },
           {
             "id": "1421ffa243102e64",
@@ -39,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/添加账户和给予用户权限.md",
+                "file": "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -47,24 +45,6 @@
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "d718b4e0d6624b87",
-        "type": "tabs",
-        "dimension": 15.479876160990713,
-        "children": [
-          {
-            "id": "f900012b0d2c6f2e",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md"
-              }
-            },
-            "group": "1e49674f519da1fd"
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 269.5
   },
   "right": {
     "id": "590141be52da20df",
@@ -130,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md"
+                "file": "IOT/物联网/应用层/Qt/Qt交叉编译配置.md"
               }
             }
           },
@@ -171,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,18 +183,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "96b0a9eee13e568c",
+  "active": "1421ffa243102e64",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
+    "IOT/物联网/应用层/Qt/Qt实例.md",
+    "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/换源.md",
     "IOT/树莓派/安装qt5.md",
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
-    "IOT/物联网/应用层/Qt/Qt实例.md",
-    "IOT/物联网/应用层/Qt/Qt.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/Linux/交叉编译.md",
     "物联网/感知层/STM32/SMT32.md",
     "物联网/感知层/Clion配置/STM32标准库配置.md",
@@ -232,7 +212,6 @@
     "物联网/感知层/Clion配置/STM32标准库FreeRtos配置.md",
     "树莓派/frp远程连接.md",
     "物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
-    "物联网/感知层/Clion配置/STM32Hal库配置.md",
     "Linux",
     "物联网/应用层/Qt",
     "物联网/感知层/51单片机/51单片机内部结构.png",
