@@ -1,7 +1,7 @@
 1. 更新源[[换源]]
 2. 安装qt5开发环境
 ```bash
-sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+z
 ```
 3. 安装qtcreator
 ```bash
