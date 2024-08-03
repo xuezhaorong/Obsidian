@@ -131,6 +131,32 @@ cmake
 然后执行可执行文件
 ![image.png|557](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-29-01-21c859956a7fcfef7ce501dae8c89a96-20240725102900-186f67.png)
 
+也可以直接为根目录添加所有文件权限
+```bash
+chmod -R 777 QtProject
+```
 ### opencv交叉编译
 > opencv github网址：[opencv/opencv: Open Source Computer Vision Library (github.com)](https://github.com/opencv/opencv)
+可以选择对应版本
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/13-13-02-dd388a2782a7af3c58fd4ffcc93f90df-20240803131301-495b0d.png)
 
+#### 下载源码
+克隆opencv项目
+```bash
+git clone https://github.com/opencv/opencv.git
+```
+
+切换到opencv目录中，创建并切换到build目录
+```bash
+cd opencv
+mkdir build
+cd build
+```
+
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/13-17-56-3286f0b7bdeef5af91c925be5f5020d0-20240803131756-c9057b.png)
+
+#### 编译前准备
+* 下载编译工具
+```bash
+sudo apt install build-essential g++-aarch64-linux-gnu
+```
