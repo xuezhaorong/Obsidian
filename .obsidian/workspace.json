@@ -36,11 +36,13 @@
             "id": "1421ffa243102e64",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
-                "mode": "source",
-                "source": false
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "page": 512,
+                "left": 625,
+                "top": 605,
+                "zoom": 1.3808038089058075
               }
             },
             "group": "5768ae6a26aa23c2"
@@ -59,7 +61,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
               }
             },
             "group": "5768ae6a26aa23c2"
@@ -130,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
               }
             }
           },
@@ -171,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
+                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,9 +207,9 @@
   },
   "active": "1421ffa243102e64",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
-    "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/Qt实例.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/安装qt5.md",

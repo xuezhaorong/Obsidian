@@ -157,6 +157,7 @@ C++ lambda表达式的本质就是重载了operator()，lambda表达式会被编
 * parameters是参数列表
 
 	与普通函数的参数列表一致。如果不需要参数传递，则可以连同括号“()”一起省略，即无参数列表
+	若需要获取参数，则在括号中写入参数，如(QImage img)
 
 * mutable关键字
 
@@ -355,3 +356,5 @@ bool LoginWidget::eventFilter(QObject *watched, QEvent *event){
     return QWidget::eventFilter(watched,event);  
 }
 ```
+
+## 多线程

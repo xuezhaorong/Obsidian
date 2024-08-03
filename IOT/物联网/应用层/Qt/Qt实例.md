@@ -302,7 +302,7 @@ void frmKeyBoard::mouseMoveEvent(QMouseEvent* event){
 ```
 
 ## 多线程
-以传输视频图像为例，掌握多线程
+以传输视频图像为例，掌握多线程，原理是获取摄像头的画面，转换为QImage并显示在label上面，由于需要不断执行这个过程，所以要放在子线程中执行，防止阻碍主线程。
 [[安装qt5]]在树莓派中安装qtcreator，并且配置好opencv[[Qt交叉编译配置#opencv交叉编译]]
 将Clion中的文件移植到qtcreator中去[[Clion配置Qt#移植]]
 新增capThread线程类，继承QThread
@@ -310,3 +310,36 @@ void frmKeyBoard::mouseMoveEvent(QMouseEvent* event){
 ![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/14-28-57-9f5117493d3477f3dd2acfe4a8950db4-20240803142857-4fa098.png)
 ![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/14-29-33-2447cfeb7065c5ec97f98897628ae4b1-20240803142932-8dddf9.png)
 
+定义并打开摄像头
+```cpp
+VideoCapture cap;
+cap.open(0);
+```
+
+重写run函数不断发送获取的图片
+```bash
+void CapThread::run(){
+    while(cap.isOpened()){ // 判断摄像头是否打开
+        cap >> frame; // 摄像头输出到Mat frame
+        Mat framel;
+        cvtColor(frame, framel, cv::COLOR_RGB2BGR); // 由于cap获取的Mat颜色通道为GBR，要将其化为RGB
+
+        QImage img = QImage((const unsigned char *)(framel.data),
+                  framel.cols, framel.rows,
+                  framel.step, QImage::Format_RGB888); // 将Mat加载到Qimage中
+        QImage resizeImg = img.scaled(mlabelSize, Qt::KeepAspectRatio); // 进行大小调整，Qt::KeepAspectRatio表示裁剪时按比例缩小扩大不改变原来的大小
+        if (!frame.empty()){
+            emit signal_emit_capFrame(resizeImg); // 发送信号
+        }
+        msleep(30);
+    }
+}
+```
+
+主线程中则获取不断传回来的画面，并显示在label上面
+```bash
+connect(capThread,&CapThread::signal_emit_capFrame,[=](QImage img){
+	ui->label_cap->setPixmap(QPixmap::fromImage(img));
+	ui->label_cap->show();
+});
+```
