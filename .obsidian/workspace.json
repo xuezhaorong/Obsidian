@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
                 "mode": "source",
                 "source": false
               }
@@ -59,7 +59,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/交叉编译.md"
+                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
               }
             },
             "group": "5768ae6a26aa23c2"
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/交叉编译.md"
+                "file": "IOT/物联网/应用层/Qt/Qt实例.md"
               }
             }
           },
@@ -171,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/物联网/应用层/Qt/Qt实例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,8 +205,8 @@
   },
   "active": "1421ffa243102e64",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/Linux/交叉编译.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/Qt/Qt.md",
