@@ -132,3 +132,5 @@ cmake
 ![image.png|557](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-29-01-21c859956a7fcfef7ce501dae8c89a96-20240725102900-186f67.png)
 
 ### opencv交叉编译
+> opencv github网址：[opencv/opencv: Open Source Computer Vision Library (github.com)](https://github.com/opencv/opencv)
+
