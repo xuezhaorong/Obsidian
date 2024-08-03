@@ -119,15 +119,7 @@ cmake
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-21-52-85f0b4d3084886bfafe06243f9b83d5d-20240725102152-1d3a2b.png)
 
 ## aarch64（树莓派4b为例）配置
-### 编译流程
-1. 下载源码
-2. 配置cmake，如果有编译脚本，直接执行编译脚本，添加编译选项
-3. 编译
-4. 安装
-### 手动链接库到系统库
-1. 在`/etc/ld.so.conf.d`创建conf文件
-2. conf文件添加lib路径
-3. 执行`sudo ldconfig`手动链接到系统库
+
 根据[[安装qt5]]配置树莓派，window上的qt版本根据树莓派上的qt版本确定，可以有小版本的偏差
 ![image.png|515](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-24-33-4df61a73cd0d9dbe25892a550be99f88-20240725102432-0a10a4.png)
 

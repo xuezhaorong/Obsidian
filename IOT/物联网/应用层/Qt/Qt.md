@@ -358,3 +358,36 @@ bool LoginWidget::eventFilter(QObject *watched, QEvent *event){
 ```
 
 ## 多线程
+一个 QThread 类的对象管理一个线程。在设计多线程程序的时候，需要从 QThread 继承定义线程类，并重定义 QThread 的虚函数 run()，在函数 run()里处理线程的事件循环。我们把应用程序的线程称为主线程，创建的其他线程称为工作线程。一般会在主线程里创建工作线程，并调用函数 start()开始执行工作线程的任务。函数 start()会在其内部调用函数 run()进入工作线程的事件循环，函数 run()的程序体一般是一个无限循环，可以在函数 run()里调用函数 exit() 或 quit()结束线程的事件循环，或在主线程里调用函数 terminate()强制结束线程。
+#### QThread
+QThread 的父类是 QObject，所以可以使用信号与槽机制。QThread 自身定义了 started()和 finished()两个信号，started()信号在线程开始运行之前，也就是在函数 run()被调用之前被发射； finished()信号在线程即将结束时被发射。
+
+要实现QThread类，需要创建继承QThread的类。
+`.h`
+```cpp
+#include <QThread>
+#include <QObject>
+class CapThread : public QThread
+{
+    Q_OBJECT
+public:
+    CapThread(QObject *parent = NULL);
+    ~CapThread();
+protected:
+    void run();
+};
+```
+
+`.cpp`
+```cpp
+CapThread::CapThread(QObject *parent):QThread(parent)
+{
+
+}
+
+
+void CapThread::run(){
+
+}
+```
+必须重定义函数 run()，线程的任务就在这个函数里实现。
