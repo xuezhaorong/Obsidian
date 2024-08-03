@@ -119,6 +119,15 @@ cmake
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-21-52-85f0b4d3084886bfafe06243f9b83d5d-20240725102152-1d3a2b.png)
 
 ## aarch64（树莓派4b为例）配置
+### 编译流程
+1. 下载源码
+2. 配置cmake，如果有编译脚本，直接执行编译脚本，添加编译选项
+3. 编译
+4. 安装
+### 手动链接库到系统库
+1. 在`/etc/ld.so.conf.d`创建conf文件
+2. conf文件添加lib路径
+3. 执行`sudo ldconfig`手动链接到系统库
 根据[[安装qt5]]配置树莓派，window上的qt版本根据树莓派上的qt版本确定，可以有小版本的偏差
 ![image.png|515](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-24-33-4df61a73cd0d9dbe25892a550be99f88-20240725102432-0a10a4.png)
 
@@ -318,3 +327,44 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE
 ..
 ```
 项目编译链接时无法链接到动态库的解决方法：
+手动链接到系统库
+```bash
+cd /etc/ld.so.conf.d
+sudo touch opencv.conf
+sudo vim opencv.conf
+```
+添加lib路径 
+```bash
+/usr/opencv_arm/lib
+```
+执行链接配置
+```bash
+sudo ldconfig
+```
+
+#### 在qtcreator中加入opencv
+在pro中导入头文件和库文件的路径
+```bash
+INCLUDEPATH += /usr/opencv_arm/include \
+/usr/opencv_arm/include/opencv4 \
+/usr/opencv_arm/include/opencv2 \
+
+LIBS += /usr/opencv_arm/lib/libopencv_highgui.so \
+/usr/opencv_arm/lib/libopencv_core.so \
+/usr/opencv_arm/lib/libopencv_imgproc.so \
+/usr/opencv_arm/lib/libopencv_imgcodecs.so \
+/usr/opencv_arm/lib/libopencv_video.so \
+/usr/opencv_arm/lib/libopencv_videoio.so \
+/usr/opencv_arm/lib/libopencv_objdetect.so
+```
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/14-24-58-1348b584e9ca25a2cc4ee66134cac830-20240803142457-394956.png)
+
+导入头文件
+```cpp
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/objdetect.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/opencv.hpp>
+```

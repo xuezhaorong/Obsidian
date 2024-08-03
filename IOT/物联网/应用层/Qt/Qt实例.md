@@ -300,3 +300,13 @@ void frmKeyBoard::mouseMoveEvent(QMouseEvent* event){
     QDialog::mouseMoveEvent(event);  
 }
 ```
+
+## 多线程
+以传输视频图像为例，掌握多线程
+[[安装qt5]]在树莓派中安装qtcreator，并且配置好opencv[[Qt交叉编译配置#opencv交叉编译]]
+将Clion中的文件移植到qtcreator中去[[Clion配置Qt#移植]]
+新增capThread线程类，继承QThread
+
+![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/14-28-57-9f5117493d3477f3dd2acfe4a8950db4-20240803142857-4fa098.png)
+![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/14-29-33-2447cfeb7065c5ec97f98897628ae4b1-20240803142932-8dddf9.png)
+
