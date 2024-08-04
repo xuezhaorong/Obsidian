@@ -78,7 +78,7 @@ connect(ui->pushButton_return,&QPushButton::clicked,[=](){
 		QString username = ui->lineEdit_username->text();  
 			QString pwd = ui->lineEdit_pwd->text();  
 				if(username=="xuezhaorong" && pwd=="123456" ){  
-					menu *m = new menu();  
+					menu *m = new menu();  // 不要传入this，否则this->hide()后会将所有的子控件一起隐藏
 					connect(m,&menu::signal_menu_return,[=](){  
 					   this->show();  
 					});  
