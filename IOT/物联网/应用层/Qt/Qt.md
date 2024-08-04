@@ -391,3 +391,43 @@ void CapThread::run(){
 }
 ```
 必须重定义函数 run()，线程的任务就在这个函数里实现。
+
+#### 线程同步
+在多线程程序中，由于存在多个线程，线程之间可能需要访问同一个变量，或一个线程需要等待另一个线程完成某个操作后才产生相应的动作。为了避免出现当前线程中在访问和操作资源时，另一个线程也对其进行访问和操作而造成冲突，就需要用到线程同步的技术。
+QMutex 和 QMutexLocker 是基于互斥量（mutex）的线程同步类，QMutex 定义的实例是互斥量，QMutex 主要有以下几个函数。
+```cpp
+void QMutex::lock() //锁定互斥量，一直等待 
+void QMutex::unlock() //解锁互斥量 
+bool QMutex::tryLock() //尝试锁定互斥量，不等待 
+bool QMutex::tryLock(int timeout) //尝试锁定互斥量，最多等待 timeout 毫秒
+```
+
+* 函数 lock()锁定互斥量，如果另一个线程锁定了这个互斥量，它将被阻塞运行直到其他线程解锁这个互斥量。
+* 函数 unlock()解锁互斥量，需要与 lock()配对使用。
+* 函数 tryLock()尝试锁定一个互斥量，如果成功锁定就返回 true，如果其他线程已经锁定了这个互斥量就返回 false，不等待。
+* 函数 tryLock(int timeout)尝试锁定一个互斥量，如果这个互斥量被其他线程锁定，最多等待 timeout 毫秒。
+
+互斥量相当于一把钥匙，如果两个线程要访问同一个共享资源，就需要通过 lock()或 tryLock()拿到这把钥匙，然后才可以访问该共享资源，访问完之后还要通过 unlock()还回钥匙，这样别的线程才有机会拿到钥匙。
+基本操作如下，在需要不断访问的临界资源前后加入锁与解锁，在触发访问的临界资源前后加上尝试锁和解锁[[Qt实例#多线程]]
+```cpp
+void CapThread::slot_recordStop(){
+    if(mutex_recordFlag.tryLock(100)){
+        mrecordFlag = false;
+        capWriter.release();
+        mutex_recordFlag.unlock();
+    }
+
+}
+
+void CapThread::run(){
+    while(cap.isOpened()){
+        mutex_recordFlag.lock();
+        if(mrecordFlag){
+            capWriter << framel;
+        }
+        mutex_recordFlag.unlock();
+
+        msleep(30);
+    }
+}
+```

@@ -318,7 +318,7 @@ cap.open(0);
 ```
 
 重写run函数不断发送获取的图片
-```bash
+```cpp
 void CapThread::run(){
     while(cap.isOpened()){ // 判断摄像头是否打开
         cap >> frame; // 摄像头输出到Mat frame
@@ -338,9 +338,91 @@ void CapThread::run(){
 ```
 
 主线程中则获取不断传回来的画面，并显示在label上面
-```bash
+```cpp
 connect(capThread,&CapThread::signal_emit_capFrame,[=](QImage img){
 	ui->label_cap->setPixmap(QPixmap::fromImage(img));
 	ui->label_cap->show();
 });
 ```
+* 拍照和录制功能实现
+在menu中添加拍照和录制的按钮
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/21-22-27-6eb74d4e540a5a25270d62a6bc01a011-20240803212226-acee0b.png)
+拍照功能简单，只需将获取到的图片保存在本地即可，这里以当前的日期时间为默认名称
+```cpp
+// 拍照
+connect(ui->pushButton_takephoto,&QPushButton::clicked,[=](){
+	QDateTime dateTime = QDateTime::currentDateTime(); // Get current system time
+	QString currentTime = dateTime.toString("yyyy-MM-dd hh:mm:ss"); // Format time
+	QString fileLoad = Load_imgSave  + currentTime + ".png";
+	mCapImg.save(fileLoad);
+});
+```
+录制功能则需要定义`VideoWriter`类，往其不断写入Mat实现
+```cpp
+    VideoWriter capWriter;
+	capWriter << framel;
+```
+需要用按钮控制，但是不能在子线程中引用主线程，所以信号槽连接的思路是主线程中的信号绑定子线程的槽函数，通过标记来控制子线程的开始录制和关闭录制。
+```cpp
+    // 录制
+connect(ui->pushButton_takevideo,&QPushButton::clicked,[=](){
+   static bool recordFlag =false;
+   recordFlag = !recordFlag;
+   if(recordFlag){
+	   qDebug() << "开始录制";
+	   QDateTime dateTime = QDateTime::currentDateTime(); // Get current system time
+	   QString currentTime = dateTime.toString("yyyy-MM-dd hh:mm:ss"); // Format time
+	   QString fileLoad = Load_videoSave + currentTime + ".avi";
+	   capThread->slot_recordStart(fileLoad);
+   }else{
+	   qDebug() << "结束录制";
+	   capThread->slot_recordStop();
+   }
+});
+```
+子线程中在run函数里，由标记控制是否写入到`VideoWriter`里面，`slot_recordStart`槽函数控制录制的开始，`slot_recordStop`槽函数控制录制的关闭，由于主线程控制的槽函数和子线程控制的run中标志`mrecordFlag`和`capWriter`是临界资源，二者对其操作时会出现冲突，所以要用互斥锁的方式进行同步[[Qt#线程同步]]，不断执行的run严格的加上锁保证不会发生冲突，而触发的槽函数中尝试解锁来访问临界资源，这样就达到了同步的效果，尝试解锁的时间要大于run中的休眠时间，避免访问失败。
+```cpp
+void CapThread::slot_recordStart(QString Load_video){
+    if(mutex_recordFlag.tryLock(100)){
+        mrecordFlag = true;
+        capWriter.open(Load_video.toStdString(), VideoWriter::fourcc('M', 'J', 'P', 'G'), 30, Size(640, 480));
+        if(!capWriter.isOpened()){
+            qDebug() << "录制失败!!!";
+            capWriter.release();
+        }
+        mutex_recordFlag.unlock();
+    }
+
+}
+
+void CapThread::slot_recordStop(){
+    if(mutex_recordFlag.tryLock(100)){
+        mrecordFlag = false;
+        capWriter.release();
+        mutex_recordFlag.unlock();
+    }
+
+}
+
+void CapThread::run(){
+    while(cap.isOpened()){
+        cap >> frame;
+        Mat framel;
+        cvtColor(frame, framel, cv::COLOR_RGB2BGR);
+        mutex_recordFlag.lock();
+        if(mrecordFlag){
+            capWriter << framel;
+        }
+        mutex_recordFlag.unlock();
+        QImage img = QImage((const unsigned char *)(framel.data),
+                  framel.cols, framel.rows,
+                  framel.step, QImage::Format_RGB888);
+        QImage resizeImg = img.scaled(mlabelSize, Qt::KeepAspectRatio);
+        if (!frame.empty()){
+            emit signal_emit_capFrame(resizeImg);
+        }
+        msleep(30);
+    }
+}
+```
+
