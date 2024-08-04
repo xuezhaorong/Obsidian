@@ -71,7 +71,7 @@ connect(ui->pushButton_return,&QPushButton::clicked,[=](){
 });
 ```
 
-3. 在login.cpp中添加点击登录按钮验证成功后跳出menu界面以及自身隐藏的业务代码，实例化menu时，需要用new指针的方法创建在堆区，以保证生命周期以及调用qt的ui自动回收机制，调用close方法之后回收内存，然后为其绑定槽函数，以便自身重新show出来，细节就是当创建完menu并且绑定信号后再close，避免因加载过久出现空白。
+3. 在login.cpp中添加点击登录按钮验证成功后跳出menu界面以及自身隐藏的业务代码，实例化menu时，需要用new指针的方法创建在堆区，以保证生命周期以及调用qt的ui自动回收机制，调用close方法之后回收内存，然后为其绑定槽函数，以便自身重新show出来，细节就是当创建完menu并且绑定信号后再close，避免出现空白。
 ```cpp
 // 登录按钮  
 	connect(ui->pushButton_login,&QPushButton::clicked,[=](){  
