@@ -82,9 +82,9 @@ connect(ui->pushButton_return,&QPushButton::clicked,[=](){
 					connect(m,&menu::signal_menu_return,[=](){  
 					   this->show();  
 					});  
-				this->hide();  
+
 				m->show();     
-		
+				this->hide();  
 		
 		}  
 	});
