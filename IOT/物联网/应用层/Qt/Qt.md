@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     return QApplication::exec();  //运行应用程序，开始应用程序的消息循环和事件处理
 }
 ```
-	main()函数是 C++程序的入口。它的主要功能是定义并创建应用程序，定义并创建窗口对象和显示窗口，运行应用程序，开始应用程序的消息循环和事件处理。 QApplication 是 Qt 的标准应用程序类，main()函数里的第一行代码定义了一个 QApplication，它就是应用程序对象。然后定义了一个 Widget 类型的变量 w，Widget 是本示例设计的窗口的类名称，定义变量 w 就是创建窗口对象，然后用 w.show()显示此窗口。函数里最后一行用 a.exec()启动应用程序，开始应用程序的消息循环和事件处理。GUI 应用程序是事件驱动的，窗口上的各种组件接收鼠标或键盘的操作，并进行相应的处理。
+	
 
 ### 窗口类
 一个窗口类由4个文件组成，刚开始创建时有.cpp，.h，.ui文件，ui.h文件则是由.ui文件通过UIC工具生成。
@@ -47,9 +47,7 @@ private:
   
 #endif //PROJECT_LOGINWIDGET_H
 ```
-1. 窗口 UI 类 Ui::Widget 的声明。文件中有如下几行代码： QT_BEGIN_NAMESPACE namespace Ui { class Widget; } //一个名字空间 Ui，包含一个类 Widget QT_END_NAMESPACE 上述代码声明了一个名称为 Ui 的名字空间（namespace），它包含一个类 Widget。
-2. 窗口类 Widget 的定义。文件 widget.h 的主体部分是一个继承自 QWidget 的类 Widget 的定义。Widget 类中包含创建窗口界面，实现窗口上界面组件的交互操作，以及其他业务逻辑。 Widget 类定义的第一行语句插入了一个宏 Q_OBJECT，**这是使用 Qt 元对象系统的类时必须插入的一个宏。插入了这个宏之后，Widget 类中就可以使用信号与槽、属性等功能。** Widget 类的 private 部分定义了一个指针，代码如下： Ui::Widget *ui; 这个指针是用前面声明的名字空间 Ui 里的类 Widget 定义的，所以 ui 是窗口 UI 类的对象指针，它指向可视化设计的窗口界面。**要访问界面上的组件，就需要通过这个指针来实现。**
-3.  在这个文件的开头部分自动加入了如下的一行包含语句： `#include "ui_widget.h"` 文件 ui_widget.h 是 UI 文件 widget.ui 被 UIC 编译后生成的文件，这个文件里定义了窗口 UI 类。
+
 
 **widget.cpp**：
 ```cpp
@@ -65,7 +63,7 @@ widget::~widget() {
 }
 ```
 
-Widget 类目前只有构造函数和析构函数。其中构造函数头部语句如下： Widget::Widget(QWidget *parent): QWidget(parent), ui(new Ui::Widget) 这行代码的功能是运行父类 QWidget 的构造函数，创建一个 Ui::Widget 类的对象 ui。这个 ui 就是 Widget 类的 private 部分定义的指针变量 ui。构造函数里只有一行代码： ui->setupUi(this); 它表示运行了 Ui::Widget 类的 setupUi()函数，并且以 this 作为函数 setupUi()的输入参数，而 this 就是 Widget 类对象的实例，也就是一个窗口。setupUi()函数里会创建窗口上所有的界面组件， 并且以 Widget 窗口作为所有组件的父容器。在 Widget 类里访问 Ui::Widget 类的成员变量或函数需要通过 Widget 类里的指针 ui 来实现，例如构造函数里运行的 ui-> setupUi(this)。
+
 
 ### 封装窗口类
 当Qt现存的窗口类无法满足需求时，则可以选择继承封装重写窗口类，流程如下：
@@ -119,10 +117,7 @@ widget::~widget() {
 
 ### 信号与槽
 
-要使用信号槽，必须在类的定义中包含Q_OBJECT宏。Q_OBJECT宏使得类能够使用信号和槽机制。在编译过程中，Qt的元对象编译器（moc）会读取带有Q_OBJECT宏的类的定义，并生成额外的代码来支持信号和槽的连接和调用。
-
-元对象编译器（moc）：moc是一个工具，它读取带有Q_OBJECT宏的源文件，并生成一个额外的源文件，这个文件包含了元对象代码，包括信号和槽的实现。
-
+要使用信号槽，必须在类的定义中包含Q_OBJECT宏。Q_OBJECT宏使得类能够使用信号和槽机制。
 * 信号（signal）是在特定情况下被发射的通知，例如 QPushButton 较常见的信号就是点击鼠标时发射的 clicked()信号。GUI 程序设计的主要工作就是对界面上各组件的信号进行响应，只需要知道什么情况下发射哪些信号，合理地去响应和处理这些信号就可以了。
 * 槽（slot）是对信号进行响应的函数。槽就是函数，所以也称为槽函数。槽函数与一般的 C++ 函数一样，可以具有任何参数，也可以被直接调用。槽函数与一般的函数不同的是：槽函数可以与信号关联，当信号被发射时，关联的槽函数被自动运行。信号与槽关联是用函数 QObject::connect()实现的，使用函数 connect()的基本格式有如下几种：
 
