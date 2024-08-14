@@ -106,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5
+    "width": 333.5
   },
   "right": {
     "id": "590141be52da20df",
@@ -195,7 +195,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "96b0a9eee13e568c",
+  "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt.md",
