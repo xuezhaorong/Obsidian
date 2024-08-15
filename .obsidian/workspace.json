@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md"
+                "file": "IOT/树莓派/安装qt5.md"
               }
             }
           },
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,15 +197,15 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/Qt实例.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
+    "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/Linux/Linux基础.md",
-    "IOT/Linux/交叉编译.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/机器学习/对数几率回归.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/安装qt5.md",

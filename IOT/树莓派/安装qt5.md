@@ -15,3 +15,9 @@ sudo apt-get install qtcreator
 ![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/20/22-43-06-11739ecd9d5d37b89c70d9585995d2b0-20240720224305-5daa20.png)
 7. 选择qt版本，注意路径
 ![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/20/22-43-32-a11230a63c1e3895ddc283978b6ab946-20240720224331-626d9c.png)
+
+## 问题解决
+1.  无法使用`multimedia`库
+```bahs
+sudo apt-get install qtmultimedia5-dev
+```
