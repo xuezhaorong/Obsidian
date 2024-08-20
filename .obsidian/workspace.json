@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 74.35233160621762,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -47,18 +48,35 @@
             "id": "993c4d2983ebefd1",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-                "page": 316,
-                "left": 627,
-                "top": 39,
-                "zoom": 1.567551865028314
+                "file": "IOT/Linux/交叉编译.md",
+                "mode": "source",
+                "source": false
               }
-            }
+            },
+            "group": "c00d484c09a0cf2a"
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "6d300f258d12b214",
+        "type": "tabs",
+        "dimension": 25.647668393782386,
+        "children": [
+          {
+            "id": "209a33a06bd59a5e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "IOT/Linux/交叉编译.md"
+              }
+            },
+            "group": "c00d484c09a0cf2a"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/Linux/交叉编译.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "IOT/Linux/交叉编译.md"
               }
             }
           },
@@ -165,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/Linux/交叉编译.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,10 +217,11 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/Linux/交叉编译.md",
     "IOT/Linux/Linux基础.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
+    "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/Linux/WSL安装配置.md",
@@ -210,7 +229,6 @@
     "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
     "IOT/机器学习/对数几率回归.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/换源.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/机器学习/SVM支持向量机.md",
@@ -226,7 +244,6 @@
     "Linux/交叉编译.md",
     "树莓派/安装qt5.md",
     "树莓派/换源.md",
-    "物联网/感知层/51单片机/80C51单片机.md",
     "Linux",
     "物联网/应用层/Qt",
     "物联网/感知层/51单片机/51单片机内部结构.png",
