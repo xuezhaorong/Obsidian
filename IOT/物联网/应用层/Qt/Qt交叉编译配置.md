@@ -22,8 +22,8 @@
 	1. 删除**qtquick3d**目录
 	2. 对以下3个目录中的文件进行修改，添加头文件
 	```c++
-	#include <stdexcept> 
-	#include <limits>
+#include <stdexcept> x
+#include <limits>
 	```
 	**文件路径：**
 ```bash
