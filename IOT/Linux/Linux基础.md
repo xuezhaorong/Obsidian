@@ -15,14 +15,10 @@
 ## 用户管理
 ### 添加账户和给予用户权限
 ```bash
-groupadd wheel
-
 adduser username
 
-passwd username
-
 # 打开/etc/sudoers文件
-sudo vim visudo
+sudo visudo
 # 找到%root，在下一行添加
 username ALL=(ALL) ALL 
 
