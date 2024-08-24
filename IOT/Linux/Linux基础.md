@@ -19,7 +19,7 @@ adduser username
 
 # 打开/etc/sudoers文件
 sudo visudo
-# 找到%root，在下一行添加
+# 找到root，在下一行添加
 username ALL=(ALL) ALL 
 
 ```
