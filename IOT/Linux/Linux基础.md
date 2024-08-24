@@ -15,11 +15,9 @@
 ## 用户管理
 ### 添加账户和给予用户权限
 ```bash
-adduser username
+groupadd wheel
 
-#编辑配置文件 
-vim /etc/sudoers 
-#增加配置, 在打开的配置文件中，找到root ALL=(ALL) ALL, 在下面添加一行 
-#其中xxx是你要加入的用户名称 
-xxx ALL=(ALL) ALL
+useradd -m -G wheel -s /bin/bash username
+
+passwd username
 ```
