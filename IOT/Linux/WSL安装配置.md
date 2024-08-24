@@ -34,7 +34,7 @@ wsl --unregister Ubuntu-24.04
 ```
 5. 将打包好的安装到指定目录上，Ubuntu版本，存储路径以及打包的路径
 ```bash
-wsl --import Ubuntu-24.04 F:\Ubuntu_24_04\ F:\export.tar --version 2
+wsl --import Ubuntu-24.04 F:\WSL\Ubuntu24.04 F:\WSL\Ubuntu24.04\export.tar --version 2
 ```
 6. 设置默认的Ubuntu版本
 ```bash
