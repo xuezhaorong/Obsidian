@@ -16,12 +16,7 @@
 ### 添加账户和给予用户权限
 ```bash
 adduser username
-passwd username # 设置用户名
-```
 
-```bash
-#切换到root用户 
-su 
 #编辑配置文件 
 vim /etc/sudoers 
 #增加配置, 在打开的配置文件中，找到root ALL=(ALL) ALL, 在下面添加一行 
