@@ -29,4 +29,8 @@ vim /etc/sudoers
 #其中xxx是你要加入的用户名称 
 xxx ALL=(ALL) ALL
 ```
-另一种方法
+另一种方法：
+```bash
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+useradd -m -G wheel -s /bin/bash username
+```
