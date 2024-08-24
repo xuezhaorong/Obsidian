@@ -15,11 +15,10 @@
 ## 用户管理
 ### 添加账户和给予用户权限
 ```bash
-sudo adduser username
-sudo usermod -aG root username
+adduser username
+passwd username # 设置用户名
 ```
 
-* ## `is not in the sudoers file`
 ```bash
 #切换到root用户 
 su 
@@ -28,10 +27,4 @@ vim /etc/sudoers
 #增加配置, 在打开的配置文件中，找到root ALL=(ALL) ALL, 在下面添加一行 
 #其中xxx是你要加入的用户名称 
 xxx ALL=(ALL) ALL
-```
-另一种方法：
-```bash
-echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
-useradd -m -G wheel -s /bin/bash username
-passwd username
 ```

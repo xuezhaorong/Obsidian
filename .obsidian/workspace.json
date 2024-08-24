@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/Linux/Linux基础.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/Linux/Linux基础.md"
               }
             },
             "group": "c00d484c09a0cf2a"
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/Linux/Linux基础.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/Linux/Linux基础.md"
               }
             }
           },
@@ -183,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/Linux/Linux基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,8 +217,8 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/Linux/Linux基础.md",
     "IOT/Linux/WSL安装配置.md",
+    "IOT/Linux/Linux基础.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
