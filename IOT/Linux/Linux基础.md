@@ -17,7 +17,13 @@
 ```bash
 groupadd wheel
 
-useradd -m -G wheel -s /bin/bash username
+adduser username
 
 passwd username
+
+# 打开/etc/sudoers文件
+sudo vim visudo
+# 找到%root，在下一行添加
+username ALL=(ALL) ALL 
+
 ```
