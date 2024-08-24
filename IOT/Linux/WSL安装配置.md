@@ -42,7 +42,7 @@ wsl --setdefault Ubuntu-24.04
 ```
 7. 设置默认的用户
 ```bash
-Ubuntu2404 config --default-user xxx
+Ubuntu2404 config --default-user username
 ```
 8. 设置默认的路径
 win+r输入wsl进入Ubuntu中，打开.bashrc到最后一行加入开机选项`cd /home/`
