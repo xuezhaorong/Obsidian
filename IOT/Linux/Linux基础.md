@@ -29,3 +29,4 @@ vim /etc/sudoers
 #其中xxx是你要加入的用户名称 
 xxx ALL=(ALL) ALL
 ```
+另一种方法
