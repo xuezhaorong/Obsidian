@@ -114,6 +114,20 @@ sudo apt-get install xubuntu-desktop # 安装gnome
 sudo apt install -y xrdp ufw # 安装xrdp和防火墙
 sudo sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 sudo ufw allow 3390 # 配置防火墙
-
-
+sudo echo xfce4-session >~/.xsession
 ```
+启动**xrdp**
+```bash
+sudo systemctl enable xrdp # 允许开机自启
+sudo systemctl start xrdp # 启动xrdp
+```
+
+### 连接远程桌面
+win使用远程桌面连接输入`localhost:3390`进入桌面，输入用户名密码
+
+### 安装中文包
+```bash
+sudo apt install -y language-pack-zh-hans
+sudo dpkg-reconfigure locales # 设置中文
+```
+进入语言区域设置，选择`zh_CN UTF`，然后再选一次
