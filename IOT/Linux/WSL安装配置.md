@@ -131,3 +131,20 @@ sudo apt install -y language-pack-zh-hans
 sudo dpkg-reconfigure locales # 设置中文
 ```
 进入语言区域设置，选择`zh_CN UTF`，然后再选一次
+
+## 编译Qt
+### 下载Qt源码并解压
+```bash
+wget https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz	
+tar xvf qt-everywhere-src-5.15.2.tar.xz
+```
+### 安装依赖和交叉编译工具
+```bash
+sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev libxkbcommon-x11-dev libfontconfig1-dev python3 python-is-python3 libxcb-xfixes0-dev libxcb-util-dev
+sudo apt install g++-aarch64-linux-gun
+```
+### 文件修改与编译
+与[[Qt交叉编译配置#文件修改]]类型，配置编译命令为
+```bash
+ ../configure -shared -release -recheck-all -nomake examples -nomake tests -qt-xcb -opensource -confirm-license -platform aarch64-linux-gnu-g++ -prefix /usr/Qt
+```
