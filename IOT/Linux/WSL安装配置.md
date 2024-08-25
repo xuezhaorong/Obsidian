@@ -40,7 +40,13 @@ wsl --import Ubuntu-24.04 F:\WSL\Ubuntu24.04 F:\WSL\Ubuntu24.04\export.tar --ver
 ```bash
 wsl --setdefault Ubuntu-24.04
 ```
-7. 设置默认的用户
+7. 进入wsl设置root密码并且添加用户
+```bash
+wsl
+passwd
+adduser username
+```
+1. 设置默认的用户
 ```bash
 Ubuntu2404 config --default-user username
 ```

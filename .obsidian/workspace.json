@@ -6,7 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 74.35233160621762,
+        "dimension": 83.65269461077844,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -51,7 +51,7 @@
               "type": "markdown",
               "state": {
                 "file": "IOT/Linux/WSL安装配置.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             },
@@ -63,7 +63,7 @@
       {
         "id": "6d300f258d12b214",
         "type": "tabs",
-        "dimension": 25.647668393782386,
+        "dimension": 16.347305389221557,
         "children": [
           {
             "id": "209a33a06bd59a5e",
@@ -199,7 +199,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,14 +217,14 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/Linux/Linux基础.md",
-    "IOT/Linux/交叉编译.md",
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
+    "IOT/树莓派/安装qt5.md",
     "IOT/Linux/WSL安装配置.md",
+    "IOT/Linux/交叉编译.md",
+    "IOT/Linux/Linux基础.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/PyCham专业版远程开发.md",
