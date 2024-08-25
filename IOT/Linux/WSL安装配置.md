@@ -42,15 +42,16 @@ wsl --setdefault Ubuntu-24.04
 ```
 7. 进入wsl设置root密码并且添加用户
 ```bash
-wsl
-passwd
-adduser username
+wsl # 进入wsl
+passwd # 设置root密码
+adduser username # 添加用户
 ```
-1. 设置默认的用户
+8. 设置默认的用户
 ```bash
+exit # 退出wsl
 Ubuntu2404 config --default-user username
 ```
-8. 设置默认的路径
+9. 设置默认的路径
 win+r输入wsl进入Ubuntu中，打开.bashrc到最后一行加入开机选项`cd /home/`
 ```bash
 sudo vim ~/.bashrc
