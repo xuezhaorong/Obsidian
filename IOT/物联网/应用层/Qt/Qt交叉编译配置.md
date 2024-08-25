@@ -21,14 +21,15 @@
 
 	1. 删除**qtquick3d**目录
 	2. 对以下3个目录中的文件进行修改，添加头文件
-	```c++
-#include <stdexcept> x
+```c++
+#include <stdexcept>
 #include <limits>
-	```
-	**文件路径：**
+```
+**文件路径：**
 ```bash
 qtbase/src/corelib/global/qendian.h 
-qtbase/src/corelib/text/qbytearraymatcher.h qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
+qtbase/src/corelib/text/qbytearraymatcher.h 
+qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 ```
 3. 在 `qtbase/src/corelib/global/qglobal.h`的`__cplusplus`中添加`#include <limits>`
 4. 在`D:\Qt\5.15.2\Src\qtbase\mkspecs\linux-aarch64-gnu-g++`下，修改`qmake.config`
