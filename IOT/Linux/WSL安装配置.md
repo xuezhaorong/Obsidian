@@ -107,3 +107,13 @@ wsl --shutdown
 wsl
 systemctl
 ```
+
+### 安装桌面
+```bash
+sudo apt-get install xubuntu-desktop # 安装gnome
+sudo apt install -y xrdp ufw # 安装xrdp和防火墙
+sudo sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
+sudo ufw allow 3390 # 配置防火墙
+
+
+```
