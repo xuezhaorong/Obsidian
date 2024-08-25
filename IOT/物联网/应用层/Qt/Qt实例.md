@@ -448,9 +448,6 @@ INCLUDEPATH += /usr/TTSLib/eigen-3.4.0 \
 LIBS += /usr/AsrLib/build/libasr.so
 LIBS += /ust/TTSLib/build/libtts.so
 
-
-
-
 ```
 
 
