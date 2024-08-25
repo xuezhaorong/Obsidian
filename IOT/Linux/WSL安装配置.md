@@ -11,7 +11,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nore
 ```
 
 ## 安装Ubuntu
-**在****Microsoft Store下载合适版本的Ubuntu**
+**在Microsoft Store下载合适版本的Ubuntu**
 下载完成后，打开并设置用户名和密码
 
 ## 迁移Ubuntu
@@ -46,7 +46,7 @@ wsl # 进入wsl
 passwd # 设置root密码
 adduser username # 添加用户
 ```
-8. 设置默认的用户
+8. 设置默认的用户, 为用户添加权限[[Linux基础#添加账户和给予用户权限]]
 ```bash
 exit # 退出wsl
 Ubuntu2404 config --default-user username
