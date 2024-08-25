@@ -85,7 +85,7 @@ sudo apt-get update
 ```bash
 sudo apt install -y fontconfig daemonize
 ```
-2. 文件/etc/profile末尾加入，注意`/usr/bin/daemonize`要看具体安装的路径，有可能是`/usr/sbin/daemonize`
+2. 文件`/etc/profile`末尾加入，注意`/usr/bin/daemonize`要看具体安装的路径，有可能是`/usr/sbin/daemonize`
 ```bash
 SYSTEMD_PID=$(ps -ef | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
 if [ -z "$SYSTEMD_PID" ]; then
@@ -96,9 +96,14 @@ if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
   exec sudo /usr/bin/nsenter -t $SYSTEMD_PID -a su - $LOGNAME
 fi
 ```
-3. 文件/etc/sudoers末尾加入，需要使用命令`sudo visudo`打开，**同样要注意daemonize路径**
+3. 文件`/etc/sudoers`末尾加入，需要使用命令`sudo visudo`打开，**同样要注意daemonize路径**
 ```bash
 %sudo ALL=(ALL) NOPASSWD: /usr/bin/daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
 %sudo ALL=(ALL) NOPASSWD: /usr/bin/nsenter -t [0-9]* -a su - [a-zA-Z0-9]*
 ```
 4. 重启，输入`systemctl`查看是否生效
+```bash
+wsl --shutdown
+wsl
+systemctl
+```
