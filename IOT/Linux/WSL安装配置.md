@@ -56,3 +56,49 @@ win+r输入wsl进入Ubuntu中，打开.bashrc到最后一行加入开机选项`c
 ```bash
 sudo vim ~/.bashrc
 ```
+
+## 安装图形界面
+### 换源
+以Ubuntu2404为例
+24.04 源文件地址 已经更换为 `/etc/apt/sources.list.d/ubuntu.sources`
+打开源文件
+```bash
+sudo vim /etc/apt/sources.list.d/ubuntu.sources
+```
+输入以下内容
+```bash
+# 阿里云
+Types: deb
+URIs: http://mirrors.aliyun.com/ubuntu/
+Suites: noble noble-updates noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+```
+更新源列表
+```bash
+sudo apt-get update
+```
+
+### 开启 systemctl 
+1. 安装 daemonize 和 fontconfig
+```bash
+sudo apt install -y fontconfig daemonize
+```
+2. 文件/etc/profile末尾加入，注意`/usr/bin/daemonize`要看具体安装的路径，有可能是`/usr/sbin/daemonize`
+```bash
+SYSTEMD_PID=$(ps -ef | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
+if [ -z "$SYSTEMD_PID" ]; then
+  sudo /usr/bin/daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+  SYSTEMD_PID=$(ps -ef | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
+fi
+if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
+  exec sudo /usr/bin/nsenter -t $SYSTEMD_PID -a su - $LOGNAME
+fi
+```
+3. 文件/etc/sudoers末尾加入，需要使用命令`sudo visudo`打开，**同样要注意daemonize路径**
+```bash
+%sudo ALL=(ALL) NOPASSWD: /usr/bin/daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+%sudo ALL=(ALL) NOPASSWD: /usr/bin/nsenter -t [0-9]* -a su - [a-zA-Z0-9]*
+```
+4. 重启，输入`systemctl`查看是否生效
