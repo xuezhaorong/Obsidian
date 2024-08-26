@@ -47,13 +47,11 @@
             "id": "993c4d2983ebefd1",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-                "page": 565,
-                "left": 622,
-                "top": 549,
-                "zoom": 1.0299438246756432
+                "file": "IOT/Linux/Linux基础.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -124,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/Linux/Linux基础.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "IOT/Linux/Linux基础.md"
               }
             }
           },
@@ -165,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "IOT/Linux/Linux基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,16 +197,16 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
+    "IOT/Linux/WSL安装配置.md",
+    "IOT/Linux/Linux基础.md",
+    "IOT/Linux/交叉编译.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/麦克风配置.md",
-    "IOT/Linux/WSL安装配置.md",
-    "IOT/Linux/Linux基础.md",
-    "IOT/Linux/交叉编译.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/添加账户和给予用户权限.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/树莓派/frp远程连接.md",
@@ -226,7 +224,6 @@
     "树莓派/PyCham专业版远程开发.md",
     "Linux/交叉编译.md",
     "树莓派/安装qt5.md",
-    "树莓派/换源.md",
     "Linux",
     "物联网/应用层/Qt",
     "物联网/感知层/51单片机/51单片机内部结构.png",

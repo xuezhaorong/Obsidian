@@ -23,3 +23,7 @@ sudo visudo
 username ALL=(ALL) ALL 
 
 ```
+
+## Makefile
+* 准备工作：[[WSL安装配置]]
+* 安装make：`sudo apt install make`
