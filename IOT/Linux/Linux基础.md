@@ -130,3 +130,5 @@ message.o:message.c
 	gcc -c message.c -o message.o
 
 ```
+
+### 伪目标
