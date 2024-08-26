@@ -131,6 +131,23 @@ message.o:message.c
 
 ```
 
+#### 自动化变量
+\$@ 表示目标文件，\$<表示第一个依赖
+```bash
+targets = world hello
+sources = main.c message.c
+objects = main.o message.o
+
+$(targets):$(objects)
+	gcc $(objects) -o $(targets)
+
+main.o:main.c
+	gcc -c $< -o $@
+
+message.o:message.c
+	gcc -c $< -o $@
+```
+
 ### 伪目标
 “伪目标”并不是一个文件，只是一个标签，由于“伪目标” 不是文件，所以 make 无法生成它的依赖关系和决定它是否要执行。只有通过显式地指明这个“目 标”才能让其生效。当然，“伪目标”的取名不能和文件名重名，不然其就失去了“伪目标”的意义了。当然，为了避免和文件重名的这种情况，我们可以使用一个特殊的标记“.PHONY”来显式地指明 一个目标是“伪目标”，向 make 说明，不管是否有这个文件，这个目标就是“伪目标”。
 clean，可以用作清除编译的中间文件
@@ -149,11 +166,33 @@ $(targets):$(objects)
 	gcc $(objects) -o $(targets)
 	
 main.o:main.c
-	gcc -c main.c -o main.o
+	gcc -c $< -o $@
 
 message.o:message.c
-	gcc -c message.c -o message.o
+	gcc -c $< -o $@
 
 clean:
-	rm -f *.o $()
+	rm -f *.o $(targets)
+```
+
+### 通配符
+`main.o`与`message.o`的生成规则一样，名称不同，则可以使用通配符进行简化
+```bash
+.PHONY:clean all
+
+targets = world hello
+sources = main.c message.c
+objects = main.o message.o
+
+all:$(targets)
+    @echo "all down"  
+
+$(targets):$(sources)
+    gcc $(sources) -o $@
+
+%.o:%.c
+    gcc -c $< -o $@
+
+clean:
+    rm -f *.o $(targets)
 ```
