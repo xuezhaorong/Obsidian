@@ -77,8 +77,14 @@ recipe：该 target 要执行的命令（任意的 shell 命令）。
 使用Makefile生成可执行文件
 新建makefile文件，在里面写入
 ```bash
-hello:main.c message.c
-	gcc main.c message.c -o hello
+hello:main.o message.o
+	gcc main.o message.o -o hello
+
+main.o:main.c
+	gcc -c main.c -o main.o
+
+message.o:message.c
+	gcc -c message.c -o message.o
 ```
 保存退出，输入`make`命令
 ```bash
@@ -96,3 +102,5 @@ make
 
 make 会一层又一层地去找文件的依赖关系，直到最终编译出第一个目 标文件。在找寻的过程中，如果出现错误，比如最后被依赖的文件找不到，那么make就会直接退出，并报错，而对于所定义的命令的错误，或是编译不成功，make 根本不理。make 只管文件的依赖性，即，如果在找了依赖关系之后，冒号后面的文件还是不在，就不工作。
 在编程中，如果这个工程已被编译过了，当修改了其中一个源文件，比如 `main.c` ，那 么根据依赖性，目标 main.o 会被重编译（也就是在这个依性关系后面所定义的命令），于 是 `main.o` 的文件也是最新的啦，于是 `main.o` 的文件修改时间要比 `target` 要新，所以 `target` 也会被重新 链接了（详见 `target` 目标文件后定义的命令）。 而如果改变了 `message.h` ，那么，`main.o` 、`message.o` 都会被重编译，并且，`target` 会被重链接。
+### 使用变量
+假如需要编译两个可执行文件，`hello`和`world`
