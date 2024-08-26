@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 83.3144154370034,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -53,10 +54,29 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "88550bae11fcafb1"
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "ebbd434fd6d780fa",
+        "type": "tabs",
+        "dimension": 16.685584562996596,
+        "children": [
+          {
+            "id": "d7f87c8ed85de0a4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "IOT/Linux/Linux基础.md"
+              }
+            },
+            "group": "88550bae11fcafb1"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,11 +219,11 @@
   "lastOpenFiles": [
     "IOT/Linux/WSL安装配置.md",
     "IOT/Linux/Linux基础.md",
+    "IOT/物联网/应用层/Qt/Qt.md",
+    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
+    "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-    "IOT/物联网/应用层/Qt/Qt实例.md",
-    "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
-    "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/麦克风配置.md",
