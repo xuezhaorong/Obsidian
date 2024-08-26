@@ -120,5 +120,13 @@ targets = world hello
 sources = main.c message.c
 objects = main.o message.o
 
+targets:objects
+	gcc objects -o targets
+
+main.o:main.c
+	gcc -c main.c -o main.o
+
+message.o:message.c
+	gcc -c message.c -o message.o
 
 ```
