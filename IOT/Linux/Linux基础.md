@@ -231,7 +231,13 @@ CXXFLAGS := -m64 -fPIC -g -O0 -std=c++11 -w -fopenmp
 CXXFLAGS += $(include_paths)
 ```
 
-
+#### \\
+- 续行符
+```bash
+LDLIBS := cudart opencv_core \
+          gomp nvinfer protobuf cudnn pthread \
+          cublas nvcaffe_parser nvinfer_plugin 
+```
 
 #### \* 与 %
 - `*`: 通配符表示匹配任意字符串，可以用在目录名或文件名中
