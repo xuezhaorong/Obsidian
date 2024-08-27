@@ -284,3 +284,18 @@ cpp_srcs := $(shell find src -name "*.cpp")
 HOST_ARCH := $(shell uname -m)
 ```
 
+#### subst
+```bash
+$(subst <from>,<to>,<text>)
+```
+- 名称：字符串替换函数——subst
+- 返回：函数返回被替换过后的字符串
+- 功能：把字串 `<text>` 中的` <from> `字符串替换成` <to>  `
+```bash
+
+cpp_srcs := $(shell find src -name "*.cpp")
+cpp_objs := $(subst src/,objs/,$(cpp_objs)) 
+
+```
+
+
