@@ -299,3 +299,17 @@ cpp_objs := $(subst src/,objs/,$(cpp_objs))
 ```
 
 
+#### patsubst
+```bash
+$(patsubst <pattern>,<replacement>,<text>)
+```
+
+- 名称：模式字符串替换函数 —— patsubst
+- 功能：通配符 `%`，表示任意长度的字串，从 text 中取出 patttern， 替换成 replacement
+- 返回：函数返回被替换过后的字符串
+
+```bash
+cpp_srcs := $(shell find src -name "*.cpp") #shell指令，src文件夹下找到.cpp文件
+cpp_objs := $(patsubst %.cpp,%.o,$(cpp_srcs)) #cpp_srcs变量下cpp文件替换成 .o文件
+```
+
