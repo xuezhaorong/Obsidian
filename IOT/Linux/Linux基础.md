@@ -440,3 +440,30 @@ clean :
 
 .PHONY : debug run
 ```
+静态库编译
+```bash
+lib_srcs := $(filter-out ./main.c,$(shell find ./ -name "*.c"))
+
+lib_objs := $(patsubst ./%.c,./%.o,$(lib_srcs))
+
+./%.o:./%.c
+    @gcc -c $^ -o $@
+
+libxxx.a: $(lib_objs)
+    @ar -r $@ $^
+
+static_lib: libxxx.a  
+
+clean:
+    @rm -f $(lib_objs)
+
+  
+debug:
+    @echo $(lib_srcs)
+    @echo $(lib_objs)
+
+  
+
+.PHONY:clean all debug
+```
+
