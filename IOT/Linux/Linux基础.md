@@ -357,3 +357,23 @@ debug :
 
 .PHONY : debug preprocess clean
 ```
+
+#### 编译成汇编语言
+```bash
+cpp_srcs := $(shell find src -name *.cpp)
+as_files := $(patsubst src/%.cpp,src/%.s,$(cpp_srcs))
+
+src/%.s : src/%.cpp
+	@g++ -S $^ -o $@
+
+assemble : $(as_files)
+
+clean :
+	@rm -f src/*.s
+
+debug :
+	@echo $(as_files)
+
+.PHONY : debug assemble clean
+```
+
