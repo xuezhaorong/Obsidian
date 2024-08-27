@@ -442,27 +442,37 @@ clean :
 ```
 静态库编译
 ```bash
-lib_srcs := $(filter-out ./main.c,$(shell find ./ -name "*.c"))
+lib_srcs := $(filter-out ./src/main.c,$(shell find ./src -name "*.c"))
+lib_objs := $(patsubst ./src/%.c,./objs/%.o,$(lib_srcs))
 
-lib_objs := $(patsubst ./%.c,./%.o,$(lib_srcs))
+include_paths := ./include
+library_paths := ./lib
+linking_libs := message
 
-./%.o:./%.c
-    @gcc -c $^ -o $@
+  
+I_options := $(include_paths:%=-I%)
+l_options := $(linking_libs:%=-l%)
+L_options := $(library_paths:%=-L%)
+  
+compile_flags := -g -std=c11 $(I_options)
 
-libxxx.a: $(lib_objs)
+./objs/%.o:./src/%.c
+    @mkdir -p $(dir $@)
+    @gcc -c $^ -o $@ $(compile_flags)
+
+./lib/libxxx.a: $(lib_objs)
+    @mkdir -p $(dir $@)
     @ar -r $@ $^
 
-static_lib: libxxx.a  
+  
+static_lib: libxxx.a
 
 clean:
     @rm -f $(lib_objs)
 
-  
 debug:
     @echo $(lib_srcs)
     @echo $(lib_objs)
-
-  
 
 .PHONY:clean all debug
 ```
