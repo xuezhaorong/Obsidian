@@ -338,3 +338,22 @@ $(dir <names...>)
 $(dir src/foo.c hacks)    # 返回值是“src/ ./”。
 ```
 
+### 编译过程
+#### 预处理
+```bash
+cpp_srcs := $(shell find src -name *.cpp)
+pp_files := $(patsubst src/%.cpp,src/%.i,$(cpp_srcs))
+
+src/%.i : src/%.cpp
+	@g++ -E $^ -o $@
+
+preprocess : $(pp_files)
+
+clean :
+	@rm -f src/*.i
+
+debug :
+	@echo $(pp_files)
+
+.PHONY : debug preprocess clean
+```
