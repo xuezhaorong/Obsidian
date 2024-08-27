@@ -455,7 +455,7 @@ l_options := $(linking_libs:%=-l%)
 L_options := $(library_paths:%=-L%)
 
   
-compile_flags := -g -std=c11 $(I_options)
+compile_flags := -g -o3 -std=c11 $(I_options)
 linking_flags := $(l_options) $(L_options)
 
   
