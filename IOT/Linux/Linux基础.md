@@ -212,6 +212,25 @@ debug:
 	@echo $(TARGET_ARCH)
 ```
 
+#### ?=
+- 默认赋值运算符
+- 如果该变量已经定义，则不进行任何操作
+- 如果该变量尚未定义，则求值并分配
+```bash
+HOST_ARCH  = aarch64
+HOST_ARCH ?= amd64
+
+debug:
+    @echo $(HOST_ARCH)
+```
+
+#### 累加 +=
+```bash
+CXXFLAGS := -m64 -fPIC -g -O0 -std=c++11 -w -fopenmp
+
+CXXFLAGS += $(include_paths)
+```
+
 
 
 #### \* 与 %
