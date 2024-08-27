@@ -377,3 +377,23 @@ debug :
 .PHONY : debug assemble clean
 ```
 
+#### 编译成目标文件
+```bash
+cpp_srcs := $(shell find src -name *.cpp)
+cpp_objs := $(patsubst src/%.cpp,objs/%.o,$(cpp_srcs))
+
+objs/%.o : src/%.cpp
+	@mkdir -p $(dir $@)
+	@g++ -c $^ -o $@
+
+objects : $(cpp_objs)
+
+clean :
+	@rm -rf objs src/*.o
+
+debug :
+	@echo $(as_files)
+
+.PHONY : debug objects clean
+```
+
