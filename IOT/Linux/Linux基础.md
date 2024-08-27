@@ -313,3 +313,28 @@ cpp_srcs := $(shell find src -name "*.cpp") #shell指令，src文件夹下找到
 cpp_objs := $(patsubst %.cpp,%.o,$(cpp_srcs)) #cpp_srcs变量下cpp文件替换成 .o文件
 ```
 
+#### foreach
+```bash
+$(foreach <var>,<list>,<text>)
+```
+- 名称：循环函数——foreach。
+- 功能：把字串`<list>`中的元素逐一取出来，执行`<text>`包含的表达式
+- 返回：`<text>`所返回的每个字符串所组成的整个字符串（以空格分隔）
+```basg'
+library_paths := /datav/shared/100_du/03.08/lean/protobuf-3.11.4/lib \
+                 /usr/local/cuda-10.1/lib64
+
+library_paths := $(foreach item,$(library_paths),-L$(item))
+```
+
+#### dir
+```bash
+$(dir <names...>)
+```
+- 名称：取目录函数——dir。
+- 功能：从文件名序列中取出目录部分。目录部分是指最后一个反斜杠（“/”）之前 的部分。如果没有反斜杠，那么返回“./”。
+- 返回：返回文件名序列的目录部分。
+```bash
+$(dir src/foo.c hacks)    # 返回值是“src/ ./”。
+```
+
