@@ -490,3 +490,48 @@ debug:
 .PHONY:clean all debug run
 ```
 
+编译动态库并链接
+```bash
+lib_srcs := $(filter-out ./src/main.c,$(shell find ./src -name "*.c"))
+lib_objs := $(patsubst ./src/%.c,./objs/%.o,$(lib_srcs))
+
+include_paths := ./include
+library_paths := ./lib
+linking_libs := message
+
+I_options := $(include_paths:%=-I%)
+l_options := $(linking_libs:%=-l%)
+L_options := $(library_paths:%=-L%)
+r_options := $(library_paths:%=-Wl,-rpath=%)
+
+compile_flags := -g -o3 -w -fPIC $(I_options)
+linking_flags := $(l_options) $(L_options) $(r_options)
+
+
+./objs/%.o:./src/%.c
+    @mkdir -p $(dir $@)
+    @gcc -c $^ -o $@ $(compile_flags)
+
+./lib/libmessage.so: $(lib_objs)
+    @mkdir -p $(dir $@)
+    @gcc -shared $^ -o $@
+
+dynamic: ./lib/libmessage.so
+
+hello:./objs/main.o
+    @mkdir $(dir $@)
+    @gcc -c $^ -o $@ $(linking_flags)
+
+  
+run:./hello
+    @./$<
+
+clean:
+    @rm -rf ./lib ./objs hello
+  
+debug:
+    @echo $(lib_srcs)
+    @echo $(lib_objs)
+
+.PHONY:clean debug dynamic run
+```
