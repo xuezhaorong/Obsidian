@@ -410,3 +410,33 @@ debug :
 - `-L`: 加在库路径前面
 - `-Wl,<选项>`: 将逗号分隔的 <选项> 传递给链接器
 - `-rpath=`: "运行" 的时候，去找的目录。运行的时候，要找 .so 文件，会从这个选项里指定的地方去找
+
+编译带头文件的程序
+```bash
+cpp_srcs := $(shell find src -name *.cpp)
+cpp_objs := $(patsubst src/%.cpp,objs/%.o,$(cpp_srcs))
+
+# 你的头文件所在文件夹路径（建议绝对路径）
+include_paths := 
+I_flag        := $(include_paths:%=-I%)
+
+
+objs/%.o : src/%.cpp
+	@mkdir -p $(dir $@)
+	@g++ -c $^ -o $@ $(I_flag)
+
+workspace/exec : $(cpp_objs)
+	@mkdir -p $(dir $@)
+	@g++ $^ -o $@ 
+
+run : workspace/exec
+	@./$<
+
+debug :
+	@echo $(I_flag)
+
+clean :
+	@rm -rf objs
+
+.PHONY : debug run
+```
