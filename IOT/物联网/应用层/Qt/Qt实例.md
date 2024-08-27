@@ -433,6 +433,7 @@ void CapThread::run(){
 * 导入TTS,Asr工具包，下载链接：
 Asr：`https://www.123pan.com/s/zum7Vv-I78XH.html`
 TTS：`https://www.123pan.com/s/zum7Vv-M78XH.html`
+需要将动态库加入到系统库中[[交叉编译#手动链接库到系统库]]
 在Qt中导入动态库
 ```bash
 INCLUDEPATH += /usr/AsrLib/include \
