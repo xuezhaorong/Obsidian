@@ -262,3 +262,5 @@ $(targets):$(sources)
 clean:
     rm -f *.o $(targets)
 ```
+
+### 函数
