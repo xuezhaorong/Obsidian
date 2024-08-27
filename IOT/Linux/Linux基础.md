@@ -270,3 +270,17 @@ $(fn, arguments) or ${fn, arguments}
 ```
 - fn: 函数名
 - arguments: 函数参数，参数间以逗号 `,` 分隔，而函数名和参数之间以“空格”分隔
+#### shell
+```bash
+$(shell <command> <arguments>)
+```
+- 名称：shell 命令函数 —— shell
+- 功能：调用 shell 命令 command
+- 返回：函数返回 shell 命令 command 的执行结果
+```bash
+# shell 指令，src 文件夹下找到 .cpp 文件
+cpp_srcs := $(shell find src -name "*.cpp") 
+# shell 指令, 获取计算机架构
+HOST_ARCH := $(shell uname -m)
+```
+
