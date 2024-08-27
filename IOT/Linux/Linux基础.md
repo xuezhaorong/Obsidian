@@ -178,7 +178,9 @@ clean:
 
 ### 符号
 
-#### =
+#### = 与 :=
+
+* =
 - 简单的赋值运算符
 - 用于将右边的值分配给左边的变量
 - 如果在后面的语句中重新定义了该变量，则将使用新的值
@@ -189,6 +191,22 @@ TARGET_ARCH = $(HOST_ARCH)
 
 # 更改了变量 a
 HOST_ARCH   = amd64
+
+debug:
+	@echo $(TARGET_ARCH)
+```
+
+* :=
+* -立即赋值运算符
+- 用于在定义变量时立即求值
+- 该值在定义后不再更改
+- 即使在后面的语句中重新定义了该变量
+```bash
+HOST_ARCH   := aarch64
+TARGET_ARCH := $(HOST_ARCH)
+
+# 更改了变量 a
+HOST_ARCH := amd64
 
 debug:
 	@echo $(TARGET_ARCH)
