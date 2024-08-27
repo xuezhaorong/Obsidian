@@ -440,32 +440,45 @@ clean :
 
 .PHONY : debug run
 ```
-静态库编译
+编译和连接静态库
 ```bash
 lib_srcs := $(filter-out ./src/main.c,$(shell find ./src -name "*.c"))
 lib_objs := $(patsubst ./src/%.c,./objs/%.o,$(lib_srcs))
 
+  
 include_paths := ./include
 library_paths := ./lib
 linking_libs := message
 
-  
 I_options := $(include_paths:%=-I%)
 l_options := $(linking_libs:%=-l%)
 L_options := $(library_paths:%=-L%)
+
   
 compile_flags := -g -std=c11 $(I_options)
+linking_flags := $(l_options) $(L_options)
 
+  
 ./objs/%.o:./src/%.c
     @mkdir -p $(dir $@)
     @gcc -c $^ -o $@ $(compile_flags)
 
-./lib/libxxx.a: $(lib_objs)
+./lib/libmessage.a: $(lib_objs)
     @mkdir -p $(dir $@)
     @ar -r $@ $^
 
-  
 static_lib: libxxx.a
+
+.objs/main.o:.src/main.c
+    @mkdir -p $(dir $@)
+    @gcc -c $^ -o $@ $(compile_flags)  
+
+hello:./objs/main.o
+    @mkdir -p $(dir $@)
+    @gcc $^ -o $@ $(linking_flags)
+
+run : hello
+    @./$<
 
 clean:
     @rm -f $(lib_objs)
@@ -474,6 +487,6 @@ debug:
     @echo $(lib_srcs)
     @echo $(lib_objs)
 
-.PHONY:clean all debug
+.PHONY:clean all debug run
 ```
 
