@@ -542,3 +542,14 @@ CMake 是一个项目构建工具，并且是跨平台的。关于项目构建�
 
 而 CMake 恰好能解决上述问题， 其允许开发者指定整个工程的编译流程，在根据编译平台，自动生成本地化的Makefile和工程文件，最后用户只需make编译即可，所以可以把CMake看成一款自动生成 Makefile的工具，其编译流程如下图：
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/28/10-09-22-3ca40b1bf7c8a76263900ca437aa6026-20240828100922-39d1ea.png)
+
+### Cmake的使用
+CMake支持大写、小写、混合大小写的命令。如果在编写CMakeLists.txt文件时使用的工具有对应的命令提示，那么大小写随缘即可，不要太过在意。
+
+#### 注释
+CMake 使用 # 进行行注释，可以放在任何位置。
+```bash
+# 这是一个 CMakeLists.txt 文件
+cmake_minimum_required(VERSION 3.0.0)
+```
+
