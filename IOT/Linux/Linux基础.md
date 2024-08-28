@@ -708,14 +708,12 @@ add_library(库名称 SHARED 源文件1 [源文件2] ...)
 
 ```bash
 cmake_minimum_required(VERSION 3.28)
-
 project(hello)
 
-  
-
 include_directories(./include)
-
 aux_source_directory(./src SRC_LIST)
-
 add_library(hello SHARED ${SRC_LIST})
 ```
+
+#### 指定输出的路径
+* 动态库
