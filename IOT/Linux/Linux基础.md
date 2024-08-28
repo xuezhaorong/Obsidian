@@ -686,7 +686,8 @@ file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 **关于要搜索的文件路径和类型可加双引号，也可不加**
 
 
-#### 生成静态库
+#### 生成和链接静态库
+生成静态库
 ```bash
 add_library(库名称 STATIC 源文件1 [源文件2] ...) 
 ```
@@ -699,6 +700,25 @@ include_directories(./include)
 aux_source_directory(./src SRC_LIST)
 add_library(hello STATIC ${SRC_LIST})
 ```
+链接静态库
+在cmake中，链接静态库的命令如下：
+```bash
+link_libraries(<static lib> [<static lib>...])
+```
+用于设置全局链接库，这些库会链接到之后定义的所有目标上。
+
+* 参数1：指定出要链接的静态库的名字
+	可以是全名 libxxx.a
+	也可以是掐头（lib）去尾（.a）之后的名字 xxx
+* 参数2-N：要链接的其它静态库的名字
+
+如果该静态库不是系统提供的（自己制作或者使用第三方提供的静态库）可能出现静态库找不到的情况，此时可以将静态库的路径也指定出来：
+```bash
+link_directories(<lib path>)
+```
+
+
+
 
 #### 制作动态库
 ```bash
@@ -716,8 +736,6 @@ add_library(hello SHARED ${SRC_LIST})
 ```
 
 #### 指定输出的路径
-
-
 ```bash
 cmake_minimum_required(VERSION 3.28)
 project(hello)
