@@ -638,7 +638,7 @@ set(EXECUTABLE_OUTPUT_PATH ${HOME}/bin)
 源文件
  如果一个项目里边的源文件很多，在编写CMakeLists.txt文件的时候不可能将项目目录的各个文件一一罗列出来，这样太麻烦也不现实。所以，在CMake中为我们提供了搜索文件的命令，可以使用aux_source_directory命令或者file命令。
 
-在 CMake 中使用aux_source_directory 命令可以查找某个路径下的所有源文件，命令格式为：
+在 CMake 中使用`aux_source_directory` 命令可以查找某个路径下的所有源文件，命令格式为：
 ```bash
 aux_source_directory(< dir > < variable >)
 ```
