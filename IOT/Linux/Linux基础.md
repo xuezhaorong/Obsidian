@@ -100,6 +100,10 @@ useradd username
 * 在`/etc/group`里面加入一个与账号名称一模一样的组名
 * 在`/home`下面创建一个与账号同名的目录作为用户家目录，且权限为700
 还需使用`passwd username`来设置用户密码
+```bash
+useradd -u 1500 -g users username
+```
+存在用户组users，且UID 1500不存在，该命令创建users为初始用户组，以及UID为1500的用户
 
 
 ### 添加账户和给予用户权限
