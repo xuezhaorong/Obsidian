@@ -145,16 +145,6 @@ groupdel mygroup
 ```
 删除用户组时要保证没有账号的初始用户组使用该用户组
 
-### 添加账户和给予用户权限
-```bash
-adduser username
-
-# 打开/etc/sudoers文件
-sudo visudo
-# 找到root，在下一行添加
-username ALL=(ALL) ALL 
-
-```
 
 ### 用户切换
 ```bash
@@ -166,9 +156,38 @@ sudo [命令] -u username]
 ```
 * `-u`参数可以接欲切换的使用者，若无此选项则代表切换身份为root
 sudo执行流程：
-1. 
+1. 当用户执行sudo时，系统于`/etc/sudoers`文件中查找该用户是否有执行sudo的权限
+2. 若用户具有可执行sudo的权限后，便让用户输入用户自己的密码来确认
+3. 若密码输入成功，便开始进行sudo后续接的命令
+4. 若欲切换的身份与执行者身份相同，那也不需要输入密码
 
 **只有规范到/etc/suders内的用户才能执行sudo命令**
+单一用户拥有sudo权限的方法
+```bash
+# root
+useradd username
+# 打开/etc/sudoers文件
+visudo
+# 找到root，在下一行添加
+username ALL=(ALL) ALL 
+```
+
+上面一行四个组件的意义是：
+1. 用户账号
+2. 登录者的来源主机名，这个账号可能是由哪一个主机连接过来的
+3. 可切换的身份，这个账号可以切换成什么身份来执行后续的命令
+4. 可执行的命令，可用该身份执行什么命令
+ALL为特殊关键词，代表任何身份，主机或命令的意思。
+
+利用用户组wheel添加多个用户拥有sudo权限
+```bash
+visudo
+# 取消注释 % 代表用户组
+%wheel ALL=(ALL) ALL
+usermod -a -G wheel username # 将username加入wheel支持 
+```
+
+
 
 
 ## Makefile
