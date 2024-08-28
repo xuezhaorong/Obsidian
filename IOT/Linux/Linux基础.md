@@ -90,6 +90,13 @@ groups
 可以用过`newgrp`命令切换用户组
 
 ### 账号管理
+#### 添加用户
+```bash
+useradd username
+```
+默认的创建方式，系统自动处理：
+* 
+
 ### 添加账户和给予用户权限
 ```bash
 adduser username
