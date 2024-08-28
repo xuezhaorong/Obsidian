@@ -110,6 +110,25 @@ useradd -u 1500 -g users username
 id username
 ```
 
+#### 删除用户
+```bash
+userdel [-r] username
+```
+* `-r`参数，来南通家目录一同删除
+想要完全删除该账号的全部数据，先用`find / -user username`查出系统内属于username的文件，再删除
+
+#### 修改用户
+```bash
+usermod -c "xx" username
+```
+修改说明栏
+```bash
+usermod -e "2015-12-31" username
+```
+让这个账号在对应日期失效
+
+### 用户组管理
+
 
 
 ### 添加账户和给予用户权限
