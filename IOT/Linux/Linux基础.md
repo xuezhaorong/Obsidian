@@ -614,3 +614,4 @@ set(SRC_LIST main.c message.c)
 add_executable(app  ${SRC_LIST})
 ```
 
+#### 指定使用的C++标准
