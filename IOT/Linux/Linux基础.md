@@ -128,7 +128,22 @@ usermod -e "2015-12-31" username
 让这个账号在对应日期失效
 
 ### 用户组管理
+#### 新建用户组
+```bash
+groupadd group
+```
 
+#### 修改用户组
+```bash
+groupmod -g 201 -n mygroup group
+```
+修改GID为201，名字为mygroup
+
+#### 删除用户组
+```bash
+groupdel mygroup
+```
+删除用户组时要保证没有账号的初始用户组使用该用户组
 
 
 ### 添加账户和给予用户权限
