@@ -716,4 +716,18 @@ add_library(hello SHARED ${SRC_LIST})
 ```
 
 #### 指定输出的路径
-* 动态库
+
+
+```bash
+cmake_minimum_required(VERSION 3.28)
+project(hello)
+
+include_directories(./include)
+aux_source_directory(./src SRC_LIST)
+
+# 设置动态库生成路径
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+add_library(hello SHARED ${SRC_LIST})
+```
+对于这种方式来说，其实就是通过set命令给`LIBRARY_OUTPUT_PATH`宏设置了一个路径，这个路径就是可执行文件生成的路径。
+
