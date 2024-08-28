@@ -145,7 +145,6 @@ groupdel mygroup
 ```
 删除用户组时要保证没有账号的初始用户组使用该用户组
 
-
 ### 添加账户和给予用户权限
 ```bash
 adduser username
@@ -156,6 +155,21 @@ sudo visudo
 username ALL=(ALL) ALL 
 
 ```
+
+### 用户切换
+```bash
+su - username
+```
+su切换用户需要知道目标账号的密码
+```bash
+sudo [命令] -u username]
+```
+* `-u`参数可以接欲切换的使用者，若无此选项则代表切换身份为root
+sudo执行流程：
+1. 
+
+**只有规范到/etc/suders内的用户才能执行sudo命令**
+
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
