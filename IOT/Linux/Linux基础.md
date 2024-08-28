@@ -548,14 +548,14 @@ CMake支持大写、小写、混合大小写的命令。如果在编写CMakeList
 
 #### 注释
 CMake 使用 # 进行行注释，可以放在任何位置。
-```bash
+```CMAKE
 # 这是一个 CMakeLists.txt 文件
 cmake_minimum_required(VERSION 3.0.0)
 ```
 
 #### 注释块
 CMake 使用 #\[\[ ]] 形式进行块注释。
-```bash
+```CMAKE
 #[[ 这是一个 CMakeLists.txt 文件。
 这是一个 CMakeLists.txt 文件
 这是一个 CMakeLists.txt 文件]]
@@ -563,3 +563,29 @@ cmake_minimum_required(VERSION 3.0.0)
 ```
 
 #### 编译可执行文件
+源文件头文件都在同一目录下
+```CMAKE
+cmake_minimum_required(VERSION 3.28)
+
+project(hello)
+
+add_executable(hello main.c message.c)
+```
+* cmake_minimum_required：指定使用的 cmake 的最低版本，可选，非必须，如果不加可能会有警告
+* project：定义工程名称，并可指定工程的版本、工程描述、web主页地址、支持的语言（默认情况支持所有语言），如果不需要这些都是可以忽略的，只需要指定出工程名字即可。
+```CMAKE
+# PROJECT 指令的语法是：
+project(<PROJECT-NAME> [<language-name>...])
+project(<PROJECT-NAME>
+       [VERSION <major>[.<minor>[.<patch>[.<tweak>]]]]
+       [DESCRIPTION <project-description-string>]
+       [HOMEPAGE_URL <url-string>]
+       [LANGUAGES <language-name>...])
+```
+* add_executable：定义工程会生成一个可执行程序
+```CMAKE
+add_executable(可执行程序名 源文件名称)
+```
+这里的可执行程序名和project中的项目名没有任何关系
+
+源文件名可以是一个也可以是多个，如有多个可用空格或;间隔
