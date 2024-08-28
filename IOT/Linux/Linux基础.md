@@ -633,6 +633,18 @@ set(EXECUTABLE_OUTPUT_PATH ${HOME}/bin)
 如果这个路径中的子目录不存在，会自动生成，无需自己手动创建
 由于可执行程序是基于 cmake 命令生成的 makefile 文件然后再执行 make 命令得到的，所以如果此处指定可执行程序生成路径的时候使用的是相对路径 ./xxx/xxx，那么这个路径中的 ./ 对应的就是 makefile 文件所在的那个目录。
 
+|            宏             |                   功能                    |
+| :----------------------: | :-------------------------------------: |
+|    PROJECT_SOURCE_DIR    |        使用cmake命令后紧跟的目录，一般是工程的根目录        |
+|    PROJECT_BINARY_DIR    |              执行cmake命令的目录               |
+| CMAKE_CURRENT_SOURCE_DIR |        当前处理的CMakeLists.txt所在的路径         |
+| CMAKE_CURRENT_BINARY_DIR |               target 编译目录               |
+|  EXECUTABLE_OUTPUT_PATH  |           重新定义目标二进制可执行文件的存放位置           |
+|   LIBRARY_OUTPUT_PATH    |            重新定义目标链接库文件的存放位置             |
+|       PROJECT_NAME       |          返回通过PROJECT指令定义的项目名称           |
+|     CMAKE_BINARY_DIR     | 项目实际构建路径，假设在build目录进行的构建，那么得到的就是这个目录的路径 |
+
+
 #### 搜索文件
 
 源文件
@@ -687,7 +699,7 @@ file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 
 
 #### 生成和链接静态库
-生成静态库
+**生成静态库**
 ```bash
 add_library(库名称 STATIC 源文件1 [源文件2] ...) 
 ```
@@ -696,11 +708,11 @@ add_library(库名称 STATIC 源文件1 [源文件2] ...)
 cmake_minimum_required(VERSION 3.28)
 project(hello)
 
-include_directories(./include)
-aux_source_directory(./src SRC_LIST)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 add_library(hello STATIC ${SRC_LIST})
 ```
-链接静态库
+**链接静态库**
 在cmake中，链接静态库的命令如下：
 ```bash
 link_libraries(<static lib> [<static lib>...])
@@ -717,10 +729,23 @@ link_libraries(<static lib> [<static lib>...])
 link_directories(<lib path>)
 ```
 
+```bash
+cmake_minimum_required(VERSION 3.28)
+project(world)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+
+# 包含静态库路径
+link_directories(${PROJECT_SOURCE_DIR}/lib)
+# 链接静态库
+link_libraries(hello)
+add_executable(world ${PROJECT_SOURCE_DIR}/src/main.c)
+```
 
 
-
-#### 制作动态库
+#### 生成并链接动态库
+**生成动态库**
 ```bash
 add_library(库名称 SHARED 源文件1 [源文件2] ...) 
 ```
@@ -734,6 +759,51 @@ include_directories(./include)
 aux_source_directory(./src SRC_LIST)
 add_library(hello SHARED ${SRC_LIST})
 ```
+
+**链接动态库**
+```bash
+target_link_libraries(
+    <target> 
+    <PRIVATE|PUBLIC|INTERFACE> <item>... 
+    [<PRIVATE|PUBLIC|INTERFACE> <item>...]...)
+```
+
+用于指定一个目标（如可执行文件或库）在编译时需要链接哪些库。它支持指定库的名称、路径以及链接库的顺序。
+
+* `target`：指定要加载的库的文件的名字
+
+	该文件可能是一个源文件
+	该文件可能是一个动态库/静态库文件
+	该文件可能是一个可执行文件
+	`PRIVATE|PUBLIC|INTERFACE`：动态库的访问权限，默认为`PUBLIC`
+		`PUBLIC`：在public后面的库会被Link到前面的target中，并且里面的符号也会被导出，提供给第三方使用。
+		`PRIVATE`：在private后面的库仅被link到前面的target中，并且终结掉，第三方不能感知你调了啥库
+		`INTERFACE`：在interface后面引入的库不会被链接到前面的target中，只会导出符号。
+
+如果各个动态库之间没有依赖关系，无需做任何设置，三者没有没有区别，一般无需指定，使用默认的 PUBLIC 即可。
+
+动态库的链接具有传递性，如果动态库 A 链接了动态库B、C，动态库D链接了动态库A，此时动态库D相当于也链接了动态库B、C，并可以使用动态库B、C中定义的方法。
+
+动态库的链接和静态库是完全不同的：
+
+静态库会在生成可执行程序的链接阶段被打包到可执行程序中，所以可执行程序启动，静态库就被加载到内存中了。
+动态库在生成可执行程序的链接阶段不会被打包到可执行程序中，当可执行程序被启动并且调用了动态库中的函数的时候，动态库才会被加载到内存
+
+因此，在cmake中指定要链接的动态库的时候，应该将命令写到生成了可执行文件之后：
+```bash
+cmake_minimum_required(VERSION 3.28)
+project(world)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+
+add_executable(world ${PROJECT_SOURCE_DIR}/src/main.c)
+
+target_link_libraries(world ${PROJECT_SOURCE_DIR}/lib/libhello.so)
+```
+
+
+
 
 #### 指定输出的路径
 ```bash
