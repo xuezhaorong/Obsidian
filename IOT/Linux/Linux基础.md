@@ -673,6 +673,17 @@ add_executable(app  ${SRC_LIST})
 ```
 
 file命令
+```bash
+file(GLOB/GLOB_RECURSE 变量名 要搜索的文件路径和文件类型)
+```
+* `GLOB`: 将指定目录下搜索到的满足条件的所有文件名生成一个列表，并将其存储到变量中。
+* `GLOB_RECURSE`：递归搜索指定目录，将搜索到的满足条件的文件名生成一个列表，并将其存储到变量中。
+```bash
+file(GLOB MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
+```
+`CMAKE_CURRENT_SOURCE_DIR` 宏表示当前访问的 CMakeLists.txt 文件所在的路径。
+**关于要搜索的文件路径和类型可加双引号，也可不加**
 
 
 #### 生成静态库
