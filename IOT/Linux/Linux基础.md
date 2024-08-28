@@ -12,7 +12,11 @@
 - rmdir：删除一个空的目录
 - cd （change directory, 变换目录）
 
-## 用户管理
+## Linux的账号与用户组
+### 用户标识符：UID与GID
+Linux中每一个文件都有拥有者UID与拥有人组GID，当显示文件属性时，系统会根据`/etc/passwd`与`/etc/group`的内容，找到UID与GID对应的账号与组名再显示出来。
+### 用户
+### 用户管理
 ### 添加账户和给予用户权限
 ```bash
 adduser username
