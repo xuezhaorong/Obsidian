@@ -819,3 +819,87 @@ add_library(hello SHARED ${SRC_LIST})
 ```
 对于这种方式来说，其实就是通过set命令给`LIBRARY_OUTPUT_PATH`宏设置了一个路径，这个路径就是可执行文件生成的路径。
 
+
+####  日志
+在CMake中可以用用户显示一条消息，该命令的名字为message：
+```bash
+message([STATUS|WARNING|AUTHOR_WARNING|FATAL_ERROR|SEND_ERROR] "message to display" ...)
+```
+* `(无)` ：重要消息
+* `STATUS` ：非重要消息
+* `WARNING`：CMake 警告, 会继续执行
+* `AUTHOR_WARNING`：CMake 警告 (dev), 会继续执行
+* `SEND_ERROR`：CMake 错误, 继续执行，但是会跳过生成的步骤
+* `FATAL_ERROR`：CMake 错误, 终止所有处理过程
+
+CMake的命令行工具会在stdout上显示STATUS消息，在stderr上显示其他所有消息。CMake的GUI会在它的log区域显示所有消息。
+
+CMake警告和错误消息的文本显示使用的是一种简单的标记语言。文本没有缩进，超过长度的行会回卷，段落之间以新行做为分隔符。
+
+```bash
+# 输出一般日志信息
+message(STATUS "source path: ${PROJECT_SOURCE_DIR}")
+# 输出警告信息
+message(WARNING "source path: ${PROJECT_SOURCE_DIR}")
+# 输出错误信息
+message(FATAL_ERROR "source path: ${PROJECT_SOURCE_DIR}")
+```
+
+#### 变量操作
+*  追加
+有时候项目中的源文件并不一定都在同一个目录中，但是这些源文件最终却需要一起进行编译来生成最终的可执行文件或者库文件。如果我们通过file命令对各个目录下的源文件进行搜索，最后还需要做一个字符串拼接的操作，关于字符串拼接可以使用set命令也可以使用list命令。
+
+```bash
+list(APPEND <list> [<element> ...])
+```
+
+list命令的功能比set要强大，字符串拼接只是它的其中一个功能，所以需要在它第一个参数的位置指定出我们要做的操作，APPEND表示进行数据追加，后边的参数和set就一样了。
+
+```bash
+cmake_minimum_required(VERSION 3.0)
+project(TEST)
+set(TEMP "hello,world")
+file(GLOB SRC_1 ${PROJECT_SOURCE_DIR}/src1/*.cpp)
+file(GLOB SRC_2 ${PROJECT_SOURCE_DIR}/src2/*.cpp)
+# 追加(拼接)
+list(APPEND SRC_1 ${SRC_1} ${SRC_2} ${TEMP})
+message(STATUS "message: ${SRC_1}")
+```
+
+* 字符串移除
+我们在通过file搜索某个目录就得到了该目录下所有的源文件，但是其中有些源文件并不是我们所需要的，比如：
+```bash
+$ tree
+.
+├── add.cpp
+├── div.cpp
+├── main.cpp
+├── mult.cpp
+└── sub.cpp
+
+0 directories, 5 files
+```
+
+在当前这么目录有五个源文件，其中main.cpp是一个测试文件。如果我们想要把计算器相关的源文件生成一个动态库给别人使用，那么只需要add.cpp、div.cp、mult.cpp、sub.cpp这四个源文件就可以了。此时，就需要将main.cpp从搜索到的数据中剔除出去，想要实现这个功能，也可以使用list
+
+```bash
+list(REMOVE_ITEM <list> <value> [<value> ...])
+```
+
+通过上面的命令原型可以看到删除和追加数据类似，只不过是第一个参数变成了REMOVE_ITEM。
+
+```bash
+cmake_minimum_required(VERSION 3.0)
+project(TEST)
+set(TEMP "hello,world")
+file(GLOB SRC_1 ${PROJECT_SOURCE_DIR}/*.cpp)
+# 移除前日志
+message(STATUS "message: ${SRC_1}")
+# 移除 main.cpp
+list(REMOVE_ITEM SRC_1 ${PROJECT_SOURCE_DIR}/main.cpp)
+# 移除后日志
+message(STATUS "message: ${SRC_1}")
+
+```
+
+可以看到，在第8行把将要移除的文件的名字指定给list就可以了。但是一定要注意通过 file 命令搜索源文件的时候得到的是文件的绝对路径（在list中每个文件对应的路径都是一个item，并且都是绝对路径），那么在移除的时候也要将该文件的绝对路径指定出来才可以，否是移除操作不会成功。
