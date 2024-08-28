@@ -597,3 +597,12 @@ $ cmake CMakeLists.txt文件所在路径
 ```
 
 在对应的目录下生成了一个makefile文件，此时再执行make命令，就可以对项目进行构建得到所需的可执行程序了。
+
+#### 变量
+在cmake里定义变量需要使用`set`
+```bash
+# SET 指令的语法是：
+# [] 中的参数为可选项, 如不需要可以不写
+SET(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]])
+```
+
