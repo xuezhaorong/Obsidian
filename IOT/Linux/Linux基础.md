@@ -633,3 +633,31 @@ set(EXECUTABLE_OUTPUT_PATH ${HOME}/bin)
 如果这个路径中的子目录不存在，会自动生成，无需自己手动创建
 由于可执行程序是基于 cmake 命令生成的 makefile 文件然后再执行 make 命令得到的，所以如果此处指定可执行程序生成路径的时候使用的是相对路径 ./xxx/xxx，那么这个路径中的 ./ 对应的就是 makefile 文件所在的那个目录。
 
+#### 搜索文件
+ 如果一个项目里边的源文件很多，在编写CMakeLists.txt文件的时候不可能将项目目录的各个文件一一罗列出来，这样太麻烦也不现实。所以，在CMake中为我们提供了搜索文件的命令，可以使用aux_source_directory命令或者file命令。
+
+方式1：
+在 CMake 中使用aux_source_directory 命令可以查找某个路径下的所有源文件，命令格式为：
+```bash
+aux_source_directory(< dir > < variable >)
+```
+* dir：要搜索的目录
+* variable：将从dir目录下搜索到的源文件列表存储到该变量中
+```bash
+cmake_minimum_required(VERSION 3.0)
+project(CALC)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+# 搜索 src 目录下的源文件
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src SRC_LIST)
+add_executable(app  ${SRC_LIST})
+```
+CMAKE_CURRENT_SOURCE_DIR 宏表示当前访问的 CMakeLists.txt 文件所在的路径。
+
+
+方式2：
+```bash
+file(GLOB/GLOB_RECURSE 变量名 要搜索的文件路径和文件类型)
+```
+
+* `GLOB`: 将指定目录下搜索到的满足条件的所有文件名生成一个列表，并将其存储到变量中。
+* `GLOB_RECURSE`：递归搜索指定目录，将搜索到的满足条件的文件名生成一个列表，并将其存储到变量中。
