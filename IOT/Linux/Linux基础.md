@@ -606,3 +606,11 @@ $ cmake CMakeLists.txt文件所在路径
 SET(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]])
 ```
 
+VAR：变量名
+VALUE：变量值
+
+```bash
+set(SRC_LIST main.c message.c)
+add_executable(app  ${SRC_LIST})
+```
+
