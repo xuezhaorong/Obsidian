@@ -614,4 +614,17 @@ set(SRC_LIST main.c message.c)
 add_executable(app  ${SRC_LIST})
 ```
 
-#### 指定使用的C++标准
+
+**宏变量**
+* 指定使用的C/C++标准
+```bash
+#增加-std=c++11
+set(CMAKE_CXX_STANDARD 11)
+#增加-std=c14
+set(CMAKE_C_STANDARD 11)
+```
+
+* 指定输出的路径
+```bash
+
+```
