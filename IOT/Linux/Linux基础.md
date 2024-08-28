@@ -15,7 +15,32 @@
 ## Linux的账号与用户组
 ### 用户标识符：UID与GID
 Linux中每一个文件都有拥有者UID与拥有人组GID，当显示文件属性时，系统会根据`/etc/passwd`与`/etc/group`的内容，找到UID与GID对应的账号与组名再显示出来。
-### 用户
+### 用户账号
+登录时，系统处理的流程：
+1. 先查找`/etc/passwd`里面是否有输入的账号，如果没有则退出，如果有的话则将该账号对应的**UID**与**GID**（在`/etc/group`中)读出来，另外，该账号的家目录与shell设置也一并读出。
+2. 核对密码表，这时linux会进入`/etc/shadow`里面找出对应的账号与UID，然后核对以下输入的密码与里面的密码是否相符。
+3. 如果一切都没问题，就进入shell管理的阶段。
+* `/etc/passwd`文件结构：
+	每一行都代表一个账号，有许多账号本来就是系统正常运行所必须的，不能随便删除。
+```bash
+# sudo head -n 4 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+```
+每一行使用`:`隔开，共七个元素：
+1. 账号名称
+2. 密码，放到了`/etc/shadow`中，所以显示`x`
+3. UID，用户标识符
+
+| ID范围              | 用户特性 |
+| ----------------- | ---- |
+| 0（系统管理员）          |      |
+| 1~999（系统账号）       |      |
+| 1000~60000（可登录账号） |      |
+
+
 ### 用户管理
 ### 添加账户和给予用户权限
 ```bash
@@ -26,7 +51,7 @@ sudo visudo
 # 找到root，在下一行添加
 username ALL=(ALL) ALL 
 
-0```
+```
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
