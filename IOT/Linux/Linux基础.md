@@ -26,7 +26,7 @@ sudo visudo
 # 找到root，在下一行添加
 username ALL=(ALL) ALL 
 
-```
+0```
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
