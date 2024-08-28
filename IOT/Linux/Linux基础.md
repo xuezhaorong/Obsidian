@@ -625,6 +625,11 @@ set(CMAKE_C_STANDARD 11)
 ```
 
 * 指定输出的路径
+在CMake中指定可执行程序输出的路径，也对应一个宏，叫做`EXECUTABLE_OUTPUT_PATH`，它的值还是通过set命令进行设置:
 ```bash
-
+set(HOME /home/)
+set(EXECUTABLE_OUTPUT_PATH ${HOME}/bin)
 ```
+如果这个路径中的子目录不存在，会自动生成，无需自己手动创建
+由于可执行程序是基于 cmake 命令生成的 makefile 文件然后再执行 make 命令得到的，所以如果此处指定可执行程序生成路径的时候使用的是相对路径 ./xxx/xxx，那么这个路径中的 ./ 对应的就是 makefile 文件所在的那个目录。
+
