@@ -691,4 +691,12 @@ file(GLOB MAIN_HEAD ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 add_library(库名称 STATIC 源文件1 [源文件2] ...) 
 ```
 在Linux中，静态库名字分为三部分：lib+库名字+.a，此处只需要指定出库的名字就可以了，另外两部分在生成该文件的时候会自动填充。
+```bash
+cmake_minimum_required(VERSION 3.28)
+project(hello)
+
+include_directories(./include)
+aux_source_directory(./src SRC_LIST)
+add_library(hello STATIC ${SRC_LIST})
+```
 
