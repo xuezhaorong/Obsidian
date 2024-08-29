@@ -1,17 +1,4 @@
 ## 文件系统
-```
-.         代表此层目录
-..        代表上一层目录
--         代表前一个工作目录
-~         代表“目前使用者身份”所在的主文件夹
-~account  代表 account 这个使用者的主文件夹（account是个帐号名称）
-```
-- cd：变换目录
-- pwd：显示目前的目录
-- mkdir：创建一个新的目录
-- rmdir：删除一个空的目录
-- cd （change directory, 变换目录）
-
 ### Linux文件权限
 #### Linux文件属性
 ```bash
@@ -63,8 +50,15 @@ chown [-R] username filename
 文件的权限字符`[-rwxrwxrwx]`，分别位拥有者，所属群组，其他人三种身份各自的读写执行权限
 用数值代表
 ```bash
-
+r:4
+w:2
+x:1
 ```
+
+```bash
+chmod 777 filename
+```
+为file设置全部权限
 
 ## Linux的账号与用户组
 ### 用户标识符：UID与GID
