@@ -12,6 +12,43 @@
 - rmdir：删除一个空的目录
 - cd （change directory, 变换目录）
 
+### Linux文件权限
+#### Linux文件属性
+```bash
+ls -al
+
+drwxr-x--- 17 xuezhaorong xuezhaorong   4096  8月 26 20:19 .
+drwxr-xr-x  4 root        root          4096  8月 25 11:15 ..
+-rw-------  1 xuezhaorong xuezhaorong   4605  8月 28 21:23 .bash_history
+-rw-r--r--  1 xuezhaorong xuezhaorong    220  8月 24 20:52 .bash_logout
+-rw-r--r--  1 xuezhaorong xuezhaorong   3812  8月 25 20:00 .bashrc
+drwxrwxr-x  6 xuezhaorong xuezhaorong   4096  8月 28 12:55 c
+drwxrwxr-x 17 xuezhaorong xuezhaorong   4096  8月 26 20:19 .cache
+drwx------ 14 xuezhaorong xuezhaorong   4096  8月 25 22:19 .config
+
+```
+命令`ls -al`表示列出所有的文件详细的权限与属性（包含隐藏文件）
+第一栏代表这个文件的类型与权限，共有10个字符
+* 第一个字符代表这个文件是目录，文件或链接文件等
+* 当为`d`则是目录
+* 当为`-`则是文件
+* 当为`l`则是链接文件
+* 当为`b`则是设备文件里面的可供存储的周边设备（可按块随机读写的设备）
+* 若为`c`则是设备文件里面的串行端口设备
+* 接下来的字符中，以三个为一组，均为`rwx`的三个参数的组合，其中`r`代表可读，`w`代表可写，`x`代表可执行，若没有权限则出现`-`
+* 第一组为文件拥有者可具备的权限
+* 第二组为加入此用户组的账号的权限
+* 第三组为非本人且没有加入本用户组的其他账号的权限
+第二栏表示有多少文件名链接到此节点
+第三栏表示这个文件或目录的拥有者账号
+第四栏表示这个文件的所属用户组
+第五栏表示这个文件的容量大小，默认单位为Bytes
+第六栏表示这个文件的 创建日期或是最近的修改日期
+第七栏表示文件名，若前面加上`.`则表示隐藏文件
+
+#### 修改文件属性与权限
+
+
 ## Linux的账号与用户组
 ### 用户标识符：UID与GID
 Linux中每一个文件都有拥有者UID与拥有人组GID，当显示文件属性时，系统会根据`/etc/passwd`与`/etc/group`的内容，找到UID与GID对应的账号与组名再显示出来。
