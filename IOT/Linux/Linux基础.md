@@ -55,7 +55,16 @@ chgrp [-R] dirname/filename ...
 ```bash
 chgrp users file
 ```
+* 修改文件拥有者
+```bash
+chown [-R] username filename
+```
+* 修改权限
+文件的权限字符`[-rwxrwxrwx]`，分别位拥有者，所属群组，其他人三种身份各自的读写执行权限
+用数值代表
+```bash
 
+```
 
 ## Linux的账号与用户组
 ### 用户标识符：UID与GID
