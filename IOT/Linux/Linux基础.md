@@ -48,7 +48,13 @@ drwx------ 14 xuezhaorong xuezhaorong   4096  8月 25 22:19 .config
 
 #### 修改文件属性与权限
 * 修改文件所属用户组
-
+```bash
+chgrp [-R] dirname/filename ...
+```
+`-R`参数表示递归，连同子目录下的所有文件，目录都更新成为这个用户组
+```bash
+chgrp users file
+```
 
 
 ## Linux的账号与用户组
