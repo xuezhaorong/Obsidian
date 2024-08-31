@@ -1206,4 +1206,21 @@ message(STATUS "message: ${SRC_1}")
 
 可以看到，在第8行把将要移除的文件的名字指定给list就可以了。但是一定要注意通过 file 命令搜索源文件的时候得到的是文件的绝对路径（在list中每个文件对应的路径都是一个item，并且都是绝对路径），那么在移除的时候也要将该文件的绝对路径指定出来才可以，否是移除操作不会成功。
 
-#### 遍历
+#### list拼接
+
+```bash
+list(APPEND <list> [<element> ...])
+```
+
+在CMake中，使用set命令可以创建一个list。一个在list内部是一个由分号;分割的一组字符串。例如，set(var a b c d e)命令将会创建一个list:a;b;c;d;e，但是最终打印变量值的时候得到的是abcde。
+
+```bash
+cmake_minimum_required(VERSION 3.0)
+project(TEST)
+set(TEMP "hello,world")
+file(GLOB SRC_1 ${PROJECT_SOURCE_DIR}/src1/*.cpp)
+file(GLOB SRC_2 ${PROJECT_SOURCE_DIR}/src2/*.cpp)
+# 追加(拼接)
+list(APPEND SRC_1 ${SRC_1} ${SRC_2} ${TEMP})
+message(STATUS "message: ${SRC_1}")
+```
