@@ -39,7 +39,7 @@ PS: 下面可以直接使用模板
 10. 选择对应的芯片型号
 ![微信截图_20240701204916.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-49-29-0788da81d007bf62d0710969e931084a-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204916-443b57.png)
 
-11. 点击ProjectManager，输入项目名称和选择IDE类型,项目名称要与Clion的文件名一致
+11. 点击ProjectManager，输入项目名称和选择IDE类型,项目名称要与Clion的文件名一致，并把Toolcchain改为SW4STM32
 ![微信截图_20240701205041.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-50-50-73724f3f334ef8e320cc4c1d84124742-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701205041-78ba01.png)
 
 12. 点击生成代码
