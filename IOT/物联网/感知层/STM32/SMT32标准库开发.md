@@ -854,9 +854,7 @@ EXTI_InitTypeDef EXTIA15_InitStructure = {
 EXTI_Init(&EXTIA15_InitStructure);
 ```
 
-
-
-####　NVIC
+#### NVIC
 
  NVIC 属于内核外设，在 STM32 中，用来统一分配中断优先级和管理中断。
 
