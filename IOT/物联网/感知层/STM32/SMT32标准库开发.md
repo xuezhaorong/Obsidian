@@ -1222,7 +1222,7 @@ void EXTI15_10_IRQHandler(void){
 RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
 ```
 
-1.  选择内部时钟
+2.  选择内部时钟
 
 ```c
 /**
@@ -1242,7 +1242,7 @@ void TIM_InternalClockConfig(TIM_TypeDef* TIMx)
 TIM_InternalClockConfig(TIM2);
 ```
 
-1.  配置时基单元
+3.  配置时基单元
 
 -   **注意：当时基单元初始化时，为保证影子寄存器能够立刻更新，会自动产生一次中断。**
 -   可以调用 **TIM_ClearFlag(TIM2,TIM_FLAG_Update)** 或者 **TIM_ClearITPendingBit(TIM2,TIM_IT_Update)** 清除中断标志位
