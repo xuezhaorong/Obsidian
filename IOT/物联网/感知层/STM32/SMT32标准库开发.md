@@ -106,14 +106,18 @@
 
 **相关库函数配置:**
 
--   包含外设
-    -   @arg RCC_AHBPeriph_DMA1
-    -   @arg RCC_AHBPeriph_DMA2
-    -   @arg RCC_AHBPeriph_SRAM
-    -   @arg RCC_AHBPeriph_FLITF
-    -   @arg RCC_AHBPeriph_CRC
-    -   @arg RCC_AHBPeriph_FSMC
-    -   @arg RCC_AHBPeriph_SDIO
+包含外设
+```
+-   @arg RCC_AHBPeriph_DMA1
+-   @arg RCC_AHBPeriph_DMA2
+-   @arg RCC_AHBPeriph_SRAM
+-   @arg RCC_AHBPeriph_FLITF
+-   @arg RCC_AHBPeriph_CRC
+-   @arg RCC_AHBPeriph_FSMC
+-   @arg RCC_AHBPeriph_SDIO
+```
+
+
 
 ```c
 /**
