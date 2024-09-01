@@ -1371,7 +1371,7 @@ void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState)
 TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);
 ```
 
-1.  配置 NVIC, 注意中断通道选择
+5.  配置 NVIC, 注意中断通道选择
 
 ```c
 // 配置NVIC
@@ -1388,7 +1388,7 @@ NVIC_InitTypeDef NVIC_InitStructure = {
 NVIC_Init(&NVIC_InitStructure);
 ```
 
-1.  启动定时器
+6.  启动定时器
 
 ```c
 /**
