@@ -260,7 +260,13 @@ tail [-n number] file
 ```bash
 od [-t TYPE] file
 ```
-
+`-t`后面可以接各种TYPE的输出：
+`a`：利用默认的字符来输出
+`c`：使用ASCII字符来输出
+d\[size]：利用十进制来输出数据，每个整数占用size Bytes
+f\[size]：利用浮点数值来输出数据，每个整数占用size Bytes
+o\[size]：利用八进制来输出数据，每个整数占用size Bytes
+x\[size]：利用十六进制，每个整数占用size Bytes
 
 
 
