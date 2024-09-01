@@ -159,19 +159,19 @@ FHS标准中，根目录所在分区应该越小越好，且应用程序所安�
 在所有目录下面都会存在`.`和`..`
 
 目录处理命令：
-*  cd 切换目录
+*  `cd` 切换目录
 ```bash
 cd [相对路径或绝对路径]
 ```
 
-* pwd 显示目前所在的目录
+* `pwd` 显示目前所在的目录
 ```bash
 pwd [-p]
 ```
 
 参数`-P`：显示真正的路径，而非链接路径
 
-* mkdir 建立新目录
+* `mkdir` 建立新目录
 ```bash
 mkdir [-mp]
 ```
@@ -182,13 +182,14 @@ mkdir -p test1/test2/test3
 mkdir -m 711 test
 ```
 
-* rmdir 删除**空**目录
+* `rmdir` 删除**空**目录
 ```bash
 rmdir [-p] filename
 ```
 
 参数`-p`：连同上层空目录一起删除
 
+* `ls` 文件与目录的查看
 
 
 
@@ -1268,3 +1269,18 @@ file(GLOB SRC_2 ${PROJECT_SOURCE_DIR}/src2/*.cpp)
 list(APPEND SRC_1 ${SRC_1} ${SRC_2} ${TEMP})
 message(STATUS "message: ${SRC_1}")
 ```
+
+#### 循环
+```bash
+foreach(ITEM ${ITEMS})
+	message(STATUS ITEM)
+endforeach()
+```
+
+#### 函数
+```bash
+function(functionname par1 par2)
+	set(${par2} ${_value} PARENT_SCOPE)
+endfunction()
+```
+函数中的值无法向外传递，要使用set方法与参数PARENT_SCOPE来指示函数内值改变外部
