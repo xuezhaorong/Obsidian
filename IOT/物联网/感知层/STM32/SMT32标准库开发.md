@@ -842,17 +842,11 @@ EXTI_Init(&EXTIA15_InitStructure);
 -   NVIC 的中断优先级由优先级寄存器的 4 位 (0~15) 决定，这 4 位可以进行切分，分为高 n 位的抢占优先级和低 4-n 位的响应优先级
 -   抢占先级高的可以中断嵌套，响应优先级高的可以优先排队，抢占优先级和响应优先级均相同的按中断号排队
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-23-37-90cfead90090694c74b38f6671241d05-NVIC%E4%BC%98%E5%85%88%E7%BA%A7%E5%88%86%E7%BB%84-360571.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-23-37-90cfead90090694c74b38f6671241d05-NVIC%E4%BC%98%E5%85%88%E7%BA%A7%E5%88%86%E7%BB%84-360571.png)
 
 由于 NVIC 属于内核外设，寄存器配置较为复杂，直接使用库函数进行配置
 
--   优先级分组配置
--   @arg NVIC_PriorityGroup_0: 0 bits for pre-emption priority 4 bits for subpriority
-    -   @arg NVIC_PriorityGroup_1: 1 bits for pre-emption priority 3 bits for subpriority
-    -   @arg NVIC_PriorityGroup_2: 2 bits for pre-emption priority 2 bits for subpriority
-    -   @arg NVIC_PriorityGroup_3: 3 bits for pre-emption priority 1 bits for subpriority
-    -   @arg NVIC_PriorityGroup_4: 4 bits for pre-emption priority 0 bits for subpriority
-    -   对应上表的分组方式
+
 
 ```c
 /**
