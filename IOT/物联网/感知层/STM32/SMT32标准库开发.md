@@ -681,7 +681,7 @@ void GPIO_EXTILineConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource)
 
 -   第一个参数为需要配置的类端口，第二个参数为具体的 Pin 端口
 
-    
+
 
 -   示例代码:
 
@@ -707,27 +707,27 @@ GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,GPIO_PinSource15);
 
 -   上升沿触发选择寄存器，用于设置对应线的上升沿触发方式
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-19-22-26cbb982683364444cef2cea7ec49319-%E4%B8%8A%E5%8D%87%E6%B2%BF%E8%A7%A6%E5%8F%91%E9%80%89%E6%8B%A9%E5%AF%84%E5%AD%98%E5%99%A8-38f815.png)
+![|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-19-22-26cbb982683364444cef2cea7ec49319-%E4%B8%8A%E5%8D%87%E6%B2%BF%E8%A7%A6%E5%8F%91%E9%80%89%E6%8B%A9%E5%AF%84%E5%AD%98%E5%99%A8-38f815.png)
 
 -   下降沿触发选择寄存器，用于设置对应线的下降沿触发方式
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-19-44-f3fd4073f8bbfa49397c258b1aea7bc5-%E4%B8%8B%E9%99%8D%E6%B2%BF%E8%A7%A6%E5%8F%91%E9%80%89%E6%8B%A9%E5%AF%84%E5%AD%98%E5%99%A8-50e4fe.png)
+![|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-19-44-f3fd4073f8bbfa49397c258b1aea7bc5-%E4%B8%8B%E9%99%8D%E6%B2%BF%E8%A7%A6%E5%8F%91%E9%80%89%E6%8B%A9%E5%AF%84%E5%AD%98%E5%99%A8-50e4fe.png)
 
 -   软件中断事件寄存器，设置对应线的软件中断触发方式
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-20-05-a3327a9dd0f8efaf8251ddbfcdff1244-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%E5%AF%84%E5%AD%98%E5%99%A8-985a97.png)
+![|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-20-05-a3327a9dd0f8efaf8251ddbfcdff1244-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%E5%AF%84%E5%AD%98%E5%99%A8-985a97.png)
 
 -   中断屏蔽寄存器，用于开启和关闭对应线的中断响应
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-21-10-c3a7f11af32491728e88627a5fe132f6-%E4%B8%AD%E6%96%AD%E5%B1%8F%E8%94%BD%E5%AF%84%E5%AD%98%E5%99%A8-a3a852.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-21-10-c3a7f11af32491728e88627a5fe132f6-%E4%B8%AD%E6%96%AD%E5%B1%8F%E8%94%BD%E5%AF%84%E5%AD%98%E5%99%A8-a3a852.png)
 
 -   挂起寄存器，设置对应线中断响应的标志位
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-21-32-d07e4b03701b8e58b92fa0ce15056128-%E6%8C%82%E8%B5%B7%E5%AF%84%E5%AD%98%E5%99%A8-01d5bd.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-21-32-d07e4b03701b8e58b92fa0ce15056128-%E6%8C%82%E8%B5%B7%E5%AF%84%E5%AD%98%E5%99%A8-01d5bd.png)
 
 -   事件屏蔽寄存器，用于开启和关闭对应线的事件响应
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-22-37-870fb80ef2a6f3bbf6e1a139c571e233-%E4%BA%8B%E4%BB%B6%E5%B1%8F%E8%94%BD%E5%AF%84%E5%AD%98%E5%99%A8-1cba30.png)
+![|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-22-37-870fb80ef2a6f3bbf6e1a139c571e233-%E4%BA%8B%E4%BB%B6%E5%B1%8F%E8%94%BD%E5%AF%84%E5%AD%98%E5%99%A8-1cba30.png)
 
 
 
@@ -837,7 +837,7 @@ EXTI_Init(&EXTIA15_InitStructure);
 
  NVIC 属于内核外设，在 STM32 中，用来统一分配中断优先级和管理中断。
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-23-17-75d9c8904a945699190eadb1df9b14c1-NVIC%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-60718b.png)
+![|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-23-17-75d9c8904a945699190eadb1df9b14c1-NVIC%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-60718b.png)
 
 -   NVIC 的中断优先级由优先级寄存器的 4 位 (0~15) 决定，这 4 位可以进行切分，分为高 n 位的抢占优先级和低 4-n 位的响应优先级
 -   抢占先级高的可以中断嵌套，响应优先级高的可以优先排队，抢占优先级和响应优先级均相同的按中断号排队
