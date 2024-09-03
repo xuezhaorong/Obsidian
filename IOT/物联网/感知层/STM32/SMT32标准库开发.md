@@ -163,30 +163,19 @@ typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
 
 ###### APB1 外设时钟使能寄存器 (RCC_APB1ENR)
 
+![|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-55-40-a4243fe6af304867b77c7e8e127f8b20-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A81-f78966.png)
 
+![|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-00-506307351d0bb0c243196ab7065e3463-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A82-18cbe3.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-55-40-a4243fe6af304867b77c7e8e127f8b20-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A81-f78966.png)
+![|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-26-537188770d95593c9b87bf0b120cfdee-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A83-884adb.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-00-506307351d0bb0c243196ab7065e3463-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A82-18cbe3.png)
-
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-26-537188770d95593c9b87bf0b120cfdee-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A83-884adb.png)
-
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-54-a40b09691c975635bdfb9a8d6e2ff11d-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A84-961af3.png)
+![|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-56-54-a40b09691c975635bdfb9a8d6e2ff11d-APB1%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A84-961af3.png)
 
 
 
 **相关库函数配置:**
 
 -   函数原型，第一个参数为要开启的外设名，可在列表中寻找
--   包含外设
--   RCC_APB1Periph_TIM2, RCC_APB1Periph_TIM3, RCC_APB1Periph_TIM4,
-    -   RCC_APB1Periph_TIM5, RCC_APB1Periph_TIM6, RCC_APB1Periph_TIM7,
-    -   RCC_APB1Periph_WWDG, RCC_APB1Periph_SPI2, RCC_APB1Periph_SPI3,
-    -   RCC_APB1Periph_USART2, RCC_APB1Periph_USART3, RCC_APB1Periph_USART4,
-    -   RCC_APB1Periph_USART5, RCC_APB1Periph_I2C1, RCC_APB1Periph_I2C2,
-    -   RCC_APB1Periph_USB, RCC_APB1Periph_CAN1, RCC_APB1Periph_BKP,
-    -   RCC_APB1Periph_PWR, RCC_APB1Periph_DAC, RCC_APB1Periph_CEC,
-    -   RCC_APB1Periph_TIM12, RCC_APB1Periph_TIM13, RCC_APB1Periph_TIM14
 
 ```c
 /**
@@ -211,29 +200,19 @@ void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)
 
 ###### APB2 外设时钟使能寄存器 (RCC_APB2ENR)
 
-
-
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-05-8147424e2ce70ddb94a57c884bba229d-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A81-2430f1.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-05-8147424e2ce70ddb94a57c884bba229d-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A81-2430f1.png)
 
 
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-35-09e83a04553cec0296fcc4378f71a978-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A82-ec4763.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-35-09e83a04553cec0296fcc4378f71a978-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A82-ec4763.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-55-6880cd6465ae043b9e1b1e00672f3a8e-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A83-77dec7.png)
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/19-59-55-6880cd6465ae043b9e1b1e00672f3a8e-APB2%E5%A4%96%E8%AE%BE%E6%97%B6%E9%92%9F%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A83-77dec7.png)
 
 
 
 **相关库函数配置:**
 
 -   函数原型，第一个参数为要开启的外设名，可在列表中寻找
--   包含外设
--   @arg RCC_APB2Periph_AFIO, RCC_APB2Periph_GPIOA, RCC_APB2Periph_GPIOB,
-    -   RCC_APB2Periph_GPIOC, RCC_APB2Periph_GPIOD, RCC_APB2Periph_GPIOE,
-    -   RCC_APB2Periph_GPIOF, RCC_APB2Periph_GPIOG, RCC_APB2Periph_ADC1,
-    -   RCC_APB2Periph_ADC2, RCC_APB2Periph_TIM1, RCC_APB2Periph_SPI1,
-    -   RCC_APB2Periph_TIM8, RCC_APB2Periph_USART1, RCC_APB2Periph_ADC3,
-    -   RCC_APB2Periph_TIM15, RCC_APB2Periph_TIM16, RCC_APB2Periph_TIM17,
-    -   RCC_APB2Periph_TIM9, RCC_APB2Periph_TIM10, RCC_APB2Periph_TIM11
 
 ```c
 /**
