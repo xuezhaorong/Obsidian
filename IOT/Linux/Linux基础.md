@@ -268,8 +268,46 @@ f\[size]：利用浮点数值来输出数据，每个整数占用size Bytes
 o\[size]：利用八进制来输出数据，每个整数占用size Bytes
 x\[size]：利用十六进制，每个整数占用size Bytes
 
+* `touch`  创建新文件
+```bash 
+touch filename
+```
 
+* `file` 观察文件类型
+```bash
+file filename
+```
 
+#### 命令与文件的查找
+* `which` 查找执行文件
+```bash
+which command
+```
+
+* `whereis` 查找特定目录下的文件
+```bash
+whereis [-bmsu] filename/dirname
+```
+-参数`-l`：可以列出会去查询的几个主要目录
+-参数`-b`：只找二进制格式的文件
+-参数`-m`：只找在说明文件manual路径下的文件
+-参数`-s`：只找source源文件
+-参数`-u`：查找不在上述三个项目当中的特殊文件
+
+* `locate` 在数据库中查找文件 可模糊查询
+```bash
+locate [-ir] file
+```
+-参数`-i`：忽略大小写差异
+-参数`-c`：不输出文件名，仅计算找到的文件数量
+-参数`-l`：仅输出几行，如`-l 5`
+-参数`-S`：输出locate所使用的数据库文件的相关信息，包括该数据库记录的文件和目录数量等
+-参数`-r`：后面可接正则表达式的显示方式
+
+如果数据库未更新，可能会找不到目标文件，可以直接输入`updatedb`命令手动更新数据库
+该命令会去读取`/etc/updatedb.conf`这个配置文件的设置，并更新`/var/lib/mlocate`内的数据库文件
+
+* `find`
 
 
 
