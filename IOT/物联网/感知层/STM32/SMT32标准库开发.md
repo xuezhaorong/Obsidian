@@ -634,7 +634,7 @@ void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 
  此功能用于解决默认复用功能冲突的情况，将其中一个引脚功能重映射至重定义功能。
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-15-50-a9491705c4a2b5d51133aa9ca260bd77-STM32F103C8T6%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89-82120f.png)
+![|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-15-50-a9491705c4a2b5d51133aa9ca260bd77-STM32F103C8T6%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89-82120f.png)
 
 
 
@@ -642,7 +642,7 @@ void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 
 
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-16-38-c22a095d00862b6f5dd71f2a6de0901f-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%80%9A%E7%94%A8IO%E6%98%A0%E5%83%8F-6af5f1.png)
+![|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-16-38-c22a095d00862b6f5dd71f2a6de0901f-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%80%9A%E7%94%A8IO%E6%98%A0%E5%83%8F-6af5f1.png)
 
 
 
@@ -652,13 +652,13 @@ void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 
 -   各个引脚外部中断的引脚配置寄存器
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-17-26-d9c2ecea938f4c50d7d28c87fd403d7b-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%201-998e87.png)
+![|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-17-26-d9c2ecea938f4c50d7d28c87fd403d7b-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%201-998e87.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-17-55-9dd2a853416831212b5d1344ed463840-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%202-62b54a.png)
+![|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-17-55-9dd2a853416831212b5d1344ed463840-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%202-62b54a.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-18-16-76a081b1b40db2792d8188bddc514789-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%203-4d8aa3.png)
+![|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-18-16-76a081b1b40db2792d8188bddc514789-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%203-4d8aa3.png)
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-18-20-5c07ac600871a0bd07ec307af7e7b390-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%204-600a35.png)
+![|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-18-20-5c07ac600871a0bd07ec307af7e7b390-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8%204-600a35.png)
 
 
 
