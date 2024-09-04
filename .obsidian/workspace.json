@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
+                "file": "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md"
+                "file": "IOT/物联网/感知层/Clion配置/STM32标准库配置.md"
               }
             },
             "group": "88550bae11fcafb1"
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
+                "file": "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md"
+                "file": "IOT/物联网/感知层/Clion配置/STM32标准库配置.md"
               }
             }
           },
@@ -183,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
+                "file": "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,16 +217,17 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
+    "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
+    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+    "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "lv_port_disp_template 1.h",
     "lv_port_disp_template.h",
     "().md",
-    "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/应用层/lvgl",
     "IOT/物联网/感知层/STM32/未命名.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
-    "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
     "IOT/机器学习/SVM支持向量机.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/frp远程连接.md",
@@ -262,7 +263,6 @@
     "物联网/感知层/51单片机/指令运行1.webp",
     "树莓派",
     "物联网/感知层/STM32",
-    "物联网/感知层/51单片机",
-    "物联网/应用层/安卓"
+    "物联网/感知层/51单片机"
   ]
 }
