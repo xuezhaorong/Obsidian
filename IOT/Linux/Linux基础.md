@@ -307,8 +307,24 @@ locate [-ir] file
 如果数据库未更新，可能会找不到目标文件，可以直接输入`updatedb`命令手动更新数据库
 该命令会去读取`/etc/updatedb.conf`这个配置文件的设置，并更新`/var/lib/mlocate`内的数据库文件
 
-* `find`
+### Linux文件与文件系统的压缩
+* 常见的压缩命令
+```bash
+*.z compress 程序压缩的文件
+*.zip zip 程序压缩的文件
+*.gz gzip 程序压缩的文件
+*.bz2 bzip2 程序压缩的文件
+*.xz xz 程序压缩的文件
+*.tar tar 程序打包的文件
+*.tar.gz tar 程序打包的文件，并且经过gzip的压缩
+*.tar.bz2 tar 程序打包的文件，并且经过bzip2的压缩
+*.tar.xz tar 程序打包的文件，并且经过xz的压缩
+```
 
+#### gzip
+```bash
+gzip [-cdtv\#] 文件名
+```
 
 
 
