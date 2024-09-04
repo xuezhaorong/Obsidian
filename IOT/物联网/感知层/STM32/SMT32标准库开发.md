@@ -1288,7 +1288,7 @@ typedef struct
 
 **TIM_Prescaler** 和 **TIM_Period** 用来配置预分频器和自动重装器的值
 $$
-Tout = ((arr+1) * (psc)+1) / Tclk
+Tout(s) = ((arr+1) * (psc)+1) / Tclk
 $$
 
 根据上方的计数器溢出频率公式计算定时值
