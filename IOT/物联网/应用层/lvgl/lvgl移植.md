@@ -65,3 +65,30 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 添加`lvgl`头文件和lcd驱动头文件
 
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-04-38-9af08a3945ac11b93952a33d3e5ed922-20240904130437-beb4a2.png)
+
+打开``lv_port_disp_template.c`文件
+同样是将`#if 0`改为`#if 1`，并加入宽度和高度的宏定义
+```cpp
+#define MY_DISP_HOR_RES LCD_W  
+#define MY_DISP_VER_RES LCD_H
+```
+
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-12-40-d1e8baea83e5539b056a0e59c4a0969b-20240904131239-11787b.png)
+
+到`lv_port_disp_init`函数中，配置图形缓存模式，注释掉2，3模式
+
+![|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-14-11-7043c891af105340338e51522936e355-20240904131410-152dea.png)
+
+设置宽度和高度
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-16-41-1ff69e3f034ed0e95f403292da4793f2-20240904131640-aa2519.png)
+
+
+在`disp_init`函数中加入LCD的初始化函数
+
+![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-15-09-a15126bc825e0376bd489af3aec2196f-20240904131509-30567b.png)
+
+在`disp_flush`函数中设置打点输出，注释掉原来的内容，加入LCD打点输出的函数
+
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-17-32-bbb9ad86229c5f7127936de42b3da4d2-20240904131731-18cb6c.png)
+
+## 引入lvgl
