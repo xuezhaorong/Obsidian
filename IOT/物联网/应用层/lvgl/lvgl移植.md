@@ -60,6 +60,10 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 重新cmake，构建
 
 ## 修改文件
+打开`lvgl_conf.h`文件，将`#if 0`改为`#if 1`
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-23-42-50d4cc853adda2b227e59752e61e789d-20240904132341-e4e5ca.png)
+
+
 打开`lv_port_disp_template.h`文件，配置输出
 将`#if 0`改为`#if 1`
 添加`lvgl`头文件和lcd驱动头文件
@@ -92,3 +96,6 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-17-32-bbb9ad86229c5f7127936de42b3da4d2-20240904131731-18cb6c.png)
 
 ## 引入lvgl
+在`main.c`中引入
+
+![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/2024/09/04/13-25-08-cbd5737785f138cf2e6c714bcb611767-13-24-37-cbd5737785f138cf2e6c714bcb611767-20240904132436-680eb8-6f83bd.png)
