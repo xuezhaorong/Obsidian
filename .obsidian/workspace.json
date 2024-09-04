@@ -217,6 +217,8 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
+    "lv_port_disp_template 1.h",
+    "lv_port_disp_template.h",
     "().md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
@@ -245,7 +247,6 @@
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/树莓派/麦克风配置.md",
     "IOT/树莓派/添加账户和给予用户权限.md",
-    "IOT/机器学习/对数几率回归.md",
     "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "Linux",
     "物联网/应用层/Qt",
@@ -262,7 +263,6 @@
     "树莓派",
     "物联网/感知层/STM32",
     "物联网/感知层/51单片机",
-    "物联网/应用层/安卓",
-    "物联网/应用层"
+    "物联网/应用层/安卓"
   ]
 }

@@ -6,7 +6,7 @@
 
 MCU要求：至少32kB RAM 和 128 kB Flash，选用`stm32f411ceu6`，按照[[STM32Hal库配置]]配置项目
 
-## 剪枝lgvl源码
+## 裁剪lgvl源码
 在项目下创建目录`Middlewares`
 ![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/12-41-58-e14bfcfa9c5a769767ada91c6e60e74c-20240904124157-05f3ab.png)
 目录内包含文件`".\Middlewares\LVGL\GUI\lvgl"`
@@ -60,3 +60,8 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 重新cmake，构建
 
 ## 修改文件
+打开`lv_port_disp_template.h`文件，配置输出
+将`#if 0`改为`#if 1`
+添加`lvgl`头文件和lcd驱动头文件
+
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-04-38-9af08a3945ac11b93952a33d3e5ed922-20240904130437-beb4a2.png)
