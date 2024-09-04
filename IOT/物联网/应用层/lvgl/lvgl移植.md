@@ -24,7 +24,7 @@ MCU要求：至少32kB RAM 和 128 kB Flash，选用`stm32f411ceu6`，按照[[ST
 ```bash
 set(LVGL_PATH Middlewares/LVGL/GUI/lvgl)  
 set(LVGL_SRC_PATH ${LVGL_PATH}/src)  
-set(LVGL_SRC_DIRPATH "")  
+
   
 function(fetch_sublist dirpath output_list)  
     # 获取到所有内容（不含路径前缀）  
@@ -32,9 +32,8 @@ function(fetch_sublist dirpath output_list)
     # 目录筛选  
     foreach(ITEM ${ALL_ITEMS})  
         if(IS_DIRECTORY ${ITEM})     # 判断是否为目录  
-            list(APPEND _list ${ITEM})  
-            set(${output_list} ${_list} PARENT_SCOPE)  
-            fetch_sublist(${ITEM} _list)  
+			include_directories(${ITEM})
+	        fetch_sublist(${ITEM} _list)  
         endif()  
     endforeach()  
 endfunction()
@@ -47,10 +46,8 @@ endfunction()
 include_directories(${LVGL_PATH} ${LVGL_PATH}/examples/porting ${LVGL_SRC_PATH})  
   
 # 子文件  
-fetch_sublist(${LVGL_SRC_PATH} LVGL_SRC_DIRPATH)  
-foreach (ITEM ${LVGL_SRC_DIRPATH})  
-    include_directories(${ITEM})  
-endforeach ()
+fetch_sublist(${LVGL_SRC_PATH})  
+
 
 file(GLOB_RECURSE LVGL_SOURCES "${LVGL_PATH}/*")
 
