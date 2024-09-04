@@ -61,14 +61,14 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 
 ## 修改文件
 打开`lvgl_conf.h`文件，将`#if 0`改为`#if 1`
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-23-42-50d4cc853adda2b227e59752e61e789d-20240904132341-e4e5ca.png)
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-23-42-50d4cc853adda2b227e59752e61e789d-20240904132341-e4e5ca.png)
 
 
 打开`lv_port_disp_template.h`文件，配置输出
 将`#if 0`改为`#if 1`
 添加`lvgl`头文件和lcd驱动头文件
 
-![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-04-38-9af08a3945ac11b93952a33d3e5ed922-20240904130437-beb4a2.png)
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-04-38-9af08a3945ac11b93952a33d3e5ed922-20240904130437-beb4a2.png)
 
 打开``lv_port_disp_template.c`文件
 同样是将`#if 0`改为`#if 1`，并加入宽度和高度的宏定义
@@ -96,6 +96,35 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${LVGL_SOURCES})
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/13-17-32-bbb9ad86229c5f7127936de42b3da4d2-20240904131731-18cb6c.png)
 
 ## 引入lvgl
-在`main.c`中引入
+在`main.c`中引入头文件
+```cpp
+#include "lvgl.h"
+#include "lv_port_disp_template.h"
+```
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/2024/09/04/13-25-08-cbd5737785f138cf2e6c714bcb611767-13-24-37-cbd5737785f138cf2e6c714bcb611767-20240904132436-680eb8-6f83bd.png)
+![|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/2024/09/04/13-25-08-cbd5737785f138cf2e6c714bcb611767-13-24-37-cbd5737785f138cf2e6c714bcb611767-20240904132436-680eb8-6f83bd.png)
+
+配置1ms的定时器
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/15-43-34-93879a8f95a5616383699c9874d5b87f-20240904154333-b9a8f0.png)
+启动定时中断，在中断回调函数中加入lvgl心跳配置，**注意：抢占优先级要为最高**
+```cpp
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {  
+    if (htim == (&htim9)) {  
+        lv_tick_inc(1);                 /*lvgl的1ms心跳*/  
+    }  
+}
+```
+
+加入lvgl和输出的 初始化代码
+![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/15-45-25-a6764e96d804a6b763431fe70259c42a-20240904154525-845221.png)
+
+```cpp
+lv_init();  
+lv_port_disp_init();
+```
+
+在`while`循环中添加
+```cpp
+lv_timer_handler();  
+HAL_Delay(10);
+```
