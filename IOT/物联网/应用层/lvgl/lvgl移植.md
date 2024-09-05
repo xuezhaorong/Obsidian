@@ -1,3 +1,6 @@
+模板链接：
+不带操作系统：https://wwet.lanzn.com/iqlp82990kab
+带操作系统：https://wwet.lanzn.com/idaXW2990kri
 下载lvgl源码，Github链接：https://github.com/lvgl/lvgl.git
 以8.2版本为例
 ![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/04/12-35-28-03d24528baed7efe607fbfe0aeab63f9-20240904123527-2dee1d.png)
