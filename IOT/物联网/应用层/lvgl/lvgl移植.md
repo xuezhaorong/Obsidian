@@ -125,3 +125,5 @@ lv_port_disp_init();
 lv_timer_handler();  
 HAL_Delay(10);
 ```
+
+## 加入FreeRTOS

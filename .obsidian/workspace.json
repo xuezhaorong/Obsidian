@@ -6,7 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 83.82519863791147,
+        "dimension": 83.3144154370034,
         "children": [
           {
             "id": "1698325d7dd8c424",
@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
       {
         "id": "ebbd434fd6d780fa",
         "type": "tabs",
-        "dimension": 16.174801362088537,
+        "dimension": 16.685584562996596,
         "children": [
           {
             "id": "d7f87c8ed85de0a4",
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
+                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md"
               }
             },
             "group": "88550bae11fcafb1"
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
+                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md"
               }
             }
           },
@@ -183,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/应用层/lvgl/lvgl移植.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,8 +217,8 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
