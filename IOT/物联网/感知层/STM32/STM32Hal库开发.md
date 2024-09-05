@@ -125,5 +125,10 @@ if(HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13)==GPIO_PIN_RESET){
 点击灰色不占用功能的引脚，即可配置输入输出模式
 ![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/19-45-20-52186962035b5e2aafeff94b6ce816e7-20240905194519-118089.png)
 
+点击左侧`System Core`的`GPIO`再点击相应的引脚，即可配置输入输出
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/19-51-15-12020394d9e5f351086930b9081bce04-20240905195115-9d7387.png)
+
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/19-54-27-2e567e982c596746c4dfbe4a63aee999-20240905195427-d1c91b.png)
+
 
 ## 外部中断
