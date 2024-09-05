@@ -1,4 +1,4 @@
-## GPIO
+## GPIO通用输入输出
 #### 初始化
 Hal中GPIO初始化函数
 ```c
@@ -122,7 +122,8 @@ if(HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13)==GPIO_PIN_RESET){
 ```
 
 ### STM32CUBE操作
-
+点击灰色不占用功能的引脚，即可配置输入输出模式
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/19-45-20-52186962035b5e2aafeff94b6ce816e7-20240905194519-118089.png)
 
 
 ## 外部中断
