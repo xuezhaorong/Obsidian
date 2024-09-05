@@ -70,7 +70,18 @@ typedef struct
 ```
 
 示例代码：
-1. 输出
-```c
 
+```c
+// 开启外设时钟
+__HAL_RCC_GPIOC_CLK_ENABLE();
+// 初始化结构体
+GPIO_InitTypeDef GPIO_InitStructure;  
+GPIO_InitStructure.Pin = GPIO_PIN_13;  
+GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;  
+GPIO_InitStructure.Speed = GPIO_SPEED_HIGH;  
+HAL_GPIO_Init(GPIOC,&GPIO_InitStructure);
 ```
+
+
+## 输出
+
