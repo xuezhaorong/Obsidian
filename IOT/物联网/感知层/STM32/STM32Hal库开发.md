@@ -1,5 +1,6 @@
 ## GPIO
-Hal中GPIO初始化可以同时配置输出和输入模式
+#### 初始化
+Hal中GPIO初始化函数
 ```c
 /**  
   * @brief  Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init. 
@@ -23,7 +24,7 @@ typedef struct
                            This parameter can be a value of @ref GPIO_speed_define */} GPIO_InitTypeDef;
 ```
 
--第一个参数`Pin`为GPIO的端口
+-参数`Pin`为GPIO的端口
 ```c
 #define GPIO_PIN_0                 ((uint16_t)0x0001)  /* Pin 0 selected    */  
 #define GPIO_PIN_1                 ((uint16_t)0x0002)  /* Pin 1 selected    */  
@@ -44,4 +45,32 @@ typedef struct
 #define GPIO_PIN_All               ((uint16_t)0xFFFF)  /* All pins selected */
 ```
 
--第二个参数`Mode`为GPIO
+-个参数`Mode`为GPIO的输入输出模式，其中输入模式需要配合参数`Pull`使用
+```c
+#define  GPIO_MODE_INPUT                        0x00000000u   /*!< Input Floating Mode                   */  
+#define  GPIO_MODE_OUTPUT_PP                    0x00000001u   /*!< Output Push Pull Mode                 */  
+#define  GPIO_MODE_OUTPUT_OD                    0x00000011u   /*!< Output Open Drain Mode                */  
+#define  GPIO_MODE_AF_PP                        0x00000002u   /*!< Alternate Function Push Pull Mode     */  
+#define  GPIO_MODE_AF_OD                        0x00000012u   /*!< Alternate Function Open Drain Mode    */  
+#define  GPIO_MODE_AF_INPUT                     GPIO_MODE_INPUT          /*!< Alternate Function Input Mode         */
+```
+
+-参数`Pull`配置上拉输入或下拉输入
+```c
+#define  GPIO_NOPULL        0x00000000u   /*!< No Pull-up or Pull-down activation  */  
+#define  GPIO_PULLUP        0x00000001u   /*!< Pull-up activation                  */  
+#define  GPIO_PULLDOWN      0x00000002u   /*!< Pull-down activation                */
+```
+
+-参数`Speed`为输出的速度
+```c
+#define  GPIO_SPEED_FREQ_LOW              (GPIO_CRL_MODE0_1) /*!< Low speed */  
+#define  GPIO_SPEED_FREQ_MEDIUM           (GPIO_CRL_MODE0_0) /*!< Medium speed */  
+#define  GPIO_SPEED_FREQ_HIGH             (GPIO_CRL_MODE0)   /*!< High speed */
+```
+
+示例代码：
+1. 输出
+```c
+
+```
