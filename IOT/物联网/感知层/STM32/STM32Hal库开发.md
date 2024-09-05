@@ -369,3 +369,5 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 ```
 
 ![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-08-54-8b81bfeafe2cd54a93b213e72b57a4ab-20240905220853-053572.png)
+
+### 输出比较
