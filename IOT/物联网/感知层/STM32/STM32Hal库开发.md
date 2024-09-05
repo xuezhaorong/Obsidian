@@ -274,3 +274,53 @@ GPIO_InitTypeDef GPIO_InitStructure;
 ## 定时器
 ### 定时中断
 ### 时基单元配置
+```c
+/**  
+  * @brief  Initializes the TIM Time base Unit according to the specified  *         parameters in the TIM_HandleTypeDef and initialize the associated handle.  
+  * @note   Switching from Center Aligned counter mode to Edge counter mode (or reverse)  *         requires a timer reset to avoid unexpected direction  *         due to DIR bit readonly in center aligned mode.  *         Ex: call @ref HAL_TIM_Base_DeInit() before HAL_TIM_Base_Init()  
+  * @param  htim TIM Base handle  
+  * @retval HAL status  */
+HAL_StatusTypeDef HAL_TIM_Base_Init(TIM_HandleTypeDef *htim)
+```
+
+`TIM_HandleTypeDef`结构体有两个重要的参数
+1. `TIM_TypeDef`选择内部定时器
+2. `TIM_Base_InitTypeDef`配置预分配值和自动重载值
+
+
+示例代码：
+```c
+  
+TIM_TimeBaseStructure.Instance = TIM6;
+
+TIM_TimeBaseStructure.Init.Period = 5000-1;
+
+TIM_TimeBaseStructure.Init.Prescaler = 8400-1;
+
+HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
+```
+
+### 配置NVIC
+
+```c
+//设置抢占优先级，子优先级
+HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 3);
+// 设置中断来源
+HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn)
+```
+
+### 开启定时器并更新中断
+
+Hal中同时更新中断和开启定时器
+```c
+HAL_TIM_Base_Start_IT(&TIM_TimeBaseStructure);
+```
+若只想开启定时器可以使用函数
+```c
+HAL_TIM_Base_Start(&TIM_TimeBaseStructure);
+```
+
+### 中断服务函数
+```c
+
+```
