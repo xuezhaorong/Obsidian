@@ -1,3 +1,4 @@
+根据[[STM32Hal库配置]]配置Clion项目
 ## GPIO通用输入输出
 #### 初始化
 Hal中GPIO初始化函数
