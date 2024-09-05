@@ -338,4 +338,34 @@ Hal中的中断服务方式和中断回调函数分离，先进入中断服务�
 
 #### STM32CUBE操作
 在`Timer`中选择定时器，勾选`Internal Clock`选择内部时钟
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-00-08-d082222208e5a7ea0675f4492d021fa3-20240905220008-bcc6a4.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-00-08-d082222208e5a7ea0675f4492d021fa3-20240905220008-bcc6a4.png)
+
+然后配置各种参数
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-03-24-86e597ee504bf9408e524dd51a91047c-20240905220323-571db7.png)
+
+在`NVIC Setting`中设置NVIC
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-04-15-3f24c3a04b093c69860181d1c8a55287-20240905220414-070e4b.png)
+
+设置优先级
+![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-04-48-877bd040efc5943b6478e7abc71fe741-20240905220448-6d40a6.png)
+
+在`main.c`中写入开启中断和定时器
+```c
+HAL_TIM_Base_Start_IT(&htim3);
+```
+
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-07-29-ede5097dfd7faceec45fbf723fa1ea29-20240905220728-3a3987.png)
+
+加入中断回调函数
+```c
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+
+    if (htim == (&htim3))
+    {
+
+    }
+}
+```
+
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-08-54-8b81bfeafe2cd54a93b213e72b57a4ab-20240905220853-053572.png)
