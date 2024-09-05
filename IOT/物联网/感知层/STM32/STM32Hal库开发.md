@@ -250,7 +250,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
      if (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_13) != RESET) {
 			// code
          //清除中断标志位
-         __HAL_GPIO_EXTI_CLEAR_IT(KEY1_INT_GPIO_PIN);
+         __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_13);
      }
  }
 ```
@@ -273,7 +273,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
 
 ## 定时器
 ### 定时中断
-### 时基单元配置
+#### 时基单元配置
 ```c
 /**  
   * @brief  Initializes the TIM Time base Unit according to the specified  *         parameters in the TIM_HandleTypeDef and initialize the associated handle.  
@@ -300,7 +300,7 @@ TIM_TimeBaseStructure.Init.Prescaler = 8400-1;
 HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 ```
 
-### 配置NVIC
+#### 配置NVIC
 
 ```c
 //设置抢占优先级，子优先级
@@ -309,7 +309,7 @@ HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 3);
 HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn)
 ```
 
-### 开启定时器并更新中断
+#### 开启定时器并更新中断
 
 Hal中同时更新中断和开启定时器
 ```c
@@ -320,7 +320,20 @@ HAL_TIM_Base_Start_IT(&TIM_TimeBaseStructure);
 HAL_TIM_Base_Start(&TIM_TimeBaseStructure);
 ```
 
-### 中断服务函数
+#### 中断服务函数
+Hal中的中断服务方式和中断回调函数分离，先进入中断服务函数中，然后触发回调函数
 ```c
-
+ void  TIM6_DAC_IRQHandler(void)
+ {
+     HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+ }
+ 
+ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+ {
+     if (htim==(&TIM_TimeBaseStructure)) {
+         
+     }
+ }
 ```
+
+#### STM32CUBE操作
