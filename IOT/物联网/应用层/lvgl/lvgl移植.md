@@ -127,3 +127,4 @@ HAL_Delay(10);
 ```
 
 ## 加入FreeRTOS
+根据[[STM32Hal库配置]]在上面的基础上配置FreeRTOS，
