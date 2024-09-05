@@ -133,3 +133,12 @@ if(HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13)==GPIO_PIN_RESET){
 
 
 ## 外部中断
+### 中断引脚选择与中断触发方式
+Hal库中的AFIO与EXIT在GPIO初始化`Mode`时可以同时配置
+```c
+#define  GPIO_MODE_IT_RISING                    0x10110000u   /*!< External Interrupt Mode with Rising edge trigger detection          */  
+#define  GPIO_MODE_IT_FALLING                   0x10210000u   /*!< External Interrupt Mode with Falling edge trigger detection         */  
+#define  GPIO_MODE_IT_RISING_FALLING            0x10310000u   /*!< External Interrupt Mode with Rising/Falling edge trigger detection  */
+```
+
+### NVIC
