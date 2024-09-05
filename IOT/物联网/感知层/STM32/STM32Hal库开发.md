@@ -142,3 +142,15 @@ Hal库中的AFIO与EXIT在GPIO初始化`Mode`时可以同时配置
 ```
 
 ### NVIC
+由函数`HAL_NVIC_SetPriority`配置中断通道，抢占优先级和响应优先级
+
+```c
+/**  
+  * @brief  Sets the priority of an interrupt.  
+  * @param  IRQn: External interrupt number.  *         This parameter can be an enumerator of IRQn_Type enumeration  *         (For the complete STM32 Devices IRQ Channels list, please refer to the appropriate CMSIS device file (stm32f10xx.h))  
+  * @param  PreemptPriority: The preemption priority for the IRQn channel.  *         This parameter can be a value between 0 and 15  *         A lower priority value indicates a higher priority  
+  * @param  SubPriority: the subpriority level for the IRQ channel.  
+  *         This parameter can be a value between 0 and 15  *         A lower priority value indicates a higher priority.  * @retval None  
+  */void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority)
+```
+
