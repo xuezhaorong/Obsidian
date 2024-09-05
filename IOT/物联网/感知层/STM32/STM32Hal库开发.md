@@ -267,3 +267,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
  ![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-40-28-98e9e3380f4006443ef8515f189eee89-20240905204027-db5bbf.png)
 进入NVIC配置，将中断通道打勾使能中断，并配置抢占优先级和响应优先级
 ![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-43-38-fd534b74699c33b59aefca781f5477fe-20240905204338-3cca9d.png)
+
+在`stm32f1xx_it.c`文件下可以看到自动生成的中断服务函数
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-50-21-595165b67a796aff40448b918050445c-20240905205020-fea4fa.png)
+
