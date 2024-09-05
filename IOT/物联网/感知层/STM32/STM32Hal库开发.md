@@ -83,5 +83,40 @@ HAL_GPIO_Init(GPIOC,&GPIO_InitStructure);
 ```
 
 
-## 输出
+### 输出
+关于输出的几个函数
+1. **引脚写0或1**
+```c
+void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+```
+参数`GPIO_PinState`为高低电平
+```c
+typedef enum  
+{  
+  GPIO_PIN_RESET = 0u,  
+  GPIO_PIN_SET  
+} GPIO_PinState;
+```
 
+2. **翻转引脚的电平状态**
+```c
+HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+```
+
+示例代码：
+```c
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,GPIO_PIN_RESET);
+```
+
+### 输入
+**读取引脚的电平状态、函数返回值为0或1**
+```c
+GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+```
+
+示例代码：
+```c
+if(HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13)==GPIO_PIN_RESET){
+
+}
+```
