@@ -127,4 +127,14 @@ HAL_Delay(10);
 ```
 
 ## 加入FreeRTOS
-根据[[STM32Hal库配置]]在上面的基础上配置FreeRTOS，
+根据[[STM32Hal库配置]]在上面的基础上配置FreeRTOS，并取消定时器
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/16-33-33-30ab69e319af398e16c831f1b6d8797a-20240905163332-d51e96.png)
+
+删除lvgl初始化代码和循环中的代码，放在在任务中执行
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/16-37-10-9e24b6b655fede62cfa357fe977622de-20240905163710-f52343.png)
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/16-37-19-3af8726f50f7c5b127dae7e1ec3ea4a0-20240905163719-048905.png)
+
+打开`lv_conf.h`文件，找到`LV_TICK_CUSTOM`，将其改为1，`LV_TICK_CUSTOM_INCLUDE`改为`"cmsis_os.h"`，`LV_TICK_CUSTOM_SYS_TIME_EXPR`改为`xTaskGetTickCount()`
+
+![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/16-38-15-ff84d9dc92a3b3d838007d1d6e3f1850-20240905163815-3c4990.png)
+
