@@ -358,6 +358,15 @@ xz [-dtlkc\#] filename
 -参数`-c`：将压缩的数据输出到屏幕上
 -参数`-#`：数字，-1最快，-9最慢但压缩比最好，默认为-6
 
+#### tar
+压缩
+```bash
+tar -jcv -f filename
+```
+解压缩
+```bash
+tar -jxv -f filename
+```
 ## Linux的账号与用户组
 ### 用户标识符：UID与GID
 Linux中每一个文件都有拥有者UID与拥有人组GID，当显示文件属性时，系统会根据`/etc/passwd`与`/etc/group`的内容，找到UID与GID对应的账号与组名再显示出来。
