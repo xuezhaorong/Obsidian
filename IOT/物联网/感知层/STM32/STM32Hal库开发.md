@@ -218,6 +218,29 @@ typedef enum
 
 参数`PreemptPriority`和参数`SubPriority`分别为抢占优先级和响应优先级。
 
+通过函数`void HAL_NVIC_EnableIRQ(IRQn_Type IRQn)`使能中断
+
+示例代码：
+```c
+GPIO_InitTypeDef GPIO_InitStructure;
+
+     /*开启按键GPIO口的时钟*/
+ __HAL_RCC_GPIOC_CLK_ENABLE;
+
+ /* 选择按键1的引脚 */
+ GPIO_InitStructure.Pin = GPIO_PIN_13;
+ /* 设置引脚为输入模式 */
+ GPIO_InitStructure.Mode = GPIO_MODE_IT_RISING;
+ /* 设置引脚不上拉也不下拉 */
+ GPIO_InitStructure.Pull = GPIO_NOPULL;
+ /* 使用上面的结构体初始化按键 */
+ HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+ /* 配置 EXTI 中断源 到key1 引脚、配置中断优先级*/
+ HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+ /* 使能中断 */
+ HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+```
+
 ### 中断服务函数
 查询相应的中断服务函数名，重写
 ```c
@@ -233,3 +256,14 @@ typedef enum
 ```
 
 ### STM32CUBE操作
+点击引脚中的EXIT中断配置
+![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-38-57-70780b0c9fc4325acb8d3844e3a2dffa-20240905203856-1adfcf.png)
+ 
+ 选择中断触发模式，参数分别为：
+ * 上升沿触发外部中断
+ * 下降沿触发外部中断
+ * 双边沿触发外部中断
+后面三个参数为外部事件的触发
+ ![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-40-28-98e9e3380f4006443ef8515f189eee89-20240905204027-db5bbf.png)
+进入NVIC配置，将中断通道打勾使能中断，并配置抢占优先级和响应优先级
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/20-43-38-fd534b74699c33b59aefca781f5477fe-20240905204338-3cca9d.png)
