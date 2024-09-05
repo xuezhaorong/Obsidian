@@ -337,3 +337,5 @@ Hal中的中断服务方式和中断回调函数分离，先进入中断服务�
 ```
 
 #### STM32CUBE操作
+在`Timer`中选择定时器，勾选`Internal Clock`选择内部时钟
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-00-08-d082222208e5a7ea0675f4492d021fa3-20240905220008-bcc6a4.png)
