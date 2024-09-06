@@ -511,3 +511,4 @@ HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
 __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
 ```
 
+### 输入捕获
