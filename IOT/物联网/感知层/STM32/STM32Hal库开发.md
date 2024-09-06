@@ -393,3 +393,46 @@ TIM_TimeBaseStructure.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
 HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 ```
 
+#### 输出比较单元配置
+hal中输出比较单元初始化函数
+```c
+/**  
+  * @brief  Initializes the TIM PWM  channels according to the specified  *         parameters in the TIM_OC_InitTypeDef.  
+  * @param  htim TIM PWM handle  
+  * @param  sConfig TIM PWM configuration structure  
+  * @param  Channel TIM Channels to be configured  *          This parameter can be one of the following values:  
+  *            @arg TIM_CHANNEL_1: TIM Channel 1 selected  
+  *            @arg TIM_CHANNEL_2: TIM Channel 2 selected  
+  *            @arg TIM_CHANNEL_3: TIM Channel 3 selected  
+  *            @arg TIM_CHANNEL_4: TIM Channel 4 selected  
+  * @retval HAL status  */
+HAL_StatusTypeDef HAL_TIM_PWM_ConfigChannel(TIM_HandleTypeDef *htim, const TIM_OC_InitTypeDef *sConfig, uint32_t Channel)
+```
+
+第二个参数`TIM_OC_InitTypeDef`为输出比较单元的结构体
+
+```c
+typedef struct  
+{  
+  uint32_t OCMode;        /*!< Specifies the TIM mode.  
+                               This parameter can be a value of @ref TIM_Output_Compare_and_PWM_modes */  
+  uint32_t Pulse;         /*!< Specifies the pulse value to be loaded into the Capture Compare Register.  
+                               This parameter can be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF */  
+  uint32_t OCPolarity;    /*!< Specifies the output polarity.  
+                               This parameter can be a value of @ref TIM_Output_Compare_Polarity */  
+  uint32_t OCNPolarity;   /*!< Specifies the complementary output polarity.  
+                               This parameter can be a value of @ref TIM_Output_Compare_N_Polarity                               @note This parameter is valid only for timer instances supporting break feature. */  
+  uint32_t OCFastMode;    /*!< Specifies the Fast mode state.  
+                               This parameter can be a value of @ref TIM_Output_Fast_State                               @note This parameter is valid only in PWM1 and PWM2 mode. */  
+  
+  uint32_t OCIdleState;   /*!< Specifies the TIM Output Compare pin state during Idle state.  
+                               This parameter can be a value of @ref TIM_Output_Compare_Idle_State                               @note This parameter is valid only for timer instances supporting break feature. */  
+  uint32_t OCNIdleState;  /*!< Specifies the TIM Output Compare pin state during Idle state.  
+                               This parameter can be a value of @ref TIM_Output_Compare_N_Idle_State                               @note This parameter is valid only for timer instances supporting break feature. */} TIM_OC_InitTypeDef;
+```
+
+主要参数有：
+* `OCMode`：PWM模式
+
+* `Pulse`：占空比
+* 
