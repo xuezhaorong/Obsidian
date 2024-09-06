@@ -371,3 +371,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 ![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-08-54-8b81bfeafe2cd54a93b213e72b57a4ab-20240905220853-053572.png)
 
 ### 输出比较
+#### 复用引脚配置
+```c
+GPIO_InitTypeDef GPIO_InitStructure;
+GPIO_InitStructure.Pin = GPIO_PIN_0;
+GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
+GPIO_InitStructure.Pull = GPIO_NOPULL;
+GPIO_InitStructure.Speed = GPIO_SPEED_HIGH;
+HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
+```
+
