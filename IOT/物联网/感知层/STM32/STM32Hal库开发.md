@@ -290,13 +290,10 @@ HAL_StatusTypeDef HAL_TIM_Base_Init(TIM_HandleTypeDef *htim)
 
 示例代码：
 ```c
-  
+TIM_HandleTypeDef TIM_TimeBaseStructure;
 TIM_TimeBaseStructure.Instance = TIM6;
-
 TIM_TimeBaseStructure.Init.Period = 5000-1;
-
 TIM_TimeBaseStructure.Init.Prescaler = 8400-1;
-
 HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 ```
 
@@ -306,7 +303,7 @@ HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 //设置抢占优先级，子优先级
 HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 3);
 // 设置中断来源
-HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn)
+HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
 ```
 
 #### 开启定时器并更新中断
@@ -323,17 +320,46 @@ HAL_TIM_Base_Start(&TIM_TimeBaseStructure);
 #### 中断服务函数
 Hal中的中断服务方式和中断回调函数分离，先进入中断服务函数中，然后触发回调函数
 ```c
- void  TIM6_DAC_IRQHandler(void)
- {
-     HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+void  TIM6_DAC_IRQHandler(void)
+{
+ HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+ if (htim==(&TIM_TimeBaseStructure)) {
+	 
  }
+}
+```
+
+#### 示例
+```c
+__HAL_RCC_TIM6_CLK_ENABLE();
+TIM_HandleTypeDef TIM_TimeBaseStructure;
+TIM_TimeBaseStructure.Instance = TIM6;
+TIM_TimeBaseStructure.Init.Period = 5000-1;
+TIM_TimeBaseStructure.Init.Prescaler = 8400-1;
+HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
+
+//设置抢占优先级，子优先级
+HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 3);
+// 设置中断来源
+HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
+
+HAL_TIM_Base_Start_IT(&TIM_TimeBaseStructure);
+
+void  TIM6_DAC_IRQHandler(void)
+{
+ HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+}
  
- void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
- {
-     if (htim==(&TIM_TimeBaseStructure)) {
-         
-     }
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+ if (htim==(&TIM_TimeBaseStructure)) {
+	 
  }
+}
 ```
 
 #### STM32CUBE操作
@@ -462,7 +488,7 @@ hal中输出比较的时钟开启合并到PWM开启的函数中
 HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1);
 ```
 
-示例代码：
+#### 示例
 ```c
 // 复用引脚配置
 __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -473,6 +499,7 @@ GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 // 时基单元配置
+__HAL_RCC_TIM2_CLK_ENABLE();
 TIM_HandleTypeDef TIM_TimeBaseStructure;
 TIM_TimeBaseStructure.Instance = TIM2;  
 TIM_TimeBaseStructure.Init.Prescaler = 71;  
@@ -510,5 +537,6 @@ HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
 
 __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
 ```
+
 
 ### 输入捕获
