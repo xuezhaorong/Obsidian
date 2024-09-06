@@ -736,5 +736,15 @@ HAL_TIM_ReadCapturedValue(&TIM_TimeBaseStructure,TIM_CHANNEL_2); //获取当前�
 ```
 
 #### STM32CUBE操作
+设置通用定时器的从模式，时钟源和输入捕获，对应的GPIO会自动配置
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/16-23-58-87f22877c3ade2073d94394ed7ba2689-20240906162357-40b631.png)
 
-![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/16-18-19-7649bc9a917f156388c3d62b2c6c3805-20240906161818-2ce6e7.png)
+
+配置时基单元的具体参数，从模式具体参数和输入捕获通道的具体参数
+![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/16-24-52-5bbf6926d38ab9e5d84c8eb1e93d7585-20240906162452-651487.png)
+
+在`main.c`中开启输入捕获并获取值
+```c
+HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_2); /*开启输入捕获*/
+HAL_TIM_ReadCapturedValue(&htim2,TIM_CHANNEL_2); //获取当前的捕获值
+```
