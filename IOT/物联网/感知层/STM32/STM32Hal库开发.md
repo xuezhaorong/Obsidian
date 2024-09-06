@@ -482,10 +482,15 @@ TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;
 HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1);
 ```
 
-#### 启动定时器
-hal中输出比较的启动合并到PWM开启的函数中
+#### 启动输出比较
+
 ```c
 HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1);
+```
+
+#### 设置占空比
+```c
+__HAL_TIM_SetCompare(&TIM_TimeBaseStructure, TIM_CHANNEL_1, 0);
 ```
 
 #### 示例
@@ -620,7 +625,7 @@ TIM_ICInitStructure.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
 TIM_ICInitStructure.ICSelection = TIM_ICSELECTION_DIRECTTI;  
 TIM_ICInitStructure.ICPrescaler = TIM_ICPSC_DIV1;  
 TIM_ICInitStructure.ICFilter = 8;  
-if (HAL_TIM_IC_ConfigChannel(&TIM_TimeBaseStructure, &TIM_ICInitStructure, TIM_CHANNEL_2) != HAL_OK)
+HAL_TIM_IC_ConfigChannel(&TIM_TimeBaseStructure, &TIM_ICInitStructure, TIM_CHANNEL_2);
 ```
 
 #### 配置从模式
@@ -681,7 +686,51 @@ TIM_SlaveConfigStructure.InputTrigger = TIM_TS_TI1FP1;
 HAL_TIM_SlaveConfigSynchronization(&TIM_TimeBaseStructure,&TIM_SlaveConfigStructure);
 ```
 
-#### 启动定时器
+#### 启动输入捕获
 ```c
-	
+HAL_TIM_IC_Start_IT(&TIM_TimeBaseStructure,TIM_CHANNEL_2); /*开启输入捕获*/
+```
+
+#### 获取输入捕获值
+```c
+HAL_TIM_ReadCapturedValue(&TIM_TimeBaseStructure,TIM_CHANNEL_2); //获取当前的捕获值
+```
+
+
+#### 示例
+```c
+__HAL_RCC_GPIOA_CLK_ENABLE();
+GPIO_InitTypeDef GPIO_InitStruct;
+GPIO_InitStruct.Pin = GPIO_PIN_1;  
+GPIO_InitStruct.Mode = GPIO_MODE_INPUT;  
+GPIO_InitStruct.Pull = GPIO_PULLDOWN;  
+HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+__HAL_RCC_TIM2_CLK_ENABLE();
+TIM_HandleTypeDef TIM_TimeBaseStructure;
+TIM_TimeBaseStructure.Instance = TIM2;  
+TIM_TimeBaseStructure.Init.Prescaler = 71;  
+TIM_TimeBaseStructure.Init.CounterMode = TIM_COUNTERMODE_UP;  
+TIM_TimeBaseStructure.Init.Period = 65535;  
+TIM_TimeBaseStructure.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;  
+TIM_TimeBaseStructure.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;  
+HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
+
+TIM_IC_InitTypeDef TIM_ICInitStructure;
+TIM_ICInitStructure.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;  
+TIM_ICInitStructure.ICSelection = TIM_ICSELECTION_DIRECTTI;  
+TIM_ICInitStructure.ICPrescaler = TIM_ICPSC_DIV1;  
+TIM_ICInitStructure.ICFilter = 8;  
+HAL_TIM_IC_ConfigChannel(&TIM_TimeBaseStructure, &TIM_ICInitStructure, TIM_CHANNEL_2);
+
+TIM_SlaveConfigTypeDef TIM_SlaveConfigStructure;
+/* 选择从模式: 复位模式 */
+TIM_SlaveConfigStructure.SlaveMode = TIM_SLAVEMODE_RESET;
+/* 选择定时器输入触发: TI1FP1 */
+TIM_SlaveConfigStructure.InputTrigger = TIM_TS_TI1FP1;
+HAL_TIM_SlaveConfigSynchronization(&TIM_TimeBaseStructure,&TIM_SlaveConfigStructure);
+
+HAL_TIM_IC_Start_IT(&TIM_TimeBaseStructure,TIM_CHANNEL_2); /*开启输入捕获*/
+
+HAL_TIM_ReadCapturedValue(&TIM_TimeBaseStructure,TIM_CHANNEL_2); //获取当前的捕获值
 ```
