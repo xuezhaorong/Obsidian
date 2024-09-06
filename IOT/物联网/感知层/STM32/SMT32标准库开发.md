@@ -1704,7 +1704,7 @@ void PWM_SetPrescaler(uint16_t Prescaler){
 
 **频率测量:**
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-35-52-499ad8e6d6db5451e2adb1af68f4fb81-%E6%B5%8B%E9%87%8F%E9%A2%91%E7%8E%87-09c88a.png)
+![|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-35-52-499ad8e6d6db5451e2adb1af68f4fb81-%E6%B5%8B%E9%87%8F%E9%A2%91%E7%8E%87-09c88a.png)
 
  测量频率有两种方法: **测频法**和**测周法** , 测频法先规定一个闸门时间 T, 记录上升沿的次数，则一个时钟周期就是 T/N, 频率则为 N/T, 测周法用标准频率计算两个上升沿之间的次数，则一个周期为 N * 1/f, 频率为 f/N。
 
@@ -1718,13 +1718,13 @@ void PWM_SetPrescaler(uint16_t Prescaler){
 
 **输入捕获基本模式测量频率:**
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-36-29-0089452a0dc9c544b270fed354ac3f51-%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-6806ef.png)
+![|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-36-29-0089452a0dc9c544b270fed354ac3f51-%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-6806ef.png)
 
  输入捕获基本模式不使用交叉连接的方式，只使用了一个通道，用于测量频率，时基单元 CNT 作为测周法的计次单元，GPIO 口输入的信号经过滤波器和边沿检测，选择 TI1FP1 为上升沿触发，选择直连通道，分频器不分频，这样当 TI1FP1 出现上升沿之后，CNT 的当前计数值转运到 CCR 里，同时触发源选择 TI1FP1 为触发信号，通过复位操作的从模式将 CNT 的值清 0。
 
 **输入捕获 PWMI 模式:**
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-37-01-b6907157b1a8dfcf6a1b74b0a3353587-PWMI%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-8b1a4d.png)
+![|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-37-01-b6907157b1a8dfcf6a1b74b0a3353587-PWMI%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-8b1a4d.png)
 
  输入捕获的 PWMI 模式使用两个通道，可以同时测量周期和占空比，在基本模式下，配置 TI1FP2 为下降沿触发，通过交叉通道，触发通道 2 的捕获单元，这样 CCR2 的值为一个周期内高电平的持续时间。
 
