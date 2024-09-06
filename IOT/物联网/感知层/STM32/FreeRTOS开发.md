@@ -1,6 +1,6 @@
 根据[[STM32标准库FreeRtos配置]]配置Clion项目
 ## 任务
-### 单任务创建
+### 任务创建
 任务是一个死循环函数
 ```c
 static void LED_Task(void *parameter){  
@@ -132,4 +132,3 @@ static void LED_Task(void *parameter){
 }
 ```
 
-### 多任务创建
