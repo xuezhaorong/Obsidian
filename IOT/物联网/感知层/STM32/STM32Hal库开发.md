@@ -540,3 +540,12 @@ __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
 
 
 ### 输入捕获
+#### GPIO引脚配置
+```c
+GPIO_InitStructure.Pin = GPIO_PIN_6;
+ GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
+ GPIO_InitStructure.Pull = GPIO_NOPULL;
+ GPIO_InitStructure.Speed = GPIO_SPEED_HIGH;
+ GPIO_InitStructure.Alternate = GENERAL_OCPWM_AF;
+ HAL_GPIO_Init(GENERAL_OCPWM_GPIO_PORT, &GPIO_InitStructure);
+```
