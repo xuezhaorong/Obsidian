@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "mode": "source",
                 "source": false
               }
@@ -59,7 +59,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             },
             "group": "88550bae11fcafb1"
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           },
@@ -171,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,8 +205,8 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
+    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
