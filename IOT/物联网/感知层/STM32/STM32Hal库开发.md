@@ -501,3 +501,12 @@ __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
 
 ![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/12-43-58-cf2563b2685378cc60f8ccd0160bad88-20240906124357-ae9bc0.png)
 
+配置时基单元参数和输出比较单元参数
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/12-53-03-9c602fa1c1cae428f88460fdd1369b8d-20240906125302-56a76e.png)
+
+在`main.c`中开启PWM并设置占空比
+```c
+HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+
+__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
+```
