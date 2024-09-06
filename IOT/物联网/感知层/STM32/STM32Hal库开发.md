@@ -456,3 +456,10 @@ TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;
 HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1)
 ```
 
+#### 开启时钟
+hal中输出比较的时钟开启合并到PWM开启的函数中
+```c
+HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1);
+```
+
+示例代码：
