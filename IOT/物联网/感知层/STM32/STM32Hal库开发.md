@@ -433,6 +433,26 @@ typedef struct
 
 主要参数有：
 * `OCMode`：PWM模式
-
+```c
+#define TIM_OCMODE_TIMING                   0x00000000U                                              /*!< Frozen                                 */  
+#define TIM_OCMODE_ACTIVE                   TIM_CCMR1_OC1M_0                                         /*!< Set channel to active level on match   */  
+#define TIM_OCMODE_INACTIVE                 TIM_CCMR1_OC1M_1                                         /*!< Set channel to inactive level on match */  
+#define TIM_OCMODE_TOGGLE                   (TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_0)                    /*!< Toggle                                 */  
+#define TIM_OCMODE_PWM1                     (TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1)                    /*!< PWM mode 1                             */  
+#define TIM_OCMODE_PWM2                     (TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_0) /*!< PWM mode 2                             */  
+#define TIM_OCMODE_FORCED_ACTIVE            (TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_0)                    /*!< Force active level                     */  
+#define TIM_OCMODE_FORCED_INACTIVE          TIM_CCMR1_OC1M_2                                         /*!< Force inactive level
+```
 * `Pulse`：占空比
-* 
+* `OCPolarity`：输出比较的极性
+
+
+示例代码：
+```c
+TIM_OC_InitTypeDef TIM_OCInitStructure;
+TIM_OCInitStructure.OCMode = TIM_OCMODE_PWM1;  
+TIM_OCInitStructure.Pulse = 0;  
+TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;  
+HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1)
+```
+
