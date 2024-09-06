@@ -1894,7 +1894,7 @@ TIM_ICInit(TIM3,&TIM_ICInitStructure);
   *     @arg TIM_TS_ETRF: External Trigger input
   * @retval None
   */
-void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource)
+void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
 
 ```
 

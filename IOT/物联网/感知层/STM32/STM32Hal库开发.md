@@ -482,8 +482,8 @@ TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;
 HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1);
 ```
 
-#### 开启时钟
-hal中输出比较的时钟开启合并到PWM开启的函数中
+#### 启动定时器
+hal中输出比较的启动合并到PWM开启的函数中
 ```c
 HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1);
 ```
@@ -671,3 +671,17 @@ typedef struct
 #define TIM_TS_NONE          0x0000FFFFU                                                       /*!< No trigger selected                    */
 ```
 
+示例代码：
+```c
+TIM_SlaveConfigTypeDef TIM_SlaveConfigStructure;
+/* 选择从模式: 复位模式 */
+TIM_SlaveConfigStructure.SlaveMode = TIM_SLAVEMODE_RESET;
+/* 选择定时器输入触发: TI1FP1 */
+TIM_SlaveConfigStructure.InputTrigger = TIM_TS_TI1FP1;
+HAL_TIM_SlaveConfigSynchronization(&TIM_TimeBaseStructure,&TIM_SlaveConfigStructure);
+```
+
+#### 启动定时器
+```c
+	
+```
