@@ -734,3 +734,5 @@ HAL_TIM_IC_Start_IT(&TIM_TimeBaseStructure,TIM_CHANNEL_2); /*开启输入捕获*
 
 HAL_TIM_ReadCapturedValue(&TIM_TimeBaseStructure,TIM_CHANNEL_2); //获取当前的捕获值
 ```
+
+#### STM32CUBE操作
