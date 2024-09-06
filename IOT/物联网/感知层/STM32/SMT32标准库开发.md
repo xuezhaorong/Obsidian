@@ -1549,7 +1549,7 @@ GPIO_InitTypeDef GPTOA_InitStructure = {
 
 -   根据 PWM 公式进行自动重装器和预分配器的配置
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-34-04-4a315f9a39213bc918e8e4737d64b4b0-PWM%E5%8F%82%E6%95%B0%E8%AE%A1%E7%AE%97-638deb.png)
+![|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-34-04-4a315f9a39213bc918e8e4737d64b4b0-PWM%E5%8F%82%E6%95%B0%E8%AE%A1%E7%AE%97-638deb.png)
 
 ```c
 // 使用内部时钟
