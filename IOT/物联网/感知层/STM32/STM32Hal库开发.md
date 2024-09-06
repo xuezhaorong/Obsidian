@@ -322,14 +322,14 @@ Hal中的中断服务方式和中断回调函数分离，先进入中断服务�
 ```c
 void  TIM6_DAC_IRQHandler(void)
 {
- HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+	HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
- if (htim==(&TIM_TimeBaseStructure)) {
+	if (htim==(&TIM_TimeBaseStructure)) {
 	 
- }
+	}
 }
 ```
 
@@ -351,14 +351,14 @@ HAL_TIM_Base_Start_IT(&TIM_TimeBaseStructure);
 
 void  TIM6_DAC_IRQHandler(void)
 {
- HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
+	HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);
 }
  
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
- if (htim==(&TIM_TimeBaseStructure)) {
+	if (htim==(&TIM_TimeBaseStructure)) {
 	 
- }
+	}
 }
 ```
 
@@ -547,5 +547,127 @@ GPIO_InitStruct.Pin = GPIO_PIN_1;
 GPIO_InitStruct.Mode = GPIO_MODE_INPUT;  
 GPIO_InitStruct.Pull = GPIO_PULLDOWN;  
 HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+```
+
+#### 时基单元配置
+```c
+TIM_HandleTypeDef TIM_TimeBaseStructure;
+TIM_TimeBaseStructure.Instance = TIM2;  
+TIM_TimeBaseStructure.Init.Prescaler = 71;  
+TIM_TimeBaseStructure.Init.CounterMode = TIM_COUNTERMODE_UP;  
+TIM_TimeBaseStructure.Init.Period = 65535;  
+TIM_TimeBaseStructure.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;  
+TIM_TimeBaseStructure.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;  
+HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
+```
+
+#### 输入捕获单元配置
+hal中输入捕获初始化的函数
+```c
+/**  
+  * @brief  Initializes the TIM Input Capture Channels according to the specified  *         parameters in the TIM_IC_InitTypeDef.  
+  * @param  htim TIM IC handle  
+  * @param  sConfig TIM Input Capture configuration structure  
+  * @param  Channel TIM Channel to configure  *          This parameter can be one of the following values:  
+  *            @arg TIM_CHANNEL_1: TIM Channel 1 selected  
+  *            @arg TIM_CHANNEL_2: TIM Channel 2 selected  
+  *            @arg TIM_CHANNEL_3: TIM Channel 3 selected  
+  *            @arg TIM_CHANNEL_4: TIM Channel 4 selected  * @retval HAL status  */
+HAL_StatusTypeDef HAL_TIM_IC_ConfigChannel(TIM_HandleTypeDef *htim, const TIM_IC_InitTypeDef *sConfig, uint32_t Channel)
+```
+
+`TIM_IC_InitTypeDef`为输入捕获结构体
+```c
+typedef struct  
+{  
+  uint32_t  ICPolarity;  /*!< Specifies the active edge of the input signal.  
+                              This parameter can be a value of @ref TIM_Input_Capture_Polarity */  
+  uint32_t ICSelection;  /*!< Specifies the input.  
+                              This parameter can be a value of @ref TIM_Input_Capture_Selection */  
+  uint32_t ICPrescaler;  /*!< Specifies the Input Capture Prescaler.  
+                              This parameter can be a value of @ref TIM_Input_Capture_Prescaler */  
+  uint32_t ICFilter;     /*!< Specifies the input capture filter.  
+                              This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF */} TIM_IC_InitTypeDef;
+```
+* 参数`ICPolarity`：触发极性
+```c
+#define  TIM_ICPOLARITY_RISING             TIM_INPUTCHANNELPOLARITY_RISING      /*!< Capture triggered by rising edge on timer input                  */  
+#define  TIM_ICPOLARITY_FALLING            TIM_INPUTCHANNELPOLARITY_FALLING     /*!< Capture triggered by falling edge on timer input                 */  
+#define  TIM_ICPOLARITY_BOTHEDGE           TIM_INPUTCHANNELPOLARITY_BOTHEDGE    /*!< Capture triggered by both rising and falling edges on timer input*/  
+```
+
+* 参数`ICSelection`：连通模式
+```c
+#define TIM_ICSELECTION_DIRECTTI           TIM_CCMR1_CC1S_0                     /*!< TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively */  
+#define TIM_ICSELECTION_INDIRECTTI         TIM_CCMR1_CC1S_1                     /*!< TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively */  
+#define TIM_ICSELECTION_TRC                TIM_CCMR1_CC1S                       /*!< TIM Input 1, 2, 3 or 4 is selected to be connected to TRC */  
+```
+
+* 参数`ICPrescaler`：分频模式
+```c
+#define TIM_ICPSC_DIV1                     0x00000000U                          /*!< Capture performed each time an edge is detected on the capture input */  
+#define TIM_ICPSC_DIV2                     TIM_CCMR1_IC1PSC_0                   /*!< Capture performed once every 2 events                                */  
+#define TIM_ICPSC_DIV4                     TIM_CCMR1_IC1PSC_1                   /*!< Capture performed once every 4 events                                */  
+#define TIM_ICPSC_DIV8                     TIM_CCMR1_IC1PSC                     /*!< Capture performed once every 8 events
+```
+
+* 参数`ICFilter`：滤波器
+
+示例代码：
+```c
+TIM_IC_InitTypeDef TIM_ICInitStructure;
+TIM_ICInitStructure.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;  
+TIM_ICInitStructure.ICSelection = TIM_ICSELECTION_DIRECTTI;  
+TIM_ICInitStructure.ICPrescaler = TIM_ICPSC_DIV1;  
+TIM_ICInitStructure.ICFilter = 8;  
+if (HAL_TIM_IC_ConfigChannel(&TIM_TimeBaseStructure, &TIM_ICInitStructure, TIM_CHANNEL_2) != HAL_OK)
+```
+
+#### 配置从模式
+hal中配置从模式的函数
+```c
+/**  
+  * @brief  Configures the TIM in Slave mode  
+  * @param  htim TIM handle.  
+  * @param  sSlaveConfig pointer to a TIM_SlaveConfigTypeDef structure that  *         contains the selected trigger (internal trigger input, filtered  *         timer input or external trigger input) and the Slave mode  *         (Disable, Reset, Gated, Trigger, External clock mode 1).  
+  * @retval HAL status  */
+HAL_StatusTypeDef HAL_TIM_SlaveConfigSynchro(TIM_HandleTypeDef *htim, const TIM_SlaveConfigTypeDef *sSlaveConfig)
+```
+
+`TIM_SlaveConfigTypeDef`为从模式的结构体
+```c
+typedef struct  
+{  
+  uint32_t  SlaveMode;         /*!< Slave mode selection  
+                                    This parameter can be a value of @ref TIM_Slave_Mode */  uint32_t  InputTrigger;      /*!< Input Trigger source  
+                                    This parameter can be a value of @ref TIM_Trigger_Selection */  uint32_t  TriggerPolarity;   /*!< Input Trigger polarity  
+                                    This parameter can be a value of @ref TIM_Trigger_Polarity */  uint32_t  TriggerPrescaler;  /*!< Input trigger prescaler  
+                                    This parameter can be a value of @ref TIM_Trigger_Prescaler */  uint32_t  TriggerFilter;     /*!< Input trigger filter  
+                                    This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF  */  
+} TIM_SlaveConfigTypeDef;
+```
+
+主要参数有`SlaveMode`和`InputTrigger`
+
+* 参数`SlaveMode`：从模式选择
+```c
+#define TIM_SLAVEMODE_DISABLE                0x00000000U                                        /*!< Slave mode disabled           */  
+#define TIM_SLAVEMODE_RESET                  TIM_SMCR_SMS_2                                     /*!< Reset Mode                    */  
+#define TIM_SLAVEMODE_GATED                  (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_0)                  /*!< Gated Mode                    */  
+#define TIM_SLAVEMODE_TRIGGER                (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1)                  /*!< Trigger Mode                  */  
+#define TIM_SLAVEMODE_EXTERNAL1              (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1 | TIM_SMCR_SMS_0) /*!< External Clock Mode 1         */
+```
+
+* 参数`InputTrigger`：从模式触发源
+```c
+#define TIM_TS_ITR0          0x00000000U                                                       /*!< Internal Trigger 0 (ITR0)              */  
+#define TIM_TS_ITR1          TIM_SMCR_TS_0                                                     /*!< Internal Trigger 1 (ITR1)              */  
+#define TIM_TS_ITR2          TIM_SMCR_TS_1                                                     /*!< Internal Trigger 2 (ITR2)              */  
+#define TIM_TS_ITR3          (TIM_SMCR_TS_0 | TIM_SMCR_TS_1)                                   /*!< Internal Trigger 3 (ITR3)              */  
+#define TIM_TS_TI1F_ED       TIM_SMCR_TS_2                                                     /*!< TI1 Edge Detector (TI1F_ED)            */  
+#define TIM_TS_TI1FP1        (TIM_SMCR_TS_0 | TIM_SMCR_TS_2)                                   /*!< Filtered Timer Input 1 (TI1FP1)        */  
+#define TIM_TS_TI2FP2        (TIM_SMCR_TS_1 | TIM_SMCR_TS_2)                                   /*!< Filtered Timer Input 2 (TI2FP2)        */  
+#define TIM_TS_ETRF          (TIM_SMCR_TS_0 | TIM_SMCR_TS_1 | TIM_SMCR_TS_2)                   /*!< Filtered External Trigger input (ETRF) */  
+#define TIM_TS_NONE          0x0000FFFFU                                                       /*!< No trigger selected                    */
 ```
 
