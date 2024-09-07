@@ -155,4 +155,19 @@ add_executable($${PROJECT_NAME}.elf $${SOURCES} $${LINKER_SCRIPT} ${LVGL_SOURCES
 
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/16-38-15-ff84d9dc92a3b3d838007d1d6e3f1850-20240905163815-3c4990.png)
 
- 
+ ## 内存不够解决方案
+ 1. 修改`lvgl.conf`，减少分配给lvgl管理的内存
+```c
+#define LV_MEM_SIZE (20U * 1024U)          /*[bytes]*/
+```
+
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/07/18-51-00-9c9059bfe0528e997c19385fa48ffabe-20240907185059-a895a1.png)
+
+2. 配置`lv_port_disp_template.c`，适当减少图形缓存区的大小，同时需要兼顾运行效果
+```c
+static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buffer for 10 rows*/
+```
+
+![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/07/18-53-38-0ab6a8a1a8b38f3e5ac3a28fbf861fec-20240907185337-47b2f8.png)
+
+3. 配置`FreeRTOSConfig.h`，适当减少分配给FreeRTOS的内存
