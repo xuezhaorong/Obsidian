@@ -189,3 +189,16 @@ lv_obj_set_style_bg_color(slider, lv_color_hex(0x94bc40),LV_STATE_DEFAULT|LV_PAR
 
 现象：
 ![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-29-14-41ac2b5c986f1c843fb48dfddd262438-20240908172914-fbe838.png)
+
+
+
+
+
+#### 事件(events)
+当发生用户感兴趣的事件时，可以触发事件，以执行相应的操作
+Api函数：
+* 添加事件：`lv_obj_add_event_cb(obj,event_cb,event_code,user_data)`
+* 删除事件：`lv_obj_remove_event_cb(obj,event_cb)`
+
+到[Events（事件） — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/overview/event.html)查看
+
