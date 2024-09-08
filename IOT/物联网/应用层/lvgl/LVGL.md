@@ -175,3 +175,6 @@ lv_obj_set_style_outline_opa(obj,200,LV_STATE_DEFAULT); // 轮廓
 
 打开[Widgets（控件） — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/widgets/index.html)，查看修改部件中各个部分的属性
 
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-25-02-0e26dbe29ee7ec1f94ba2ba3ef24038a-20240908172502-2e06c8.png)
+
+示例代码：
