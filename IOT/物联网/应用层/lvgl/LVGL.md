@@ -76,3 +76,16 @@ lv_obj_set_pos(obj1,100,200);
 ```
 
 #### 对齐(alignment)
+对齐方式有两种
+1. 参照父对象对齐
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-14-43-35d012202dc91ed96892b8d060e046af-20240908161442-273e37.png)
+
+Api函数：
+* 参照父对象对齐：`lv_obj_set_align(obj,LV_ALIGN_...)`
+* 参照父对象对齐，再进行偏移：`lv_obj_align(obj,lv_ALIGN_...,x,y)` 
+
+3. 参照其他对象对齐（无父子关系）
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-15-28-de1357b4a919bbd46d0cd96a851582df-20240908161528-b1e0bc.png)
+
+Api函数：
+* 参照其他对象对齐（无父子关系），再进行偏移：`lv_obj_align_to(obj_to_align,obj_referece,LV_ALIGN_,...,x,y)`
