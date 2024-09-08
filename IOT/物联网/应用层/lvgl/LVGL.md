@@ -215,3 +215,15 @@ void my_gui(void){
 }
 ```
 
+如果多个事件触发使用同一个回调函数，可以使用函数`lv_event_get_code`进行区分
+示例代码：
+```c
+lv_event_code_t code = lv_event_get_code(e);  
+if (code == LV_EVENT_CLICKED){  
+    printf("LV_EVENT_CLICKED \n");  
+}  
+else if (code == LV_EVENT_PRESSED){  
+    printf("LV_EVENT_PRESSED \n");  
+}
+```
+
