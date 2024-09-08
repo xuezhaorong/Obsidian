@@ -558,7 +558,14 @@ Vi共分为3种模式：
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-58-36-940630db0188bf301cb850c27991ddcb-20240908215836-6e1a68.png)
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-59-08-cb1562cf47ecb6b894dab3590a4c9be9-20240908215908-fe9134.png)
 
+* 一般指令模式切换到编辑模式：
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/22-00-38-d19c398fc02145016a1af33226e3e62e-20240908220038-3ab267.png)
 
+* 一般指令模式切换到命令行界面：
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/22-01-10-529c8efd745aaa6019ef0a6ff7f602ba-20240908220109-bcdb48.png)
+
+## BASH
+   
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
