@@ -204,4 +204,8 @@ static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buff
 5. 配置Clion工具链
 ![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-55-28-54b26c4c71b8318caa6261ec390b3ab4-20240908125527-fcf11c.png)
 
-6. 使用Clion打开下载的`lv_port_pc_eclipse`，
+6. 使用Clion打开下载的`lv_port_pc_eclipse`，配置Cmake，选择LVGL工具链
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-59-23-25e54ed8a3ee4a85cd9d7f665bf00ac0-20240908125921-e95884.png)
+
+7. 构建，编译运行
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/13-00-18-2ab32fd1a169391b4044e734958258c0-20240908130018-74d999.png)
