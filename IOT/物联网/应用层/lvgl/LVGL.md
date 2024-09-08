@@ -47,3 +47,32 @@ Api函数：
 * 设置宽度：`lv_obj_set_width(obj,new_width)`
 * 设置高度：`lv_obj_height(obj,new_height)`
 * 同时设置宽度，高度：`lv_obj_set_size(obj,new_width,new_height)`
+示例代码：
+```c
+lv_obj_t *obj1 = lv_obj_create(lv_scr_act());  
+//    lv_obj_set_width(obj1,300);  
+//    lv_obj_set_height(obj1,300);  
+lv_obj_set_size(obj1,300,400);
+```
+
+#### 位置(position)
+
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-03-30-35d3607e49871aceb1f2d010258b85cb-20240908160330-034980.png)
+
+ 设置部件位置位置时，坐标原点在父对象的左上角
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-01-44-af63fb0addaad50a061dd56816db56d4-20240908160143-35db80.png)
+
+Api函数
+* 设置X轴坐标：`lv_obj_set_x(obj,new_x)`
+* 设置Y轴坐标：`lv_obj_set_y(obj,new_y)`
+* 同时设置X，Y轴坐标：`lv_obj_set_pos(obj,new_x,new_y)`
+
+示例代码：
+```c
+lv_obj_t *obj1 = lv_obj_create(lv_scr_act());  
+//    lv_obj_set_x(obj1,100);  
+//    lv_obj_set_y(obj1,200);  
+lv_obj_set_pos(obj1,100,200);
+```
+
+#### 对齐(alignment)
