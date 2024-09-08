@@ -227,3 +227,33 @@ else if (code == LV_EVENT_PRESSED){
 }
 ```
 
+如果多个部件使用同一个回调函数，可以使用函数`lv_event_get_target`区分
+示例代码：
+```c  
+lv_obj_t *obj = NULL;  
+lv_obj_t *obj2 = NULL;  
+  
+static void my_event_cb(lv_event_t *e){  
+    lv_obj_t *target = lv_event_get_target(e);  
+    if (target == obj){  
+        printf("obj \n");  
+  
+    }  
+    else if (target == obj2){  
+        printf("obj2 \n");  
+  
+    }  
+  
+}  
+  
+void my_gui(void){  
+  
+    obj = lv_obj_create(lv_scr_act());  
+    lv_obj_add_event_cb(obj,my_event_cb,LV_EVENT_CLICKED,NULL);  
+    lv_obj_set_size(obj,300,300);  
+  
+    obj2 = lv_obj_create(lv_scr_act());  
+    lv_obj_add_event_cb(obj2,my_event_cb,LV_EVENT_PRESSED,NULL);  
+  
+}
+```
