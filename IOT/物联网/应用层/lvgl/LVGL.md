@@ -84,8 +84,21 @@ Api函数：
 * 参照父对象对齐：`lv_obj_set_align(obj,LV_ALIGN_...)`
 * 参照父对象对齐，再进行偏移：`lv_obj_align(obj,lv_ALIGN_...,x,y)` 
 
+示例代码：
+```c
+lv_obj_t *obj1 = lv_obj_create(lv_scr_act());  
+lv_obj_set_align(obj1,LV_ALIGN_CENTER);
+```
+
+现象：
+![|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-26-00-d67378cff5fe121b7eed7d3f229ce33f-20240908162559-12650b.png)
+
+
 3. 参照其他对象对齐（无父子关系）
 ![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-15-28-de1357b4a919bbd46d0cd96a851582df-20240908161528-b1e0bc.png)
 
 Api函数：
 * 参照其他对象对齐（无父子关系），再进行偏移：`lv_obj_align_to(obj_to_align,obj_referece,LV_ALIGN_,...,x,y)`
+
+**对齐模式**：
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-22-39-1b79fbf4d6a13ab4fefb93daaf012a45-20240908162238-a51f92.png)
