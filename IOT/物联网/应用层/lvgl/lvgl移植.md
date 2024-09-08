@@ -201,4 +201,7 @@ static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buff
 将`x86_64_w64-mingw32/lib`所有的文件复制到`mingw/x86_64_w64-mingw32/lib`中
 ![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-47-32-89cde6a338a0ec411028ceee5c6b8e97-20240908124732-531770.png)
 
-5. 
+5. 配置Clion工具链
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-55-28-54b26c4c71b8318caa6261ec390b3ab4-20240908125527-fcf11c.png)
+
+6. 使用Clion打开下载的`lv_port_pc_eclipse`，
