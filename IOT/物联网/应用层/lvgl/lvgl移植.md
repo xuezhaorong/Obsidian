@@ -187,4 +187,18 @@ static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buff
 ![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-30-34-1dc554053a2893a6c8c935da530da7f6-20240908123033-4e8fa0.png)
 
 3. 下载Mingw，链接：[SourceForge](http://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/ "SourceForge").
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-31-55-7745ad9768bf46b5096fbef2c9b3258b-20240908123154-0dacbd.png)
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-31-55-7745ad9768bf46b5096fbef2c9b3258b-20240908123154-0dacbd.png)
+
+注意要添加到系统环境变量中
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-37-33-005757768579510b57c47e03d3b0fc16-20240908123733-086f67.png)
+
+4. 下载SDL，链接：https://github.com/libsdl-org/SDL/releases/download/release-2.0.22/SDL2-devel-2.0.22-mingw.zip，进入到`x86_64_w64-mingw32`目录下
+![image.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-41-46-8591f1e2e4cf589f56851b42d62731d1-20240908124145-7246e8.png)
+
+将`x86_64_w64-mingw32/include/SDL2`复制到mingw/x86_64_w64-mingw32/include`文件夹中
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-44-44-130e4ab128d1e569d2b593b7fb8c19c1-20240908124443-3bd721.png)
+
+将`x86_64_w64-mingw32/lib`所有的文件复制到`mingw/x86_64_w64-mingw32/lib`中
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-47-32-89cde6a338a0ec411028ceee5c6b8e97-20240908124732-531770.png)
+
+5. 
