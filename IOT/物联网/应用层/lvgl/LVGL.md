@@ -157,7 +157,18 @@ enum {
 ![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-56-46-52a177e2954136c09458fc1934b8b4c4-20240908165645-ad5fe5.png)
 
 示例代码：
+```c
+lv_obj_t * obj = lv_obj_create(lv_scr_act());  
+lv_obj_set_align(obj,LV_ALIGN_CENTER);  
+  
+lv_obj_set_style_border_color(obj, lv_color_hex(0x56c94c),LV_STATE_DEFAULT);  // 设置边框颜色
+lv_obj_set_style_border_width(obj,10,LV_STATE_DEFAULT);  // 设置边框宽度
+lv_obj_set_style_border_opa(obj,200,LV_STATE_DEFAULT); // 设置边框透明度
 
+lv_obj_set_style_outline_color(obj, lv_color_hex(0x0000a0),LV_STATE_DEFAULT);  // 轮廓
+lv_obj_set_style_outline_width(obj,10,LV_STATE_DEFAULT);  // 论据
+lv_obj_set_style_outline_opa(obj,200,LV_STATE_DEFAULT); // 轮廓
+```
 
 现象： 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-01-56-d3d9ca6b0b7bff65e3592c58f270e106-20240908170156-28586a.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-06-54-5ed87d85afab860974be1caab47796e2-20240908170653-7d7a4e.png)
