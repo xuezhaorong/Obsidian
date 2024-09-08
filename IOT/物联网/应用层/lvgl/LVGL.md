@@ -100,5 +100,23 @@ lv_obj_set_align(obj1,LV_ALIGN_CENTER);
 Api函数：
 * 参照其他对象对齐（无父子关系），再进行偏移：`lv_obj_align_to(obj_to_align,obj_referece,LV_ALIGN_,...,x,y)`
 
+ 示例代码：
+ ```c
+lv_obj_t *obj1 = lv_obj_create(lv_scr_act());  
+lv_obj_set_size(obj1,300,300);  
+  
+lv_obj_t *obj2 = lv_obj_create(lv_scr_act());  
+lv_obj_align_to(obj2,obj1,LV_ALIGN_OUT_RIGHT_MID,0,0); 
+```
+
+现象：
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-31-19-aa76b4c28d0644e79f7113df1d229d8f-20240908163119-87d9d3.png)
+
+
 **对齐模式**：
 ![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-22-39-1b79fbf4d6a13ab4fefb93daaf012a45-20240908162238-a51f92.png)
+
+中间灰色部分是父子关系的对齐模式，父子关系其他模式不能选择
+
+### 样式(stytles)
+样式用于设置部件的外观，以优化显示界面和实现用户交互
