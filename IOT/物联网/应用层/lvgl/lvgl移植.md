@@ -175,5 +175,16 @@ static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buff
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/07/18-58-08-0582c22b953f1d68bddd509716559e8e-20240907185807-aca4f7.png)
 
 ## LVGL模拟器安装
-1. 下载lvgl8.3版本，链接：[lvgl/lvgl at release/v8.3 (github.com)](https://github.com/lvgl/lvgl/tree/release/v8.3)
-2. 
+1. 下载lvgl8.3版本，链接：[lvgl/lvgl at release/v8.3 (github.com)](https://github.com/lvgl/lvgl/tree/release/v8.3)，下载好的文件夹中**lv_drives**和**lvgl**是空文件夹
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-28-43-01d1cd25a485a4c025b431c7e02546bf-20240908122842-52d122.png)
+
+2. 下载[https://github.com/lvgl/lvgl](https://github.com/lvgl/lvgl "https://github.com/lvgl/lvgl")中的所有文件，下载好后复制到**lvgl**文件夹中（注意版本为8.3）
+
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-29-50-63261c2df9ae6b6a3c22ecf02adc9a45-20240908122950-d43e60.png)
+
+下载[https://github.com/lvgl/lv_drivers](https://github.com/lvgl/lv_drivers "https://github.com/lvgl/lv_drivers")中的所有文件，下载好后复制到**lv_drivers**文件夹中
+
+![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-30-34-1dc554053a2893a6c8c935da530da7f6-20240908123033-4e8fa0.png)
+
+3. 下载Mingw，链接：[SourceForge](http://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/ "SourceForge").
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/12-31-55-7745ad9768bf46b5096fbef2c9b3258b-20240908123154-0dacbd.png)
