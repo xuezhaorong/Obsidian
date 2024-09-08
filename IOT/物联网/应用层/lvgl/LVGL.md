@@ -118,7 +118,7 @@ lv_obj_align_to(obj2,obj1,LV_ALIGN_OUT_RIGHT_MID,0,0);
 
 中间灰色部分是父子关系的对齐模式，父子关系其他模式不能选择
 
-### 样式(stytles)
+#### 样式(stytles)
 样式用于设置部件的外观，以优化显示界面和实现用户交互
 * 添加普通样式
 ```c
@@ -135,3 +135,21 @@ lv_obj_add_style(obj,&style,LV_STATE_DEFAULT); // 设置部件的样式
 lv_obj_t * obj = lv_obj_create(lv_scr_act());  
 lv_obj_set_style_bg_color(obj, lv_color_hex(0xf4b183),LV_STATE_DEFAULT);
 ```
+
+`lv_obj_add_style`和`lv_obj_set_style_bg_color`的第三个参数为样式的选择状态，代表样式什么状态下生效
+```c
+enum {  
+    LV_STATE_DEFAULT     =  0x0000,  // 默认状态
+    LV_STATE_CHECKED     =  0x0001,  // 切换或选中状态
+    LV_STATE_FOCUSED     =  0x0002,  // 通过键盘，编码器聚焦或通过触摸板，鼠标点击
+    LV_STATE_FOCUS_KEY   =  0x0004,  // 通过键盘，编码器聚焦
+    LV_STATE_EDITED      =  0x0008,  // 由编码器编辑
+    LV_STATE_HOVERED     =  0x0010,  // 鼠标悬停（已不支持）
+    LV_STATE_PRESSED     =  0x0020,  // 已按下
+    LV_STATE_SCROLLED    =  0x0040,  // 滚动状态
+    LV_STATE_DISABLED    =  0x0080,  // 禁用状态
+};
+```
+
+可以设置的样式
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-52-11-af07eb8c44fe58c76312e1b6e8fc7da0-20240908165210-4e7e30.png)
