@@ -553,6 +553,10 @@ Vi共分为3种模式：
 
 按键说明：
 * 一般命令模式：
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-55-46-0ca74740ffb4b0ed0eaced12a061a365-20240908215545-570cb9.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-57-21-701fc633495f44d1c757a3856a36bbac-20240908215721-4d39ff.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-58-36-940630db0188bf301cb850c27991ddcb-20240908215836-6e1a68.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/21-59-08-cb1562cf47ecb6b894dab3590a4c9be9-20240908215908-fe9134.png)
 
 
 
