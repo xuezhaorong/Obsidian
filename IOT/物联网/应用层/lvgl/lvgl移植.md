@@ -175,3 +175,5 @@ static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buff
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/07/18-58-08-0582c22b953f1d68bddd509716559e8e-20240907185807-aca4f7.png)
 
 ## LVGL模拟器安装
+1. 下载lvgl8.3版本，链接：[lvgl/lvgl at release/v8.3 (github.com)](https://github.com/lvgl/lvgl/tree/release/v8.3)
+2. 
