@@ -41,3 +41,9 @@ lv_obj_set_pos(obj2,400,20);
 现象：
 ![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/15-50-51-c5c264144bc6597f4ceac85ddb593b86-20240908155051-bff3a5.png)
 
+### 部件的基本属性
+#### 大小(size)
+Api函数：
+* 设置宽度：`lv_obj_set_width(obj,new_width)`
+* 设置高度：`lv_obj_height(obj,new_height)`
+* 同时设置宽度，高度：`lv_obj_set_size(obj,new_width,new_height)`
