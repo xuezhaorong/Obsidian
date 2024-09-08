@@ -178,3 +178,14 @@ lv_obj_set_style_outline_opa(obj,200,LV_STATE_DEFAULT); // 轮廓
 ![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-25-02-0e26dbe29ee7ec1f94ba2ba3ef24038a-20240908172502-2e06c8.png)
 
 示例代码：
+```c
+lv_obj_t *slider = lv_slider_create(lv_scr_act());  
+lv_obj_set_align(slider,LV_ALIGN_CENTER);  
+  
+lv_obj_set_style_bg_color(slider, lv_color_hex(0x94bc40),LV_STATE_DEFAULT|LV_PART_INDICATOR );  // 设置指示器颜色
+lv_obj_set_style_bg_color(slider, lv_color_hex(0x94bc40),LV_STATE_DEFAULT|LV_PART_KNOB ); // 设置手柄颜色
+```
+
+
+现象：
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-29-14-41ac2b5c986f1c843fb48dfddd262438-20240908172914-fbe838.png)
