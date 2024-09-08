@@ -202,3 +202,16 @@ Api函数：
 
 到[Events（事件） — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/overview/event.html)查看
 
+示例代码：
+```c
+static void my_event_cb(lv_event_t *e){  
+    printf("LV_EVENT_CLICKED \n");  
+}  
+  
+void my_gui(void){  
+  
+    lv_obj_t *obj = lv_obj_create(lv_scr_act());  
+    lv_obj_add_event_cb(obj,my_event_cb,LV_EVENT_CLICKED,NULL); 
+}
+```
+
