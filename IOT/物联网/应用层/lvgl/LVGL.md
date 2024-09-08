@@ -120,3 +120,12 @@ lv_obj_align_to(obj2,obj1,LV_ALIGN_OUT_RIGHT_MID,0,0);
 
 ### 样式(stytles)
 样式用于设置部件的外观，以优化显示界面和实现用户交互
+* 添加普通样式
+```c
+static lv_style_t style;  
+lv_style_init(&style);  
+lv_style_set_bg_color(&style, lv_color_hex(0xf4b183));  
+  
+lv_obj_t * obj = lv_obj_create(lv_scr_act());  
+lv_obj_add_style(obj,&style,LV_STATE_DEFAULT);
+```
