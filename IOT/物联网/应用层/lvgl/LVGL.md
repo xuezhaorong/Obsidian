@@ -153,3 +153,6 @@ enum {
 
 可以设置的样式
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-52-11-af07eb8c44fe58c76312e1b6e8fc7da0-20240908165210-4e7e30.png)
+可在[Style properties（样式属性） — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/overview/style-props.html#size-and-position)查询
+![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-56-46-52a177e2954136c09458fc1934b8b4c4-20240908165645-ad5fe5.png)
+
