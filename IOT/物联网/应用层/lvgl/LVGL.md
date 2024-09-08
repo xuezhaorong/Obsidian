@@ -122,10 +122,16 @@ lv_obj_align_to(obj2,obj1,LV_ALIGN_OUT_RIGHT_MID,0,0);
 样式用于设置部件的外观，以优化显示界面和实现用户交互
 * 添加普通样式
 ```c
-static lv_style_t style;  
-lv_style_init(&style);  
-lv_style_set_bg_color(&style, lv_color_hex(0xf4b183));  
+static lv_style_t style;  // 定义样式变量
+lv_style_init(&style);  // 初始化样式
+lv_style_set_bg_color(&style, lv_color_hex(0xf4b183));  // 设置背景颜色
   
+lv_obj_t * obj = lv_obj_create(lv_scr_act());  // 创建一个部件
+lv_obj_add_style(obj,&style,LV_STATE_DEFAULT); // 设置部件的样式
+```
+
+* 添加本地样式
+```c
 lv_obj_t * obj = lv_obj_create(lv_scr_act());  
-lv_obj_add_style(obj,&style,LV_STATE_DEFAULT);
+lv_obj_set_style_bg_color(obj, lv_color_hex(0xf4b183),LV_STATE_DEFAULT);
 ```
