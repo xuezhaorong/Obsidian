@@ -156,3 +156,8 @@ enum {
 可在[Style properties（样式属性） — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/overview/style-props.html#size-and-position)查询
 ![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/16-56-46-52a177e2954136c09458fc1934b8b4c4-20240908165645-ad5fe5.png)
 
+示例代码：
+
+
+现象： 
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/17-01-56-d3d9ca6b0b7bff65e3592c58f270e106-20240908170156-28586a.png)
