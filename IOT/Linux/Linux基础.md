@@ -577,6 +577,10 @@ Vi共分为3种模式：
 cat /etc/issue
 ```
 
+issue内各代码意义
+```bash
+
+```
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
