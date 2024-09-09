@@ -565,7 +565,8 @@ Vi共分为3种模式：
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/22-01-10-529c8efd745aaa6019ef0a6ff7f602ba-20240908220109-bcdb48.png)
 
 ## BASH
-   
+
+
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
