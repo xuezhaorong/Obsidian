@@ -204,8 +204,9 @@
   },
   "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
-    "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
+    "IOT/物联网/应用层/lvgl/LVGL.md",
+    "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/交叉编译.md",
     "IOT/Linux/Linux基础.md",
     "IOT/Linux/WSL安装配置.md",
@@ -214,7 +215,6 @@
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
-    "IOT/物联网/应用层/lvgl/LVGL.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/应用层/安卓/Mqtt.md",

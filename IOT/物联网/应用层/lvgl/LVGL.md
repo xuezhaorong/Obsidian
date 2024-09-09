@@ -344,3 +344,4 @@ lv_obj_set_style_bg_color(btn, lv_color_hex(0xffe1d4),LV_STATE_PRESSED);
 lv_obj_add_flag(btn,LV_OBJ_FLAG_CHECKABLE);  // 开启状态切换
 lv_obj_add_event_cb(btn,my_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
 ```
+
