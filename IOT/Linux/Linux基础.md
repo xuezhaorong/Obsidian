@@ -579,7 +579,10 @@ cat /etc/issue
 
 issue内各代码意义
 ```bash
-
+\d 本地端时间的日期
+\l 显示第几个终端界面
+\m 显示硬件等级
+\n 显示
 ```
 
 ## Makefile
