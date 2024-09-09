@@ -600,6 +600,8 @@ issue内各代码意义
 
 `non-login shell`读取的配置文件：`~/.bashrc`
 
+#### 通配符
+
 
 
 ## Makefile
