@@ -590,12 +590,6 @@ issue内各代码意义
 \v 操作系统的版本
 ```
 
-#### 环境配置文件
-* login shell：取得bash时需要完整的登录流程，需要输入用户的账号与密码
-* non-login shell：取得bash的方法不需要重复操作
-
-`login shell `读取的配置文件：
-
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
