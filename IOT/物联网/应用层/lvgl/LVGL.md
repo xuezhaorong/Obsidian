@@ -268,6 +268,7 @@ lv_obj_t *label = lv_label_create(parent);
 #### 设置文本
 ```c
 lv_label_set_text(label,"hello lvgl");
+lv_label_set_text_fmt(label,"hello %s","lvgl");
 ```
 
 #### 设置样式
