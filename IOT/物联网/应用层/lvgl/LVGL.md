@@ -270,3 +270,46 @@ lv_obj_t *label = lv_label_create(parent);
 lv_label_set_text(label,"hello lvgl");
 ```
 
+#### 设置样式
+* 背景颜色：
+```c
+lv_obj_set_style_bg_color(label, lv_color_hex(0xff0000),LV_STATE_DEFAULT);
+```
+
+* 透明度：
+```c
+lv_obj_set_style_bg_opa(label,100,LV_STATE_DEFAULT);
+```
+
+* 字体大小：
+```c
+lv_obj_set_style_text_font(label,&lv_font_montserrat_30,LV_STATE_DEFAULT);
+```
+
+* 字体颜色：
+```c
+lv_obj_set_style_text_color(label,lv_color_hex(0x5084db),LV_STATE_DEFAULT);
+```
+
+* 设置个别字体的字体颜色：
+```c
+lv_label_set_recolor(label,true);  // 开启重写着色模式
+lv_label_set_text(label,"hello #ff0000 lvgl#");
+```
+
+#### 长文本
+* 默认情况下，如果没有限定标签部件的大小，那它的大小自动扩展为文本大小
+* 长文本模式：
+```c
+lv_label_set_long_mode(label,LV_LABEL_LONG_...);
+```
+
+```c
+enum {  
+    LV_LABEL_LONG_WRAP,    // 默认模式，如果部件大小已固定，超出的文本将被剪切  
+    LV_LABEL_LONG_DOT,     // 将label右下角的最后三个字符替换为点  
+    LV_LABEL_LONG_SCROLL,  // 来回滚动  
+    LV_LABEL_LONG_SCROLL_CIRCULAR,  // 循环滚动 
+    LV_LABEL_LONG_CLIP,    // 直接剪切部件外面的文本部分
+};
+```
