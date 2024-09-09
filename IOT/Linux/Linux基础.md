@@ -542,7 +542,8 @@ visudo
 usermod -a -G wheel username # 将username加入wheel支持 
 ```
 
-## Vi与Vim
+## Shell
+### Vi与Vim
 Vi共分为3种模式：
 * 一般命令模式：
 以vi打开一个文件就直接进入一般命令模式，在这个模式中，可以使用上下左右按键来移动光标，可以使用删除字符和删除整行来处理文件内容，也可以使用复制粘贴来处理文件内容
@@ -564,7 +565,7 @@ Vi共分为3种模式：
 * 一般指令模式切换到命令行界面：
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/22-01-10-529c8efd745aaa6019ef0a6ff7f602ba-20240908220109-bcdb48.png)
 
-## BASH
+### BASH
 
 
 
