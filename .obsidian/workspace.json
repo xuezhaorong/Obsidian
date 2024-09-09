@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md",
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md"
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md"
               }
             }
           },
@@ -171,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md",
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,8 +203,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d7f87c8ed85de0a4",
+  "active": "993c4d2983ebefd1",
   "lastOpenFiles": [
+    "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/Linux/交叉编译.md",
     "IOT/Linux/Linux基础.md",
@@ -224,7 +225,6 @@
     "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库FreeRtos配置.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
-    "IOT/树莓派/PyCham专业版远程开发.md",
     "lv_port_disp_template 1.h",
     "lv_port_disp_template.h",
     "().md",

@@ -259,7 +259,7 @@ void my_gui(void){
 ```
 
 ## 部件
-### 标签(label)
+### 标签(lv_label)
 #### 创建标签部件
 ```c
 lv_obj_t *label = lv_label_create(parent);
@@ -316,3 +316,5 @@ enum {
     LV_LABEL_LONG_CLIP,    // 直接剪切部件外面的文本部分
 };
 ```
+
+### 按钮(lv_btn)
