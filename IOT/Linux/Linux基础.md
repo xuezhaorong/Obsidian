@@ -601,7 +601,9 @@ issue内各代码意义
 `non-login shell`读取的配置文件：`~/.bashrc`
 
 #### 通配符
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/09/21-20-56-3675c72e712f9d3ac17c2e5af0f3125e-20240909212055-6687a0.png)
 
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/09/21-21-12-b944724ae7998751aed7c85ea1099d90-20240909212112-bcc5ba.png)
 
 
 ## Makefile
