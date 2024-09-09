@@ -566,6 +566,13 @@ Vi共分为3种模式：
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/08/22-01-10-529c8efd745aaa6019ef0a6ff7f602ba-20240908220109-bcdb48.png)
 
 ### BASH
+#### 路径与命令查找顺序
+1. 以相对/绝对路径执行命令
+2. 由`alias`找到该命令来执行
+3. 由`bash`内置的(builtin)命令来执行
+4. 通过`${PATH}`这个变量的顺序查找到的第一个命令来执行
+
+#### 登录与欢迎信息
 
 
 
