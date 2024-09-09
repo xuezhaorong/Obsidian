@@ -285,6 +285,8 @@ lv_obj_set_style_bg_opa(label,100,LV_STATE_DEFAULT);
 ```c
 lv_obj_set_style_text_font(label,&lv_font_montserrat_30,LV_STATE_DEFAULT);
 ```
+需要在`lv_conf.h`中开启对应的字体，将0设为1
+![image.png|331](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/09/11-57-24-0f9b237ef308db813d056eeb96180169-20240909115723-a27957.png)
 
 * 字体颜色：
 ```c
