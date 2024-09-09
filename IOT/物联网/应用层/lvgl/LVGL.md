@@ -318,3 +318,29 @@ enum {
 ```
 
 ### 按钮(lv_btn)
+#### 创建按钮部件
+```c
+lv_obj_t *btn = lv_btn_create(lv_scr_act());
+```
+
+#### 设置样式
+* 设置大小
+```c
+lv_obj_set_size(btn,100,50);  
+```
+
+* 设置样式
+```c
+lv_obj_set_align(btn,LV_ALIGN_CENTER);  
+```
+
+* 添加事件
+```c
+lv_obj_set_style_bg_color(btn, lv_color_hex(0xffe1d4),LV_STATE_PRESSED);
+```
+
+#### 添加事件
+```c
+lv_obj_add_flag(btn,LV_OBJ_FLAG_CHECKABLE);  // 开启状态切换
+lv_obj_add_event_cb(btn,my_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
+```
