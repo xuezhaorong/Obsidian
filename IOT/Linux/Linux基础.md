@@ -605,6 +605,8 @@ issue内各代码意义
 
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/09/21-21-12-b944724ae7998751aed7c85ea1099d90-20240909212112-bcc5ba.png)
 
+### Shell
+Shell是一个命令行解释器，负责接收用户输入的命令，然后调用操作系统的内核去执行这些命令，再把执行的结果返回给用户
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]

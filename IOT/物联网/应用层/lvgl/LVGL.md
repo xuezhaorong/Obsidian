@@ -363,5 +363,5 @@ lv_obj_clear_state(switch1,LV_STATE_CHECKED); // 清除开关的状态
 
 #### 获取开关状态
 ```c
-lv_obj_has_state(switch1,LV_STATE_CHECKED);
+lv_obj_has_state(switch1,LV_STATE_CHECKED); 
 ```
