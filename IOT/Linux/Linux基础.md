@@ -689,7 +689,7 @@ hello,xue,welcome to git!
 
 #### 条件
 
-```c
+```bash
 if [[ $guess -eq $number]]; then
 		echo ".."
 fi
@@ -699,7 +699,12 @@ fi
 
 
 #### 循环
-
+```bash
+while [[$guess -nq $number]]
+do
+	...
+done
+```
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
