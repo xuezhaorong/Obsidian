@@ -1,3 +1,4 @@
+开发文档链接：[欢迎阅读LVGL中文开发手册！ — LVGL 文档 (100ask.net)](https://lvgl.100ask.net/master/)
 ## 基础对象
 ### 基础对象简介
 LVGL 采用的是面向对象的编程思想，以抽象的类来实例化不同的对象
@@ -344,4 +345,7 @@ lv_obj_set_style_bg_color(btn, lv_color_hex(0xffe1d4),LV_STATE_PRESSED);
 lv_obj_add_flag(btn,LV_OBJ_FLAG_CHECKABLE);  // 开启状态切换
 lv_obj_add_event_cb(btn,my_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
 ```
+
+### 开关(lv_switch)
+开关部件常用于控制某个功能的开启和关闭，它可以直接显示被控对象的状态
 
