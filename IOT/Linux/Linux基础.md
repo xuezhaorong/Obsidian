@@ -596,9 +596,14 @@ issue内各代码意义
 
 `login shell `读取的配置文件：
 1. `/etc/profile`：系统整体的设置
-2. `~/.bash_profile`或`~/.bash_login`或`~/.profile`：属于用户个人设置
+2. `~/.bash_profile`，`~/.bash_login`，`~/.profile`：属于用户个人设置，按顺序读取 
 
 `non-login shell`读取的配置文件：`~/.bashrc`
+
+使用source命令读入环境配置文件，立即生效
+```bash
+source ~/.bashrc
+```
 
 #### 通配符
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/09/21-20-56-3675c72e712f9d3ac17c2e5af0f3125e-20240909212055-6687a0.png)
