@@ -607,7 +607,8 @@ issue内各代码意义
 
 #### 变量
 ```bash
-echo $PATH
+channel=git 
+echo $channel
 ```
 
 * 变量的设置规则：
@@ -619,10 +620,12 @@ echo $PATH
 * 单引号内的特殊字符则仅为一般字符
 	* 可用转义字符`\`将特殊符号变成一般字符
 	* 在一串命令的执行中，还需要借由其他额外的命令说提供信息时，可以用反单引号或`$`
-	* 若该变量为扩增变量内容时，则可用`${变量}`累加内容
+	* 若该变量为扩增变量内容时，则可用`$变量`或`${变量}`累加内容
 	* 若该变量需要在其他子程序执行，则需要以export来使变量变成环境变量
 	* 通常大写字符为系统默认变量，自行设置变量可用使用小写字符，方便判断
 	* 取消变量的方法为使用unset
+
+
 
 #### 环境变量
 * HOME：代表用户的根目录
@@ -643,7 +646,41 @@ echo -e "hello world!\a \n"
 exit 0
 ```
 
+`#!/bin/bash`声明脚本
 
+执行：
+```bash
+chmod a+x hello.sh 
+./hello.sh
+```
+
+#### 默认变量
+```bash
+/path/to/scriptname opt1 opt2 opt3 opt4
+		$0           $1   $2  $3   $4
+```
+
+* `$#`：代表后接的参数个数
+* `$@`：代表\["$1""$2""$3""$4"]，每个变量是独立的
+* `$*`：代表\["$1 $2 $3 $4"]
+
+![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/10/13-23-21-ae8f2731c707fd5fd8485929424e33e0-20240910132320-21d476.png)
+
+
+```bash
+#!/bin/bash
+echo "please input your name："
+name=$1
+channel=$2
+
+echo "hello,$name,welcome to $channel!"                     
+```
+
+```bash
+./hello.sh xue git
+please input your name：
+hello,xue,welcome to git!
+```
 
 
 ## Makefile
