@@ -698,6 +698,9 @@ fi
 ![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/10/14-26-20-b3e6de9a1db0c5e65f8ef1bbac9c52e4-20240910142620-808d58.png)
 
 
+#### 循环
+
+
 ## Makefile
 * 准备工作：[[WSL安装配置]]
 * 安装make：`sudo apt install make`
