@@ -349,3 +349,10 @@ lv_obj_add_event_cb(btn,my_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
 ### 开关(lv_switch)
 开关部件常用于控制某个功能的开启和关闭，它可以直接显示被控对象的状态
 
+#### 创建开关部件
+```c
+lv_obj_t *switch1 = lv_switch_create(lv_scr_act());  
+lv_obj_set_style_bg_color(switch1, lv_color_hex(0xdf5345),LV_STATE_CHECKED | LV_PART_INDICATOR); // 设置手柄颜色，与上状态检测，避免被主题颜色覆盖
+```
+
+	
