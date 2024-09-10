@@ -688,6 +688,13 @@ hello,xue,welcome to git!
 ```
 
 #### 条件
+
+```c
+if [[ $guess -eq $number]]; then
+		echo ".."
+fi
+```
+
 ![image.png|650](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/10/14-26-20-b3e6de9a1db0c5e65f8ef1bbac9c52e4-20240910142620-808d58.png)
 
 
