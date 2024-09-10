@@ -355,4 +355,8 @@ lv_obj_t *switch1 = lv_switch_create(lv_scr_act());
 lv_obj_set_style_bg_color(switch1, lv_color_hex(0xdf5345),LV_STATE_CHECKED | LV_PART_INDICATOR); // 设置手柄颜色，与上状态检测，避免被主题颜色覆盖
 ```
 
-	
+#### 添加，清除开关状态
+```c
+lv_obj_add_state(switch1,LV_STATE_CHECKED | LV_STATE_DISABLED);  // 添加状态，默认打开且不能修改
+lv_obj_clear_state(switch1,LV_STATE_CHECKED); // 清除开关的状态
+```
