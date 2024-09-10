@@ -633,6 +633,18 @@ echo $PATH
 
 ### Shell
 Shell是一个命令行解释器，负责接收用户输入的命令，然后调用操作系统的内核去执行这些命令，再把执行的结果返回给用户
+```bash
+#!/bin/bash
+#Program:
+#       This program shows "hello world" in your screen
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+echo -e "hello world!\a \n"
+exit 0
+```
+
+
+
 
 ## Makefile
 * 准备工作：[[WSL安装配置]]
