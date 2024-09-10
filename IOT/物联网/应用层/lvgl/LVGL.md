@@ -360,3 +360,8 @@ lv_obj_set_style_bg_color(switch1, lv_color_hex(0xdf5345),LV_STATE_CHECKED | LV_
 lv_obj_add_state(switch1,LV_STATE_CHECKED | LV_STATE_DISABLED);  // 添加状态，默认打开且不能修改
 lv_obj_clear_state(switch1,LV_STATE_CHECKED); // 清除开关的状态
 ```
+
+#### 获取开关状态
+```c
+lv_obj_has_state(switch1,LV_STATE_CHECKED);
+```
