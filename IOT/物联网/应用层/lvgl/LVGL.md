@@ -377,3 +377,14 @@ lv_obj_t *checkbox = lv_checkbox_create(parent);
 lv_checkbox_set_text(checkbox,"remember the password");
 lv_obj_set_style_pad_column(checkbox,20,LV_STATE_DEFAULT); // 设置文本和勾选框的距离
 ```
+
+#### 添加，清除复选框状态
+```c
+lv_obj_add_state(checkbox,LV_STATE_CHECKED | LV_STATE_DISABLED);  
+lv_obj_clear_state(checkbox,LV_STATE_CHECKED | LV_STATE_DISABLED);
+```
+
+#### 获取复选框状态
+```c
+lv_obj_has_state(checkbox,LV_STATE_CHECKED);
+```
