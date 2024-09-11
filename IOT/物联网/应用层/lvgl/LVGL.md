@@ -374,5 +374,7 @@ lv_obj_t *checkbox = lv_checkbox_create(parent);
 
 #### 文本设置
 ```c
-
+lv_checkbox_set_text(checkbox,"remember the password");
 ```
+
+#### 
