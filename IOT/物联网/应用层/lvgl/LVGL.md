@@ -367,4 +367,12 @@ lv_obj_has_state(switch1,LV_STATE_CHECKED);
 ```
 
 ### 复选框(lv_checkbox)
+#### 创建复选框部件
+```c
+lv_obj_t *checkbox = lv_checkbox_create(parent);
+```
 
+#### 文本设置
+```c
+
+```
