@@ -1,0 +1,16 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "excalidraw-plugin": "text",
+    "excalidraw-export-transparent": "checkbox",
+    "excalidraw-mask": "checkbox",
+    "excalidraw-export-dark": "checkbox",
+    "excalidraw-export-padding": "number",
+    "excalidraw-export-pngscale": "number",
+    "excalidraw-export-embed-scene": "checkbox",
+    "excalidraw-link-prefix": "text",
+    "excalidraw-url-prefix": "text",
+    "excalidraw-link-brackets": "checkbox",
+    

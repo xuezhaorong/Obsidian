@@ -203,12 +203,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "993c4d2983ebefd1",
+  "active": "96b0a9eee13e568c",
   "lastOpenFiles": [
+    "未命名.canvas",
+    "IOT/物联网/应用层/lvgl/LVGL.md",
+    "2024-09-12.md",
     "IOT/Linux/Linux基础.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
-    "IOT/物联网/应用层/lvgl/LVGL.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
@@ -233,8 +235,6 @@
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/物联网/感知层/Clion配置/51单片机配置.md",
-    "未命名.canvas",
-    "未命名.md",
     "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "Linux",
     "物联网/应用层/Qt",
