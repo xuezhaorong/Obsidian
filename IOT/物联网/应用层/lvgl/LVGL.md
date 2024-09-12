@@ -408,4 +408,16 @@ lv_bar_set_value(bar,50,LV_ANIM_ON); // 设置当前值
 lv_obj_set_style_anim_time(bar,500,LV_STATE_DEFAULT); // 动画设置必须放在当前值设置之前
 ```
 
+#### 设置模式和设置起始值
+```c
+lv_bar_set_mode(bar,LV_BAR_MODE_RANGE);  
+lv_bar_set_start_value(bar,-50,LV_ANIM_OFF);
+```
 
+```c
+enum {  
+    LV_BAR_MODE_NORMAL,  // 默认模式
+    LV_BAR_MODE_SYMMETRICAL,  // 从零值绘制到当前值
+    LV_BAR_MODE_RANGE  // 允许设置起始值，但起始值必须小于当前值
+};
+```
