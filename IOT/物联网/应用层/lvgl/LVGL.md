@@ -422,4 +422,19 @@ enum {
 };
 ```
 
-z
+#### 设置定时器
+```c
+static void timer_cb(lv_timer_t *timer){  
+    if (val < 100){  
+        val ++;  
+        lv_label_set_text_fmt(label,"%d %%", lv_bar_get_value(bar));  
+        lv_bar_set_value(bar,val,LV_ANIM_ON);  
+    }  
+    else{  
+        lv_label_set_text(label,"finished");  
+    }  
+}
+p
+lv_obj_set_style_anim_time(bar,100,LV_STATE_DEFAULT); // 动画设置必须放在当前值设置之前
+lv_timer_create(timer_cb,100,NULL);
+```
