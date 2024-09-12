@@ -388,3 +388,24 @@ lv_obj_clear_state(checkbox,LV_STATE_CHECKED | LV_STATE_DISABLED);
 ```c
 lv_obj_has_state(checkbox,LV_STATE_CHECKED);
 ```
+
+
+### 进度条部件(lv_bar)
+#### 创建进度条部件
+```c
+lv_obj_t *bar = lv_bar_create(lv_scr_act());
+```
+
+#### 设置大小，当前值，范围值
+```c
+lv_obj_set_size(bar,400,20);  
+lv_bar_set_range(bar,-100,100); // 设置范围值  
+lv_bar_set_value(bar,50,LV_ANIM_ON); // 设置当前值
+```
+
+#### 设置动画时间
+```c
+lv_obj_set_style_anim_time(bar,500,LV_STATE_DEFAULT); // 动画设置必须放在当前值设置之前
+```
+
+
