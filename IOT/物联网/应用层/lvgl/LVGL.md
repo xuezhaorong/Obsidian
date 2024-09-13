@@ -261,6 +261,9 @@ void my_gui(void){
 
 ## 部件
 ### 标签(lv_label)
+![image.png|276](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/11-49-34-81eb87d5d394b3516feab4444b39eb75-20240913114933-639977.png)
+
+
 #### 创建标签部件
 ```c
 lv_obj_t *label = lv_label_create(parent);
@@ -319,6 +322,9 @@ enum {
 ```
 
 ### 按钮(lv_btn)
+![image.png|296](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/11-48-42-4ee1daf888f8e3a34f9bcdbfef7e9179-20240913114842-2984de.png)
+
+
 #### 创建按钮部件
 ```c
 lv_obj_t *btn = lv_btn_create(lv_scr_act());
@@ -348,6 +354,7 @@ lv_obj_add_event_cb(btn,my_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
 
 ### 开关(lv_switch)
 开关部件常用于控制某个功能的开启和关闭，它可以直接显示被控对象的状态
+![image.png|335](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/11-48-05-9a4b8d2d70ef4e5893de4e5a5672ec49-20240913114804-56979b.png)
 
 #### 创建开关部件
 ```c
@@ -367,6 +374,9 @@ lv_obj_has_state(switch1,LV_STATE_CHECKED);
 ```
 
 ### 复选框(lv_checkbox)
+![image.png|322](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/11-46-31-df52fe3d5211e402a1b06ef4457bcb4d-20240913114630-c2b88e.png)
+
+
 #### 创建复选框部件
 ```c
 lv_obj_t *checkbox = lv_checkbox_create(parent);
@@ -391,6 +401,7 @@ lv_obj_has_state(checkbox,LV_STATE_CHECKED);
 
 
 ### 进度条部件(lv_bar)
+![image.png|377](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/11-47-15-e2e884bb0d9e5406501f715308f0cf55-20240913114715-8359a1.png)
 
 
 #### 创建进度条部件
