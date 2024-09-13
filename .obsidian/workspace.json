@@ -49,9 +49,11 @@
             "id": "5559e0fdf63012fb",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md"
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -140,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md",
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md"
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md"
               }
             }
           },
@@ -181,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md",
+                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,14 +218,14 @@
   },
   "active": "5559e0fdf63012fb",
   "lastOpenFiles": [
+    "IOT/Linux/Linux基础.md",
+    "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/WSL安装配置.md",
-    "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md",
     "IOT/物联网/应用层/lvgl/LVGL.md",
     "Excalidraw",
     "未命名.canvas",
     "2024-09-12.md",
-    "IOT/Linux/Linux基础.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",

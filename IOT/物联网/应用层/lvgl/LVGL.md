@@ -438,3 +438,10 @@ p
 lv_obj_set_style_anim_time(bar,100,LV_STATE_DEFAULT); // 动画设置必须放在当前值设置之前
 lv_timer_create(timer_cb,100,NULL);
 ```
+
+
+### 加载器部件(lv_spinner)
+加载器部件常用于提示当前任务正在加载
+![image.png|475](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/13/10-30-59-743d7a2e9f7365de2453f44bce303137-20240913103059-e041a9.png)
+
+
