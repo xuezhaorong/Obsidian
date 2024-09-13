@@ -449,3 +449,14 @@ lv_timer_create(timer_cb,100,NULL);
 lv_obj_t *spinner = lv_spinner_create(lv_scr_act(),1000,60);
 ```
 
+#### 设置圆弧颜色
+```c
+lv_obj_set_style_arc_color(spinner, lv_color_hex(0x4a9f00),LV_PART_MAIN);  //  设置主题圆弧颜色
+lv_obj_set_style_arc_color(spinner, lv_color_hex(0x83bd55),LV_PART_INDICATOR); // 设置指示器圆弧颜色
+```
+
+#### 设置圆弧宽度
+```c
+lv_obj_set_style_arc_width(spinner,30,LV_PART_MAIN); // 设置主题圆弧宽度
+lv_obj_set_style_arc_width(spinner,30,LV_PART_INDICATOR); // 设置指示器圆弧宽度
+```
