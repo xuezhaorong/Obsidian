@@ -13,4 +13,15 @@
     "excalidraw-link-prefix": "text",
     "excalidraw-url-prefix": "text",
     "excalidraw-link-brackets": "checkbox",
-    
+    "excalidraw-onload-script": "text",
+    "excalidraw-linkbutton-opacity": "number",
+    "excalidraw-default-mode": "text",
+    "excalidraw-font": "text",
+    "excalidraw-font-color": "text",
+    "excalidraw-border-color": "text",
+    "excalidraw-css": "text",
+    "excalidraw-autoexport": "text",
+    "excalidraw-embeddable-theme": "text",
+    "excalidraw-open-md": "checkbox"
+  }
+}
