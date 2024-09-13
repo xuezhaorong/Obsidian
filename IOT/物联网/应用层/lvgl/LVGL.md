@@ -391,6 +391,8 @@ lv_obj_has_state(checkbox,LV_STATE_CHECKED);
 
 
 ### 进度条部件(lv_bar)
+
+
 #### 创建进度条部件
 ```c
 lv_obj_t *bar = lv_bar_create(lv_scr_act());
