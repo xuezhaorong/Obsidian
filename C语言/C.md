@@ -184,3 +184,25 @@ int main(void) {
 浮点运算可能得到的结果是一个 **接近零的值**，但不是精确的零，其他数字的计算也是如此。
 
 ## 字符串和格式化输出输入
+### 字符串
+```c
+#include <string.h>
+int main(){
+	char name[40];
+	scanf("%s:",&name);
+	return 0;
+}
+```
+字符串（character string）是一个或多个字符的序列，字符串都被储存在char类型的数组中。数组由连续的存储单元组成，字符串中的字符被储存在相邻的存储单元中，每个单元储存一个字符。
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-41-56-de21d566e36ed83fafba7a5b8c7c7ddc-20240914144155-3b953b.png)
+数组末尾位置的字符\0。这是空字符（null character），C 语言用它标记字符串的结束。空字符不是数字0，它是非打印字符，其ASCII 码值是（或等价于）0。C中的字符串一定以空字符结束，这意味着数组的容量必须至少比待存储字符串中的字符数多1。
+
+使用双引号规定字符串，自动在末尾加入空字符。
+#### strlen
+```c
+unsigned long length = strlen(name);
+```
+strlen() 函数给出字符串中的字符长度，不计入最后的空字符。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
+
+### printf
