@@ -282,3 +282,33 @@ printf("%ld %ld %ld %ld\n", n1, n2, n3, n4);
 ```
 
 该调用告诉计算机把变量n1、n2、、n3和n4的值传递给程序。这是一种常见的参数传递方式。程序把传入的值放入被称为栈（stack）的内存区域。计算机根据变量类型（不是根据转换说明）把这些值放入栈中。因此，n1被储存在栈中，占8字节（float类型被转换成double类型）。同样，n2也在栈中占8字节，而n3和n4在栈中分别占4字节。然后，控制转到printf()函数。该函数根据转换说明（不是根据变量类型）从栈中读取值。%ld转换说明表明 printf()应该读取4字节，所以printf()读取栈中的前4字节作为第1个值。这是 n1的前半部分，将被解释成一个long类型的整数。根据下一个%ld转换说明，printf()再读取4字节，这是n1的后半部分，将被解释成第2个long类型的整数（见图4.9）。类似地，根据第3个和第4个%ld，printf()读取n2的前半部分和后半部分，并解释成两个long类型的整数。因此，对于n3和n4，虽然用对了转换说明，但printf()还是读错了字节。
+
+![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-19-14-9f5a0b896d913ae356a292f9fe2b938c-20240914161913-e101b7.png)
+
+#### 字符串断行
+有时，printf()语句太长，在屏幕上不方便阅读。如果空白（空格、制表符、换行符）仅用于分隔不同的部分，C 编译器会忽略它们。因此，一条语句可以写成多行，只需在不同部分之间输入空白即可。
+```c
+printf("The printf() function printed %d characters.\n", 
+rv);
+```
+
+方法1：使用多个printf()语句。因为第1个字符串没有以\n字符结束，所以第2个字符串紧跟第1个字符串末尾输出。
+```c
+printf("Here's one way to print a "); printf("long string.\n");
+```
+
+方法2：用反斜杠（\）和Enter（或Return）键组合来断行。这使得光标移至下一行，而且字符串中不会包含换行符。其效果是在下一行继续输出。但是，下一行代码必须和程序清单中的代码一样从最左边开始。如果缩进该行，比如缩进5个空格，那么这5个空格就会成为字符串的一部分。
+```c
+printf("Here's another way to print a \
+long string.\n");
+```
+
+方法3：ANSI C引入的字符串连接。在两个用双引号括起来的字符串之间用空白隔开，C编译器会把多个字符串看作是一个字符串。因此，以下3 种形式是等效的：
+```c
+printf("Hello, young lovers, wherever you are."); 
+printf("Hello, young " "lovers" ", wherever you are."); 
+printf("Hello, young lovers" 
+", wherever you are.");
+```
+
+但是，不能在双引号括起来的字符串中间断行。C编译器会报错：字符串常量中有非法字符。在字符串中，可以使用\n 来表示换行字符，但是不能通过按下Enter（或Return）键产生实际的换行符。
