@@ -234,6 +234,11 @@ printf("%hd,%hu",num,num);
 
 * 大字节与小字节
 ```c
-
+int word = 65618;  
+printf("%d,%hd",word,word);
 ```
+输出：
+`65618,82`
+
+
 
