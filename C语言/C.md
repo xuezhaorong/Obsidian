@@ -206,3 +206,5 @@ strlen() 函数给出字符串中的字符长度，不计入最后的空字符�
 ![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
 
 ### printf
+
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-56-22-58b3266ec99c5ff07b500444dddee0ce-20240914145622-bbccab.png)
