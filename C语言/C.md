@@ -435,3 +435,6 @@ four = 12.0/3.0;
 
 数除法和浮点数除法不同。浮点数除法的结果是浮点数，而整数除法的结果是整数。在C语言中，整数除法结果的小数部分被丢弃，这一过程被称为截断（truncation）。而对于混合类型（整数和浮点数的除法），在进行除法运算前，整数会被转换成浮点数。
 
+#### 关系运算符
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/21-34-17-7c7251cc1a24e74a218333b61264e664-20240914213416-30acaf.png)
+
