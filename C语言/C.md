@@ -209,6 +209,14 @@ strlen() 函数给出字符串中的字符长度，不计入最后的空字符�
 
 printf()函数能让用户可以与程序交流，它输出函数，请求printf()函数打印数据的指令要与待打印数据的类型相匹配。例如， 打印整数时使用%d，打印字符时使用%c。这些符号被称为转换说明 （conversion specification），它们指定了如何把数据转换成可显示的形式。
 ![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-56-22-58b3266ec99c5ff07b500444dddee0ce-20240914145622-bbccab.png)
+
+空参数问题：
+```c
+printf("%d,%hd",word);
+```
+
+
+
 #### 转换说明
 
 | 数据类型     |     |
