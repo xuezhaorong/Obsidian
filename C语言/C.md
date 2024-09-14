@@ -183,6 +183,17 @@ int main(void) {
 - 如果 `1.0` 实际上被存储为 `0.9999999999999999`（略小于 `1.0`），那么 `1.0 - 1.0` 的结果可能会是一个非常小的数，而不是严格的 `0`。
 浮点运算可能得到的结果是一个 **接近零的值**，但不是精确的零，其他数字的计算也是如此。
 
+#### 类型转换
+* 自动转换机制：
+1. 当类型转换出现在表达式时，无论是unsigned还是signed的char和short 都会被自动转换成int，如有必要会被转换成unsigned int（如果short与int的大小相同，unsigned short就比int大。这种情况下，unsigned short会被转换成 unsigned int）。
+2. 涉及两种类型的运算，两个值会被分别转换成两种类型的更高级别。
+3. 类型的级别从高至低依次是long double、double、float、unsignedlong long、long long、unsigned long、long、unsigned int、int。例外的情况是，当 long 和 int 的大小相同时，unsigned int比long的级别高。之所以short和char类型没有列出，是因为它们已经被升级到int或unsigned int。
+4. 在赋值表达式语句中，计算的最终结果会被转换成被赋值变量的类型。这个过程可能导致类型升级或降级（demotion）。所谓降级，是指把一种类型转换成更低级别的类型。 
+5. 当作为函数参数传递时，char和short被转换成int，float被转换成 double。
+
+* 强制转换机制：
+
+
 ## 字符串和格式化输出输入
 ### 字符串
 ```c
