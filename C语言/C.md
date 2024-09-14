@@ -269,9 +269,16 @@ printf("%d,%hd",word,word);
 
 然而，`146` 仍然在 `short int` 的范围内，因此在解释为 `short int` 时，它被打印为 **82**（即 `146 - 128 = 82`，因为符号位没有被占用）。
 
+这种截断相当于用一个整数除以256，只保留其余数。用专业术语来说，该数字被解释成“以256为模”（modulo 256）， 即该数字除以256后取其余数。
 
 #### 转换说明修饰符
-![Uploading file...qx6qn]()
+在%和转换字符之间插入修饰符可修饰基本的转换说明。
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-09-11-ec7a5af00fa506414fbfbef3a5c14c56-20240914160911-5a1213.png)
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-10-32-37499ddab511efc23ceaf7789b6d008e-20240914161032-3cd8ed.png)
 
+#### 参数传递错误
+```c
+printf("%ld %ld %ld %ld\n", n1, n2, n3, n4);
+```
 
-
+该调用告诉计算机把变量n1、n2、、n3和n4的值传递给程序。这是一种常见的参数传递方式。程序把传入的值放入被称为栈（stack）的内存区域。计算机根据变量类型（不是根据转换说明）把这些值放入栈中。因此，n1被储存在栈中，占8字节（float类型被转换成double类型）。同样，n2也在栈中占8字节，而n3和n4在栈中分别占4字节。然后，控制转到printf()函数。该函数根据转换说明（不是根据变量类型）从栈中读取值。%ld转换说明表明 printf()应该读取4字节，所以printf()读取栈中的前4字节作为第1个值。这是 n1的前半部分，将被解释成一个long类型的整数。根据下一个%ld转换说明，printf()再读取4字节，这是n1的后半部分，将被解释成第2个long类型的整数（见图4.9）。类似地，根据第3个和第4个%ld，printf()读取n2的前半部分和后半部分，并解释成两个long类型的整数。因此，对于n3和n4，虽然用对了转换说明，但printf()还是读错了字节。
