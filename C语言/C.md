@@ -378,4 +378,6 @@ scanf()函数允许把普通字符放在格式字符串中。除空格字符外�
 bmw = 2002;
 ```
 
-赋值行为从右往左进行。赋值表达式语句的目的是把值储存到内存位置上。用于储存值的数据存储区域统称为数据对象（data object）。
+赋值行为从右往左进行。赋值表达式语句的目的是把值储存到内存位置上。用于储存值的数据存储区域统称为数据对象（data object），与初始化区分。
+
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/20-55-39-9f262e48bf56cf09be72a95855704fb8-20240914205538-a6f6db.png)
