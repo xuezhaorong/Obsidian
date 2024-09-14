@@ -452,3 +452,8 @@ while (++shoe < 18.5) {
 }
 ```
 首先，这样的while循环是如何工作的？很简单。shoe的值递增1，然后和18.5作比较。如果递增后的值小于18.5，则执行花括号内的语句一次。然后，shoe的值再递增1，重复刚才的步骤，直到shoe的值不小于18.5为止。注意，我们把shoe的初始值从3.0改为2.0，因为在对foot第1次求值之前， shoe  已经递增了1。
+![|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/2024/09/14/22-04-13-08d1014cffe4b33939a5c28279b7ba39-22-04-07-08d1014cffe4b33939a5c28279b7ba39-20240914220406-01cbd1-168e98.png)
+单独使用递增运算符时（如，ego++;），使用哪种形式都没关系。但是，当运算符和运算对象是更复杂表达式的一部分时（如上面的示例），使用前缀或后缀的效果不同。
+
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/22-05-54-67f57fa33ca0b6eca311a95cdc9b5139-20240914220554-520b28.png)
+
