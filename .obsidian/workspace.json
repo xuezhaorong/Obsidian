@@ -6,7 +6,6 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 83.42792281498296,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -42,8 +41,7 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "88550bae11fcafb1"
+            }
           },
           {
             "id": "5559e0fdf63012fb",
@@ -51,32 +49,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
+                "file": "IOT/Linux/Linux基础.md",
                 "mode": "source",
                 "source": false
               }
             }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "ebbd434fd6d780fa",
-        "type": "tabs",
-        "dimension": 16.57207718501703,
-        "children": [
+          },
           {
-            "id": "d7f87c8ed85de0a4",
+            "id": "fdad230af652c450",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "pdf",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "page": 140,
+                "left": -10,
+                "top": 226,
+                "zoom": 1.5119047379062738
               }
-            },
-            "group": "88550bae11fcafb1"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -142,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
               }
             }
           },
@@ -183,7 +177,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,13 +210,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5559e0fdf63012fb",
+  "active": "fdad230af652c450",
   "lastOpenFiles": [
+    "未命名.md",
+    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "IOT/Linux/Linux基础.md",
+    "C语言",
+    "IOT/物联网/应用层/lvgl/LVGL.md",
     "Excalidraw/Drawing 2024-09-12 21.55.13.excalidraw.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/WSL安装配置.md",
-    "IOT/物联网/应用层/lvgl/LVGL.md",
     "Excalidraw",
     "未命名.canvas",
     "2024-09-12.md",
@@ -248,8 +245,6 @@
     "IOT/物联网/应用层/lvgl",
     "IOT/机器学习/SVM支持向量机.md",
     "IOT/树莓派/安装qt5.md",
-    "IOT/树莓派/frp远程连接.md",
-    "IOT/物联网/感知层/Clion配置/51单片机配置.md",
     "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "Linux",
     "物联网/应用层/Qt",
@@ -262,8 +257,6 @@
     "物联网/感知层/51单片机/指令运行4.webp",
     "物联网/感知层/51单片机/指令运行3.webp",
     "物联网/感知层/51单片机/指令运行2.webp",
-    "物联网/感知层/51单片机/指令运行1.webp",
-    "树莓派",
-    "物联网/感知层/STM32"
+    "物联网/感知层/51单片机/指令运行1.webp"
   ]
 }
