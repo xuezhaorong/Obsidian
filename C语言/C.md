@@ -378,6 +378,50 @@ scanf()函数允许把普通字符放在格式字符串中。除空格字符外�
 bmw = 2002;
 ```
 
-赋值行为从右往左进行。赋值表达式语句的目的是把值储存到内存位置上。用于储存值的数据存储区域统称为数据对象（data object），与初始化区分。
+赋值表达式语句的目的是把值储存到内存位置上。用于储存值的数据存储区域统称为数据对象（data object），与初始化区分。
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/20-55-39-9f262e48bf56cf09be72a95855704fb8-20240914205538-a6f6db.png)
+![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/20-55-39-9f262e48bf56cf09be72a95855704fb8-20240914205538-a6f6db.png)
+赋值行为从右往左进行。
+```c
+i = i + 1
+```
+意思是找出变量 i 的值，把该值加 1，然后把新值赋值变量i
+![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/21-02-17-f5a67be239b930863e916c1b156f07b4-20240914210217-9f6736.png)
+
+
+
+
+可修改的左值（modifiable lvalue），用于标识可修改的对象。所以，赋值运算符的左侧应该是可修改的左值。右值（rvalue）指的是能赋值给可修改左值的量，且本身不是左值。这里，bmw是可修改的左值，2002是右值。右值可以是常量、变量或其他可求值的表达式（如，函数调用）。实际上，当前标准在描述这一概念时使用的是表达式的值（value of an expression），而不是右值。
+
+* 加法运算符
+一元运算：
+```c
+dozen = +12;
+```
+这样不会改变变量的值
+
+二元运算：
+加法运算符（addition operator）用于加法运算，使其两侧的值相加。例如，语句： 
+```c
+printf("%d", 4 + 20);
+```
+
+
+* 减法运算符
+一元运算：
+减号可用于标明或改变一个值的代数符号。
+```c
+dozen = -12;
+```
+
+二元运算：
+减法运算符（subtraction operator）用于减法运算，使其左侧的数减去右侧的数。
+```c
+takehome = 224.00 – 24.00;
+```
+
+* 乘法运算符：
+符号*表示乘法。下面的语句用2.54乘以inch，并将结果赋给cm：
+```c
+cm = 2.54 * inch;
+```
