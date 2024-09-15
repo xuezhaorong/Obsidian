@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 84.52012383900929,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -71,11 +72,13 @@
             "id": "7f35b76e375efe30",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "C语言/C.md",
-                "mode": "source",
-                "source": false
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "page": 328,
+                "left": -11,
+                "top": 607,
+                "zoom": 1.3128372807486144
               }
             },
             "group": "089c705f16023dc5"
@@ -86,6 +89,7 @@
       {
         "id": "213d7ffd5e504d1c",
         "type": "tabs",
+        "dimension": 15.479876160990713,
         "children": [
           {
             "id": "87c7e3c8d0c78d6a",
@@ -93,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
               }
             },
             "group": "089c705f16023dc5"
@@ -164,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
               }
             }
           },
@@ -205,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -238,10 +242,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "87c7e3c8d0c78d6a",
+  "active": "7f35b76e375efe30",
   "lastOpenFiles": [
-    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
+    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/Linux基础.md",
     "C语言",

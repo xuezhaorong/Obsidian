@@ -480,3 +480,22 @@ while (++shoe < 18.5) {
 
 ## 语句
 ### 循环语句
+#### while
+while循环的通用形式如下：
+```c
+while ( expression ) 
+statement
+```
+
+expression是值之间的比较，可以使用任何表达式。如果expression为真 （或者更一般地说，非零），执行 statement部分一次，然后再次判断 expression。在expression为假（0）之前，循环的判断和执行一直重复进行。每次循环都被称为一次迭代（iteration）。
+
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-47-21-87ef08400fd45928e5e9c0240066819d-20240915204721-176d1d.png)
+while循环是使用入口条件的有条件循环。所谓“有条件”指的是语句部分的执行取决于测试表达式描述的条件，如(index < 5)。该表达式是一个入口条件（entry condition），因为必须满足条件才能进入循环体。对于真值，非零数为真值，而零为假值。
+
+```c
+int n = 0; 
+while (n++ < 3){
+	printf("n is %d\n", n);
+}
+```
+
