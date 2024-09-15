@@ -499,3 +499,20 @@ while (n++ < 3){
 }
 ```
 
+#### for
+for语句使用3个表达式控制循环过程，分别用分号隔开。initialize表达式在执行for语句之前只执行一次；然后对test表达式求值，如果表达式为真 （或非零），执行循环一次；接着对update表达式求值，并再次检查test表达式。for语句是一种入口条件循环，即在执行循环之前就决定了是否执行循环。因此，for循环可能一次都不执行。statement部分可以是一条简单语句或复合语句。
+
+```c
+for ( initialize; test; update ) 
+statement //在test为假或0之前，重复执行statement部分。
+```
+
+ 关键字for后面的圆括号中有3个表达式，分别用两个分号隔开。第1个表达式是初始化，只会在for循环开始时执行一次。第 2 个表达式是测试条件，在执行循环之前对表达式求值。如果表达式为假（本例中，count大于 NUMBER时），循环结束。第3个表达式执行更新，在每次循环结束时求值。程序清单6.10用这个表达式递增count 的值，更新计数。完整的for语句还包括后面的简单语句或复合语句。for圆括号中的表达式也叫做控制表达式，它们都是完整表达式，所以每个表达式的副作用（如，递增变量）都发生在对下一个表达式求值之前。
+
+```c
+int count; 
+for (count = 1; count <= NUMBER; count++) 
+	printf("Be my Valentine!\n");
+```
+
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-59-29-36df0a3380b0cb2b56817e439349c629-20240915205928-5049de.png)
