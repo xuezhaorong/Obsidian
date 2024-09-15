@@ -475,6 +475,10 @@ while (++shoe < 18.5) {
 
 递增运算符和递减运算符都有很高的结合优先级，只有圆括号的优先级比它们高。因此，x*y++表示的是(x)*(y++)，而不是(x+y)++。不过后者无效，因为递增和递减运算符只能影响一个变量（或者，更普遍地说，只能影响一个可修改的左值），而组合x*y本身不是可修改的左值。
 
+* 其他赋值运算符
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/21-38-52-e007450c80b0b9a77e79e5335cbbb9b0-20240915213851-6d2061.png)
+
+
 ### 运算符优先级
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-26-20-4765bc3449e3bb50a001410fcae7ed48-20240915202619-c0bbe2.png)
 
