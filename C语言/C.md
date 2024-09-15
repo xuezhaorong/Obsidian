@@ -1,4 +1,4 @@
-##  基本数据类型
+下面是do while循环的通用形式： do statement while ( expression );##  基本数据类型
 ### 整型
 
 | 数据类型  | 表达方式 | 存储大小  | 表达范围                                      |
@@ -521,3 +521,13 @@ for (count = 1; count <= NUMBER; count++)
 
 ![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-59-29-36df0a3380b0cb2b56817e439349c629-20240915205928-5049de.png)
 
+#### do while
+出口条件循环：do while while循环和for循环都是入口条件循环，即在循环的每次迭代之前检查测试条件，所以有可能根本不执行循环体中的内容。C语言还有出口条件循环（exit-condition loop），即在循环的每次迭代之后检查测试条件，这保证了至少执行循环体中的内容一次。
+下面是do while循环的通用形式： 
+```c
+do 
+statement 
+while ( expression );
+```
+ do while循环在执行完循环体后才执行测试条件，所以至少执行循环体一次；而for循环或while循环都是在执行循环体之前先执行测试条件。
+![|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/21-49-19-381cb713b6bbf2b14f6042138bfe1e2a-20240915214919-273b49.png)
