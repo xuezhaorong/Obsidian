@@ -515,4 +515,5 @@ for (count = 1; count <= NUMBER; count++)
 	printf("Be my Valentine!\n");
 ```
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-59-29-36df0a3380b0cb2b56817e439349c629-20240915205928-5049de.png)
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-59-29-36df0a3380b0cb2b56817e439349c629-20240915205928-5049de.png)
+
