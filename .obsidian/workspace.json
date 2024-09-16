@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 78.48297213622291,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -98,6 +99,7 @@
       {
         "id": "de990d500eb8200c",
         "type": "tabs",
+        "dimension": 21.517027863777088,
         "children": [
           {
             "id": "c50e2a5dd2d7d847",
@@ -250,7 +252,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c50e2a5dd2d7d847",
+  "active": "90a87f7ae65c8734",
   "lastOpenFiles": [
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
