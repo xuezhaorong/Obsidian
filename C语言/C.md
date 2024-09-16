@@ -222,6 +222,27 @@ strlen() 函数给出字符串中的字符长度，不计入最后的空字符�
 ![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
 
 ## 输入输出
+### 缓冲区
+
+
+### 单字符I/O
+
+#### getchar()
+`getchar()`函数不带任何参数，它从输入队列中返回下一个字符。例如， 下面的语句读取下一个字符输入，并把该字符的值赋给变量ch：
+```c
+char ch;
+ch = getchar();
+```
+
+#### putchar()
+`putchar()`函数将单个字符打印出来
+```c
+char ch;  
+while ((ch = getchar()) != '#')  
+    putchar(ch);  
+return 0;
+```
+
 ### printf
 
 printf()函数能让用户可以与程序交流，它输出函数，请求printf()函数打印数据的指令要与待打印数据的类型相匹配。例如， 打印整数时使用%d，打印字符时使用%c。这些符号被称为转换说明 （conversion specification），它们指定了如何把数据转换成可显示的形式。
