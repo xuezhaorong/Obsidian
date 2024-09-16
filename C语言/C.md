@@ -458,6 +458,17 @@ four = 12.0/3.0;
 ![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-17-58-5d1c693ddcbf214f20f8c97cd3001838-20240916091758-8056f8.png)
 假设exp1和exp2是两个简单的关系表达式（如car > rat或debt == 1000），那么： 当且仅当exp1和exp2都为真时，exp1 && exp2才为真； 如果exp1或exp2为真，则exp1 || exp2为真； 如果exp1为假，则!exp1为真；如果exp1为真，则!exp1为假。
 
+### 条件运算符
+C提供条件表达式（conditional expression）作为表达if else语句的一种便捷方式，该表达式使用`?:`条件运算符。该运算符分为两部分，需要 3 个运算对象。
+```c
+expression1 ? expression2 : expression3
+```
+如果 expression1 为真（非 0），那么整个条件表达式的值与 expression2 的值相同；如果expression1为假（0），那么整个条件表达式的值与 expression3的值相同。
+要把两个值中的一个赋给变量时，就可以用条件表达式。典型的例子是，把两个值中的最大值赋给变量：
+```c
+max = (a > b) ? a : b;
+```
+如果a大于b，那么将max设置为a；否则，设置为b。
 
 ### 其他运算符
 * 取模运算符：
