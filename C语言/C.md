@@ -317,6 +317,27 @@ if (strncmp(list[i], "astro", 5) == 0) {
 pts2 = pts1;
 ```
 上面语句拷贝的是字符串的地址而不是字符串本身，如果希望拷贝整个字符串，要使用strcpy()函数。
+strcpy()接受两个字符串指针作为参数，可以把指向源字符串的第2个指针声明为指针、数组名或字符串常量；而指向源字符串副本的第1个指针应指向一个数据对象（如，数组），且该对象有足够的空间储存源字符串的副本。
+
+```c
+strcpy(qwords, temp);
+```
+strcpy()函数还有两个有用的属性。第一，strcpy()的返回类型是 char \*， 该函数返回的是第 1个参数的值，即一个字符的地址。第二，第 1 个参数不必指向数组的开始。这个属性可用于拷贝数组的一部分。
+
+```c
+const char * orig = WORDS; 
+char copy[SIZE] = "Be the best that you can be."; 
+char * ps; 
+puts(orig); 
+puts(copy); 
+ps = strcpy(copy + 7, orig); 
+puts(copy);
+puts(ps);
+
+```
+注意，strcpy()把源字符串中的空字符也拷贝在内。在该例中，空字符覆盖了copy数组中that的第1个t（见图11.5）。注意，由于第1个参数是copy + 7，所以ps指向copy中的第8个元素（下标为7）。因此puts(ps)从该处开始打印字符串。
+![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/20-01-38-bb11bb37d7ccaf278e7d3e25b9e152e4-20240916200137-5fd6cc.png)
+
 
 
 
