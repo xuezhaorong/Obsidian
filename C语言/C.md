@@ -336,10 +336,26 @@ puts(ps);
 
 ```
 注意，strcpy()把源字符串中的空字符也拷贝在内。在该例中，空字符覆盖了copy数组中that的第1个t（见图11.5）。注意，由于第1个参数是copy + 7，所以ps指向copy中的第8个元素（下标为7）。因此puts(ps)从该处开始打印字符串。
-![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/20-01-38-bb11bb37d7ccaf278e7d3e25b9e152e4-20240916200137-5fd6cc.png)
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/20-01-38-bb11bb37d7ccaf278e7d3e25b9e152e4-20240916200137-5fd6cc.png)
 
+拷贝字符串用 strncpy()更安全，该函数的第 3 个参数指明可拷贝的最大字符数。
+```c
+strncpy(qwords[i], temp, TARGSIZE - 1);
+```
 
+strncpy(target, source, n)把source中的n个字符或空字符之前的字符（先满足哪个条件就拷贝到何处）拷贝至target中。因此，如果source中的字符数小于n，则拷贝整个字符串，包括空字符。但是，strncpy()拷贝字符串的长度不会超过n，如果拷贝到第n个字符时还未拷贝完整个源字符串，就不会拷贝空字符。所以，拷贝的副本中不一定有空字符。鉴于此，该程序把 n 设置为比目标数组大小少1（TARGSIZE-1），然后把数组最后一个元素设置为空字符。
+```c
+ strncpy(qwords[i], temp, TARGSIZE - 1); 
+ qwords[i][TARGSIZE - 1] = '\0';
+```
+这样做确保储存的是一个字符串。如果目标空间能容纳源字符串的副本，那么从源字符串拷贝的空字符便是该副本的结尾；如果目标空间装不下副本，则把副本最后一个元素设置为空字符。
 
+#### sprintf
+该函数和printf()类似，但是它是把数据写入字符串，而不是打印在显示器上。因此，该函数可以把多个元素组合成一个字符串。sprintf()的第1个参数是目标字符串的地址。其余参数和printf()相同，即格式字符串和待写入项的列表。
+```c
+sprintf(formal, "%s, %-19s: $%6.2f\n", last, first, prize);
+```
+sprintf()函数获取输入，并将其格式化为标准形式，然后把格式化后的字符串储存在formal中。
 
 ## 内存管理 
 ### 作用域
