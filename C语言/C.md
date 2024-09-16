@@ -539,3 +539,30 @@ while ( expression );
  statement
 ```
 如果对expression求值为真（非0），则执行statement；否则，跳过 statement。与while循环一样，statement可以是一条简单语句或复合语句。if 语句的结构和while语句很相似，它们的主要区别是：如果满足条件可执行的话，if语句只能测试和执行一次，而while语句可以测试和执行多次。通常，expression 是关系表达式，即比较两个量的大小（如，表达式 x > y 或 c == 6）。如果expression为真（即x大于y，或c == 6），则执行 statement。否则，忽略statement。概括地说，可以使用任意表达式，表达式的值为0则为假。
+![Uploading file...himsu]()
+
+#### if else
+简单形式的if语句可以让程序选择执行一条语句，或者跳过这条语句。 C还提供了if else形式，可以在两条语句之间作选择。
+```c
+if ( expression ) 
+	statement1
+else 
+	statement2
+```
+如果expression为真（非0），则执行statement1；如果expression为假或 0，则执行else后面的statement2。statement1和statement2可以是一条简单语句或复合语句。
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/08-56-22-1bad2f8ff2943271206a0b6233dacd9e-20240916085621-3e9545.png)
+
+#### else if
+```c
+if (score < 1000) 
+	bonus = 0; 
+else if (score < 1500) 
+	bonus = 1; 
+else if (score < 2000) 
+	bonus = 2;
+else
+	...
+```
+
+如果程序中有许多if和else，else与离它最近的if匹配，除非最近的if被花括号括起来
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-00-26-ac5bc199ec376e4ea8b621fd6cf5a91e-20240916090026-6420c6.png)
