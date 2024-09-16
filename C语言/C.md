@@ -534,4 +534,8 @@ while ( expression );
 
 ### 分支语句
 #### if
-
+```c
+ if ( expression ) 
+ statement
+```
+如果对expression求值为真（非0），则执行statement；否则，跳过 statement。与while循环一样，statement可以是一条简单语句或复合语句。if 语句的结构和while语句很相似，它们的主要区别是：如果满足条件可执行的话，if语句只能测试和执行一次，而while语句可以测试和执行多次。通常，expression 是关系表达式，即比较两个量的大小（如，表达式 x > y 或 c == 6）。如果expression为真（即x大于y，或c == 6），则执行 statement。否则，忽略statement。概括地说，可以使用任意表达式，表达式的值为0则为假。
