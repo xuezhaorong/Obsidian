@@ -243,7 +243,8 @@ while ((ch = getchar()) != '#')
 return 0;
 ```
 
-### printf
+### 字符串IO
+#### printf
 
 printf()函数能让用户可以与程序交流，它输出函数，请求printf()函数打印数据的指令要与待打印数据的类型相匹配。例如， 打印整数时使用%d，打印字符时使用%c。这些符号被称为转换说明 （conversion specification），它们指定了如何把数据转换成可显示的形式。
 ![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-56-22-58b3266ec99c5ff07b500444dddee0ce-20240914145622-bbccab.png)
@@ -260,7 +261,7 @@ printf("%d,%hd",word);
 由于没有给第二个转换符号具体参数，所以打印出的值是内存中的任意值
 
 
-#### 转换说明
+##### 转换说明
 
 | 数据类型     |     |
 | -------- | --- |
@@ -309,12 +310,12 @@ printf("%d,%hd",word,word);
 
 这种截断相当于用一个整数除以256，只保留其余数。用专业术语来说，该数字被解释成“以256为模”（modulo 256）， 即该数字除以256后取其余数。
 
-#### 转换说明修饰符
+##### 转换说明修饰符
 在%和转换字符之间插入修饰符可修饰基本的转换说明。
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-09-11-ec7a5af00fa506414fbfbef3a5c14c56-20240914160911-5a1213.png)
 ![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-10-32-37499ddab511efc23ceaf7789b6d008e-20240914161032-3cd8ed.png)
 
-#### 参数传递错误
+##### 参数传递错误
 ```c
 printf("%ld %ld %ld %ld\n", n1, n2, n3, n4);
 ```
@@ -323,7 +324,7 @@ printf("%ld %ld %ld %ld\n", n1, n2, n3, n4);
 
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-19-14-9f5a0b896d913ae356a292f9fe2b938c-20240914161913-e101b7.png)
 
-#### 字符串断行
+##### 字符串断行
 有时，printf()语句太长，在屏幕上不方便阅读。如果空白（空格、制表符、换行符）仅用于分隔不同的部分，C 编译器会忽略它们。因此，一条语句可以写成多行，只需在不同部分之间输入空白即可。
 ```c
 printf("The printf() function printed %d characters.\n", 
@@ -352,7 +353,7 @@ printf("Hello, young lovers"
 但是，不能在双引号括起来的字符串中间断行。C编译器会报错：字符串常量中有非法字符。在字符串中，可以使用\n 来表示换行字符，但是不能通过按下Enter（或Return）键产生实际的换行符。
 
 
-### scanf
+#### scanf
 scanf()把输入的字符串转换成整数、浮点数、字符或字符串，而 printf()正好与它相反，把整数、浮点数、字符和字符串转换成显示在屏幕上的文本。 
 scanf()和 printf()类似，也使用格式字符串和参数列表。scanf()中的格式字符串表明字符输入流的目标数据类型。两个函数主要的区别在参数列表中。printf()函数使用变量、常量和表达式，而scanf()函数使用指向变量的指针。
 ```c
@@ -360,7 +361,7 @@ int age;
 scanf("%d",age);
 ```
 
-#### 分隔机制
+##### 分隔机制
 
 scanf()函数使用空白（换行符、制表符和空格）把输入分成多个字段。在依次把转换说明和字段匹配时跳过空白。只要在每个输入项之间输入至少一个换行符、空格或制表符即可，可以在一行或多行输入：
 ```c
@@ -374,14 +375,14 @@ scanf("%d %f", &age, &assets);
 42 2121.45
 ```
 
-#### 转换说明
+##### 转换说明
 scanf()函数所用的转换说明与printf()函数几乎相同。主要的区别是，对于float类型和double类型，printf()都使用%f、%e、%E、%g和%G转换说明。而scanf()只把它们用于float类型，对于double类型时要使用l修饰符。
 ![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-50-18-97b0856c62b94f4db9c9e37808d7152c-20240914165018-3d68a0.png)
 
 
 ![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/16-48-13-fe0bb90ca86577df69c8d29b5a0f8382-20240914164812-5aaf52.png)
 
-####  输入机制
+#####  输入机制
 * 以`%d`为例：
 	**读取机制**：scanf()函数每次读取一个字符，跳过所有的空白字符，直至遇到第1个非空白字符才开始读取。因为要读取整数，所以 scanf()希望发现一个数字字符或者一个符号（+或-）。如果找到一个数字或符号，它便保存该字符，并读取下一个字符。如果下一个字符是数字，它便保存该数字并读取下一个字符。
 
@@ -397,7 +398,7 @@ scanf()函数所用的转换说明与printf()函数几乎相同。主要的区�
 
 当scanf()把字符串放进指定数组中时，它会在字符序列的末尾加上'\\0'，让数组中的内容成为一个C字符串。
 
-#### 格式字符串中的普通字符
+##### 格式字符串中的普通字符
 scanf()函数允许把普通字符放在格式字符串中。除空格字符外的普通字符必须与输入字符串严格匹配。
 ```c
  scanf("%d,%d", &n, &m);
