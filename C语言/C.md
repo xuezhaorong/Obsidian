@@ -747,9 +747,16 @@ break让程序离开switch语句，跳至switch语句后面的下一条语句（
 ## 指针
 从根本上看，指针（pointer）是一个值为内存地址的变量（或数据对象）。正如char类型变量的值是字符，int类型变量的值是整数，指针变量的值是地址。
 ```c
-int * pi; // pi是指向int类型变量的指针 
+int * pi = &bah; // pi是指向int类型变量的指针 
 char * pc; // pc是指向char类型变量的指针 
 float * pf, * pg; // pf、pg都是指向float类型变量的指针
 ```
 类型说明符表明了指针所指向对象的类型，星号（\*）表明声明的变量是一个指针。int * pi;声明的意思是pi是一个指针，\*pi是int类型
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/15-52-40-347f953e0fefe023023dcb54d64c8ae1-20240916155240-0853f9.png)
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/15-52-40-347f953e0fefe023023dcb54d64c8ae1-20240916155240-0853f9.png)
+`&`后跟一个变量名时，`&`给出该变量的地址。
+
+```c
+val = *pi;
+```
+
+使用间接运算符*（indirection operator）找出储存在bah中的值，该运算符有时也称为解引用运算符（dereferencing operator）。
