@@ -83,13 +83,11 @@
             "id": "90a87f7ae65c8734",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
-                "page": 819,
-                "left": -10,
-                "top": 407,
-                "zoom": 1.5648214037329935
+                "file": "C语言/C.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -160,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "file": "C语言/C.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
+                "file": "C语言/C.md"
               }
             }
           },
@@ -201,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "file": "C语言/C.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,8 +234,8 @@
   },
   "active": "90a87f7ae65c8734",
   "lastOpenFiles": [
-    "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+    "C语言/C.md",
     "().md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/Linux基础.md",
