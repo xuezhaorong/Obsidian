@@ -199,7 +199,7 @@ mice = (int)1.6 + (int)1.7;
 
 第1 行使用自动类型转换。首先，1.6和1.7相加得3.3。然后，为了匹配 int 类型的变量，3.3被类型转换截断为整数3。第2行，1.6和1.7在相加之前都被转换成整数（1），所以把1+1的和赋给变量mice。
 
-## 字符串和格式化输出输入
+## 字符串
 ### 字符串
 ```c
 #include <string.h>
@@ -221,6 +221,7 @@ unsigned long length = strlen(name);
 strlen() 函数给出字符串中的字符长度，不计入最后的空字符。
 ![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
 
+## 输入输出
 ### printf
 
 printf()函数能让用户可以与程序交流，它输出函数，请求printf()函数打印数据的指令要与待打印数据的类型相匹配。例如， 打印整数时使用%d，打印字符时使用%c。这些符号被称为转换说明 （conversion specification），它们指定了如何把数据转换成可显示的形式。
