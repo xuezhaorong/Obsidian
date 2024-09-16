@@ -198,6 +198,85 @@ mice = (int)1.6 + (int)1.7;
 ```
 
 第1 行使用自动类型转换。首先，1.6和1.7相加得3.3。然后，为了匹配 int 类型的变量，3.3被类型转换截断为整数3。第2行，1.6和1.7在相加之前都被转换成整数（1），所以把1+1的和赋给变量mice。
+## 指针
+从根本上看，指针（pointer）是一个值为内存地址的变量（或数据对象）。正如char类型变量的值是字符，int类型变量的值是整数，指针变量的值是地址。
+```c
+int * pi = &bah; // pi是指向int类型变量的指针 
+char * pc; // pc是指向char类型变量的指针 
+float * pf, * pg; // pf、pg都是指向float类型变量的指针
+```
+类型说明符表明了指针所指向对象的类型，星号（\*）表明声明的变量是一个指针。int * pi;声明的意思是pi是一个指针，\*pi是int类型
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/15-52-40-347f953e0fefe023023dcb54d64c8ae1-20240916155240-0853f9.png)
+`&`后跟一个变量名时，`&`给出该变量的地址。
+
+```c
+val = *pi;
+```
+
+使用间接运算符*（indirection operator）找出储存在bah中的值，该运算符有时也称为解引用运算符（dereferencing operator）。
+
+## 数组
+数组由数据类型相同的一系列元素组成。需要使用数组时，通过声明数组告诉编译器数组中内含多少元素和这些元素的类型。编译器根据这些信息正确地创建数组。普通变量可以使用的类型，数组元素都可以用。
+```c
+int main(void) { 
+	float candy[365]; /* 内含365个float类型元素的数组 */ 
+	char code[12]; /*内含12个char类型元素的数组*/ 
+	int states[50]; /*内含50个int类型元素的数组 */ 
+}
+```
+
+方括号（\[]）表明candy、code和states都是数组，方括号中的数字表明数组中的元素个数。要访问数组中的元素，通过使用数组下标数（也称为索引）表示数组中的各元素。数组元素的编号从0开始，所以candy\[0]表示candy数组的第1个元素，candy\[364]表示第365个元素，也就是最后一个元素。
+### 初始化数组
+```c
+int main(void) { 
+	int powers[8] = {1,2,4,6,8,16,32,64}; /* 从ANSI C开始支持这种初始化 */ 
+}
+```
+用以逗号分隔的值列表（用花括号括起来）来初始化数组， 各值之间用逗号分隔。在逗号和值之间可以使用空格。根据上面的初始化， 把 1 赋给数组的首元素（powers[0]），以此类推。
+使用数组前必须先初始化它。与普通变量类似，在使用数组元素之前， 必须先给它们赋初值。编译器使用的值是内存相应位置上的现有值。
+当初始化列表中的值少于数组元素个数时，编译器会把剩余的元素都初始化为0。也就是说，如果不初始化数组， 数组元素和未初始化的普通变量一样，其中储存的都是垃圾值；但是，如果部分初始化数组，剩余的元素就会被初始化为0。
+
+```c
+const int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31 };
+```
+
+如果初始化数组时省略方括号中的数字，编译器会根据初始化列表中的项数来确定数组的大小。所以sizeof days是整个数组的大小（以字节为单位），sizeof day\[0]是数组中一个元素的大小（以字节为单位）。整个数组的大小除以单个元素的大小就是数组元素的个数。
+
+### 给数组赋值
+声明数组后，可以借助数组下标（或索引）给数组元素赋值。
+```c
+#include <stdio.h> 
+#define SIZE 50 
+int main(void) { 
+int counter, evens[SIZE]; 
+for (counter = 0; counter < SIZE; counter++) 
+	evens[counter] = 2 * counter;
+}
+```
+C 不允许把数组作为一个单元赋给另一个数组，除初始化以外也不允许使用花括号列表的形式赋值。
+
+## 字符串
+### 字符串
+```c
+#include <string.h>
+int main(){
+	char name[40];
+	scanf("%s:",&name);
+	return 0;
+}
+```
+字符串（character string）是一个或多个字符的序列，字符串都被储存在char类型的数组中。数组由连续的存储单元组成，字符串中的字符被储存在相邻的存储单元中，每个单元储存一个字符。
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-41-56-de21d566e36ed83fafba7a5b8c7c7ddc-20240914144155-3b953b.png)
+数组末尾位置的字符\0。这是空字符（null character），C 语言用它标记字符串的结束。空字符不是数字0，它是非打印字符，其ASCII 码值是（或等价于）0。C中的字符串一定以空字符结束，这意味着数组的容量必须至少比待存储字符串中的字符数多1。
+
+使用双引号规定字符串，自动在末尾加入空字符。
+#### strlen
+```c
+unsigned long length = strlen(name);
+```
+strlen() 函数给出字符串中的字符长度，不计入最后的空字符。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
+
 
 ## 内存管理 
 ### 作用域
@@ -302,29 +381,41 @@ void function() {
 
 ```
 
-
-
-## 字符串
-### 字符串
+### 分配内存
 ```c
-#include <string.h>
-int main(){
-	char name[40];
-	scanf("%s:",&name);
-	return 0;
-}
+float x; 
+char place[] = "Dancing Oxen Creek";
 ```
-字符串（character string）是一个或多个字符的序列，字符串都被储存在char类型的数组中。数组由连续的存储单元组成，字符串中的字符被储存在相邻的存储单元中，每个单元储存一个字符。
-![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-41-56-de21d566e36ed83fafba7a5b8c7c7ddc-20240914144155-3b953b.png)
-数组末尾位置的字符\0。这是空字符（null character），C 语言用它标记字符串的结束。空字符不是数字0，它是非打印字符，其ASCII 码值是（或等价于）0。C中的字符串一定以空字符结束，这意味着数组的容量必须至少比待存储字符串中的字符数多1。
-
-使用双引号规定字符串，自动在末尾加入空字符。
-#### strlen
+所有程序都必须预留足够的内存来储存程序使用的数据。这些内存中有些是自动分配的。
+的数据。这些内存中有些是自动分配的。例如，以下声明： float x; char place[] = "Dancing Oxen Creek"; 为一个float类型的值和一个字符串预留了足够的内存，或者可以显式指定分配一定数量的内存：
 ```c
-unsigned long length = strlen(name);
+int plates[100];
 ```
-strlen() 函数给出字符串中的字符长度，不计入最后的空字符。
-![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
+该声明预留了100个内存位置，每个位置都用于储存int类型的值。声明还为内存提供了一个标识符。
+malloc()函数，该函数接受一个参数：所需的内存字节数。malloc()函数会找到合适的空闲内存块，这样的内存是匿名的。也就是说， malloc()分配内存，但是不会为其赋名。然而，它确实返回动态分配内存块的首字节地址。因此，可以把该地址赋给一个指针变量，并使用指针访问这块内存。如果 malloc()分配内存失败，将返回空指针。
+```c
+double * ptd; 
+ptd = (double *) malloc(30 * sizeof(double));
+```
+以上代码为30个double类型的值请求内存空间，并设置ptd指向该位置。注意，指针ptd被声明为指向一个double类型，而不是指向内含30个double类型值的块。数组名是该数组首元素的地址。因此，如果让ptd指向这个块的首元素，便可像使用数组名一样使用它。也就是说，可以使用表达式ptd\[0]访问该块的首元素，ptd\[1]访问第2个元素，以此类推。可以使用数组名来表示指针，也可以用指针来表示数组。
+
+```c
+ptd = (double *) malloc(n * sizeof(double)); /* 可以 */
+```
+创建动态数组（dynamic array）。这种数组和普通数组不同，可以在程序运行时选择数组的大小和分配内存。使用malloc()，程序可以在运行时才确定数组大小。
+```c
+free(ptd);
+```
+通常，malloc()要与free()配套使用。free()函数的参数是之前malloc()返回的地址，该函数释放之前malloc()分配的内存。因此，动态分配内存的存储期从调用malloc()分配内存到调用free()释放内存为止。设想malloc()和 free()管理着一个内存池。每次调用malloc()分配内存给程序使用，每次调用 free()把内存归还内存池中，这样便可重复使用这些内存。free()的参数应该是一个指针，指向由 malloc()分配的一块内存。不能用 free()释放通过其他方式（如，声明一个数组）分配的内存。
+
+静态内存的数量在编译时是固定的，在程序运行期间也不会改变。自动变量使用的内存数量在程序执行期间自动增加或减少。但是动态分配的内存数量只会增加，除非用 free()进行释放。
+
+```c
+long * newmem; 
+newmem = (long *)calloc(100, sizeof (long));
+```
+与malloc()类似，在ANSI之前，calloc()也返回指向char的指针；在ANSI 之后，返回指向void的指针。如果要储存不同的类型，应使用强制类型转换运算符。calloc()函数接受两个无符号整数作为参数（ANSI规定是size_t类型）。第1个参数是所需的存储单元数量，第2个参数是存储单元的大小（以字节为单位）。在该例中，long为4字节，所以，前面的代码创建了100个4 字节的存储单元，总共400字节。
+
 
 ## 输入输出
 ### 缓冲区
@@ -744,59 +835,3 @@ default : <--可选语句 <--可选
 ![image.png|452](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-50-30-1126dfe1a370138b418883f0cb95bd47-20240916095029-b18384.png)
 break让程序离开switch语句，跳至switch语句后面的下一条语句（见图7.4）。如果没有break语句，就会从匹配标签开始执行到switch末尾。
 
-## 指针
-从根本上看，指针（pointer）是一个值为内存地址的变量（或数据对象）。正如char类型变量的值是字符，int类型变量的值是整数，指针变量的值是地址。
-```c
-int * pi = &bah; // pi是指向int类型变量的指针 
-char * pc; // pc是指向char类型变量的指针 
-float * pf, * pg; // pf、pg都是指向float类型变量的指针
-```
-类型说明符表明了指针所指向对象的类型，星号（\*）表明声明的变量是一个指针。int * pi;声明的意思是pi是一个指针，\*pi是int类型
-![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/15-52-40-347f953e0fefe023023dcb54d64c8ae1-20240916155240-0853f9.png)
-`&`后跟一个变量名时，`&`给出该变量的地址。
-
-```c
-val = *pi;
-```
-
-使用间接运算符*（indirection operator）找出储存在bah中的值，该运算符有时也称为解引用运算符（dereferencing operator）。
-
-## 数组
-数组由数据类型相同的一系列元素组成。需要使用数组时，通过声明数组告诉编译器数组中内含多少元素和这些元素的类型。编译器根据这些信息正确地创建数组。普通变量可以使用的类型，数组元素都可以用。
-```c
-int main(void) { 
-	float candy[365]; /* 内含365个float类型元素的数组 */ 
-	char code[12]; /*内含12个char类型元素的数组*/ 
-	int states[50]; /*内含50个int类型元素的数组 */ 
-}
-```
-
-方括号（\[]）表明candy、code和states都是数组，方括号中的数字表明数组中的元素个数。要访问数组中的元素，通过使用数组下标数（也称为索引）表示数组中的各元素。数组元素的编号从0开始，所以candy\[0]表示candy数组的第1个元素，candy\[364]表示第365个元素，也就是最后一个元素。
-### 初始化数组
-```c
-int main(void) { 
-	int powers[8] = {1,2,4,6,8,16,32,64}; /* 从ANSI C开始支持这种初始化 */ 
-}
-```
-用以逗号分隔的值列表（用花括号括起来）来初始化数组， 各值之间用逗号分隔。在逗号和值之间可以使用空格。根据上面的初始化， 把 1 赋给数组的首元素（powers[0]），以此类推。
-使用数组前必须先初始化它。与普通变量类似，在使用数组元素之前， 必须先给它们赋初值。编译器使用的值是内存相应位置上的现有值。
-当初始化列表中的值少于数组元素个数时，编译器会把剩余的元素都初始化为0。也就是说，如果不初始化数组， 数组元素和未初始化的普通变量一样，其中储存的都是垃圾值；但是，如果部分初始化数组，剩余的元素就会被初始化为0。
-
-```c
-const int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31 };
-```
-
-如果初始化数组时省略方括号中的数字，编译器会根据初始化列表中的项数来确定数组的大小。所以sizeof days是整个数组的大小（以字节为单位），sizeof day\[0]是数组中一个元素的大小（以字节为单位）。整个数组的大小除以单个元素的大小就是数组元素的个数。
-
-### 给数组赋值
-声明数组后，可以借助数组下标（或索引）给数组元素赋值。
-```c
-#include <stdio.h> 
-#define SIZE 50 
-int main(void) { 
-int counter, evens[SIZE]; 
-for (counter = 0; counter < SIZE; counter++) 
-	evens[counter] = 2 * counter;
-}
-```
-C 不允许把数组作为一个单元赋给另一个数组，除初始化以外也不允许使用花括号列表的形式赋值。
