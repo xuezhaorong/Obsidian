@@ -452,7 +452,12 @@ four = 12.0/3.0;
 数除法和浮点数除法不同。浮点数除法的结果是浮点数，而整数除法的结果是整数。在C语言中，整数除法结果的小数部分被丢弃，这一过程被称为截断（truncation）。而对于混合类型（整数和浮点数的除法），在进行除法运算前，整数会被转换成浮点数。
 
 ### 关系运算符
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/21-34-17-7c7251cc1a24e74a218333b61264e664-20240914213416-30acaf.png)
+![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/21-34-17-7c7251cc1a24e74a218333b61264e664-20240914213416-30acaf.png)
+
+### 逻辑运算符
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-17-58-5d1c693ddcbf214f20f8c97cd3001838-20240916091758-8056f8.png)
+假设exp1和exp2是两个简单的关系表达式（如car > rat或debt == 1000），那么： 当且仅当exp1和exp2都为真时，exp1 && exp2才为真； 如果exp1或exp2为真，则exp1 || exp2为真； 如果exp1为假，则!exp1为真；如果exp1为真，则!exp1为假。
+
 
 ### 其他运算符
 * 取模运算符：
@@ -479,9 +484,12 @@ while (++shoe < 18.5) {
 ![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/21-38-52-e007450c80b0b9a77e79e5335cbbb9b0-20240915213851-6d2061.png)
 
 
-### 运算符优先级
+### 运算符优先级与运算顺序
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-26-20-4765bc3449e3bb50a001410fcae7ed48-20240915202619-c0bbe2.png)
 
+对于逻辑运算符，!运算符的优先级很高，比乘法运算符还高，与递增运算符的优先级相同，只比圆括号的优先级低。&&运算符的优先级比||运算符高，但是两者的优先级都比关系运算符低，比赋值运算符高。因此，表达式a >b && b > c || b > d相当于((a > b) && (b > c)) || (b > d)。也就是说，b介于a和c之间，或者b大于d。
+
+C保证逻辑表达式的求值顺序是从左往右。&&和||运算符都是序列点，所以程序在从一个运算对象执行到下一个运算对象之前，所有的副作用都会生效。而且，C 保证一旦发现某个元素让整个表达式无效，便立即停止求值。
 ## 语句
 ### 循环语句
 #### while
