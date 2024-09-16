@@ -594,3 +594,17 @@ else
 #### break
 程序执行到循环中的break语句时，会终止包含它的循环，并继续执行下一阶段。如果break语句位于嵌套循环内，它只会影响包含它的当前循环。
 ![|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-35-34-3f2842cab17bcc62e84e42c5497d5cd7-20240916093534-63a16b.png)
+
+### 多重选择
+```c
+switch ( 整型表达式) { 
+case 常量1: 语句 <--可选 
+case 常量2: 语句 <--可选 
+default : <--可选语句 <--可选 
+}
+```
+对紧跟在关键字 switch 后圆括号中的表达式求值。然后程序扫描标签列表，直到发现一个匹配的值为止。然后程序跳转至那一行。如果没有匹配的标签怎么办？如果有default :标签行，就跳转至该行；否则，程序继续执行在switch后面的语句。
+ switch在圆括号中的测试表达式的值应该是一个整数值（包括char类型）。case标签必须是整数类型（包括char类型）的常量或整型常量表达式 （即，表达式中只包含整型常量）。不能用变量作为case标签。
+
+![image.png|452](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-50-30-1126dfe1a370138b418883f0cb95bd47-20240916095029-b18384.png)
+break让程序离开switch语句，跳至switch语句后面的下一条语句（见图7.4）。如果没有break语句，就会从匹配标签开始执行到switch末尾。
