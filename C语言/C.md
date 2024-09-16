@@ -565,4 +565,4 @@ else
 ```
 
 如果程序中有许多if和else，else与离它最近的if匹配，除非最近的if被花括号括起来
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-00-26-ac5bc199ec376e4ea8b621fd6cf5a91e-20240916090026-6420c6.png)
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-00-26-ac5bc199ec376e4ea8b621fd6cf5a91e-20240916090026-6420c6.png)
