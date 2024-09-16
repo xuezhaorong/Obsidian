@@ -789,3 +789,14 @@ const int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31 };
 如果初始化数组时省略方括号中的数字，编译器会根据初始化列表中的项数来确定数组的大小。所以sizeof days是整个数组的大小（以字节为单位），sizeof day\[0]是数组中一个元素的大小（以字节为单位）。整个数组的大小除以单个元素的大小就是数组元素的个数。
 
 ### 给数组赋值
+声明数组后，可以借助数组下标（或索引）给数组元素赋值。
+```c
+#include <stdio.h> 
+#define SIZE 50 
+int main(void) { 
+int counter, evens[SIZE]; 
+for (counter = 0; counter < SIZE; counter++) 
+	evens[counter] = 2 * counter;
+}
+```
+C 不允许把数组作为一个单元赋给另一个数组，除初始化以外也不允许使用花括号列表的形式赋值。
