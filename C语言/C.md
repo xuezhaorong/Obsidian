@@ -743,3 +743,5 @@ default : <--可选语句 <--可选
 
 ![image.png|452](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-50-30-1126dfe1a370138b418883f0cb95bd47-20240916095029-b18384.png)
 break让程序离开switch语句，跳至switch语句后面的下一条语句（见图7.4）。如果没有break语句，就会从匹配标签开始执行到switch末尾。
+
+## 指针
