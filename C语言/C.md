@@ -288,8 +288,23 @@ char addon [] = "s smell like old shoes.";
 strcat(flower, addon);
 ```
 
-### strncat
+#### strncat
 strcat()函数无法检查第1个数组是否能容纳第2个字符串。如果分配给第1个数组的空间不够大，多出来的字符溢出到相邻存储单元时就会出问题。该函数的第3 个参数指定了最大添加字符数。例如，strncat(bugs, addon, 13)将把 addon字符串的内容附加给bugs，在加到第13个字符或遇到空字符时停止。因此，算上空字符（无论哪种情况都要添加空字符），bugs数组应该足够大，以容纳原始字符串（不包含空字符）、添加原始字符串在后面的13个字符和末尾的空字符。
+
+```c
+available = BUGSIZE - strlen(bug) - 1; 
+strncat(bug, addon, available);
+```
+
+#### strcmp
+如果两个字符串参数相同，该函数就返回0，否则返回非零值。
+```c
+while (strcmp(try, ANSWER) != 0);
+```
+strcmp()比较"A"和本身，返回0；比较"A"和"B"，返回-1；比较"B"和"A"，返回1。这说明，如果在字母表中第1个字符串位于第2个字符串前面，strcmp()中就返回负数；反之，strcmp()则返回正数。所以， strcmp()比较"C"和"A"，返回1。其他系统可能返回2，即两者的ASCII码之差。ASCII标准规定，在字母表中，如果第1个字符串在第2个字符串前面， strcmp()返回一个负数；如果两个字符串相同，strcmp()返回0；如果第1个字符串在第2个字符串后面，strcmp()返回正数。然而，返回的具体值取决于实现。
+
+#### strncmp
+
 
 ## 内存管理 
 ### 作用域
