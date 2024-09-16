@@ -585,3 +585,12 @@ else
 
 如果程序中有许多if和else，else与离它最近的if匹配，除非最近的if被花括号括起来
 ![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-00-26-ac5bc199ec376e4ea8b621fd6cf5a91e-20240916090026-6420c6.png)
+
+### 循环辅助
+#### continue
+3种循环都可以使用continue语句。执行到该语句时，会跳过本次迭代的剩余部分，并开始下一轮迭代。如果continue语句在嵌套循环内，则只会影响包含该语句的内层循环。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-34-41-a72212e602af60aa24fbe561bf2f8347-20240916093441-caeffe.png)
+
+#### break
+程序执行到循环中的break语句时，会终止包含它的循环，并继续执行下一阶段。如果break语句位于嵌套循环内，它只会影响包含它的当前循环。
+![|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-35-34-3f2842cab17bcc62e84e42c5497d5cd7-20240916093534-63a16b.png)
