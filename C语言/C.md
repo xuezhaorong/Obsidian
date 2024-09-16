@@ -256,7 +256,6 @@ for (counter = 0; counter < SIZE; counter++)
 C 不允许把数组作为一个单元赋给另一个数组，除初始化以外也不允许使用花括号列表的形式赋值。
 
 ## 字符串
-### 字符串
 ```c
 #include <string.h>
 int main(){
@@ -270,12 +269,18 @@ int main(){
 数组末尾位置的字符\0。这是空字符（null character），C 语言用它标记字符串的结束。空字符不是数字0，它是非打印字符，其ASCII 码值是（或等价于）0。C中的字符串一定以空字符结束，这意味着数组的容量必须至少比待存储字符串中的字符数多1。
 
 使用双引号规定字符串，自动在末尾加入空字符。
+
+### 字符串函数
 #### strlen
 ```c
 unsigned long length = strlen(name);
 ```
 strlen() 函数给出字符串中的字符长度，不计入最后的空字符。
 ![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-46-58-d16cd6e11b821b13d7e28398808936ab-20240914144657-a61062.png)
+
+
+#### strcat
+strcat()（用于拼接字符串）函数接受两个字符串作为参数。该函数把第 2个字符串的备份附加在第1个字符串末尾，并把拼接后形成的新字符串作为第1个字符串，第2个字符串不变。strcat()函数的类型是char *（即，指向char 的指针）。strcat()函数返回第1个参数，即拼接第2个字符串后的第1个字符串的地址。
 
 
 ## 内存管理 

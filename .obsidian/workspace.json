@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 84.52012383900929,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -89,10 +90,29 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "402a429c40049c65"
           }
         ],
         "currentTab": 6
+      },
+      {
+        "id": "a9149f6219cf3c58",
+        "type": "tabs",
+        "dimension": 15.479876160990713,
+        "children": [
+          {
+            "id": "56127d12057f30ca",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "C语言/C.md"
+              }
+            },
+            "group": "402a429c40049c65"
+          }
+        ]
       }
     ],
     "direction": "vertical"
