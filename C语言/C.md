@@ -298,6 +298,16 @@ puts("I'm an argument to puts().");
 ```
 puts()在显示字符串时会自动在其末尾添加一个换行符。函数在遇到空字符时就停止输出，所以必须确保有空字符。
 
+#### fputs
+fputs()函数的第 2 个参数指明要写入数据的文件。如果要打印在显示器上，可以用定义在stdio.h中的stdout（标准输出）作为该参数。与puts()不同，fputs()不会在输出的末尾添加换行符。
+
+```c
+while (fgets(line, 81, stdin)) 
+	fputs(line, stdout);
+```
+
+
+
 ### 字符串函数
 #### strlen
 ```c
