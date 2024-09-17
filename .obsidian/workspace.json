@@ -6,6 +6,7 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
+        "dimension": 63.39009287925697,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -113,10 +114,29 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "973d39d99357739c"
           }
         ],
         "currentTab": 8
+      },
+      {
+        "id": "f8ec5286201da21b",
+        "type": "tabs",
+        "dimension": 36.60990712074303,
+        "children": [
+          {
+            "id": "bdaa4511f47ced7d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "C语言/C.md"
+              }
+            },
+            "group": "973d39d99357739c"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,11 +276,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c2656723151a1ff3",
+  "active": "bdaa4511f47ced7d",
   "lastOpenFiles": [
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
-    "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "C语言/C.md",
+    "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
