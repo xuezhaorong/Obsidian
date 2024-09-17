@@ -291,6 +291,7 @@ fgets(words, STLEN, stdin);
 ```c
 while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n');
 ```
+### 字符串输出
 
 
 
