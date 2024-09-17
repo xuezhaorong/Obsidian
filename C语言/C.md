@@ -1085,3 +1085,5 @@ enum levels {low = 100, medium = 500, high = 2000};
 enum feline {cat, lynx = 10, puma, tiger};
 ```
 那么，cat的值是0（默认），lynx、puma和tiger的值分别是10、11、 12。
+
+### typedef
