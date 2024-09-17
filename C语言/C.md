@@ -286,6 +286,12 @@ fgets()的区别如下。 fgets()函数的第2个参数指明了读入字符的�
 fgets(words, STLEN, stdin);
 ```
 
+程序中的fgets()一次读入 STLEN - 1 个字符（该例中为 9 个字符）。所以，一开始它只读入了“By the wa”，并储存为By the wa\0；接着 fputs()打印该字符串，而且并未换行。然后while循环进入下一轮迭代， fgets()继续从剩余的输入中读入数据，即读入“y, the ge”并储存为y, the ge\0； 接着fputs()在刚才打印字符串的这一行接着打印第 2 次读入的字符串。然后 while 进入下一轮迭代，fgets()继续读取输入、fputs()打印字符串，这一过程循环进行，直到读入最后的“tion\n”。fgets()将其储存为tion\n\0， fputs()打印该字符串，由于字符串中的\n，光标被移至下一行开始处。系统使用缓冲的I/O。这意味着用户在按下Return键之前，输入都被储存在临时存储区（即，缓冲区）中。按下Return键就在输入中增加了一个换行符，并把整行输入发送给fgets()。
+
+```c
+while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n');
+```
+
 
 
 ### 字符串函数
