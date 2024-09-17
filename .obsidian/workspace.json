@@ -6,7 +6,6 @@
       {
         "id": "a026176e27ae56d6",
         "type": "tabs",
-        "dimension": 64.86068111455108,
         "children": [
           {
             "id": "939af7c0a07e33b5",
@@ -90,29 +89,24 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "44ba2babdf95b78c"
-          }
-        ],
-        "currentTab": 6
-      },
-      {
-        "id": "13d59882a4e53894",
-        "type": "tabs",
-        "dimension": 35.139318885448915,
-        "children": [
+            }
+          },
           {
-            "id": "fd94165863a4d08e",
+            "id": "d993b088c92a9829",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "pdf",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "page": 1085,
+                "left": -10,
+                "top": 393,
+                "zoom": 1.5648214037329935
               }
-            },
-            "group": "44ba2babdf95b78c"
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -178,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
               }
             }
           },
@@ -219,7 +213,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -252,10 +246,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "fd94165863a4d08e",
+  "active": "d993b088c92a9829",
   "lastOpenFiles": [
-    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
+    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+    "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
+    "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/Linux基础.md",
@@ -288,8 +284,6 @@
     "IOT/机器学习/SVM支持向量机.md",
     "IOT/树莓派/安装qt5.md",
     "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-    "Linux",
-    "物联网/应用层/Qt",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
