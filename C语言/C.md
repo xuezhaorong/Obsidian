@@ -1087,3 +1087,11 @@ enum feline {cat, lynx = 10, puma, tiger};
 那么，cat的值是0（默认），lynx、puma和tiger的值分别是10、11、 12。
 
 ### typedef
+typedef工具是一个高级数据特性，利用typedef可以为某一类型自定义名称。这方面与#define类似，但是两者有3处不同： 与#define不同，typedef创建的符号名只受限于类型，不能用于值。 typedef由编译器解释，不是预处理器。在其受限范围内，typedef比#define更灵活。
+用typedef来命名一个结构类型时，可以省略该结构的标签：
+```c
+typedef struct {double x; double y;} rect;
+rect r1 = {3.0, 6.0}; 
+rect r2;
+```
+

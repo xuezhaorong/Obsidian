@@ -102,9 +102,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c2656723151a1ff3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C语言/C.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -244,11 +256,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "d993b088c92a9829",
+  "active": "c2656723151a1ff3",
   "lastOpenFiles": [
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
+    "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
     "IOT/树莓派/PyCham专业版远程开发.md",
@@ -281,7 +294,6 @@
     "IOT/物联网/应用层/lvgl",
     "IOT/机器学习/SVM支持向量机.md",
     "IOT/树莓派/安装qt5.md",
-    "物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
