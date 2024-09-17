@@ -268,7 +268,7 @@ int main(){
 ![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/14/14-41-56-de21d566e36ed83fafba7a5b8c7c7ddc-20240914144155-3b953b.png)
 数组末尾位置的字符\0。这是空字符（null character），C 语言用它标记字符串的结束。空字符不是数字0，它是非打印字符，其ASCII 码值是（或等价于）0。C中的字符串一定以空字符结束，这意味着数组的容量必须至少比待存储字符串中的字符数多1。
 
-使用双引号规定字符串，自动在末尾加入空字符。
+使用双引号规定字符串，自动在末尾加入空字符，为字符串常量，被视为该字符串的地址，而存储字符串的数组名也被视为地址。
 
 ### 字符串输入
 #### gets
@@ -292,8 +292,11 @@ fgets(words, STLEN, stdin);
 while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n');
 ```
 ### 字符串输出
-
-
+#### puts
+```c
+puts("I'm an argument to puts().");
+```
+puts()在显示字符串时会自动在其末尾添加一个换行符。函数在遇到空字符时就停止输出，所以必须确保有空字符。
 
 ### 字符串函数
 #### strlen
