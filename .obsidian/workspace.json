@@ -107,11 +107,13 @@
             "id": "c2656723151a1ff3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "C语言/C.md",
-                "mode": "source",
-                "source": false
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "page": 1140,
+                "left": -10,
+                "top": 605,
+                "zoom": 1.5648214037329935
               }
             }
           }
@@ -182,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,7 +207,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
               }
             }
           },
@@ -223,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C.md",
+                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -258,10 +260,10 @@
   },
   "active": "c2656723151a1ff3",
   "lastOpenFiles": [
-    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
-    "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
+    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+    "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
     "IOT/树莓派/PyCham专业版远程开发.md",
