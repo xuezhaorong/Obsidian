@@ -1057,3 +1057,31 @@ fit.bigfl = 2.0; // 清除23，储存 2.0，占8字节
 fit.letter = 'h'; // 清除2.0，储存h
 ```
 占1字节点运算符表示正在使用哪种数据类型。在联合中，一次只储存一个值。即使有足够的空间，也不能同时储存一个char类型值和一个int类型值。编写代码时要注意当前储存在联合中的数据类型。
+
+### 枚举
+可以用枚举类型（enumerated type）声明符号名称来表示整型常量。使用enum关键字，可以创建一个新“类型”并指定它可具有的值（实际上，enum 常量是int类型，因此，只要能使用int类型的地方就可以使用枚举类型）。枚举类型的目的是提高程序的可读性。它的语法与结构的语法相同。
+```c
+enum spectrum {red, orange, yellow, green, blue, violet}; 
+enum spectrum color;
+```
+
+第1个声明创建了spetrum作为标记名，允许把enum spetrum作为一个类型名使用。第2个声明使color作为该类型的变量。第1个声明中花括号内的标识符枚举了spectrum变量可能有的值。因此， color 可能的值是 red、 orange、yellow 等。这些符号常量被称为枚举符（enumerator）。
+
+```c
+int c; 
+color = blue; 
+if (color == yellow)  
+for (color = red; color <= violet; color++)
+```
+
+虽然枚举符（如red和blue）是int类型，但是枚举变量可以是任意整数类型，前提是该整数类型可以储存枚举常量。
+默认情况下，枚举列表中的常量都被赋予0、1、2等。在枚举声明中，可以为枚举常量指定整数值：
+```c
+enum levels {low = 100, medium = 500, high = 2000};
+```
+
+如果只给一个枚举常量赋值，没有对后面的枚举常量赋值，那么后面的常量会被赋予后续的值。例如，假设有如下的声明：
+```c
+enum feline {cat, lynx = 10, puma, tiger};
+```
+那么，cat的值是0（默认），lynx、puma和tiger的值分别是10、11、 12。
