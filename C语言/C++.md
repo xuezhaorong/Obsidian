@@ -306,3 +306,5 @@ char name1[Size];
 char name2[Size] = "C++owboy";
 cin >> name1;
 ```
+
+#### 字符串输入
