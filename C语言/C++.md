@@ -224,6 +224,11 @@ short thirty = 1.0;
 so_long = thirty;
 ```
 赋值时，程序将thirty的值扩展为long值。某些转换会带来问题：
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/15-34-42-59b7456a4e6aad30ca33af89f5c97733-20240919153440-226a3a.png)
+![image.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/15-34-42-59b7456a4e6aad30ca33af89f5c97733-20240919153440-226a3a.png)
+
+将浮点值赋给整型将导致两个问题。首先，将浮点值转换为整型会将数字截短（除掉小数部分）。其次， float 值对于 int 变量来说可能太大了。在这种情况下，C++并没有定义结果应该是什么；这意味着不同的实现的反应可能不同。
+
+2. 以{ }方式初始化时进行的转换
+
 
 
