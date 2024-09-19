@@ -217,5 +217,13 @@ C++自动执行很多类型转换：
 * 将参数传递给函数时，C++将对值进行转换
 
 1. 初始化和赋值进行的转换
-C++允许将一种
+C++允许将一种类型的值赋给另一种类型的变量，值将会被转换为接收变量的类型。
+```cpp
+long so_long = 0.0;
+short thirty = 1.0;
+so_long = thirty;
+```
+赋值时，程序将thirty的值扩展为long值。某些转换会带来问题：
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/15-34-42-59b7456a4e6aad30ca33af89f5c97733-20240919153440-226a3a.png)
+
 
