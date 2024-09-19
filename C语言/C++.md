@@ -266,6 +266,15 @@ typeName arrayName[arraySize];
 
 数组的很多用途都是基于这样一个事实：可以单独访问数组元素。方法是使用下标或索引来对元素进行编号。C++数组从 0 开始编号（这没有商量的余地，必须从 0 开始。Pascal 和 BASIC 用户必须调整习惯）。 C++使用带索引的方括号表示法来指定数组元素。例如，months\[0]是 months 数组的第一个元素，months[11] 是最后一个元素。注意，最后一个元素的索引比数组长度小 1。因此，数组声明能够使用一个声明创建大量的变量，然后便可以用索引来标识和访问各个元素。
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/16-10-27-2414f4ba86fdd20d390ed53de9388303-20240919161026-1a1d08.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/16-10-27-2414f4ba86fdd20d390ed53de9388303-20240919161026-1a1d08.png)
 
+C++允许在声明语句中初始化数组元素。
+```c
+int yamcosts[3] = {20,30,5};
+```
 
+需提供一个用逗号分隔的值列表（初始化列表），并将它们用花括号括起即可。列表中的空格是可选的。如果没有初始化函数中定义的数组，则其元素值将是不确定的，这意味着元素的值为以前驻留在该内存单元中的值。
+
+将 sizeof 运算符用于数组名，得到的将是整个数组中的字节数。但如果将 sizeof 用于数组元素，则得到的将是元素的长度 （单位为字节）。这表明 yams 是一个数组，而 yams[1]只是一个 int 变量。
+
+### 字符串
