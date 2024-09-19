@@ -302,5 +302,7 @@ cout << "hello "
 要将字符串存储到数组中，最常用的方法有两种 — 将数组初始化为字符串常量、将键盘或文件输入读入到数组中。
 
 ```c
-
+char name1[Size];
+char name2[Size] = "C++owboy";
+cin >> name1;
 ```
