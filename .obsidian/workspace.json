@@ -4,126 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "a026176e27ae56d6",
-        "type": "tabs",
-        "dimension": 63.39009287925697,
-        "children": [
-          {
-            "id": "939af7c0a07e33b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1421ffa243102e64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "993c4d2983ebefd1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IOT/物联网/应用层/lvgl/LVGL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5559e0fdf63012fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IOT/Linux/Linux基础.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fdad230af652c450",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
-                "page": 1,
-                "zoom": 1
-              }
-            }
-          },
-          {
-            "id": "7f35b76e375efe30",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
-                "page": 1,
-                "zoom": 1
-              }
-            }
-          },
-          {
-            "id": "90a87f7ae65c8734",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C语言/C.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d993b088c92a9829",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C语言/C.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c2656723151a1ff3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C语言/C.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "973d39d99357739c"
-          }
-        ],
-        "currentTab": 8
-      },
-      {
         "id": "f8ec5286201da21b",
         "type": "tabs",
-        "dimension": 36.60990712074303,
         "children": [
           {
             "id": "bdaa4511f47ced7d",
@@ -131,12 +13,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C.md"
+                "file": "C语言/C++.md"
               }
-            },
-            "group": "973d39d99357739c"
+            }
+          },
+          {
+            "id": "9b41a20f6b198ee8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C语言/C++.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md",
+                "file": "C语言/C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md"
+                "file": "C语言/C++.md"
               }
             }
           },
@@ -243,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/PyCham专业版远程开发.md",
+                "file": "C语言/C++.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -276,15 +170,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "bdaa4511f47ced7d",
+  "active": "9b41a20f6b198ee8",
   "lastOpenFiles": [
+    "IOT/树莓派/PyCham专业版远程开发.md",
+    "C语言/C++.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/C.md",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
-    "IOT/树莓派/PyCham专业版远程开发.md",
     "IOT/Linux/Linux基础.md",
     "C语言",
     "IOT/物联网/应用层/lvgl/LVGL.md",
