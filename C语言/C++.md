@@ -289,3 +289,12 @@ char fish[] = "Bubbles";
 ![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/19/22-34-43-af0c3e285dcb0b215eaa43428b70f8f6-20240919223443-7364f9.png)
 
 #### 字符串拼接
+时候，字符串很长，无法放到一行中。C++允许拼接字符串字面值，即将两个用引号括起的字符串合并为一个。事实上，任何两个由空白（空格、制表符和换行符）分隔的字符串常量都将自动拼接成一个。因此，下面所有的输出语句都是等效的：
+
+```cpp
+cout << "hello " " world";
+cout << "hello world";
+cout << "hello "
+"world";
+```
+
