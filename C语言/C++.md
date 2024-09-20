@@ -443,3 +443,62 @@ book library{
 
 #### 访问结构成员
 使用结构成员运算符——点（.）访问结构中的成员。例如，library.value即访问library的value 部分。可以像使用任何float类型变量那样使用library.value。
+
+
+### 共用体
+共用体（union）是一种数据类型，它能在同一个内存空间中储存不同的数据类型（不是同时储存）。其典型的用法是，设计一种表以储存既无规律、事先也不知道顺序的混合类型。使用联合类型的数组，其中的联合都大小相等，每个联合可以储存各种数据类型。创建联合和创建结构的方式相同，需要一个联合模板和联合变量。
+```c
+union hold { 
+	int digit; 
+	double bigfl; 
+	char letter; 
+};
+```
+根据以上形式声明的结构可以储存一个int类型、一个double类型和char 类型的值。然而，声明的联合只能储存一个int类型的值或一个double类型的值或char类型的值。
+```c
+union hold fit; // hold类型的联合变量 
+union hold save[10]; // 内含10个联合变量的数组 
+union hold * pu; // 指向hold类型联合变量的指针
+```
+第1个声明创建了一个单独的联合变量fit。编译器分配足够的空间以便它能储存联合声明中占用最大字节的类型。在本例中，占用空间最大的是double类型的数据。在我们的系统中，double类型占64位，即8字节。第2个声明创建了一个数组save，内含10个元素，每个元素都是8字节。第3个声明创建了一个指针，该指针变量储存hold类型联合变量的地址。可以初始化联合。需要注意的是，联合只能储存一个值，这与结构不同。有 3 种初始化的方法：把一个联合初始化为另一个同类型的联合；初始化联合的第1个元素；或者根据C99标准，使用指定初始化器：
+```c
+union hold valA; valA.letter = 'R'; 
+union hold valB = valA; // 用另一个联合来初始化 
+union hold valC = {88}; // 初始化联合的digit 成员 
+union hold valD = {.bigfl = 118.2}; // 指定初始化器
+```
+下面是联合的一些用法： 
+```c
+fit.digit = 23; //把 23 储存在 fit，占2字节 
+fit.bigfl = 2.0; // 清除23，储存 2.0，占8字节 
+fit.letter = 'h'; // 清除2.0，储存h
+```
+占1字节点运算符表示正在使用哪种数据类型。在联合中，一次只储存一个值。即使有足够的空间，也不能同时储存一个char类型值和一个int类型值。编写代码时要注意当前储存在联合中的数据类型。
+
+### 枚举
+可以用枚举类型（enumerated type）声明符号名称来表示整型常量。使用enum关键字，可以创建一个新“类型”并指定它可具有的值（实际上，enum 常量是int类型，因此，只要能使用int类型的地方就可以使用枚举类型）。枚举类型的目的是提高程序的可读性。它的语法与结构的语法相同。
+```c
+enum spectrum {red, orange, yellow, green, blue, violet}; 
+enum spectrum color;
+```
+
+第1个声明创建了spetrum作为标记名，允许把enum spetrum作为一个类型名使用。第2个声明使color作为该类型的变量。第1个声明中花括号内的标识符枚举了spectrum变量可能有的值。因此， color 可能的值是 red、 orange、yellow 等。这些符号常量被称为枚举符（enumerator）。
+
+```c
+int c; 
+color = blue; 
+if (color == yellow)  
+for (color = red; color <= violet; color++)
+```
+
+虽然枚举符（如red和blue）是int类型，但是枚举变量可以是任意整数类型，前提是该整数类型可以储存枚举常量。
+默认情况下，枚举列表中的常量都被赋予0、1、2等。在枚举声明中，可以为枚举常量指定整数值：
+```c
+enum levels {low = 100, medium = 500, high = 2000};
+```
+
+如果只给一个枚举常量赋值，没有对后面的枚举常量赋值，那么后面的常量会被赋予后续的值。例如，假设有如下的声明：
+```c
+enum feline {cat, lynx = 10, puma, tiger};
+```
+那么，cat的值是0（默认），lynx、puma和tiger的值分别是10、11、 12。
