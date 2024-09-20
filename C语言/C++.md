@@ -365,10 +365,14 @@ string str2 = "panther";
 #### 赋值、拼接和附加
 可以将一个 string 对象赋给另一个 string 对象：
 ```c
-
+string str1;
+string str2 = "panther";
+str1 = str2;
 ```
 
 string 类简化了字符串合并操作。可以使用运算符+将两个 string 对象合并起来，还可以使用运算符+= 将字符串附加到 string 对象的末尾。
 ```c
-
+string str3;
+str3 = str1 + str2;
+str1 += str2;
 ```
