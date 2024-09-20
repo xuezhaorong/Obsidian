@@ -504,3 +504,18 @@ enum feline {cat, lynx = 10, puma, tiger};
 那么，cat的值是0（默认），lynx、puma和tiger的值分别是10、11、 12。
 
 ### 指针和自由空间
+指针名表示的是地址。*运算符被称为间接值（indirect velue）或解除引用（dereferencing） 运算符，将其应用于指针，可以得到该地址处存储的值。
+```c
+int updates = 6;
+int * p_updates;
+p_updates = &updates;
+```
+![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/15-59-16-e0f23b571044afae43ce9a4584b0770e-20240920155915-8feb9d.png)
+
+#### 声明和初始化指针
+指针声明必须指定指针指向的数据的类型。
+```c
+int *p_updates;
+```
+这表明，* p_updates 的类型为 int。由于*运算符被用于指针，因此 p_updates 变量本身必须是指针。
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/16-03-23-b09930889bbe8aa4d653f79e7148e656-20240920160323-5f0baa.png)
