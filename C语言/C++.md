@@ -379,5 +379,81 @@ str1 += str2;
 
 #### string 类 I/O
 ```c
-
+cin.getline(charr,20);
 ```
+这种句点表示法表明，函数 getline( )是 istream 类的一个类方法（还记得吗，cin 是一个 istream 对象）。正如前面指出的，第一个参数是目标数组；第二个参数数组长度，getline( )使用它来避免超越数组的边界。
+
+```c
+getline(cin,str);
+```
+
+这里没有使用句点表示法，这表明这个 getline( )不是类方法。它将 cin 作为参数，指出到哪里去查找输入。另外，也没有指出字符串长度的参数，因为 string 对象将根据字符串的长度自动调整自己的大小。
+
+
+### 结构体
+#### 建立结构声明
+结构声明（structure declaration）描述了一个结构的组织布局。
+```c
+struct book { 
+	char title[MAXTITL]; 
+	char author[MAXAUTL]; 
+	float value; 
+};
+```
+该声明描述了一个由两个字符数组和一个float类型变量组成的结构。该声明并未创建实际的数据对象，只描述了该对象由什么组成。关键字 struct，它表明跟在其后的是一个结构，后面是一个可选的标记。
+在结构声明中，用一对花括号括起来的是结构成员列表。每个成员都用自己的声明来描述。成员可以是任意一种C的数据类型，甚至可以是其他结构！右花括号后面的分号是声明所必需的，表示结构布局定义结束。可以把这个声明放在所有函数的外部（如本例所示），也可以放在一个函数定义的内部。如果把结构声明置于一个函数的内部，它的标记就只限于该函数内部使用。如果把结构声明置于函数的外部，那么该声明之后的所有函数都能使用它的标记。
+#### 定义结构体变量
+在 C++中，结构标记的用法与基本类型名相同。这种变化强调的是，结构声明定义了一种新类型。在 C++中，省略 struct 不会出错。
+```c
+book library;
+```
+
+编译器执行这行代码便创建了一个结构变量library。编译器使用book模板为该变量分配空间：一个内含MAXTITL个元素的char数组、一个内含 MAXAUTL个元素的char数组和一个float类型的变量。这些存储空间都与一个名称library结合在一起。
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/17/10-26-13-48fa160cdbcbbb6b89e5ca327f31d8d3-20240917102612-b42fa7.png)
+就计算机而言，下面的声明:
+```c
+struct book library;
+```
+是以下声明的简化：
+```c
+struct book { 
+	char title[MAXTITL]; 
+	char author[AXAUTL]; 
+	float value; 
+} library; /* 声明的右右花括号后跟变量名*/
+```
+换言之，声明结构的过程和定义结构变量的过程可以组合成一个步骤。
+```c
+struct { /* 无结构标记 */ 
+	char title[MAXTITL]; 
+	char author[MAXAUTL]; 
+	float value; 
+} library;
+```
+
+#### 初始化结构
+初始化一个结构变量 （ANSI之前，不能用自动变量初始化结构；ANSI之后可以用任意存储类别）与初始化数组的语法类似：
+```c
+struct book library = { 
+	"The Pious Pirate and the Devious Damsel", 
+	"Renee Vivotte", 
+	1.95 
+};
+```
+在一对花括号中括起来的初始化列表进行初始化， 各初始化项用逗号分隔。因此， title成员可以被初始化为一个字符串，value 成员可以被初始化为一个数字。为了让初始化项与结构中各成员的关联更加明显，我们让每个成员的初始化项独占一行。这样做只是为了提高代码的可读性，对编译器而言，只需要用逗号分隔各成员的初始化项即可。
+
+#### 结构体内存对齐
+
+
+对齐规则：
+1. 第一个成员在与结构体变量偏移量为0的地址处。（即结构体的首地址处，即对齐到0处）
+2. 其他成员变量要对齐到某个数字（对齐数）的整数倍的地址处。
+3. 结构体的总大小为最大对齐数（每个成员变量都有一个对齐数）的整数倍。
+4. 如果嵌套了结构体，嵌套的结构体对齐到自己的最大对齐数的整数倍处，结构体的整体大小就是所有最大对齐数
+
+使用`#pragma pack(2)`可以规定系统默认对齐大小，需要与结构体中最大字节比较，较小的一个为对齐数
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/17/10-48-37-c6dfe3f75ad7d2c6d47904f8ac1eeca4-20240917104836-851baf.png)
+
+
+#### 访问结构成员
+使用结构成员运算符——点（.）访问结构中的成员。例如，library.value即访问library的value 部分。可以像使用任何float类型变量那样使用library.value。
