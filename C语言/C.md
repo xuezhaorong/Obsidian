@@ -474,6 +474,19 @@ startbar(); // 函数调用
 ![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/19-56-13-ad01fcad24a3edf63ddcec039910c317-20240920195613-28bb70.png)
 
 ### 函数参数
+```c
+void show_n_char(char ch, int num);
+```
+行告知编译器show_n_char()使用两个参数ch和num，ch是char类型， num是int类型。这两个变量被称为形式参数（formal argument，但是最近的标准推荐使用formal parameter），简称形参。和定义在函数中变量一样，形式数也是局部变量，属该函数私有。这意味着在其他函数中使用同名变量不会引起名称冲突。每次调用函数，就会给这些变量赋值。
+```c
+show_n_char(SPACE, 12);
+```
+实际参数是空格字符和12。这两个值被赋给show_n_char()中相应的形式参数：变量ch和num。简而言之，形式参数是被调函数（called function）中的变量，实际参数是主调函数（calling function）赋给被调函数的具体值。实际参数是出现在函数调用圆括号中的表达式。形式参数是函数定义的函数头中声明的变量。调用函数时，创建了声明为形式参数的变量并初始化为实际参数的求值结果。
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/21-47-53-56aa5d171a84b526c1a5a4859f5da7eb-20240920214752-7a5372.png)
+
+
+### 使用return从函数中返回值
+
 
 
 
