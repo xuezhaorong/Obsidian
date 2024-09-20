@@ -486,6 +486,19 @@ show_n_char(SPACE, 12);
 
 
 ### 使用return从函数中返回值
+```c
+int imin(int n, int m) {
+	int min; 
+	if (n < m) 
+		min = n; 
+	else min = m; 
+	return min; 
+}
+```
+关键字return后面的表达式的值就是函数的返回值。在该例中，该函数返回的值就是变量min的值。因为min是int类型的变量，所以imin()函数的类型也是int。变量min属于imin()函数私有，但是return语句把min的值传回了主调函数。下面这条语句的作用是把min的值赋给lesser:
+```c
+lesser = imin(n,m);
+```
 
 
 
