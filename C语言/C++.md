@@ -376,3 +376,8 @@ string str3;
 str3 = str1 + str2;
 str1 += str2;
 ```
+
+#### string 类 I/O
+```c
+
+```
