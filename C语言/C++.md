@@ -519,3 +519,13 @@ int *p_updates;
 ```
 这表明，* p_updates 的类型为 int。由于*运算符被用于指针，因此 p_updates 变量本身必须是指针。
 ![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/16-03-23-b09930889bbe8aa4d653f79e7148e656-20240920160323-5f0baa.png)
+
+#### 指针的危险
+创建指针时，计算机将分配用来存储地址的内存，但不会分配用来存储指针所指向的数据的内存。
+```c
+long * fellow;
+*fellow = 223323;
+```
+
+上述代码没有将地址赋给 fellow。由于 fellow 没有被初始化，它可能有任何值。不管值是什么，程序都将它解释为存储 223323 的地址。如果 fellow 的值碰巧为 1200，计算机将把数据放在地址 1200 上，即使这恰巧是程序代码的地址。fellow 指向的地方很可能并不是所要存储 223323 的地方。
+

@@ -13,7 +13,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
+                "file": "C语言/C.md"
               }
             }
           },
@@ -21,13 +21,11 @@
             "id": "9b41a20f6b198ee8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
-                "page": 118,
-                "left": 659,
-                "top": 638,
-                "zoom": 2.3930978021285974
+                "file": "C语言/C.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+                "file": "C语言/C.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
+                "file": "C语言/C.md"
               }
             }
           },
@@ -139,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+                "file": "C语言/C.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,8 +172,8 @@
   },
   "active": "9b41a20f6b198ee8",
   "lastOpenFiles": [
-    "C语言/C++.md",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+    "C语言/C++.md",
     "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "IOT/树莓派/PyCham专业版远程开发.md",
