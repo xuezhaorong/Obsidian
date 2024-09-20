@@ -410,37 +410,23 @@ book library;
 
 编译器执行这行代码便创建了一个结构变量library。编译器使用book模板为该变量分配空间：一个内含MAXTITL个元素的char数组、一个内含 MAXAUTL个元素的char数组和一个float类型的变量。这些存储空间都与一个名称library结合在一起。
 ![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/17/10-26-13-48fa160cdbcbbb6b89e5ca327f31d8d3-20240917102612-b42fa7.png)
-就计算机而言，下面的声明:
-```c
-struct book library;
-```
-是以下声明的简化：
-```c
-struct book { 
-	char title[MAXTITL]; 
-	char author[AXAUTL]; 
-	float value; 
-} library; /* 声明的右右花括号后跟变量名*/
-```
-换言之，声明结构的过程和定义结构变量的过程可以组合成一个步骤。
-```c
-struct { /* 无结构标记 */ 
-	char title[MAXTITL]; 
-	char author[MAXAUTL]; 
-	float value; 
-} library;
-```
-
 #### 初始化结构
-初始化一个结构变量 （ANSI之前，不能用自动变量初始化结构；ANSI之后可以用任意存储类别）与初始化数组的语法类似：
+与数组一样，C++11 也支持将列表初始化用于结构，且等号（=）是可选的：
 ```c
-struct book library = { 
+book library{ 
 	"The Pious Pirate and the Devious Damsel", 
 	"Renee Vivotte", 
 	1.95 
 };
 ```
 在一对花括号中括起来的初始化列表进行初始化， 各初始化项用逗号分隔。因此， title成员可以被初始化为一个字符串，value 成员可以被初始化为一个数字。为了让初始化项与结构中各成员的关联更加明显，我们让每个成员的初始化项独占一行。这样做只是为了提高代码的可读性，对编译器而言，只需要用逗号分隔各成员的初始化项即可。
+
+其次，如果大括号内未包含任何东西，各个成员都将被设置为零。
+```c
+book library{ 
+};
+
+```
 
 #### 结构体内存对齐
 
