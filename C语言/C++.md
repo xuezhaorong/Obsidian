@@ -343,4 +343,32 @@ cin.clear();
 
 
 ## String 类
+ISO/ANSI C++98 标准通过添加 string 类扩展了 C++库，因此现在可以 string 类型的变量（使用 C++的话说是对象）而不是字符数组来存储字符串。
+要使用 string 类，必须在程序中包含头文件 string。string 类位于名称空间 std 中，因此必须提供一条 using 编译指令，或者使用 std::string 来引用它。
+```c
+using namespace std;
+char charr1[20];
+char charr2[20] = "jaguar";
+string str1;
+string str2 = "panther";
 
+cin >> charr1;
+cout << charr1; 
+```
+
+#### C++11 字符串初始化
+```c
+string str2 = "panther";
+```
+
+
+#### 赋值、拼接和附加
+可以将一个 string 对象赋给另一个 string 对象：
+```c
+
+```
+
+string 类简化了字符串合并操作。可以使用运算符+将两个 string 对象合并起来，还可以使用运算符+= 将字符串附加到 string 对象的末尾。
+```c
+
+```
