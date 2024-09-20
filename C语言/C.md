@@ -484,6 +484,9 @@ show_n_char(SPACE, 12);
 实际参数是空格字符和12。这两个值被赋给show_n_char()中相应的形式参数：变量ch和num。简而言之，形式参数是被调函数（called function）中的变量，实际参数是主调函数（calling function）赋给被调函数的具体值。实际参数是出现在函数调用圆括号中的表达式。形式参数是函数定义的函数头中声明的变量。调用函数时，创建了声明为形式参数的变量并初始化为实际参数的求值结果。
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/21-47-53-56aa5d171a84b526c1a5a4859f5da7eb-20240920214752-7a5372.png)
 
+### 函数类型
+
+
 
 ### 使用return从函数中返回值
 ```c
