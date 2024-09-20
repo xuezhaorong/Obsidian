@@ -333,3 +333,14 @@ cin.get(name,ArSize);
 cin.get();
 cin.get(dessert,Arsize);
 ```
+
+当 getline( )或 get( )读取空行时，下一条输入语句将在前一条 getline( ) 或 get( )结束读取的位置开始读取；但当前的做法是，当 get( )（不是 getline( )）读取空行后将设置失效位 （failbit）。这意味着接下来的输入将被阻断，但可以用下面的命令来恢复输入：
+```c
+cin.clear();
+```
+
+另一个潜在的问题是，输入字符串可能比分配的空间长。如果输入行包含的字符数比指定的多，则 getline( )和 get( )将把余下的字符留在输入队列中，而 getline( )还会设置失效位，并关闭后面的输入。
+
+
+## String 类
+
