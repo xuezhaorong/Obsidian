@@ -579,3 +579,112 @@ p3[2] = 0.8;
 p3 = p3 + 1;
 ```
 不能修改数组名的值。但指针是变量，因此可以修改它的值。请注意将 p3 加 1 的效果。表达式 p3[0] 现在 4 个字节，而将 p3 加 1 后，它将指向下一个元素的地址，这表明指针算术有一些特别的地方。情况确实如此。 pointer arithmetic）和 C++内部处理数组的方式。但将指针变量加 1 后，增加的量等于它指向的类型的字节数。 C++将数组名解释为地址。指的是数组的第 2 个值。
+
+## 语句
+### 循环语句
+#### while
+while循环的通用形式如下：
+```c
+while ( expression ) 
+statement
+```
+
+expression是值之间的比较，可以使用任何表达式。如果expression为真 （或者更一般地说，非零），执行 statement部分一次，然后再次判断 expression。在expression为假（0）之前，循环的判断和执行一直重复进行。每次循环都被称为一次迭代（iteration）。
+
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-47-21-87ef08400fd45928e5e9c0240066819d-20240915204721-176d1d.png)
+while循环是使用入口条件的有条件循环。所谓“有条件”指的是语句部分的执行取决于测试表达式描述的条件，如(index < 5)。该表达式是一个入口条件（entry condition），因为必须满足条件才能进入循环体。对于真值，非零数为真值，而零为假值。
+
+```c
+int n = 0; 
+while (n++ < 3){
+	printf("n is %d\n", n);
+}
+```
+
+#### for
+for语句使用3个表达式控制循环过程，分别用分号隔开。initialize表达式在执行for语句之前只执行一次；然后对test表达式求值，如果表达式为真 （或非零），执行循环一次；接着对update表达式求值，并再次检查test表达式。for语句是一种入口条件循环，即在执行循环之前就决定了是否执行循环。因此，for循环可能一次都不执行。statement部分可以是一条简单语句或复合语句。
+
+```c
+for ( initialize; test; update ) 
+statement //在test为假或0之前，重复执行statement部分。
+```
+
+ 关键字for后面的圆括号中有3个表达式，分别用两个分号隔开。第1个表达式是初始化，只会在for循环开始时执行一次。第 2 个表达式是测试条件，在执行循环之前对表达式求值。如果表达式为假（本例中，count大于 NUMBER时），循环结束。第3个表达式执行更新，在每次循环结束时求值。程序清单6.10用这个表达式递增count 的值，更新计数。完整的for语句还包括后面的简单语句或复合语句。for圆括号中的表达式也叫做控制表达式，它们都是完整表达式，所以每个表达式的副作用（如，递增变量）都发生在对下一个表达式求值之前。
+
+```c
+int count; 
+for (count = 1; count <= NUMBER; count++) 
+	printf("Be my Valentine!\n");
+```
+
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/20-59-29-36df0a3380b0cb2b56817e439349c629-20240915205928-5049de.png)
+
+#### do while
+出口条件循环：do while while循环和for循环都是入口条件循环，即在循环的每次迭代之前检查测试条件，所以有可能根本不执行循环体中的内容。C语言还有出口条件循环（exit-condition loop），即在循环的每次迭代之后检查测试条件，这保证了至少执行循环体中的内容一次。
+下面是do while循环的通用形式： 
+```c
+do 
+statement 
+while ( expression );
+```
+ do while循环在执行完循环体后才执行测试条件，所以至少执行循环体一次；而for循环或while循环都是在执行循环体之前先执行测试条件。
+![|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/15/21-49-19-381cb713b6bbf2b14f6042138bfe1e2a-20240915214919-273b49.png)
+
+### 分支语句
+#### if
+```c
+ if ( expression ) 
+ statement
+```
+如果对expression求值为真（非0），则执行statement；否则，跳过 statement。与while循环一样，statement可以是一条简单语句或复合语句。if 语句的结构和while语句很相似，它们的主要区别是：如果满足条件可执行的话，if语句只能测试和执行一次，而while语句可以测试和执行多次。通常，expression 是关系表达式，即比较两个量的大小（如，表达式 x > y 或 c == 6）。如果expression为真（即x大于y，或c == 6），则执行 statement。否则，忽略statement。概括地说，可以使用任意表达式，表达式的值为0则为假。
+![Uploading file...himsu]()
+
+#### if else
+简单形式的if语句可以让程序选择执行一条语句，或者跳过这条语句。 C还提供了if else形式，可以在两条语句之间作选择。
+```c
+if ( expression ) 
+	statement1
+else 
+	statement2
+```
+如果expression为真（非0），则执行statement1；如果expression为假或 0，则执行else后面的statement2。statement1和statement2可以是一条简单语句或复合语句。
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/08-56-22-1bad2f8ff2943271206a0b6233dacd9e-20240916085621-3e9545.png)
+
+#### else if
+```c
+if (score < 1000) 
+	bonus = 0; 
+else if (score < 1500) 
+	bonus = 1; 
+else if (score < 2000) 
+	bonus = 2;
+else
+	...
+```
+
+如果程序中有许多if和else，else与离它最近的if匹配，除非最近的if被花括号括起来
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-00-26-ac5bc199ec376e4ea8b621fd6cf5a91e-20240916090026-6420c6.png)
+
+### 循环辅助
+#### continue
+3种循环都可以使用continue语句。执行到该语句时，会跳过本次迭代的剩余部分，并开始下一轮迭代。如果continue语句在嵌套循环内，则只会影响包含该语句的内层循环。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-34-41-a72212e602af60aa24fbe561bf2f8347-20240916093441-caeffe.png)
+
+#### break
+程序执行到循环中的break语句时，会终止包含它的循环，并继续执行下一阶段。如果break语句位于嵌套循环内，它只会影响包含它的当前循环。
+![|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-35-34-3f2842cab17bcc62e84e42c5497d5cd7-20240916093534-63a16b.png)
+
+### 多重选择
+```c
+switch ( 整型表达式) { 
+case 常量1: 语句 <--可选 
+case 常量2: 语句 <--可选 
+default : <--可选语句 <--可选 
+}
+```
+对紧跟在关键字 switch 后圆括号中的表达式求值。然后程序扫描标签列表，直到发现一个匹配的值为止。然后程序跳转至那一行。如果没有匹配的标签怎么办？如果有default :标签行，就跳转至该行；否则，程序继续执行在switch后面的语句。
+ switch在圆括号中的测试表达式的值应该是一个整数值（包括char类型）。case标签必须是整数类型（包括char类型）的常量或整型常量表达式 （即，表达式中只包含整型常量）。不能用变量作为case标签。
+
+![image.png|452](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/09-50-30-1126dfe1a370138b418883f0cb95bd47-20240916095029-b18384.png)
+break让程序离开switch语句，跳至switch语句后面的下一条语句（见图7.4）。如果没有break语句，就会从匹配标签开始执行到switch末尾。
+
