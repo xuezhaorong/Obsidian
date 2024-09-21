@@ -506,6 +506,7 @@ int imin(int n, int m) {
 lesser = imin(n,m);
 ```
 
+### 使用指针在函数间通信
 
 
 
