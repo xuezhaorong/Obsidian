@@ -817,3 +817,14 @@ C++新增了一种复合类型 —引用变量。引用是已定义的变量的�
 int rats;
 int & rodents = rats;
 ```
+必须在声明引用时将其初始化， 而不能像指针那样，先声明，再赋值。
+
+#### 将引用用作函数参数
+引用经常被用作函数参数，使得函数中的变量名成为调用程序中的变量的别名。这种传递参数的方法称为按引用传递。按引用传递允许被调用的函数能够访问调用函数中的变量。C++新增的这项特性是对 C 语言的超越，C 语言只能按值传递。
+
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/21/20-08-09-e4999de6b00a4e9059a590c0a397119d-20240921200809-3263a0.png)
+
+```cpp
+void swapr(int & a,int & b);
+```
+
