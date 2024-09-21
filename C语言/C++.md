@@ -689,4 +689,101 @@ default : <--可选语句 <--可选
 break让程序离开switch语句，跳至switch语句后面的下一条语句（见图7.4）。如果没有break语句，就会从匹配标签开始执行到switch末尾。
 
 ## 函数
+函数（function）是完成特定任务的独立程序代码单元。语法规则定义了函数的结构和使用方式。虽然C中的函数和其他语言中的函数、子程序、过程作用相同，但是细节上略有不同。一些函数执行某些动作，如printf()把数据打印到屏幕上；一些函数找出一个值供程序使用， 如strlen()把指定字符串的长度返回给程序。一般而言，函数可以同时具备以上两种功能。
+
+### 创建并使用简单函数
+```c
+
+
+void starbar(void) /* 定义函数 */ { 
+	int count; 
+	for (count = 1; count <= WIDTH; count++) 
+		putchar('*'); 
+	putchar('\n'); 
+}
+	
+
+```
+
+程序在3处使用了starbar标识符：函数原型（function prototype）告诉编译器函数starbar()的类型；函数调用（function call）表明在此处执行函数； 函数定义（function definition）明确地指定了函数要做什么。
+
+原型：
+```c
+void starbar(void); /* 函数原型 */
+```
+圆括号表明starbar是一个函数名。第1个void是函数类型，void类型表明函数没有返回值。第2个void（在圆括号中）表明该函数不带参数。分号表明这是在声明函数，不是定义函数。也就是说，这行声明了程序将使用一个名为starbar()、没有返回值、没有参数的函数，并告诉编译器在别处查找该函数的定义。
+
+一般而言，函数原型指明了函数的返回值类型和函数接受的参数类型。这些信息称为该函数的签名（signature）。对于starbar()函数而言，其签名是该函数没有返回值，没有参数。
+
+程序把 starbar()原型置于 main()的前面。当然，也可以放在 main()里面的声明变量处。放在哪个位置都可以。在main()中，执行到下面的语句时调用了starbar()函数：
+
+```c
+startbar(); // 函数调用
+```
+
+是调用void类型函数的一种形式。当计算机执行到starbar();语句时， 会找到该函数的定义并执行其中的内容。执行完starbar()中的代码后，计算机返回主调函数（calling function）继续执行下一行
+
+程序中strarbar()和main()的定义形式相同。首先函数头包括函数类型、函数名和圆括号，接着是左花括号、变量声明、函数表达式语句，最后以右花括号结束。注意，函数头中的starbar()后面没有分号，告诉编译器这是定义starbar()，而不是调用函数或声明函数原型。
+
+这是定义starbar()，而不是调用函数或声明函数原型。程序把 starbar()和 main()放在一个文件中。当然，也可以把它们分别放在两个文件中。把函数都放在一个文件中的单文件形式比较容易编译，而使用多个文件方便在不同的程序中使用同一个函数。如果把函数放在一个单独的文件中，要把#define 和#include 指令也放入该文件。
+
+
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/2024/09/21/19-32-01-ad01fcad24a3edf63ddcec039910c317-19-56-13-ad01fcad24a3edf63ddcec039910c317-20240920195613-28bb70-6ee3c7.png)
+
+### 函数参数
+```c
+void show_n_char(char ch, int num);
+```
+行告知编译器show_n_char()使用两个参数ch和num，ch是char类型， num是int类型。这两个变量被称为形式参数（formal argument，但是最近的标准推荐使用formal parameter），简称形参。和定义在函数中变量一样，形式数也是局部变量，属该函数私有。这意味着在其他函数中使用同名变量不会引起名称冲突。每次调用函数，就会给这些变量赋值。
+```c
+show_n_char(SPACE, 12);
+```
+实际参数是空格字符和12。这两个值被赋给show_n_char()中相应的形式参数：变量ch和num。简而言之，形式参数是被调函数（called function）中的变量，实际参数是主调函数（calling function）赋给被调函数的具体值。实际参数是出现在函数调用圆括号中的表达式。形式参数是函数定义的函数头中声明的变量。调用函数时，创建了声明为形式参数的变量并初始化为实际参数的求值结果。
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/2024/09/21/19-32-01-56aa5d171a84b526c1a5a4859f5da7eb-21-47-53-56aa5d171a84b526c1a5a4859f5da7eb-20240920214752-7a5372-f07ff0.png)
+
+### 函数类型
+声明函数时必须声明函数的类型。带返回值的函数类型应该与其返回值类型相同，而没有返回值的函数应声明为void类型。
+```c
+double klink(int a, int b);
+```
+
+
+### 使用return从函数中返回值
+```c
+int imin(int n, int m) {
+	int min; 
+	if (n < m) 
+		min = n; 
+	else min = m; 
+	return min; 
+}
+```
+关键字return后面的表达式的值就是函数的返回值。在该例中，该函数返回的值就是变量min的值。因为min是int类型的变量，所以imin()函数的类型也是int。变量min属于imin()函数私有，但是return语句把min的值传回了主调函数。下面这条语句的作用是把min的值赋给lesser:
+```c
+lesser = imin(n,m);
+```
+
+### 使用指针在函数间通信
+```c
+void interchange(int * u, int * v) { 
+	int temp; 
+	temp = *u; // temp获得 u 所指向对象的值 
+	*u = *v; 
+	*v = temp; 
+}
+
+interchange(&x, &y);
+```
+
+该函数传递的不是x和y的值，而是它们的地址。这意味着出现在 interchange()原型和定义中的形式参数u和v将把地址作为它们的值。因此， 应把它们声明为指针。由于x和y是整数，所以u和v是指向整数的指针，其声明如下：
+```c
+void interchange (int * u, int * v);
+```
+
+## 函数和数组
+
+
+
+
 ###  内联函数
+执行到函数调用指令时， 程序将在函数调用后立即存储该指令的内存地址，并将函数参数复制到堆栈（为此保留的内存块），跳到标记函数起点的内存单元，执行函数代码（也许还需将返回值放入到寄存器中），然后跳回到地址被保存的指令处。C++内联函数提供了另一种选择。内联函数的编译代码与其他程序代码“内联”起来了。也就是说，编译器将使用相应的函数代码替换函数调用。对于内联代码，程序无需跳到另一个位置处执行代码，再跳回来。因此，内联函数的运行速度比常规函数稍快，但代价是需要占用更多内存。如果程序在 10 个不同的地方调用同一个内联函数，则该程序将包含该函数代码的 10 个副本。应有选择地使用内联函数。如果执行函数代码的时间比处理函数调用机制的时间长，则节省的时间将只占整个过程的很小一部分。如果代码执行时间很短，则内联调用就可以节省非内联调用使用的大部分时间。另一方面，由于这个过程相当快，因此尽管节省了该过程的大部分时间，但节省的时间绝对值并不大，
