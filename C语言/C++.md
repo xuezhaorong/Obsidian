@@ -342,7 +342,7 @@ cin.clear();
 另一个潜在的问题是，输入字符串可能比分配的空间长。如果输入行包含的字符数比指定的多，则 getline( )和 get( )将把余下的字符留在输入队列中，而 getline( )还会设置失效位，并关闭后面的输入。
 
 
-## String 类
+### String 类
 ISO/ANSI C++98 标准通过添加 string 类扩展了 C++库，因此现在可以 string 类型的变量（使用 C++的话说是对象）而不是字符数组来存储字符串。
 要使用 string 类，必须在程序中包含头文件 string。string 类位于名称空间 std 中，因此必须提供一条 using 编译指令，或者使用 std::string 来引用它。
 ```c
@@ -800,4 +800,20 @@ int sum_arr(int arr[],int b);
 
 ```cpp
 inline double square(double x) { return x * x;}
+```
+
+inline 工具是 C++新增的特性。C 语言使用预处理器语句#define 来提供宏—内联代码的原始实现。
+```c
+#define SQUARE(X) X*X
+```
+
+上述示例只有第一个能正常工作。如果使用 C 语言的宏执行了类似函数的功能，应考虑将它们转换为 C++内联函数。
+
+### 引用变量
+C++新增了一种复合类型 —引用变量。引用是已定义的变量的别名（另一个名称）。例如，如果将 twain 作为 clement 变量的引用，则可以交替使用 twain 和 clement 来表示该变量。除指针之外，引用也为函数处理大型结构提供了一种非常方便的途径，同时对于设计类来说，引用也是必不可少的。\
+
+#### 创建引用变量
+```cpp
+int rats;
+int & rodents = rats;
 ```
