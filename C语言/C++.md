@@ -530,6 +530,107 @@ long * fellow;
 上述代码没有将地址赋给 fellow。由于 fellow 没有被初始化，它可能有任何值。不管值是什么，程序都将它解释为存储 223323 的地址。如果 fellow 的值碰巧为 1200，计算机将把数据放在地址 1200 上，即使这恰巧是程序代码的地址。fellow 指向的地方很可能并不是所要存储 223323 的地方。
 
 ## 内存管理 
+### 作用域
+* 块作用域
+```c
+{
+    int x = 10;  // x 具有块作用域
+    printf("%d\n", x);
+}
+// 在此处无法访问 x
+```
+
+* 文件作用域
+在所有函数之外声明的变量具有文件作用域。它们从声明的点开始直到文件的末尾都是可见的。
+```c
+int global_variable = 5;  // 具有文件作用域
+
+void function() {
+    printf("%d\n", global_variable);  // 可以访问
+}
+```
+
+* 函数原型作用域
+在函数原型中声明的参数具有函数原型作用域。它们的作用域仅在函数原型声明内。
+```c
+int function(int a);  // a 的作用域仅限于此函数原型声明
+```
+
+作用域嵌套
+作用域可以嵌套。在嵌套的作用域中，如果内层作用域和外层作用域都声明了同名的变量，内层作用域中的变量会遮蔽外层作用域中的变量。
+```c
+{
+    int x = 5;  // 外层块中的 x
+    {
+        int x = 10;  // 内层块中的 x 遮蔽了外层的 x
+        printf("%d\n", x);  // 输出 10
+    }
+    printf("%d\n", x);  // 输出 5
+}
+
+```
+
+### 存储区域
+1. 代码区--------主要存储程序代码指令，define定义的常量。
+
+2. 数据区------主要存储全局变量（常量），静态变量（常量），常量字符串。
+
+3. 栈区--------主要存储局部变量，栈区上的内容只在函数范围内存在，当函数运行结束，这些内容也会自动被销毁。其特点是效率高，但内存大小有限。
+
+4. 堆区--------由malloc,calloc分配的内存区域，其生命周期由free决定。堆的内存大小是由程序员分配的，理论上可以占据系统中的所有内存。
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/14-59-54-5bafc4ca2bc515e8da85a41acb4ebf35-20240916145953-9b7793.png)
+
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/16/15-00-23-456e384562c065cd8aab21461f7aced3-20240916150022-bb499c.png)
+
+### 变量的存储类别与生命周期
+C 语言中的变量根据其存储类别可以分为以下几种，并且它们的作用域和生命周期有所不同：
+* 自动变量
+在函数内部或块内声明，没有使用 `static` 关键字修饰的变量就是自动变量。它们具有块作用域，并且在进入块时创建，在退出块时销毁。
+```c
+void function() {
+    int auto_variable = 20;  // 自动变量
+}
+```
+
+* 静态变量变量
+使用 `static` 关键字声明的变量可以是静态局部变量或静态全局变量。
+静态局部变量：在函数内部声明，具有块作用域，但生命周期从程序运行开始到程序结束。即使函数调用结束，其值仍然保留。
+```c
+void function() {
+    static int static_local_variable = 0;  // 静态局部变量
+    static_local_variable++;
+    printf("%d\n", static_local_variable);
+}
+```
+
+静态全局变量：在函数外部声明，使用 `static` 关键字修饰。具有文件作用域，但只能在声明它的文件中访问。
+```c
+static int static_global_variable = 100;  // 静态全局变量
+
+void function() {
+    printf("%d\n", static_global_variable);  // 可以访问
+}
+
+```
+
+* 外部变量
+在函数外部声明，没有使用 `static` 关键字修饰的变量就是外部变量。具有文件作用域，可以在多个文件中通过 `extern` 关键字声明后使用。
+
+假设有两个文件：`file1.c` 和 `file2.c`
+在 `file1.c` 中：
+```c
+int external_variable = 50;  // 外部变量
+
+```
+在 `file2.c` 中：
+```c
+extern int external_variable;  // 通过 extern 声明，可以使用 file1.c 中的 external_variable
+
+void function() {
+    printf("%d\n", external_variable);  // 可以访问并输出 50
+}
+
+```
 
 ### 内存分配
 在运行阶段分配未命名的内存以存储值，在这种情况下，只能通过指针来访问内存。
