@@ -828,3 +828,9 @@ int & rodents = rats;
 void swapr(int & a,int & b);
 ```
 
+### 默认参数
+默认参数指的是当函数调用中省略了实参时自动使用的一个值。例如，如果将 void wow（int n）设置成 n 有默认值为 1，则函数调用 wow( )相当于 wow（1）。这极大地提高了使用函数的灵活性。
+```cpp
+char * left(const char * str,int n = 1);
+```
+
