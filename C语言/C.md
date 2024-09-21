@@ -485,7 +485,10 @@ show_n_char(SPACE, 12);
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/20/21-47-53-56aa5d171a84b526c1a5a4859f5da7eb-20240920214752-7a5372.png)
 
 ### 函数类型
-
+声明函数时必须声明函数的类型。带返回值的函数类型应该与其返回值类型相同，而没有返回值的函数应声明为void类型。
+```c
+double klink(int a, int b);
+```
 
 
 ### 使用return从函数中返回值
