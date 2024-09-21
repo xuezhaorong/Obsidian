@@ -507,6 +507,22 @@ lesser = imin(n,m);
 ```
 
 ### 使用指针在函数间通信
+```c
+void interchange(int * u, int * v) { 
+	int temp; 
+	temp = *u; // temp获得 u 所指向对象的值 
+	*u = *v; 
+	*v = temp; 
+}
+
+interchange(&x, &y);
+```
+
+该函数传递的不是x和y的值，而是它们的地址。这意味着出现在 interchange()原型和定义中的形式参数u和v将把地址作为它们的值。因此， 应把它们声明为指针。由于x和y是整数，所以u和v是指向整数的指针，其声明如下：
+```c
+void interchange (int * u, int * v);
+```
+
 
 
 

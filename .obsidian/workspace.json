@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             }
           },
@@ -24,11 +24,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
-                "page": 626,
-                "left": -8,
-                "top": 554,
-                "zoom": 1.8546031451650293
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+                "page": 142,
+                "left": 657,
+                "top": 53,
+                "zoom": 1.9064630816000547
               }
             },
             "group": "589ed818d15487df"
@@ -47,7 +47,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             },
             "group": "589ed818d15487df"
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             }
           },
@@ -159,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,11 +194,11 @@
   },
   "active": "9b41a20f6b198ee8",
   "lastOpenFiles": [
-    "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+    "C语言/C.md",
+    "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/C++.md",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
-    "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
     "().md",
