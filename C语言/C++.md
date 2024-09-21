@@ -781,7 +781,13 @@ void interchange (int * u, int * v);
 ```
 
 ## 函数和数组
+```cpp
+int sum_arr(int * arr,int b);
+int sum_arr(int arr[],int b);
+```
 
+在 C++中，当（且仅当） 用于函数头或函数原型中，int \*arr 和 int arr \[ ]的含义才是相同的。它们都意味着 arr 是一个 int 指针。然而，数组表示法（int arr\[ ]）提醒用户，arr 不仅指向 int，还指向 int 数组的第一个 int。
+![Uploading file...grme1]()
 
 
 
