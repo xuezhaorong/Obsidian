@@ -19,19 +19,18 @@
             }
           },
           {
-            "id": "9b41a20f6b198ee8",
+            "id": "b94bfedd5847594e",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
                 "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
-                "page": 232,
+                "page": 272,
                 "left": 658,
-                "top": 758,
+                "top": 399,
                 "zoom": 2.1068420841706312
               }
-            },
-            "group": "589ed818d15487df"
+            }
           }
         ],
         "currentTab": 1
@@ -49,8 +48,7 @@
               "state": {
                 "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
-            },
-            "group": "589ed818d15487df"
+            }
           }
         ]
       }
@@ -192,16 +190,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "9b41a20f6b198ee8",
+  "active": "b94bfedd5847594e",
   "lastOpenFiles": [
     "C语言/C++.md",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
+    "().md",
     "C语言/C.md",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
-    "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
-    "().md",
     "IOT/Linux/Linux基础.md",
     "C语言",
     "IOT/物联网/应用层/lvgl/LVGL.md",
