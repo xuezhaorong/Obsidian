@@ -1097,3 +1097,18 @@ void Buffoon::update();
 std::cout << shares;
 ```
 
+其定义位于类声明中的函数都将自动成为内联函数。
+
+### 创建对象
+```cpp
+Stock kate,joe;
+```
+
+使用对象的成员函数。和使用结构成员一样，通过成员运算符：
+```cpp
+kate.show();
+joe.show();
+```
+
+所创建的每个新对象都有自己的存储空间，用于存储其内部变量和类成员；但同一个类的所有对象共享同一组类方法，即每种方法只有一个副本。
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/16-10-59-4ad8b20a81262ba013555656aed55c10-20240922161059-21464c.png)
