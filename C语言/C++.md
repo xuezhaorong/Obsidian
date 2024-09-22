@@ -1188,3 +1188,9 @@ const Stock & Stock::topval(const Stock & s) const{
 Stock sleeper("Exclusive Ore",100,0.25);
 sleeper.show();
 ```
+
+### 运算符重载
+要重载运算符，需使用被称为运算符函数的特殊函数形式。运算符函数的格式如下：
+```cpp
+operatorop(argument-list);
+```
