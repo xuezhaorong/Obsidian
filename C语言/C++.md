@@ -728,6 +728,24 @@ Jack::fetch();
 ```
 
 
+using 声明由被限定的名称和它前面的关键字 using 组成
+```cpp
+using Jill::fetch;
+```
+
+using 声明将特定的名称添加到它所属的声明区域中。例如 main( )中的 using 声明 Jill::fetch 将 fetch 添加到 main( )定义的声明区域中。完成该声明后，便可以使用名称 fetch 代替 Jill::fetch。下面的代码段说明了这几点：
+```cpp
+using Jill::fetch;
+int main(){
+	cin << feth;
+}
+```
+
+和其他局部变量一样，fetch 也将覆盖同名的全局变量。在函数的外面使用 using 声明时，将把名称添加到全局名称空间中： using 声明使一个名称可用，而 using 编译指令使所有的名称都可用。using 编译指令由名称空间名和它前面的关键字 using namespace 组成，它使名称空间中的所有名称都可用，而不需要使用作用域解析运算符：
+```cpp
+using namespace std;
+cin >> x;
+```
 
 
 ## 语句
@@ -1029,3 +1047,5 @@ void Swap(T &a,T &b){
 }
 ```
 
+
+## 类和对象
