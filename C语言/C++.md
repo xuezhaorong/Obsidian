@@ -1224,4 +1224,25 @@ C++控制对类对象私有部分的访问。通常，公有类方法提供唯�
 * 友元类； 
 * 友元成员函数。
 
-通过让函数成为类的友元，可以赋予该函数与类的成员函数相同的访问权限。
+通过让函数成为类的友元，可以赋予该函数与类的成员函数相同的访问权限。创建友元函数的第一步是将其原型放在类声明中，并在原型声明前加上关键字 friend：
+```cpp
+friend Time operator*(double m,const Time & t);
+```
+
+该原型意味着下面两点： 
+* 虽然 operator *( )函数是在类声明中声明的，但它不是成员函数，因此不能使用成员运算符来调用； 
+* 虽然 operator *( )函数不是成员函数，但它与成员函数的访问权限相同。
+
+第二步是编写函数定义。因为它不是成员函数，所以不要使用 Time::限定符。另外，不要在定义中使用关键字 friend，定义应该如下：
+```cpp
+Time operator*(double m,const Time &t){
+	Time result;
+	long totalminutes = t.hours * mult * 60 + t.minutes * mult;
+	result.hours = totalminutes / 60;
+	result.minutes = totalminutes % 60;
+	return result;
+}
+```
+
+
+总之，类的友元函数是非成员函数，其访问权限与成员函数相同。
