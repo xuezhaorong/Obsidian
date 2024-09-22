@@ -1194,3 +1194,7 @@ sleeper.show();
 ```cpp
 operatorop(argument-list);
 ```
+例如，operator +( )重载+运算符，operator *( )重载*运算符。op 必须是有效的 C++运算符，不能虚构一个新的符号。例如，不能有 operator@( )这样的函数，因为 C++中没有@运算符。然而，operator [ ]( )函数将重载[ ]运算符，因为[ ]是数组索引运算符。例如，假设有一个 Salesperson 类，并为它定义了一个 operator +( )成员函数，以重载+运算符，以便能够将两个 Saleperson 对象的销售额相加，则如果 district2、sid 和 sara 都是 Salesperson 类对象，便可以编写这样的等式：
+```cpp
+district2 = sid + sara;
+```
