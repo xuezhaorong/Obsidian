@@ -1198,3 +1198,23 @@ operatorop(argument-list);
 ```cpp
 district2 = sid + sara;
 ```
+operator +( )由 Time 对象调用的，它将第二个 Time 对象作为参数，并返回一个 Time 对象。
+```cpp
+Time Time::operator+(const Time &t) const;
+
+Time Time::operator+(const Time &t) const{
+	Time sum;
+	sum.minutes = minutes + t.minutes;
+	sum.hours = hours + t.hours + sum.minutes / 60;
+	sun.minutes %= 60;
+	return sum;
+}
+```
+
+将该方法命令为 operator +( )后，也可以使用运算符表示法：
+```cpp
+total = coding + fixing;
+```
+
+在运算符表示法中，运算符左侧的对象（这里为 coding） 是调用对象，运算符右边的对象（这里为 fixing）是作为参数被传递的对象。
+
