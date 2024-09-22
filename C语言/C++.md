@@ -1071,5 +1071,10 @@ class Stock{
 
 首先，C++关键字 class 指出这些代码定义了一个类设计（不同于在模板参数中，在这里，关键字 class 和 typename 不是同义词，不能使用 typename 代替 class）。这种语法指出，Stock 是这个新类的类型名。该声明让我们能够声明 Stock 类型的变量—— 称为对象或实例。
 ```cpp
-
+Stock sally;
+Stock solly;
 ```
+
+###  访问控制
+关键字 private 和 public 也是新的，它们描述了对类成员的访问控制。使用类对象的程序都可以直接访问公有部分，但只能通过公有成员函数（来访问对象的私有成员。例如，要修改 Stock 类的 shares 成员，只能通过 Stock 的成员函数。因此，公有成员函数是程序和对象的私有成员之间的桥梁，提供了对象和程序之间的接口。防止程序直接访问数据被称为数据隐藏。C++ 还提供了第三个访问控制关键字 protected。
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/15-52-53-c235907ce02fe50555e79b41204adcd2-20240922155251-a9e459.png)
