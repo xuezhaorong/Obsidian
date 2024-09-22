@@ -1273,4 +1273,17 @@ public:
 * 派生类对象存储了基类的数据成员（派生类继承了基类的实现）； 
 * 派生类对象可以使用基类的方法（派生类继承了基类的接口）。
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/22-13-52-475122abc7dcc98a0775b586e7da3303-20240922221351-0f4948.png)
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/22-13-52-475122abc7dcc98a0775b586e7da3303-20240922221351-0f4948.png)
+
+派生类需要自己的构造函数。派生类可以根据需要添加额外的数据成员和成员函数。
+
+```cpp
+class RatedPlayer : public TableTennisPlayer{
+	private:
+		unsigned int rating;
+	public:
+		RatePlayer(unsigned int r = 0,const string & fn = "none",const string & ln = "none",bool ht = false);
+}
+```
+
+
