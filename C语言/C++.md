@@ -1049,3 +1049,27 @@ void Swap(T &a,T &b){
 
 
 ## 类和对象
+类是一种将抽象转换为用户定义类型的 C++工具，它将数据表示和操纵数据的方法组合成一个整洁的包。一般来说，类规范由两个部分组成。
+* 类声明：以数据成员的方式描述数据部分，以成员函数（被称为方法）的方式描述公有接口。
+* 类方法定义：描述如何实现类成员函数。
+简单地说，类声明提供了类的蓝图，而方法定义则提供了细节。
+
+```cpp
+class Stock{
+	private:
+		std::string company;
+		long shares;
+		double share_val;
+		double total_val;
+		void set_tot(){
+			total_val = shares * share_val;
+		}
+	public:
+		void acquire(const std::string & co,long n,double pr);
+}
+```
+
+首先，C++关键字 class 指出这些代码定义了一个类设计（不同于在模板参数中，在这里，关键字 class 和 typename 不是同义词，不能使用 typename 代替 class）。这种语法指出，Stock 是这个新类的类型名。该声明让我们能够声明 Stock 类型的变量—— 称为对象或实例。
+```cpp
+
+```
