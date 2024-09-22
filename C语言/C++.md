@@ -1254,3 +1254,23 @@ Time operator*(double m,const Time &t){
 * 可以修改类方法的行为。
 
 从一个类派生出另一个类时，原始类称为基类，继承类称为派生类。为说明继承，首先需要一个基类。
+```cpp
+class TableTennisPlayer{
+private:
+	string firstname;
+	string lastname;
+	bool hasTable;
+public:
+	TableTennisPlayer(const string & fn = "none", const string & ln = "none",bool ht = false);
+	void Name() const;
+	bool HasTable() const {return hasTable;};
+	void ResetTable(bool v){hasTable = v;};
+}
+```
+
+冒号指出 RatedPlayer 类的基类是 TableTennisplayer 类。上述特殊的声明头表明 TableTennisPlayer 是一个公有基类，这被称为公有派生。派生类对象包含基类对象。使用公有派生，基类的公有成员将成为派生类的公有成员；基类的私有部分也将成为派生类的一部分，但只能通过基类的公有和保护方法访问。
+
+* 派生类对象存储了基类的数据成员（派生类继承了基类的实现）； 
+* 派生类对象可以使用基类的方法（派生类继承了基类的接口）。
+
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/22-13-52-475122abc7dcc98a0775b586e7da3303-20240922221351-0f4948.png)
