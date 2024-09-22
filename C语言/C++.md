@@ -1114,3 +1114,33 @@ joe.show();
 ![image.png|550](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/16-10-59-4ad8b20a81262ba013555656aed55c10-20240922161059-21464c.png)
 
 ### 类的构造函数和析构函数
+
+类构造函数，专门用于构造新对象、将值赋给它们的数据成员。更准确地说，C++为这些成员函数提供了名称和使用语法，而程序员需要提供方法定义。名称与类名相同。
+```cpp
+Stock::Stock(const string & co,long n,double pr);
+
+Stock::Stock(const string & co,long n,double pr){
+	company = co;
+	if(n < 0){
+		shares = 0;
+	}
+
+	set_tot();
+}
+```
+
+C++提供了两种使用构造函数来初始化对象的方式。第一种方式是显式地调用构造函数：
+```cpp
+Stock garment = Stock("Electroshock Games",18,19.0);
+```
+另一种方式是隐式地调用构造函数：
+```cpp
+Stock garment("Furry Mason",50,2.5);
+```
+
+每次创建类对象（甚至使用 new 动态分配内存）时，C++都使用类构造函数。下面是将构造函数与 new 一起使用的方法：
+```cpp
+Stock *pstock = new Stock("Electroshock Games",18,19.0);
+```
+
+无法使用对象来调用构造函数，因为在构造函数构造出对象之前，对象是不存在的。因此构造函数被用来创建对象，而不能通过对象来调用。
