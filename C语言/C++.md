@@ -1167,3 +1167,19 @@ Strock hot_tip = {"Derivatives Plus Plus",100,45.0};
 Stock jocK{"Sport Age Storage,inc"};
 ```
 
+### this指针
+this 指针指向用来调用成员函数的对象（this 被作为隐藏参数传递给方法）。每个成员函数（包括构造函数和析构函数）都有一个 this 指针。this 指针指向调用对象。如果方法需要引用整个调用对象，则可以使用表达式\*this。
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/22/17-03-34-9dde013eb2ca4a8f71508d9413c86299-20240922170334-1c6124.png)
+```cpp
+const Stock & Stock::topval(const Stock & s) const{
+	if(s.total_val > total_val){
+		return s;
+	}
+	else{
+		return *thsi;
+	}
+}
+```
+返回类型为引用意味着返回的是调用对象本身，而不是其副本。
+
+### 类作用域
