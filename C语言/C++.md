@@ -1452,7 +1452,59 @@ int main()
 }
 ```
 
+vector的遍历有多种方式：
 
+\[]方式，如果越界或出现其他错误，不会抛出异常，可能会崩溃，可能数据随机出现；
+
+at方式，如果越界或出现其他错误，会抛出异常，需要捕获异常并处理；
+
+迭代器提供了逆向遍历，可以通过迭代器来实现逆向遍历，当然上面两种方式也可以。
+
+```cpp
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+//创建vector
+    vector<int> v1;
+    
+    //插入元素
+    for (int i = 0; i < 10; i++) {
+        v1.push_back(i);
+    }
+    
+    //遍历-[]取值
+    for (int i = 0; i < v1.size(); i++) {
+        cout << v1[i] << " ";
+    }
+    cout << endl;
+   
+    //遍历-at取值
+    for (int i = 0; i < v1.size(); i++) {
+        cout << v1.at(i) << " ";
+    }
+    cout << endl;
+ 
+    //遍历-迭代器遍历
+    for (vector<int>::iterator it = v1.begin(); it != v1.end(); it++) {
+        cout << *it << " ";
+    }
+    cout << endl;
+    
+    //遍历-迭代器逆向遍历
+    for (vector<int>::reverse_iterator it = v1.rbegin(); it != v1.rend(); it++) {
+        cout << *it << " ";
+    }
+    cout << endl;
+    
+    //测试越界
+    cout << "[]越界:" << v1[20] << endl;      //不会抛出异常，可能会崩溃，可能会乱码
+    cout << "at越界:" << v1.at(20) << endl;   //会抛出异常，需要捕获异常
+    
+    return 0;
+}
+```
 
 ### list
 
