@@ -1570,8 +1570,95 @@ shrink_to_fit() 它减少了容量并使它等于向量的大小。
 所谓的deque是”double ended queue”的缩写，双端队列不论在尾部或头部插入元素，都十分迅速。而在中间插入元素则会比较费时，因为必须移动中间其他的元素。双端队列是一种随机访问的数据类型，提供了在序列两端快速插入和删除操作的功能，它可以在需要的时候改变自身大小，完成了标准的C++数据结构中队列的所有功能。
 
 双端队列表示双端队列。它概括了队列数据结构，即可以从前端或后端的两端进行插入和删除。
+```cpp
+#include<iostream>
+#include<deque>
+using namespace std;
+int main(void)
+{
+	int i;
+	int a[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	deque<int> q;
+	for (i = 0; i <= 9; i++)
+	{
+		if (i % 2 == 0)
+			q.push_front(a[i]);
+		else
+			q.push_back(a[i]);
+	}                   //此时队列里的内容是: {8,6,4,2,0,1,3,5,7,9}
+	q.pop_front();
+	cout << q.front()<< endl;   //清除第一个元素后输出第一个(6)
+	q.pop_back();
+	cout << q.back() << endl;   //清除最后一个元素后输出最后一个(7)
+	deque<int>::iterator it;
+	for (it = q.begin(); it != q.end(); it++) {
+		cout << *it << '\t';
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
+```
+C ++ Deque（双端队列）常见的成员函数：
+assign()    它分配新内容并替换旧内容。
 
+emplace()        它将在指定位置添加一个新元素。
 
+emplace_back()      它在末尾添加一个新元素。
+
+emplace_front()      它在双端队列的开头添加一个新元素。
+
+insert()     它在指定位置之前添加一个新元素。
+
+push_back()     它在容器的末尾添加一个新元素。
+
+push_front()    它在容器的开头添加一个新元素。
+
+pop_back()      它从双端队列中删除最后一个元素。
+
+pop_front()      它从双端队列中删除第一个元素。
+
+swap()      它交换两个双端队列的内容。
+
+clear()      它将删除双端队列的所有内容。
+
+empty()    它检查容器是否为空。
+
+erase()     它删除元素。
+
+max_size()       它确定双端队列的最大大小。
+
+resize()     它改变了双端队列的大小。
+
+shrink_to_fit() 它减少了内存以适合双端队列的大小。
+
+size()        它返回元素数。
+
+at()   它访问位置pos处的元素。
+
+operator[]()     它访问位置pos处的元素。
+
+operator=()      它将新的内容分配给容器。
+
+back()       它访问最后一个元素。
+
+begin()     它将迭代器返回到双端队列的开头。
+
+cbegin()   它向双端队列的开头返回一个常量迭代器。
+
+end()        它将迭代器返回到末尾。
+
+cend()      它将常量迭代器返回到末尾。
+
+rbegin()    它将反向迭代器返回到开头。
+
+crbegin()  它将常量反向迭代器返回到开头。
+
+rend()       它将反向迭代器返回到末尾。
+
+crend()     它将常量反向迭代器返回到末尾。
+
+front()      它访问最后一个元素。
 
 
 ### list
@@ -1658,6 +1745,7 @@ emplace_back()        它将在容器的末尾插入一个新元素。
 emplace_front()       它将在列表的开头插入一个新元素。
 
 ### stack
+
 
 ### queue
 ### map
