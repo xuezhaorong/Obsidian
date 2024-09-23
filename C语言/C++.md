@@ -1290,3 +1290,38 @@ class RatedPlayer : public TableTennisPlayer{
 派生类不能直接访问基类的私有成员，而必须通过基类方法进行访问。例如，RatedPlayer 构造函数不能直接设置继承的成员（firstname、lastname 和 hasTable），而必须使用基类的公有方法来访问私有的基类成员。具体地说，派生类构造函数必须使用基类构造函数。创建派生类对象时，程序首先创建基类对象。从概念上说，这意味着基类对象应当在程序进入派生类构造函数之前被创建。C++使用成员初始化列表语法来完成这种工作。
 
 创建派生类对象时，程序首先调用基类构造函数，然后再调用派生类构造函数。基类构造函数负责初始化继承的数据成员；派生类构造函数主要用于初始化新增的数据成员。派生类的构造函数总是调用一个基类构造函数。可以使用初始化器列表语法指明要使用的基类构造函数，否则将使用默认的基类构造函数。派生类对象过期时，程序将首先调用派生类析构函数，然后再调用基类析构函数。
+
+### 多态公有继承
+派生类对象使用基类的方法，而未做任何修改。然而，可能会遇到这样的情况，即希望同一个方法在派生类和基类中的行为是不同的。换句话来说，方法的行为应取决于调用该方法的对象。这种较复杂的行为称为多态—具有多种形态，即同一个方法的行为随上下文而异。有两种重要的机制可用于实现多态公有继承； 
+* 在派生类中重新定义基类的方法。
+* 使用虚方法。
+
+```cpp
+class Brass{
+private:
+	std::string fullName;
+	long acctNum;
+	double balance;
+public:
+	Brass(const std::string & s = "Nullbody",long an = -1,double bal = 0.0);
+	void Deposit(double amt);
+	virtual void Withdraw(double amt);
+	double Balance() const;
+	virtual void ViewAcct() const;
+	virtual ~Brass();	
+}
+
+class BrassPlus:public Brass{
+private:
+	double maxLoan;
+	double rate;
+	double owesBank;
+public:
+	Brass(const std::string & s = "Nullbody",long an = -1,double bal = 0.0);
+	void Deposit(double amt);
+	virtual void Withdraw(double amt);
+	double Balance() const;
+	virtual void ViewAcct() const;
+	virtual ~Brass();	
+}
+```
