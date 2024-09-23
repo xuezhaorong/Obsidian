@@ -1660,6 +1660,8 @@ crend()     它将常量反向迭代器返回到末尾。
 
 front()      它访问最后一个元素。
 
+### queue
+
 
 ### list
 list是一种物理存储单元上非连续的存储结构，数据元素的逻辑顺序是通过链表中的指针链接实现的 。list支持双向，并为插入和删除操作提供了一种有效的方法。在列表中遍历速度很慢，因为列表元素是按顺序访问的。
@@ -1744,10 +1746,41 @@ emplace_back()        它将在容器的末尾插入一个新元素。
 
 emplace_front()       它将在列表的开头插入一个新元素。
 
+
 ### stack
+栈为[数据结构](https://so.csdn.net/so/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&spm=1001.2101.3001.7020)的一种，是STL中实现的一个先进后出，后进先出的容器。
+```cpp
+//头文件需要添加
+#include<stack>
+
+//声明
+stack<int> s;
+stack<string> s;
+stack<node> s;//node是结构体类型
+
+```
+
+栈只能对栈顶元素进行操作，如果想要进行遍历，只能将栈中元素一个个取出来存在数组中
+```cpp
+stack<int> st;
+for (int i = 0; i < 10; ++i) st.push(i);
+while (!st.empty()) {
+    int tp = st.top(); // 栈顶元素
+    st.pop();
+}
+
+```
+
+方法函数：
+s.push(ele)	元素ele入栈，增加元素 O ( 1 ) O(1)O(1)
+s.pop()	移除栈顶元素 O ( 1 ) O(1)O(1)
+s.top()	取得栈顶元素（但不删除）O ( 1 ) O(1)O(1)
+s.empty()	检测栈内是否为空，空为真 O ( 1 ) O(1)O(1)
+s.size()	返回栈内元素的个数 O ( 1 ) O(1)O(1)
 
 
-### queue
+
+
 ### map
 
 ### set
