@@ -1794,8 +1794,11 @@ s.empty()	检测栈内是否为空，空为真 O ( 1 ) O(1)O(1)
 s.size()	返回栈内元素的个数 O ( 1 ) O(1)O(1)
 
 
-### map
+### **map****（映射）/multimap（多重映射）容器**
+map和multimap都是键值对（key-value），每一个元素都有一个键，唯一的不同是，map的键值key不可重复，而multimap可以，也正是由于这种区别，map支持[ ]运算符，multimap不支持[ ]运算符。在用法上没什么区别。map和multimap都需要#include\<map>。
+```cpp
 
+```
 
 
 ### set
