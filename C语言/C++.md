@@ -1797,9 +1797,82 @@ s.size()	返回栈内元素的个数 O ( 1 ) O(1)O(1)
 ### **map****（映射）/multimap（多重映射）容器**
 map和multimap都是键值对（key-value），每一个元素都有一个键，唯一的不同是，map的键值key不可重复，而multimap可以，也正是由于这种区别，map支持[ ]运算符，multimap不支持[ ]运算符。在用法上没什么区别。map和multimap都需要#include\<map>。
 ```cpp
+#include <iostream>
+#include <map>  //map
+using namespace std;   
+int main()
+{
+    //创建并初始化 multimap 容器
+    map<char, int>mymap{ {'a',10},{'b',20},{'b',15}, {'c',30} };
+    //输出 mymap 容器存储键值对的数量
+    cout << mymap.size() << endl;
+    //输出 mymap 容器中存储键为 'b' 的键值对的数量
+    cout << mymap.count('b') << endl;
+    for (auto iter = mymap.begin(); iter != mymap.end(); ++iter) {
+        cout << iter->first << " " << iter->second << endl;
+    }
+    return 0;
+}
+
+#include <iostream>
+#include <map>  //map
+using namespace std;   
+int main()
+{
+    //创建并初始化 multimap 容器
+    multimap<char, int>mymultimap{ {'a',10},{'b',20},{'b',15}, {'c',30} };
+    //输出 mymultimap 容器存储键值对的数量
+    cout << mymultimap.size() << endl;
+    //输出 mymultimap 容器中存储键为 'b' 的键值对的数量
+    cout << mymultimap.count('b') << endl;
+    for (auto iter = mymultimap.begin(); iter != mymultimap.end(); ++iter) {
+        cout << iter->first << " " << iter->second << endl;
+    }
+    return 0;
+
 
 ```
 
+Map（映射）/multimap（多重映射）常见成员函数的列表：
 
+函数/方法       
+
+begin()    返回指向map头部的迭代器
+
+clear(）   删除所有元素
+
+count()    返回指定元素出现的次数
+
+empty()    如果map为空则返回true
+
+end() 返回指向map末尾的迭代器
+
+equal_range()   返回特殊条目的迭代器对
+
+erase()    删除一个元素
+
+find()查找一个元素
+
+get_allocator() 返回map的配置器
+
+insert()   插入元素
+
+key_comp() 返回比较元素key的函数
+
+lower_bound()   返回键值>=给定元素的第一个位置
+
+max_size() 返回可以容纳的最大元素个数
+
+rbegin()   返回一个指向map尾部的逆向迭代器
+
+rend()返回一个指向map头部的逆向迭代器
+
+size()返回map中元素的个数
+
+swap() 交换两个map
+
+upper_bound()    返回键值>给定元素的第一个位置
+
+value_comp()返回比较元素value的函数
 ### set
 
