@@ -1247,6 +1247,9 @@ Time operator*(double m,const Time &t){
 
 总之，类的友元函数是非成员函数，其访问权限与成员函数相同。
 
+
+
+
 ### 类继承
 类继承能够从已有的类派生出新的类，而派生类继承了原有类（称为基类）的特征，包括方法。下面是可以通过继承完成的一些工作。
 * 可以在已有类的基础上添加功能。
@@ -1326,6 +1329,103 @@ public:
 }
 ```
 
+### 访问控制
+* 公有继承–public
+公有继承时，对基类的公有成员和保护成员的访问属性不变，派生类的新增成员可以访问基类的公有成员和保护成员，但是访问不了基类的私有成员。派生类的对象只能访问派生类的公有成员（包括继承的公有成员），访问不了保护成员和私有成员。
+```cpp
+#include <iostream>
+using namespace std;
+
+class Base         
+{
+public: 
+    Base(int nId) {mId = nId;}
+    int GetId() {mId++;cout<< mId<<endl;return mId;}
+protected:
+    int GetNum() {cout<< 0 <<endl;return 0;}
+private: 
+    int mId; 
+};
+
+class Child : public Base
+{
+public:
+    Child() : Base(7) {;}
+    int GetCId() {return GetId();}    //新增成员可以访问公有成员
+    int GetCNum() {return GetNum();}  //新增成员可以访问保护成员
+                                      //无法访问基类的私有成员
+protected:
+    int y;
+private:
+    int x;
+};
+
+int main() 
+{ 
+    Child child;
+    child.GetId();        //派生类的对象可以访问派生类继承下来的公有成员
+    //child.GetNum();     //无法访问继承下来的保护成员GetNum()
+    child.GetCId();   
+    child.GetCNum();      //派生类对象可以访问派生类的公有成员
+    //child.x;
+    //child.y;            //无法访问派生类的保护成员y和私有成员x
+    return 0;
+}
+```
+
+* 保护继承–protected
+保护继承中，基类的公有成员和保护成员被派生类继承后变成保护成员，派生类的新增成员可以访问基类的公有成员和保护成员，但是访问不了基类的私有成员。派生类的对象不能访问派生类继承基类的公有成员，保护成员和私有成员。
+```cpp
+class Child : protected Base
+{
+public:
+    Child() : Base(7) {;}
+    int GetCId() {return GetId();}   //可以访问基类的公有成员和保护成员
+    int GetCNum() {return GetNum();}
+protected:
+    int y;
+private:
+    int x;
+};
+
+int main() 
+{ 
+    Child child;
+    //child.GetId();//派生类对象访问不了继承的公有成员，因为此时保护继承时GetId()已经为          protected类型
+    //child.GetNum(); //这个也访问不了
+    child.GetCId();
+    child.GetCNum();
+    return 0;
+}
+```
+
+* 私有继承–private
+私有继承时，基类的公有成员和保护成员都被派生类继承下来之后变成私有成员，派生类的新增成员可以访问基类的公有成员和保护成员，但是访问不了基类的私有成员。派生类的对象不能访问派生类继承基类的公有成员，保护成员和私有成员。
+```cpp
+class Child : private Base
+{
+public:
+    Child() : Base(7) {;}
+    int GetCId() {return GetId();}   //可以访问基类的公有成员和保护成员
+    int GetCNum() {return GetNum();}
+protected:
+    int y;
+private:
+    int x;
+};
+
+int main() 
+{ 
+    Child child;
+    //child.GetId();//派生类对象访问不了继承的公有成员，因为此时私有继承时GetId()已经为          private类型
+    //child.GetNum(); //派生类对象访问不了继承的保护成员，而且此时私有继承时GetNum()已经为          private类型
+    child.GetCId();
+    child.GetCNum();
+    return 0;
+}
+```
+不管是哪种继承方式，派生类中新增成员可以访问基类的公有成员和保护成员，无法访问私有成员。而继承方式影响的是派生类继承成员访问属性，而使用友元（friend）可以访问保护成员和私有成员。
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/23/16-57-08-2901a3cca553b13506a435d9fd94eded-20240923165707-8c96eb.png)
 
 
 ## STL
