@@ -1566,10 +1566,96 @@ data()       它将向量的数据写入数组。
 
 shrink_to_fit() 它减少了容量并使它等于向量的大小。
 
+### Deque
+所谓的deque是”double ended queue”的缩写，双端队列不论在尾部或头部插入元素，都十分迅速。而在中间插入元素则会比较费时，因为必须移动中间其他的元素。双端队列是一种随机访问的数据类型，提供了在序列两端快速插入和删除操作的功能，它可以在需要的时候改变自身大小，完成了标准的C++数据结构中队列的所有功能。
+
+双端队列表示双端队列。它概括了队列数据结构，即可以从前端或后端的两端进行插入和删除。
+
+
+
 
 ### list
 list是一种物理存储单元上非连续的存储结构，数据元素的逻辑顺序是通过链表中的指针链接实现的 。list支持双向，并为插入和删除操作提供了一种有效的方法。在列表中遍历速度很慢，因为列表元素是按顺序访问的。
+```cpp
 
+#include<iostream>
+#include<list>
+using namespace std;
+int cmp(const int &a,const int &b){ 
+    //简单的自定义降序序列
+    return a>b;
+}
+int main(){
+    list<int> li;           //创建一个空链表
+    for(int i=10;i>=6;i--){
+        li.push_back(i);
+    }
+    li.push_front(3);
+    li.push_back(20);
+    list<int> li2(li);
+    for(list<int>::iterator it=li.begin();it!=li.end();it++){
+        cout<<*it<<' ';
+    }
+    cout<<endl;
+//排序前3 10 9 8 7 6 20//
+    li.sort();
+  
+    for(list<int>::iterator it=li.begin();it!=li.end();it++){
+        cout<<*it<<' ';
+    }
+    cout<<endl;
+//默认排序后 3 6 7 8 9 10 20//
+    li2.sort(cmp);
+    for(list<int>::iterator it=li2.begin();it!=li2.end();it++){
+        cout<<*it<<' ';
+    }
+    cout<<endl;
+//自定义排序后 20 10 9 8 7 6 3//
+    return 0;
+}
+```
+List（列表）常见的成员函数：
+insert()     它将新元素插入到迭代器指向的位置之前。
+
+push_back()      它在容器的末尾添加了一个新元素。
+
+push_front()     它在前面增加了一个新元素。
+
+pop_back()       删除最后一个元素。
+
+pop_front()       删除第一个元素。
+
+empty()    它检查列表是否为空。
+
+size()         它查找列表中存在的元素数。
+
+max_size()        它找到列表的最大大小。
+
+front()       它返回列表的第一个元素。
+
+back()       它返回列表的最后一个元素。
+
+swap()      当两个列表的类型相同时，它将交换两个列表。
+
+reverse()  它反转了列表的元素。
+
+sort()         它以递增的顺序对列表中的元素进行排序。
+
+merge()    它合并两个排序的列表。
+
+splice()      它将新列表插入到调用列表中。
+
+unique()   它从列表中删除所有重复的元素。
+
+resize()     它更改列表容器的大小。
+
+assign()     它将一个新元素分配给列表容器。
+
+emplace()         它将在指定位置插入一个新元素。
+
+emplace_back()        它将在容器的末尾插入一个新元素。
+
+emplace_front()       它将在列表的开头插入一个新元素。
 
 ### stack
 
