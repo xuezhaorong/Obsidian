@@ -1875,4 +1875,116 @@ upper_bound()    返回键值>给定元素的第一个位置
 
 value_comp()返回比较元素value的函数
 ### set
+set/multiset属于关联式容器，底层结构是用二叉树实现。
 
+set和multiset区别：
+
+set不允许容器中有重复的元素，其中每个键都是唯一的，可以插入或删除但不能更改。
+
+multiset允许容器中有重复的元素。
+
+```cpp
+#include<iostream>
+#include<set>
+using namespace std;
+int main()
+{
+    set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    //输出结果按照从小到大的顺序排序
+    for (set<int>::iterator x = s.begin(); x != s.end(); x++)
+    {
+    	cout << *x << endl;
+	}
+    cout << endl;
+    s.erase(2);    //删除一个元素
+    for (set<int>::iterator x = s.begin(); x != s.end(); x++)
+    {
+    	cout << *x << endl;
+	}
+    //判断一个元素是否存在
+    if (s.count(1))
+        cout << "存在\n";
+    else
+        cout << "不存在\n";
+        
+    return 0; 
+}
+
+#include<iostream>
+#include<set>
+using namespace std;
+int main()
+{
+    multiset<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    //输出结果按照从小到大的顺序排序
+    for (multiset<int>::iterator x = s.begin(); x != s.end(); x++)
+    {
+    	cout << *x << endl;
+	}
+    cout << endl;
+    s.erase(2);    //删除一个元素
+    for (multiset<int>::iterator x = s.begin(); x != s.end(); x++)
+    {
+    	cout << *x << endl;
+	}
+    //判断一个元素是否存在
+    if (s.count(1))
+        cout << "存在\n";
+    else
+        cout << "不存在\n";
+        
+    return 0; 
+}
+
+```
+
+函数方法：
+set（集合）/multiset（多重集合）常见成员函数的列表：
+
+函数/方法       描述
+
+begin()  返回指向第一个元素的迭代器
+
+clear()  清除所有元素
+
+count()  返回某个值元素的个数
+
+empty()  如果集合为空，返回true
+
+end()  返回指向最后一个元素的迭代器
+
+equal_range()  返回集合中与给定值相等的上下限的两个迭代器
+
+erase()  删除集合中的元素
+
+find()  返回一个指向被查找到元素的迭代器
+
+get_allocator()  返回集合的分配器
+
+insert()  在集合中插入元素
+
+lower_bound()  返回指向大于（或等于）某值的第一个元素的迭代器
+
+key_comp()  返回一个用于元素间值比较的函数
+
+max_size()  返回集合能容纳的元素的最大限值
+
+rbegin()  返回指向集合中最后一个元素的反向迭代器
+
+rend()  返回指向集合中第一个元素的反向迭代器
+
+size()  集合中元素的数目
+
+swap()  交换两个集合变量
+
+upper_bound()  返回大于某个值元素的迭代器
+
+value_comp()  返回一个用于比较元素间的值的函数
