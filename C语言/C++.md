@@ -1431,10 +1431,28 @@ int main()
 
 ## STL
 ### vector
-`vector`为可变长数组（[动态数组](https://so.csdn.net/so/search?q=%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84&spm=1001.2101.3001.7020)），定义的`vector`数组可以随时添加数值和删除元素。
-注意：**在局部区域中（比如局部函数里面）开vector数组，是在堆空间里面开的。**
-在局部区域开数组是在栈空间开的，而栈空间比较小，如果开了非常长的数组就会发生爆栈。
-故局部区域**不可以**开大长度数组，但是可以开大长度`vector`。
+Vector是最简单的序列是容器，就像数组一样，向量使用连续的存储位置作为元素，这意味着它们的元素也可以使用常量指向其元素的偏移来访问，与数组一样有效。但与数组不同，它们的大小可以动态变化，其存储由容器自动处理。
+
+Vector就是一个动态创建空间，且预先加载了常用的数组操作的数组。
+```cpp
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<string> v1;
+    //添加 2个值到向量中
+    v1.push_back("一民");
+    v1.push_back("，你好啊！");
+    // 使用迭代器 iterator 访问值
+    for(vector<string>::iterator itr=v1.begin();itr!=v1.end();++itr){
+        cout<<*itr;
+    }
+    return 0; 
+}
+```
+
+
 
 ### list
 
