@@ -1424,8 +1424,9 @@ int main()
     return 0;
 }
 ```
-不管是哪种继承方式，派生类中新增成员可以访问基类的公有成员和保护成员，无法访问私有成员。而继承方式影响的是派生类继承成员访问属性，而使用友元（friend）可以访问保护成员和私有成员。
-![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/23/16-57-08-2901a3cca553b13506a435d9fd94eded-20240923165707-8c96eb.png)
+派生类可以访问基类中所有的非私有成员。因此基类成员如果不想被派生类的[成员函数](https://zhida.zhihu.com/search?q=%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0&zhida_source=entity&is_preview=1)访问，则应在基类中声明为 private。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/23/17-01-49-fbeb06a19a6af5c912644271d8f2b268-20240923170149-daa50f.png)
+
 
 
 ## STL
@@ -1434,4 +1435,14 @@ int main()
 注意：**在局部区域中（比如局部函数里面）开vector数组，是在堆空间里面开的。**
 在局部区域开数组是在栈空间开的，而栈空间比较小，如果开了非常长的数组就会发生爆栈。
 故局部区域**不可以**开大长度数组，但是可以开大长度`vector`。
+
+### list
+
+
+### stack
+
+### queue
+### map
+
+### set
 
