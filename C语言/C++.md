@@ -1661,6 +1661,21 @@ crend()     它将常量反向迭代器返回到末尾。
 front()      它访问最后一个元素。
 
 ### queue
+队列是一种先进先出的数据结构。
+```cpp
+//头文件
+#include<queue>
+//定义初始化
+queue<int> q;
+```
+
+方法函数：
+q.front()	返回队首元素 O ( 1 ) O(1)O(1)
+q.back()	返回队尾元素 O ( 1 ) O(1)O(1)
+q.push(element)	尾部添加一个元素element 进队O ( 1 ) O(1)O(1)
+q.pop()	删除第一个元素 出队 O ( 1 ) O(1)O(1)
+q.size()	返回队列中元素个数，返回值类型unsigned int O ( 1 ) O(1)O(1)
+q.empty()	判断是否为空，队列为空，返回true O ( 1 ) O(1)O(1)
 
 
 ### list
@@ -1779,9 +1794,9 @@ s.empty()	检测栈内是否为空，空为真 O ( 1 ) O(1)O(1)
 s.size()	返回栈内元素的个数 O ( 1 ) O(1)O(1)
 
 
-
-
 ### map
+
+
 
 ### set
 
