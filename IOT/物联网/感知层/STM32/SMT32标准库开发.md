@@ -2506,7 +2506,10 @@ void Serial_SendByte(uint8_t Byte){
 * 发送数组
 ```c
 void Serial_SendArray(uint8_t *Array,uint16_t Length){
-	
+	uint16_t i;
+	for(i = 0;i < Length;i++){
+		Serial_SendByte(Array[i]);
+	}
 }
 ```
 
