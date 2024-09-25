@@ -2513,6 +2513,13 @@ void Serial_SendArray(uint8_t *Array,uint16_t Length){
 }
 ```
 
+* 发送字符串
+```c
+void Serial_SendString(char *String){
+
+}
+```
+
 ## 开发相关
 
 ### 启动配置
