@@ -2437,7 +2437,11 @@ uint16_t AD_GetValue(void){
 -   可配置数据位长度 (8/9)，停止位长度 (0.5/1/1.5/2)
 -   可选校验位（无校验 / 奇校验 / 偶校验）
 -   支持同步模式，硬件流控制，DMA，智能卡，IrDA，LIN
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/16-50-25-61d4464b285042e4f23be7a9a3162249-20240925165024-69b519.png)
+
+### 外设电路图
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/16-50-25-61d4464b285042e4f23be7a9a3162249-20240925165024-69b519.png)
+
+左上角引脚部分，TXRX为发送接收引脚，剩下的为智能卡等通信协议的引脚。
 
 ## 开发相关
 
