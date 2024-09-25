@@ -750,3 +750,72 @@ HAL_TIM_ReadCapturedValue(&htim2,TIM_CHANNEL_2); //获取当前的捕获值
 ```
 
 ## 串口
+### 开启时钟
+```c
+__HAL_USART1_CLK_ENABLE();
+__HAL_GPIOA_CLK_ENABLE()
+```
+### 初始化GPIO
+```c
+GPIO_InitTypeDef  GPIO_InitStruct;
+/* 配置Tx引脚为复用功能  */
+GPIO_InitStruct.Pin = GPIO_PIN_9;
+GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;  //复用推挽输出
+GPIO_InitStruct.Pull = GPIO_PULLUP;      //上拉
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH; //高速
+GPIO_InitStruct.Alternate = GPIO_AF7_USART1; //复用为 USART1
+HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+/* 配置Rx引脚为复用功能 */
+GPIO_InitStruct.Pin = GPIO_PIN_10;
+GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
+HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+```
+
+### 初始化USART
+```c
+UART_HandleTypeDef UartHandle;
+UartHandle.Instance        = USART1; //USART1句柄
+UartHandle.Init.BaudRate   = 115200;//波特率
+UartHandle.Init.WordLength = UART_WORDLENGTH_8B; //8位字长
+UartHandle.Init.StopBits   = UART_STOPBITS_1;    //一个停止位
+UartHandle.Init.Parity     = UART_PARITY_NONE;   //无奇偶校验
+UartHandle.Init.HwFlowCtl  = UART_HWCONTROL_NONE;//无硬件流控
+UartHandle.Init.Mode       = UART_MODE_TX_RX;   //收发模式
+
+HAL_UART_Init(&UartHandle);
+```
+
+### 设置中断
+```c
+/*使能串口接收断 */
+__HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);
+/*抢占优先级0，子优先级1*/
+HAL_NVIC_SetPriority(USART1_IRQn ,0,1);
+HAL_NVIC_EnableIRQ(USART1_IRQn ); /*使能USART1中断通道*/
+```
+
+### 发送功能
+* 发送一个字节
+```c
+HAL_UART_Transmit( &UartHandle,(uint8_t *)(str + k) ,1,1000);
+```
+
+* 发送字符串
+```c
+ /*****************  发送字符串 **********************/
+ void Usart_SendString(uint8_t *str)
+ {
+     unsigned int k=0;
+     do {
+         HAL_UART_Transmit( &UartHandle,(uint8_t *)(str + k) ,1,1000);
+         k++;
+     } while (*(str + k)!='\0');
+ }
+```
+
+### 接收功能
+```c
+void USART1_IRQHandler(void){
+
+}
+```
