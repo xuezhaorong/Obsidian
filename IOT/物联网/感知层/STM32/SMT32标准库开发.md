@@ -2547,7 +2547,15 @@ void Serial_SendNumber(uint32_t Number,uint8_t Length){
 ```
 
 6. 接收功能
-
+* 查询
+```c
+while(1){
+	if(USART_GetFlagStatus(USART1,USART_FLAG_RXNE) == SET){
+		RxData = USART_ReceiveData(USART1);
+		 
+	}
+}
+```
 
 ## 开发相关
 
