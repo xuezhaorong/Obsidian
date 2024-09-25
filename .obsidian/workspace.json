@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C++.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C语言/C++.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C++.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/C++.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/C++.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/C++.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,10 +190,12 @@
   },
   "active": "b94bfedd5847594e",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/安卓/Mqtt.md",
+    "IOT/物联网/应用层/lvgl/lvgl移植.md",
+    "C语言/C++.md",
     "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
-    "C语言/C++.md",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "IOT/Linux/交叉编译.md",
     "IOT/Linux/WSL安装配置.md",
@@ -208,14 +210,12 @@
     "Excalidraw",
     "未命名.canvas",
     "2024-09-12.md",
-    "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
-    "IOT/物联网/应用层/安卓/Mqtt.md",
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
