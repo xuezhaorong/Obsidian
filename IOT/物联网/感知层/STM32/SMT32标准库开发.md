@@ -2437,14 +2437,13 @@ uint16_t AD_GetValue(void){
 -   可配置数据位长度 (8/9)，停止位长度 (0.5/1/1.5/2)
 -   可选校验位（无校验 / 奇校验 / 偶校验）
 -   支持同步模式，硬件流控制，DMA，智能卡，IrDA，LIN
-
-
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/16-50-25-61d4464b285042e4f23be7a9a3162249-20240925165024-69b519.png)
 
 ## 开发相关
 
 ### 启动配置
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-00-35f307eb2e1c4590ddfd19304ddcfe8d-%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE-443f37.png)
+![|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-00-35f307eb2e1c4590ddfd19304ddcfe8d-%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE-443f37.png)
 
  系统存储器存储 STM32 中的一段 BootLoader 程序，用于接收串口的数据，然后刷新到主闪存中。当 STM32 死锁时，需要切换到内置 SRAM 模式进行解锁。
 
