@@ -825,3 +825,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 ```
 
 ### STM32CUBE操作
+![|1150](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/21-21-31-8d8ececbbbc69a7f59e08fab0698a3a6-20240925212130-10b6ce.png)
+
+在USART中选择异步模式，设置参数，对应引脚自动配置。
+
+![image.png|1150](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/21-23-24-f4594445fee06ce2b6b4939facaa192a-20240925212324-99ce1c.png)
+
+使能NVIC。
+
