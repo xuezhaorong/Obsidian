@@ -2493,13 +2493,21 @@ USART_Init(USART1,&USART_InitStructure);
 ```c
 USART_Cmd(USART1,ENABLE);
 ```
-5. 发送字节数据
+5. 发送功能
+* 发送一个字节数据
 ```c
 void Serial_SendByte(uint8_t Byte){
 	USART_SendData(USART1,Byte);
 	while(USART_GetFlagStatus(USART1,USART_FLAG_TXE) == RESET);
 }
 
+```
+
+* 发送数组
+```c
+void Serial_SendArray(uint8_t *Array,uint16_t Length){
+	
+}
 ```
 
 ## 开发相关
