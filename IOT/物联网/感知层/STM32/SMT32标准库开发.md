@@ -2476,6 +2476,11 @@ GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
 GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
 GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 GPIO_Init(GPIOA,&GPIO_InitStructure);
+
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+GPIO_Init(GPIOA,&GPIO_InitStructure);
 ```
 
 3. 初始化USART
@@ -2483,7 +2488,7 @@ GPIO_Init(GPIOA,&GPIO_InitStructure);
 USART_InitTypeDef USART_InitStructure;
 USART_InitStructure.USART_BaudRate = 9600; // 波特率
 USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None; // 硬件流控制 
-USART_InitStructure.USART_Mode = USART_Mode_Tx; // 接收发送模式
+USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx; // 接收发送模式
 USART_InitStructure.USART_Parity = USART_Parity_No; // 校验位
 USART_InitStructure.USART_StopBits = USART_Stop_Bits_1; // 停止位
 USART_InitStructure.USART_WordLength = USART_WordLength_8b; // 字节长度
@@ -2540,6 +2545,9 @@ void Serial_SendNumber(uint32_t Number,uint8_t Length){
 	}
 }
 ```
+
+6. 接收功能
+
 
 ## 开发相关
 
