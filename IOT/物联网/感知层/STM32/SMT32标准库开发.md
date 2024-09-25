@@ -2466,8 +2466,34 @@ $波特率 = F_{pCLK2/1}/(16 * DIV)$
 ### 配置过程
 1. 开启时钟
 ```c
-
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
 ```
+2. 初始化GPIO
+```c
+GPIO_InitTypeDef GPIO_InitStructure;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+GPIO_Init(GPIOA,&GPIO_InitStructure);
+```
+
+3. 初始化USART
+```c
+USART_InitTypeDef USART_InitStructure;
+USART_InitStructure.USART_BaudRate = 9600; // 波特率
+USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None; // 硬件流控制 
+USART_InitStructure.USART_Mode = USART_Mode_Tx; // 接收发送模式
+USART_InitStructure.USART_Parity = USART_Parity_No; // 校验位
+USART_InitStructure.USART_StopBits = USART_Stop_Bits_1; // 停止位
+USART_InitStructure.USART_WordLength = USART_WordLength_8b; // 字节长度
+USART_Init(USART1,&USART_InitStructure); 
+```
+4. 开启开关
+```c
+USART_Cmd(USART1,ENABLE);
+```
+5. 发送数据
 
 
 ## 开发相关
