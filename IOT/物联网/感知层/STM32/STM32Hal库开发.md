@@ -817,6 +817,10 @@ HAL_UART_Transmit( &UartHandle,(uint8_t *)(str + k) ,1,1000);
 ```c
 HAL_UART_Receive_IT(&huart1,(uint8_t *)&value,1); //中断接收一个字符，存储到value中
 
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	while(HAL_UART_GetState(&huart1) == HAL_UART_STATE_BUSY_TX);//检测UART发送结束
+	HAL_UART_Receive_IT(&huart1, (uint8_t *)&aRxBuffer, 1); //再开启接收中断
+}
 
 ```
+
