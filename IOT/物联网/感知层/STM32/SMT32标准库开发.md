@@ -2494,7 +2494,13 @@ USART_Init(USART1,&USART_InitStructure);
 USART_Cmd(USART1,ENABLE);
 ```
 5. 发送数据
+```c
+void Serial_SendByte(uint8_t Byte){
+	USART_SendData(USART1,Byte);
+	while(USART_GetFlagStatus(USART1,USART_FLAG_TXE) == RESET);
+}
 
+```
 
 ## 开发相关
 
@@ -2506,7 +2512,7 @@ USART_Cmd(USART1,ENABLE);
 
 ### 工程结构
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-44-bc6ee65ad9904efcdbb72d8ed284c075-%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84-1c5e4c.png)
+![|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-44-bc6ee65ad9904efcdbb72d8ed284c075-%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84-1c5e4c.png)
 
 ### StlinkV2 插针图
 
