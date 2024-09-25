@@ -2516,7 +2516,17 @@ void Serial_SendArray(uint8_t *Array,uint16_t Length){
 * 发送字符串
 ```c
 void Serial_SendString(char *String){
+	uint8_t i;
+	for(i = 0;String[i] != '\0';i++){
+		Serial_SendByte(String[i]);
+	}
+}
+```
 
+* 发送数字
+```c
+void Serial_SendNumber(uint32_t Number,uint8_t Length){
+	
 }
 ```
 
