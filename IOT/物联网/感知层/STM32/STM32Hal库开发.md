@@ -815,7 +815,8 @@ HAL_UART_Transmit( &UartHandle,(uint8_t *)(str + k) ,1,1000);
 
 ### 接收功能
 ```c
-void USART1_IRQHandler(void){
-	HAL_UART_Receive_IT(&huart1,(uint8_t *)&value,1); //中断接收一个字符，存储到value中
-}
+HAL_UART_Receive_IT(&huart1,(uint8_t *)&value,1); //中断接收一个字符，存储到value中
+
+
+
 ```
