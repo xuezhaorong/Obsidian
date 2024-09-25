@@ -2557,6 +2557,28 @@ while(1){
 }
 ```
 
+* 中断
+中断初始化和配置，在开启串口前加入
+```c
+USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+NVIC_ProrityGroupConfig(NVIC_PriorityGroup_2);
+NVIC_InitTypeDef NVIC_Structure;
+NVIC_Structure.NVIC_IRQChannel = USART1_IRQn;
+NVIC_Structure.NVIC_IRQChannelCmd = ENABLE;
+NVIC_Structure.NVIC_IRQChannelPreemptionPriority = 1;
+NVIC_Structure.NVIC_IRQChannelSubPriority = 1;
+NVIC_Init(&NVIC_Structure)
+```
+
+```c
+void USART1_IRQHandler(void){
+	if(USART_GetITStatus(USART1,USART_IT_RXNE) == SET){
+		Serial_RxData = USART_ReceiveData(USART1);
+		USART_ClearPendingBit(USART1,USART_IT_RXNE);
+	}
+}
+```
+
 ## 开发相关
 
 ### 启动配置
