@@ -2453,11 +2453,16 @@ uint16_t AD_GetValue(void){
 
 下方波特率发生器，APB时钟进行分分频，得到发送和接收移位的时钟，外设时钟进行分频除以分频系数，再除以16得到发送器时钟和接收器时钟，通向控制部分，如果TE为1，发送器使能，发送部分的波特率就有效，如果RE为1，接收器使能，接收部分的波特率有效。
 
+### 简化图
+![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/25/18-01-29-e087f09d890033ba0e71e84a4f297308-20240925180128-f61d3a.png)
+
+外设时钟经过波特率发生器分频后，产生的时钟通向发送控制器和接收控制器，发送控制器和接收控制器用来控制发送移位和接收移位，之后由发送数据寄存器和发送移位寄存器这两个寄存器的配合，将数据一位一位地移出去，通过GPIO的复用输出，输出到TX引脚， 产生串口协议规定的波形，数据在移位寄存器是往右移的，低位先行，当数据由数据寄存器转到移位寄存器时，会置一个TXE的标志位，接收部分接收RX引脚的数据，在接收控制器的控制下，一位一位地移入移位寄存器，
+
 ## 开发相关
 
 ### 启动配置
 
-![|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-00-35f307eb2e1c4590ddfd19304ddcfe8d-%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE-443f37.png)
+![|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-47-00-35f307eb2e1c4590ddfd19304ddcfe8d-%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE-443f37.png)
 
  系统存储器存储 STM32 中的一段 BootLoader 程序，用于接收串口的数据，然后刷新到主闪存中。当 STM32 死锁时，需要切换到内置 SRAM 模式进行解锁。
 
