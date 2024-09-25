@@ -2525,8 +2525,19 @@ void Serial_SendString(char *String){
 
 * 发送数字
 ```c
+void Serial_Pow(uint32_t X,uint32_t Y){
+	uint32_t Result = 1;
+	while(Y--){
+		Result *= X;
+	}
+	return Result;
+}
+
 void Serial_SendNumber(uint32_t Number,uint8_t Length){
-	
+	uint8_t i;
+	for(i = 0;i < Length;i++){
+		Serial_SendByte(Number / Serial_Pow(10,Length - i -1)) % 10;
+	}
 }
 ```
 
