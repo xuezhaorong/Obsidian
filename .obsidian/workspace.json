@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             }
           },
@@ -24,11 +24,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
-                "page": 602,
-                "left": 629,
-                "top": 387,
-                "zoom": 2.0825237773661356
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
+                "page": 123,
+                "left": 658,
+                "top": 730,
+                "zoom": 2.1068420841706312
               }
             }
           }
@@ -46,7 +46,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             }
           }
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf"
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf"
               }
             }
           },
@@ -157,7 +157,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
+                "file": "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,10 +192,11 @@
   },
   "active": "b94bfedd5847594e",
   "lastOpenFiles": [
+    "C语言/C.md",
+    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/Qt/Qt实例.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
-    "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/换源.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
@@ -203,7 +204,6 @@
     "IOT/物联网/应用层/安卓/Mqtt.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "C语言/C++.md",
-    "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
