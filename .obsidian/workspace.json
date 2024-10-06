@@ -13,25 +13,10 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "微信小程序/微信小程序.md"
-              }
-            }
-          },
-          {
-            "id": "b94bfedd5847594e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "微信小程序/微信小程序.md",
-                "mode": "source",
-                "source": false
-              }
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "91ae393827fd9820",
@@ -43,9 +28,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "微信小程序/微信小程序.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "微信小程序/微信小程序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "微信小程序/微信小程序.md"
-              }
+              "state": {}
             }
           },
           {
@@ -155,7 +135,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "微信小程序/微信小程序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,10 +167,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b94bfedd5847594e",
+  "active": "bdaa4511f47ced7d",
   "lastOpenFiles": [
-    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "微信小程序/微信小程序.md",
+    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "微信小程序",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/应用层/lvgl/LVGL.md",
