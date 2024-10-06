@@ -1,5 +1,5 @@
 ## 布局
-[[Qt#GUI程序基础]]
+
 以制作登录界面为例，了解布局
 1. 添加QUI类
 ![image.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/15-02-26-c3aed694ff5f800cde7956e790a67b88-20240725150226-4f7580.png)
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 ```
 
 ## 登录响应
-[[Qt#信号与槽]]
+
 在登录界面上添加登录退出按钮并添加功能，了解信号与槽机制，只介绍关键内容，其他的具体操作可看上节。
 1. 在登录界面通过qt designer新建两个按钮控件，登录以及退出，布局并且改变对象名称。
 ![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/17-00-31-048ba762eac4b9877f55981dfecbf361-20240725170030-e6f7e7.png)
