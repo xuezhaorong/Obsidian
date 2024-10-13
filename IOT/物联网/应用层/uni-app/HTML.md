@@ -106,3 +106,16 @@ started with developing web sites and applications." />
 
 ## 文本处理
 ### 标题和段落
+在 HTML 中，每个段落是通过 `<p>` 元素标签进行定义的，比如下面这样：
+```html
+<p>我是一个段落，千真万确。</p>
+```
+
+每个标题（Heading）都必须被包裹在一个标题元素中：
+```html
+<h1>我是文章的标题</h1>
+
+```
+
+一共有六种标题元素标签——[h1](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)、[h2](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)、[h3](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)、[h4](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)、[h5](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements) 和 [h6](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)。每个元素代表文档中不同级别的内容：`<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
+
