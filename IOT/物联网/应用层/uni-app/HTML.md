@@ -65,3 +65,19 @@
 
 ```
 
+## HTML元信息
+```html
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>我的测试页面</title>
+  </head>
+  <body>
+    <p>这是我的页面</p>
+  </body>
+</html>
+
+```
+
+HTML 头部包含 HTML `<head>` 元素的内容，与 `<body>`元素内容不同，页面在浏览器加载后它的内容不会在浏览器中显示，它的作用是保存页面的一些**元数据**。
