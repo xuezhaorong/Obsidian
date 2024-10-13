@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/uni-app/HTML.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/uni-app/HTML.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/uni-app/HTML.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/uni-app/HTML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/uni-app/HTML.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/uni-app/HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,10 +191,11 @@
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
     "IOT/物联网/应用层/uni-app/微信小程序.md",
+    "IOT/物联网/应用层/uni-app/HTML.md",
+    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/物联网/应用层/uni-app",
     "IOT/Linux/Linux基础.md",
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "微信小程序/微信小程序.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
@@ -225,7 +226,6 @@
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
-    "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
     "lv_port_disp_template 1.h",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
