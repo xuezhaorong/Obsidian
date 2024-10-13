@@ -80,4 +80,25 @@
 
 ```
 
-HTML 头部包含 HTML `<head>` 元素的内容，与 `<body>`元素内容不同，页面在浏览器加载后它的内容不会在浏览器中显示，它的作用是保存页面的一些**元数据**。
+HTML 头部包含 HTML `<head>` 元素的内容，与 `<body>`元素内容不同，页面在浏览器加载后它的内容不会在浏览器中显示，它的作用是保存页面的一些**元数据**。元数据就是描述数据的数据，而 HTML 有一个“官方的”方式来为一个文档添加元数据——`<meta>` 元素。
+
+```html
+<meta charset="utf-8" />
+```
+这个元素简单的指定了文档的字符编码——在这个文档中被允许使用的字符集。
+
+
+```html
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing web sites and applications." />
+
+```
+
+许多 `<meta>` 元素包含了 `name` 和 `content` 属性：
+
+- `name` 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。
+- `content` 指定了实际的元数据内容。
