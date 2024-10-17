@@ -453,4 +453,47 @@ LIBS += /ust/TTSLib/build/libtts.so
 
 ## 串口编程
 
+
+## 数据库
+1. 打开数据库
+```cpp
+QSqlDatabase DB; // 数据库连接
+DB = QSqlDatabase::addDatabase("QSQLITE");  
+DB.setDatabaseName("myDataBase.db");  
+  
+if(!DB.open()){  
+   qDebug() << "Database error!!!";  
+   return;  
+}
+```
+注意：若显示`QSqlDatabase: QSQLITE driver not loaded`，需要将Qt路径下的`sqldrivers`移动到可执行文件目录下，注意路径。
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/17/23-42-54-80c6490e5bee6ab5e382e8341800939b-20241017234253-cd796d.png)
+
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/17/23-44-32-b78458e6915c186e5f5ad3cc83278d52-20241017234432-76456d.png)
+
+2. 打开数据表
+```cpp
+QSqlTableModel *tableModel; // 数据模型
+tableModel = new QSqlTableModel(this,DB);  
+tableModel->setTable("device");  
+tableModel->setSort(tableModel->fieldIndex("id"),Qt::AscendingOrder); // 设置排序  
+tableModel->setEditStrategy(QSqlTableModel::OnManualSubmit); // 设置编辑策略  
+if(!tableModel->select()){  
+  createTable();  
+  tableModel->select();  
+}
+```
+
+使用`QSqlQuery`执行sql指令创建表
+```cpp
+QSqlQuery sql_query;  
+QString create_sql = "create table device (id int primary key, address varchar(4))";  
+sql_query.prepare(create_sql);  
+if (!sql_query.exec()) {  
+  qDebug() << "Error: Fail to create table." << sql_query.lastError();  
+} else {  
+  qDebug() << "Table created!";  
+}
+
+```
 ## 常用控件
