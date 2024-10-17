@@ -429,6 +429,7 @@ void CapThread::run(){
 ```
 
 ## 音频输入输出
+**本地模型**
 以语言识别，文字转语言为例，了解qt的音频输入输出模块
 * 导入TTS,Asr工具包，下载链接：
 Asr：`https://www.123pan.com/s/zum7Vv-I78XH.html`
