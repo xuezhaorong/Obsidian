@@ -91,7 +91,7 @@ connect(ui->pushButton_return,&QPushButton::clicked,[=](){
 ```
 
 ## 文件操作
-	[[Qt#读写文件]]
+
 1. 添加注册按钮，实现点击注册，打开对应文件（没有则创建一个），写入注册信息（按符号分隔的账号和密码）。
 2. 首先需要读取文件，按行查找当前注册的信息是否注册过，避免重复注册，新增读取文件函数`bool openByIO_Lines(const QString &aFileName,QString mUsername,QString mPwd);`，参数为注册文件的路径，要注册的用户名和密码，使用`split`方法分割一行里面的账号和密码，因为密码后面跟着是`\n`换行符，所以在判断时要加一个`\n`换行符号。
 ```cpp
