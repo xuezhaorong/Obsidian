@@ -569,3 +569,193 @@ WHERE column LIKE '_XXXX_'
 |WHERE SALARY LIKE '_2%3'|查找第二位为 2，且以 3 结尾的任意值|
 |WHERE SALARY LIKE '2___3'|查找长度为 5 位数，且以 2 开头以 3 结尾的任意值|
 
+### Distinct 关键字
+SQLite 的 **DISTINCT** 关键字与 SELECT 语句一起使用，来消除所有重复的记录，并只获取唯一一次记录。
+
+有可能出现一种情况，在一个表中有多个重复的记录。当提取这样的记录时，DISTINCT 关键字就显得特别有意义，它只获取唯一一次记录，而不是获取重复记录。
+
+用于消除重复记录的 DISTINCT 关键字的基本语法如下：
+```sql
+SELECT DISTINCT column1, column2,.....columnN 
+FROM table_name
+WHERE [condition]
+
+```
+
+假设 COMPANY 表有以下记录：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+8           Paul        24          Houston     20000.0
+9           James       44          Norway      5000.0
+10          James       45          Texas       5000.0
+
+```
+
+首先，让我们来看看下面的 SELECT 查询，它将返回重复的工资记录：
+```sql
+SELECT name FROM COMPANY;
+```
+
+这将产生以下结果：
+```sql
+NAME
+----------
+Paul
+Allen
+Teddy
+Mark
+David
+Kim
+James
+Paul
+James
+James
+
+```
+
+现在，让我们在上述的 SELECT 查询中使用 **DISTINCT** 关键字：
+```sql
+SELECT DISTINCT name FROM COMPANY;
+```
+
+这将产生以下结果，没有任何重复的条目：
+```sql
+NAME
+----------
+Paul
+Allen
+Teddy
+Mark
+David
+Kim
+James
+
+```
+
+### Order By子句
+SQLite 的 **ORDER BY** 子句是用来基于一个或多个列按升序或降序顺序排列数据。
+
+ORDER BY 子句的基本语法如下：
+```sql
+SELECT column-list 
+FROM table_name 
+[WHERE condition] 
+[ORDER BY column1, column2, .. columnN] [ASC | DESC];
+
+```
+
+- **ASC** 默认值，从小到大，升序排列
+- **DESC** 从大到小，降序排列
+
+您可以在 ORDER BY 子句中使用多个列，确保您使用的排序列在列清单中：
+```sql
+SELECT
+   select_list
+FROM
+   table
+ORDER BY
+    column_1 ASC,
+    column_2 DESC;
+```
+
+column_1 与 column_2 如果后面不指定排序规则，默认为 ASC 升序，以上语句按 column_1 升序，column_2 降序读取，等价如下语句：
+```sql
+SELECT
+   select_list
+FROM
+   table
+ORDER BY
+    column_1,
+    column_2 DESC;
+```
+
+column_1 与 column_2 如果后面不指定排序规则，默认为 ASC 升序，以上语句按 column_1 升序，column_2 降序读取，等价如下语句：
+```sql
+SELECT
+   select_list
+FROM
+   table
+ORDER BY
+    column_1,
+    column_2 DESC;
+```
+
+假设 COMPANY 表有以下记录：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+
+```
+
+下面是一个实例，它会将结果按 SALARY 升序排序：
+```sql
+SELECT * FROM COMPANY ORDER BY SALARY ASC;
+```
+
+这将产生以下结果：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+7           James       24          Houston     10000.0
+2           Allen       25          Texas       15000.0
+1           Paul        32          California  20000.0
+3           Teddy       23          Norway      20000.0
+6           Kim         22          South-Hall  45000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+
+```
+
+下面是一个实例，它会将结果按 NAME 和 SALARY 升序排序：
+```sql
+SELECT * FROM COMPANY ORDER BY NAME, SALARY ASC;
+```
+
+这将产生以下结果：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+2           Allen       25          Texas       15000.0
+5           David       27          Texas       85000.0
+7           James       24          Houston     10000.0
+6           Kim         22          South-Hall  45000.0
+4           Mark        25          Rich-Mond   65000.0
+1           Paul        32          California  20000.0
+3           Teddy       23          Norway      20000.0
+
+```
+
+下面是一个实例，它会将结果按 NAME 降序排序：
+```sql
+SELECT * FROM COMPANY ORDER BY NAME DESC;
+```
+
+这将产生以下结果：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+3           Teddy       23          Norway      20000.0
+1           Paul        32          California  20000.0
+4           Mark        25          Rich-Mond   65000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+5           David       27          Texas       85000.0
+2           Allen       25          Texas       15000.0
+
+```
+
