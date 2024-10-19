@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md"
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/QtWidget.md",
+                "file": "IOT/物联网/应用层/数据库/Sqlite3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,13 +190,15 @@
   },
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/Qt/QtWidget.md",
+    "IOT/物联网/应用层/数据库/Sqlite3.md",
+    "IOT/物联网/应用层/数据库",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/应用层/uni-app/HTML.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/物联网/应用层/uni-app",
     "IOT/Linux/Linux基础.md",
@@ -225,8 +227,6 @@
     "未命名.canvas",
     "2024-09-12.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
-    "IOT/物联网/应用层/安卓/Bluetooth.md",
-    "lv_port_disp_template 1.h",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
