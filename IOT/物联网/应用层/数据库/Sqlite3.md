@@ -1006,3 +1006,102 @@ EMP_ID      NAME                  DEPT
 ```
 
 ### Join语句
+SQLite 的 **Join** 子句用于结合两个或多个数据库中表的记录。JOIN 是一种通过共同值来结合两个表中字段的手段。
+
+SQL 定义了三种主要类型的连接：
+- 交叉连接 - CROSS JOIN
+ 
+- 内连接 - INNER JOIN
+ 
+- 外连接 - OUTER JOIN
+
+在我们继续之前，让我们假设有两个表 COMPANY 和 DEPARTMENT。我们已经看到了用来填充 COMPANY 表的 INSERT 语句。现在让我们假设 COMPANY 表的记录列表如下：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+
+```
+
+另一个表是 DEPARTMENT，定义如下：
+```sql
+CREATE TABLE DEPARTMENT(
+   ID INT PRIMARY KEY      NOT NULL,
+   DEPT           CHAR(50) NOT NULL,
+   EMP_ID         INT      NOT NULL
+);
+
+```
+
+下面是填充 DEPARTMENT 表的 INSERT 语句：
+```sql
+INSERT INTO DEPARTMENT (ID, DEPT, EMP_ID)
+VALUES (1, 'IT Billing', 1 );
+
+INSERT INTO DEPARTMENT (ID, DEPT, EMP_ID)
+VALUES (2, 'Engineering', 2 );
+
+INSERT INTO DEPARTMENT (ID, DEPT, EMP_ID)
+VALUES (3, 'Finance', 7 );
+
+```
+
+最后，我们在 DEPARTMENT 表中有下列的记录列表：
+```sql
+ID          DEPT        EMP_ID
+----------  ----------  ----------
+1           IT Billing  1
+2           Engineerin  2
+3           Finance     7
+
+```
+
+*  **交叉连接 - CROSS JOIN**
+交叉连接（CROSS JOIN）把第一个表的每一行与第二个表的每一行进行匹配。如果两个输入表分别有 x 和 y 行，则结果表有 x\*y 行。由于交叉连接（CROSS JOIN）有可能产生非常大的表，使用时必须谨慎，只在适当的时候使用它们。
+> 交叉连接的操作，它们都返回被连接的两个表所有数据行的笛卡尔积，返回到的数据行数等于第一个表中符合查询条件的数据行数乘以第二个表中符合查询条件的数据行数。
+
+下面是交叉连接（CROSS JOIN）的语法：
+```sql
+SELECT ... FROM table1 CROSS JOIN table2 ...
+
+```
+
+基于上面的表，我们可以写一个交叉连接（CROSS JOIN），如下所示：
+```sql
+SELECT EMP_ID, NAME, DEPT FROM COMPANY CROSS JOIN DEPARTMENT;
+```
+
+上面的查询会产生以下结果：
+```sql
+EMP_ID      NAME        DEPT
+----------  ----------  ----------
+1           Paul        IT Billing
+2           Paul        Engineerin
+7           Paul        Finance
+1           Allen       IT Billing
+2           Allen       Engineerin
+7           Allen       Finance
+1           Teddy       IT Billing
+2           Teddy       Engineerin
+7           Teddy       Finance
+1           Mark        IT Billing
+2           Mark        Engineerin
+7           Mark        Finance
+1           David       IT Billing
+2           David       Engineerin
+7           David       Finance
+1           Kim         IT Billing
+2           Kim         Engineerin
+7           Kim         Finance
+1           James       IT Billing
+2           James       Engineerin
+7           James       Finance
+
+```
+
