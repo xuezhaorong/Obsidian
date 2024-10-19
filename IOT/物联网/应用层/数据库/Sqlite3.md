@@ -403,3 +403,14 @@ ID          NAME        AGE         ADDRESS     SALARY
 7           James       24          Houston     10000.0
 ```
 
+下面的 SELECT 语句列出了 NAME 以 'Ki' 开始的所有记录，'Ki' 之后的字符不做限制：
+```sql
+SELECT * FROM COMPANY WHERE NAME LIKE 'Ki%';
+```
+
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+6           Kim         22          South-Hall  45000.0
+```
+
