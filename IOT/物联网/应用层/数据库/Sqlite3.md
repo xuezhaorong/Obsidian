@@ -333,6 +333,10 @@ ID          NAME        AGE         ADDRESS     SALARY
 
 ## Sql子句
 ### Where子句
+
+#### 运算符
+
+
 SQLite的 **WHERE** 子句用于指定从一个表或多个表中获取数据的条件。
 
 如果满足给定的条件，即为真（true）时，则从表中返回特定的值。您可以使用 WHERE 子句来过滤记录，只获取需要的记录。
