@@ -1105,3 +1105,76 @@ EMP_ID      NAME        DEPT
 
 ```
 
+* 内连接 - INNER JOIN
+内连接（INNER JOIN）根据连接谓词结合两个表（table1 和 table2）的列值来创建一个新的结果表。查询会把 table1 中的每一行与 table2 中的每一行进行比较，找到所有满足连接谓词的行的匹配对。当满足连接谓词时，A 和 B 行的每个匹配对的列值会合并成一个结果行。
+
+内连接（INNER JOIN）是最常见的连接类型，是默认的连接类型。INNER 关键字是可选的。
+
+下面是内连接（INNER JOIN）的语法：
+```sql
+SELECT ... FROM table1 [INNER] JOIN table2 ON conditional_expression ...
+
+```
+为了避免冗余，并保持较短的措辞，可以使用 **USING** 表达式声明内连接（INNER JOIN）条件。这个表达式指定一个或多个列的列表：
+```sql
+SELECT ... FROM table1 JOIN table2 USING ( column1 ,... ) ...
+
+```
+
+自然连接（NATURAL JOIN）类似于 **JOIN...USING**，只是它会自动测试存在两个表中的每一列的值之间相等值：
+```sql
+SELECT ... FROM table1 NATURAL JOIN table2...
+```
+基于上面的表，我们可以写一个内连接（INNER JOIN），如下所示：
+```sql
+SELECT EMP_ID, NAME, DEPT FROM COMPANY INNER JOIN DEPARTMENT
+        ON COMPANY.ID = DEPARTMENT.EMP_ID;
+```
+
+上面的查询会产生以下结果：
+```sql
+EMP_ID      NAME        DEPT
+----------  ----------  ----------
+1           Paul        IT Billing
+2           Allen       Engineerin
+7           James       Finance
+```
+
+* 外连接 - OUTER JOIN
+外连接（OUTER JOIN）是内连接（INNER JOIN）的扩展。虽然 SQL 标准定义了三种类型的外连接：LEFT、RIGHT、FULL，但 SQLite 只支持 **左外连接（LEFT OUTER JOIN）**。
+
+外连接（OUTER JOIN）声明条件的方法与内连接（INNER JOIN）是相同的，使用 ON、USING 或 NATURAL 关键字来表达。最初的结果表以相同的方式进行计算。一旦主连接计算完成，外连接（OUTER JOIN）将从一个或两个表中任何未连接的行合并进来，外连接的列使用 NULL 值，将它们附加到结果表中。
+
+下面是左外连接（LEFT OUTER JOIN）的语法：
+```sql
+SELECT ... FROM table1 LEFT OUTER JOIN table2 ON conditional_expression ...
+
+```
+
+为了避免冗余，并保持较短的措辞，可以使用 **USING** 表达式声明外连接（OUTER JOIN）条件。这个表达式指定一个或多个列的列表：
+```sql
+SELECT ... FROM table1 LEFT OUTER JOIN table2 USING ( column1 ,... ) ...
+
+```
+
+基于上面的表，我们可以写一个外连接（OUTER JOIN），如下所示：
+```sql
+SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT
+        ON COMPANY.ID = DEPARTMENT.EMP_ID;
+```
+
+上面的查询会产生以下结果：
+```sql
+EMP_ID      NAME        DEPT
+----------  ----------  ----------
+1           Paul        IT Billing
+2           Allen       Engineerin
+            Teddy
+            Mark
+            David
+            Kim
+7           James       Finance
+
+```
+
+## 约束
