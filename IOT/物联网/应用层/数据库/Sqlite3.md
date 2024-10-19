@@ -332,3 +332,74 @@ ID          NAME        AGE         ADDRESS     SALARY
 
 
 ## Sql子句
+### Where子句
+SQLite的 **WHERE** 子句用于指定从一个表或多个表中获取数据的条件。
+
+如果满足给定的条件，即为真（true）时，则从表中返回特定的值。您可以使用 WHERE 子句来过滤记录，只获取需要的记录。
+
+WHERE 子句不仅可用在 SELECT 语句中，它也可用在 UPDATE、DELETE 语句中：
+SQLite 的带有 WHERE 子句的 SELECT 语句的基本语法如下：
+```sql
+SELECT column1, column2, columnN 
+FROM table_name
+WHERE [condition]
+
+```
+
+还可以使用[比较或逻辑运算符](https://www.runoob.com/sqlite/sqlite-operators.html)指定条件，比如 >、<、=、LIKE、NOT，等等。假设 COMPANY 表有以下记录：
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+
+```
+
+下面的实例演示了 SQLite 逻辑运算符的用法。下面的 SELECT 语句列出了 AGE 大于等于 25 **且**工资大于等于 65000.00 的所有记录：
+```sql
+SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
+```
+
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+```
+
+下面的 SELECT 语句列出了 AGE 大于等于 25 **或**工资大于等于 65000.00 的所有记录：
+```sql
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+```
+
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+```
+
+下面的 SELECT 语句列出了 AGE 不为 NULL 的所有记录，结果显示所有的记录，意味着没有一个记录的 AGE 等于 NULL：
+```sql
+SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+```
+
+```sql
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+```
+
