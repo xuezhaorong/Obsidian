@@ -428,30 +428,6 @@ void CapThread::run(){
 }
 ```
 
-## 音频输入输出
-**本地模型**
-以语言识别，文字转语言为例，了解qt的音频输入输出模块
-* 导入TTS,Asr工具包，下载链接：
-Asr：`https://www.123pan.com/s/zum7Vv-I78XH.html`
-TTS：`https://www.123pan.com/s/zum7Vv-M78XH.html`
-需要将动态库加入到系统库中[[交叉编译#手动链接库到系统库]]
-在Qt中导入动态库
-```bash
-INCLUDEPATH += /usr/AsrLib/include \
-/usr/AsrLib/src \
-/usr/AsrLib/src/util \
-/usr/AsrLib/eigen-3.4.0
-
-INCLUDEPATH += /usr/TTSLib/eigen-3.4.0 \
-/usr/TTSLib/src/tn/header \
-/usr/TTSLib/include \
-/usr/TTSLib/src/header
-
-LIBS += /usr/AsrLib/build/libasr.so
-LIBS += /ust/TTSLib/build/libtts.so
-
-```
-
 ## 坐标映射
 
 
