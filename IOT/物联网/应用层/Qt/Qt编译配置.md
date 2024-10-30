@@ -303,3 +303,8 @@ LIBS += /usr/opencv_arm/lib/libopencv_highgui.so \
 #include <opencv2/videoio.hpp>
 #include <opencv2/opencv.hpp>
 ```
+
+
+## Qt分模块编译
+以DiagramModel模块为例
+* Clion
