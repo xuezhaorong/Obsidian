@@ -452,6 +452,7 @@ if(!DB.open()){
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/17/23-44-32-b78458e6915c186e5f5ad3cc83278d52-20241017234432-76456d.png)
 
 2. 打开数据表
+用此方法可以快速检测对应数据表是否存在
 ```cpp
 QSqlTableModel *tableModel; // 数据模型
 tableModel = new QSqlTableModel(this,DB);  
