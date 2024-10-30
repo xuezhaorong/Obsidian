@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/交叉编译.md"
+                "file": "IOT/Linux/编译.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/Linux/编译.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/交叉编译.md"
+                "file": "IOT/Linux/编译.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/Linux/编译.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/交叉编译.md"
+                "file": "IOT/Linux/编译.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/Linux/交叉编译.md",
+                "file": "IOT/Linux/编译.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,8 +188,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a0820ef39d5fbeb3",
+  "active": "96b0a9eee13e568c",
   "lastOpenFiles": [
+    "IOT/Linux/Linux基础.md",
+    "IOT/Linux/编译.md",
     "IOT/物联网/应用层/Qt/Qt交叉编译配置.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
@@ -198,7 +200,6 @@
     "IOT/Linux/WSL安装配置.md",
     "IOT/物联网/应用层/lvgl/LVGL.md",
     "IOT/物联网/应用层/数据库/Sqlite3.md",
-    "IOT/Linux/交叉编译.md",
     "IOT/物联网/应用层/数据库",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
@@ -206,7 +207,6 @@
     "IOT/物联网/应用层/uni-app/HTML.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/应用层/uni-app",
-    "IOT/Linux/Linux基础.md",
     "IOT/物联网/应用层/Qt/Qt.md",
     "微信小程序/微信小程序.md",
     "微信小程序",
