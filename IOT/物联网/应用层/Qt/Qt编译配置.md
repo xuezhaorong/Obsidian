@@ -306,8 +306,9 @@ LIBS += /usr/opencv_arm/lib/libopencv_highgui.so \
 
 
 ## Qt分模块编译
-以DiagramModel模块为例
+
 * Clion
+以DiagramModel模块为例
 1. 新建`DiagramModel`目录，在里面新建`include`,`src`目录和`CMakeLists`文件，并移入`.cpp`和`.h`
 ![image.png|490](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/13-55-44-0e5d87f6210f664ab036a3283f62d91f-20241030135543-2c2943.png)
 
@@ -369,3 +370,19 @@ target_link_libraries(Project
         diagramModel  
 )
 ```
+
+* QtCreate
+以DataBaseModel为例
+1. 在项目目录下新建`DataBaseModel`目录，新建`DataBaseModel.pri`文件
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-30-06-c1c603c296c25d5159860764a0f44eda-20241030143005-e4008b.png)
+
+2. 在顶层`.pro`文件添加
+![image.png|400](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-31-59-48310fc91b61ae85cae8e831ada9e3aa-20241030143158-785e2f.png)
+
+```cpp
+INCLUDEPATH += $$PWD/DataBaseModel
+include($$PWD/DataBaseModel/DataBaseModel.pri)
+```
+
+3. 编译后，出现在项目文件栏中，可以添加类等文件
+![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-33-14-dca3cb4504d8490507314c7e4def564b-20241030143313-c9e125.png)
