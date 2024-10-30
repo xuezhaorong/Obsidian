@@ -308,3 +308,64 @@ LIBS += /usr/opencv_arm/lib/libopencv_highgui.so \
 ## Qt分模块编译
 以DiagramModel模块为例
 * Clion
+1. 新建`DiagramModel`目录，在里面新建`include`,`src`目录和`CMakeLists`文件，并移入`.cpp`和`.h`
+![image.png|490](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/13-55-44-0e5d87f6210f664ab036a3283f62d91f-20241030135543-2c2943.png)
+
+2. 编写`CMakeLists`文件
+```cmake
+cmake_minimum_required(VERSION 3.26)  
+project(DiagramModel)  
+  
+set(CMAKE_CXX_STANDARD 17)  
+set(CMAKE_AUTOMOC ON)  
+set(CMAKE_AUTORCC ON)  
+set(CMAKE_AUTOUIC ON)  
+  
+add_library(diagramModel STATIC ${SOURCE_FILES} )  
+  
+  
+find_package(Qt5 COMPONENTS  
+        Core  
+        Gui  
+        Widgets  
+        Sql  
+        REQUIRED)  
+        
+# 对外部的头文件
+target_include_directories(diagramModel  
+        PUBLIC  
+        ${CMAKE_CURRENT_SOURCE_DIR}/include  
+)  
+  
+# 源文件  
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)  
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)  
+  
+# 添加源文件  
+target_sources(diagramModel PRIVATE ${SOURCE_FILES} ${HEADER_FILES})  
+  
+  
+target_link_libraries(diagramModel  
+        Qt5::Core  
+        Qt5::Gui  
+        Qt5::Widgets  
+        Qt5::Sql  
+)
+```
+
+3. 编写顶层`CMakeLists`
+添加模块库的路径
+```cmake
+add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
+```
+
+链接模块
+```cmake
+target_link_libraries(Project  
+        Qt5::Core  
+        Qt5::Gui  
+        Qt5::Widgets  
+        Qt5::Sql  
+        diagramModel  
+)
+```
