@@ -357,8 +357,20 @@ target_link_libraries(diagramModel
 3. 编写顶层`CMakeLists`
 添加模块库的路径
 ```cmake
-add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
 include_directories(${PROJECT_SOURCE_DIR}/DiagramModel/include)
+add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
+
+```
+
+如果要添加多个模块，需要先导入头文件路径，再假如库路径
+如：
+```cmake
+include_directories(${PROJECT_SOURCE_DIR}/DataBaseModel/include)  
+include_directories(${PROJECT_SOURCE_DIR}/DiagramModel/include)  
+  
+  
+add_subdirectory(${PROJECT_SOURCE_DIR}/DataBaseModel)  
+add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
 ```
 
 链接模块
