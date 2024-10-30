@@ -358,6 +358,7 @@ target_link_libraries(diagramModel
 添加模块库的路径
 ```cmake
 add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
+include_directories(${PROJECT_SOURCE_DIR}/DiagramModel/include)
 ```
 
 链接模块
