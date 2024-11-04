@@ -1,22 +1,3 @@
-## 下载源码
-> opencv github网址：[opencv/opencv: Open Source Computer Vision Library (github.com)](https://github.com/opencv/opencv)
-可以选择对应版本
-![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/13-13-02-dd388a2782a7af3c58fd4ffcc93f90df-20240803131301-495b0d.png)
-
-克隆opencv项目
-```bash
-git clone https://github.com/opencv/opencv.git
-```
-
-切换到opencv目录中，创建并切换到build目录
-```bash
-cd opencv
-mkdir build
-cd build
-```
-
-![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/13-17-56-3286f0b7bdeef5af91c925be5f5020d0-20240803131756-c9057b.png)
-
 ## 编译前准备
 * 下载编译工具
 ```bash
@@ -109,6 +90,24 @@ cmake ../ -D CMAKE_INSTALL_PREFIX=./install ..
 make -j2
 make install
 ```
+## 下载源码
+> opencv github网址：[opencv/opencv: Open Source Computer Vision Library (github.com)](https://github.com/opencv/opencv)
+可以选择对应版本
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/2024/11/04/15-36-46-dd388a2782a7af3c58fd4ffcc93f90df-13-13-02-dd388a2782a7af3c58fd4ffcc93f90df-20240803131301-495b0d-5285ca.png)
+
+克隆opencv项目
+```bash
+git clone https://github.com/opencv/opencv.git
+```
+
+切换到opencv目录中，创建并切换到build目录
+```bash
+cd opencv
+mkdir build
+cd build
+```
+
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/08/03/2024/11/04/15-36-46-3286f0b7bdeef5af91c925be5f5020d0-13-17-56-3286f0b7bdeef5af91c925be5f5020d0-20240803131756-c9057b-88cfe3.png)
 
 ## 编译opencv
 切换到opencv目录，新建并切换build目录
