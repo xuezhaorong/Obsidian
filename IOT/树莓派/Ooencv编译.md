@@ -12,7 +12,7 @@ wget http://www.ffmpeg.org/releases/ffmpeg-3.4.8.tar.gz
 tar -zxvf ffmpeg-3.4.8.tar.gz
 ```
 在编译ffmpeg之前需要安装**yasm**汇编编译器
-在http://www.tortall.net/projects/yasm/releases下面找到适合自己平台的yasm版本。然后进行安装。
+在http://www.tortall.net/projects/yasm/releases 下面找到适合自己平台的yasm版本。然后进行安装。
 ```bash
 wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
 tar -zxvf yasm-1.3.0.tar.gz 
