@@ -22,7 +22,7 @@ cd yasm-1.3.0
 ```bash
 ./configure
 make -j2 
-make install
+sudo make install
 ```
 安装yasm后返回 ffmpeg文件夹下执行编译安装，--prefix为安装目录，需要提前创建
 ```bash
