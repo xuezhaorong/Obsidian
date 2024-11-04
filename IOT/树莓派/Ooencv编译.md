@@ -32,7 +32,7 @@ cd ffmpeg-3.4.8/
 编译，安装
 ```bash
 make -j2
-make install
+sudo make install
 ```
 查看版本
 ```bash
