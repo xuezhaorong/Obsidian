@@ -83,7 +83,7 @@ git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
 cd libjpeg-turbo
 mkdir build
 cd build
-cmake ../ -D CMAKE_INSTALL_PREFIX=./install ..
+cmake ../ -D CMAKE_INSTALL_PREFIX=/usr/libjpeg
 ```
 编译，安装
 ```bash
