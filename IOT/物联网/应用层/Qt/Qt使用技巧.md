@@ -35,3 +35,5 @@ pad-oper                 # 在运算符周围插入空格填充
 pad-comma                # 在逗号后插入空格填充
 ```
 
+注意：Window操作系统需要选择`astyle`的路径
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/05/09-49-57-845ce3e253ba0641d536aa73117e374b-20241105094956-a925a9.png)
