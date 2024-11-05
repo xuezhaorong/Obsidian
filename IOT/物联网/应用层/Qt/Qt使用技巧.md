@@ -15,7 +15,7 @@ cmake  ../
 make
 make install 
 ```
-
+注意：如果是Window操作系统直接下载可执行包
 4. 配置美化器
 ![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/31/12-45-39-943d092201c4851f05811dbe9bd0574e-20241031124538-b73a5d.png)
 
