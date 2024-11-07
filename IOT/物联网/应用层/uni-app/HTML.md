@@ -172,5 +172,15 @@ started with developing web sites and applications." />
 </ol>
 ```
 
-### 重点强调
 ### 强调
+* `<em>`表示斜体
+* `<strong>`表示粗体
+
+
+```html
+<p>我很<em>庆幸</em>你没有<em>迟到</em>。</p> 
+<p>这杯液体<strong>毒性很大</strong>。</p>
+
+<p>就指望你了，千万<strong>不要</strong>迟到！</p>
+
+```
