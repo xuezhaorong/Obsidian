@@ -231,3 +231,11 @@ shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
 
 ```
+
+### 获得数组长度
+可以通过使用 `length` 属性获取数组的长度（数组中有多少项元素），这与查找字符串的长度（以字符为单位）完全相同。
+```js
+sequence.length;
+// should return 7
+
+```
