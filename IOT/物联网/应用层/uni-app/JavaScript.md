@@ -195,3 +195,23 @@ console.log(greeting + "，" + name); // "你好，克里斯"
 ```
 
 ### 数字与字符串
+如果你有一个数字变量，你想将其转换为字符串，或者你想将一个字符串变量转换为数字，你可以使用以下两个结构：
+* 如果可以的话，`Number()` 函数会将其参数转换为数字。
+```js
+const myString = "123";
+const myNum = Number(myString);
+console.log(typeof myNum);
+// number
+
+```
+
+* 相反，`String()` 函数将其参数转换为字符串。
+```js
+const myNum2 = 123;
+const myString2 = String(myNum2);
+console.log(typeof myString2);
+// string
+
+```
+
+## 数组
