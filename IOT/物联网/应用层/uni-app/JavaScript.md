@@ -38,3 +38,69 @@ let myName = "Chris";
 
 ```
 
+### 变量类型
+* Number
+可以在变量中存储数字，不论这些数字是像 30（也叫整数）这样，或者像 2.456 这样的小数（也叫做浮点数）。
+```js
+let myAge = 17;
+
+```
+
+* String
+字符串是文本的一部分。当你给一个变量赋值为字符串时，你需要用单引号或者双引号把值给包起来，否则 JavaScript 将会把这个字符串值理解成别的变量名。
+```js
+let dolphinGoodbye = "So long and thanks for all the fish";
+
+```
+
+* Boolean
+Boolean 的值有 2 种：true 或 false。它们通常被用于在适当的代码之后，测试条件是否成立。
+```js
+let iAmAlive = true;
+
+```
+
+然而实际上通常是以下用法：
+```js
+let test = 6 < 3;
+
+```
+
+* Array
+数组是一个单个对象，其中包含很多值，方括号括起来，并用逗号分隔。
+```js
+let myNameArray = ["Chris", "Bob", "Jim"];
+let myNumberArray = [10, 15, 40];
+
+```
+
+当数组被定义后，你可以使用如下所示的语法来访问各自的值，
+```js
+myNameArray[0]; // should return 'Chris'
+myNumberArray[2]; // should return 40
+
+```
+
+* Object
+```js
+let dog = { name: "Spot", breed: "Dalmatian" };
+
+```
+
+### 动态类型
+JavaScript 是一种“动态类型语言”，这意味着不同于其他一些语言 (译者注：如 C、JAVA)，你不需要指定变量将包含什么数据类型（例如 number 或 string）
+
+例如，如果你声明一个变量并给它一个带引号的值，浏览器就会知道它是一个字符串：
+```js
+let myString = "Hello";
+
+```
+
+即使它包含数字，但它仍然是一个字符串
+```js
+let myNumber = "500"; // oops, this is still a string
+typeof myNumber;
+myNumber = 500; // much better — now this is a number
+typeof myNumber;
+
+```
