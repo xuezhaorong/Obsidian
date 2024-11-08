@@ -291,3 +291,89 @@ switch (expression) {
 }
 
 ```
+
+* 三元运算符
+```js
+const greeting = isBirthday
+  ? "小王生日快乐，祝你有个美好的一天！"
+  : "小王早上好。";
+
+```
+
+### 循环
+* for
+```js
+var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+var info = "My cats are called ";
+var para = document.querySelector("p");
+
+for (var i = 0; i < cats.length; i++) {
+  info += cats[i] + ", ";
+}
+
+para.textContent = info;
+
+```
+
+* while
+```js
+var i = 0;
+
+while (i < cats.length) {
+  if (i === cats.length - 1) {
+    info += "and " + cats[i] + ".";
+  } else {
+    info += cats[i] + ", ";
+  }
+
+  i++;
+}
+
+```
+
+## 函数
+在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。 
+
+```js
+function myFunction() {
+  alert("你好");
+}
+
+myFunction();
+// 调用一次该函数
+
+```
+
+### 匿名函数
+```js
+textBox.addEventListener("keydown", function (event) {
+  console.log(`You pressed "${event.key}".`);
+});
+
+```
+
+如果你传递这样一个匿名函数，你可以使用另一种形式，即**箭头函数**。你可以用 `(event) =>` 来代替 `function(event)`：
+```js
+textBox.addEventListener("keydown", (event) => {
+  console.log(`You pressed "${event.key}".`);
+});
+
+```
+
+如果函数只接受一个参数，可以省略参数周围的括号
+```js
+textBox.addEventListener("keydown", event => {
+  console.log(`You pressed "${event.key}".`);
+});
+
+```
+
+如果函数只包含一行 `return` 语句，也可以省略圆括号和 `return` 关键字，隐式地返回表达式。
+```js
+const originals = [1, 2, 3];
+
+const doubled = originals.map(item => item * 2);
+
+console.log(doubled); // [2, 4, 6]
+
+```
