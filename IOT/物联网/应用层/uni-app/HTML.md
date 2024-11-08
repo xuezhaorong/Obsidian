@@ -279,8 +279,77 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 为了实现语义化标记，HTML 提供了明确这些区段的专用标签，例如：
 
-- [`<header>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header)：页眉。
-- [`<nav>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav)：导航栏。
-- [`<main>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main)：主内容。主内容中还可以有各种子内容区段，可用[`<article>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article)、[`<section>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 和 [`<div>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 等元素表示。
-- [`<aside>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside)：侧边栏，经常嵌套在 [`<main>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 中。
-- [`<footer>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer)：页脚。
+- `<header>`：页眉。
+- `<nav>`：导航栏。
+- `<main>`：主内容。主内容中还可以有各种子内容区段，可用`<article>`、`<section>` 和 `<div>` 等元素表示。
+- `<aside>`：侧边栏，经常嵌套在 `<main>`中。
+- `<footer>`：页脚。
+
+```HTML
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>二次元俱乐部</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe"
+      rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <!-- 本站所有网页的统一主标题 -->
+      <h1>聆听电子天籁之音</h1>
+    </header>
+
+    <nav>
+      <!-- 本站统一的导航栏 -->
+      <ul>
+        <li><a href="#">主页</a></li>
+        <!-- 共 n 个导航栏项目，省略…… -->
+      </ul>
+
+      <form>
+        <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+        <input type="search" name="q" placeholder="要搜索的内容" />
+        <input type="submit" value="搜索" />
+      </form>
+    </nav>
+
+    <main>
+      <!-- 网页主体内容 -->
+      <article>
+        <!-- 此处包含一个 article（一篇文章），内容略…… -->
+      </article>
+
+      <aside>
+        <!-- 侧边栏在主内容右侧 -->
+        <h2>相关链接</h2>
+        <ul>
+          <li><a href="#">这是一个超链接</a></li>
+          <!-- 侧边栏有 n 个超链接，略略略…… -->
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <!-- 本站所有网页的统一页脚 -->
+      <p>© 2050 某某保留所有权利</p>
+    </footer>
+  </body>
+</html>
+
+```
+
+### HTML 布局元素细节
+- [`<main>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 [`<body>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 中。最好不要把它嵌套进其他元素。
+- [`<article>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article) 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
+- [`<section>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
+- [`<aside>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside) 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
+- [`<header>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header) 是简介形式的内容。如果它是 [`<body>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 的子元素，那么就是网站的全局页眉。如果它是 [`<article>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article) 或[`<section>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#%e5%a2%9e%e5%8a%a0%e4%b8%80%e4%b8%aa%e6%a0%87%e9%a2%98)）。
+- [`<nav>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav) 包含页面主导航功能。其中不应包含二级链接等内容。
+- [`<footer>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer) 包含了页面的页脚部分。
