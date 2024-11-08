@@ -209,3 +209,26 @@ started with developing web sites and applications." />
 
 ```
 
+#### 图片链接
+如果有需要作为链接的图片，使用 `<a>` 元素来包裹要引用图片的 `<img>`元素。下面的示例使用相对路径来引用本地存储的 SVG 图像文件。
+```html
+<a href="https://developer.mozilla.org/zh-CN/">
+  <img src="mdn_logo.svg" alt="MDN Web 文档" />
+</a>
+
+```
+
+#### 使用 title 属性添加支持信息
+你可能要添加到你的链接的另一个属性是 `title`。这旨在包含关于链接的补充信息，例如页面包含什么样的信息或需要注意的事情。
+```html
+<p>
+  我创建了一个指向
+  <a
+    href="https://www.mozilla.org/zh-CN/"
+    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">
+    Mozilla 主页</a
+  >的超链接。
+</p>
+
+```
+当鼠标指针悬停在链接上时，标题将作为提示信息出现）
