@@ -257,3 +257,37 @@ myArray;
 removedItem;
 
 ```
+
+## 语句
+
+### 条件语句
+* if else
+
+```js
+if (condition) {
+  /* 条件为真时运行的代码 */
+} else {
+  /* 否则，运行其他的代码 */
+}
+
+```
+
+* switch
+```js
+switch (expression) {
+  case choice1:
+    // 运行这段代码
+    break;
+
+  case choice2:
+    // 否则，运行这段代码
+    break;
+
+  // 包含尽可能多的情况
+
+  default:
+    // 此外，仅运行这段代码
+    break;
+}
+
+```
