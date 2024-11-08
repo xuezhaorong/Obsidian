@@ -215,3 +215,11 @@ console.log(typeof myString2);
 ```
 
 ## 数组
+### 创建数组
+数组由方括号构成，其中包含用逗号分隔的元素列表。
+```js
+let sequence = [1, 1, 2, 3, 5, 8, 13];
+let random = ["tree", 795, [0, 1, 2]];
+
+```
+
