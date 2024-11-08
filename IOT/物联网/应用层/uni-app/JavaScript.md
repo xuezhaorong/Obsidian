@@ -239,3 +239,21 @@ sequence.length;
 // should return 7
 
 ```
+
+### 添加和删除数组项
+要在数组末尾添加或删除一个项目，我们可以使用 `push()` 和 `pop()`。
+```js
+myArray.push("Cardiff");
+myArray;
+myArray.push("Bradford", "Brighton");
+myArray;
+
+```
+
+从数组中删除最后一个元素的话直接使用 `pop()` 就可以。例如：
+```js
+let removedItem = myArray.pop();
+myArray;
+removedItem;
+
+```
