@@ -223,3 +223,11 @@ let random = ["tree", 795, [0, 1, 2]];
 
 ```
 
+### 访问和修改数组元素
+可以使用括号表示法访问数组中的元素
+```js
+shopping[0] = "tahini";
+shopping;
+// shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+
+```
