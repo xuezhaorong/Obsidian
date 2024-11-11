@@ -60,9 +60,9 @@ qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 		6. -skip: 表示不安装的qt工具包
 		7. -xplatform 表示使用源码路径qtbase\mkspecs\linux-aarch64-gnu-g++文件夹内的配置，编译时会自动去该路径下找到配置文件进行编译
 	
-* 等待配置完成，中途要选择y接受授权，没有**Error**可以开始编译，-j40可以根据电脑配置调整对应的线程数量
+* 等待配置完成，中途要选择y接受授权，没有**Error**可以开始编译，-j4可以根据电脑配置调整对应的线程数量
 ```bash
-mingw32-make -j40
+mingw32-make -j4
 ```
 
 * 编译完成后，没有Error，可以进行安装
