@@ -23,8 +23,8 @@
 * 下载完成后，在对应版本的目录下可以看到，进入Src源码文件进行修改
 	![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/08-57-25-d17822f2ed8f8da0234fa73159a0feb4-20240725085725-34333c.png)
 
-	1. 删除**qtquick3d**目录
-	2. 对以下3个目录中的文件进行修改，添加头文件
+1. 删除**qtquick3d**目录
+2. 对以下3个目录中的文件进行修改，添加头文件
 ```c++
 #include <stdexcept>
 #include <limits>
