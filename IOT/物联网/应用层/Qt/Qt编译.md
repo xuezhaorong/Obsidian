@@ -1,4 +1,5 @@
-## window-aarch64
+> 介绍如何在window和树莓派中编译qt源码
+## window编译
 [[编译#交叉编译介绍]]选择：**gcc-arm-mingw-w64-i686-aarch64-none-linux-gnu**交叉编译工具
 > 交叉编译工具包链接：https://www.123pan.com/s/zum7Vv-6PCXH.html
 ### Window配置
