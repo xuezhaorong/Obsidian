@@ -141,7 +141,7 @@ tar xvf qt-everywhere-src-5.15.2.tar.xz
 ### 安装依赖和交叉编译工具
 ```bash
 sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev libxkbcommon-x11-dev libfontconfig1-dev python3 python-is-python3 libxcb-xfixes0-dev libxcb-util-dev
-sudo apt install g++-aarch64-linux-gun
+sudo apt install g++-aarch64-linux-gnu
 ```
 ### 文件修改与编译
 与[[Qt编译#文件修改]]类型，配置编译命令为
