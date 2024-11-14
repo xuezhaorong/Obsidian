@@ -165,7 +165,7 @@ cd build
 #### 编译前准备
 * 下载编译工具
 ```bash
-sudo apt install build-essential g++-aarch64-linux-gnu make
+sudo apt install build-essential g++-aarch64-linux-gnu make g++
 ```
 ##### 安装**ffmpeg**
 使用opencv相关读图/视频等相关功能，需安装ffmpeg
