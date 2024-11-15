@@ -6,7 +6,7 @@
       {
         "id": "f8ec5286201da21b",
         "type": "tabs",
-        "dimension": 88.3855981416957,
+        "dimension": 88.26945412311265,
         "children": [
           {
             "id": "bdaa4511f47ced7d",
@@ -36,7 +36,7 @@
       {
         "id": "91ae393827fd9820",
         "type": "tabs",
-        "dimension": 11.614401858304298,
+        "dimension": 11.730545876887339,
         "children": [
           {
             "id": "d65986d5cad0213c",
@@ -190,23 +190,24 @@
   },
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
-    "IOT/Linux/WSL2连接USB存储设备.md",
-    "IOT/树莓派/制作树莓派最小系统镜像.md",
-    "IOT/Linux/WSL安装配置.md",
+    "IOT/树莓派/NSS编译.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
+    "IOT/树莓派/安装qt5.md",
+    "IOT/树莓派/换源.md",
+    "IOT/树莓派/制作树莓派最小系统镜像.md",
+    "IOT/树莓派/Opencv编译.md",
+    "IOT/树莓派/frp远程连接.md",
+    "IOT/Linux/WSL2连接USB存储设备.md",
+    "IOT/Linux/WSL安装配置.md",
     "IOT/树莓派/制作最小镜像.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/编译.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
-    "IOT/树莓派/Opencv编译.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/树莓派/安装qt5.md",
-    "IOT/树莓派/换源.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
     "IOT/物联网/应用层/uni-app/HTML.md",
-    "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/PyCham专业版远程开发.md",
     "().md",
     "IOT/Linux/Linux基础.md",
@@ -218,7 +219,6 @@
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/应用层/uni-app",
-    "IOT/物联网/应用层/Qt/Qt.md",
     "微信小程序",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
