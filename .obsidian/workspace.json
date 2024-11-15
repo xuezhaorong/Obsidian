@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md"
               }
             }
           },
@@ -24,8 +24,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
-                "mode": "preview",
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
+                "file": "IOT/树莓派/制作树莓派最小系统镜像.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,11 +190,14 @@
   },
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
+    "IOT/Linux/WSL2连接USB存储设备.md",
+    "IOT/树莓派/制作树莓派最小系统镜像.md",
+    "IOT/Linux/WSL安装配置.md",
+    "IOT/物联网/应用层/Qt/Qt编译.md",
+    "IOT/树莓派/制作最小镜像.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/编译.md",
-    "IOT/Linux/WSL安装配置.md",
-    "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/树莓派/Opencv编译.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
@@ -216,10 +219,8 @@
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/应用层/uni-app",
     "IOT/物联网/应用层/Qt/Qt.md",
-    "微信小程序/微信小程序.md",
     "微信小程序",
     "C语言/C++ Primer Plus：中文版（第六版） (Stephen Prata) (Z-Library).pdf",
-    "C语言/C.md",
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
