@@ -91,6 +91,11 @@ make -j1 BUILD_OPT=1                  \
   $([ -f /usr/include/sqlite3.h ] && echo NSS_USE_SYSTEM_SQLITE=1)
 ```
 
+可能会提示找不到`zlib.h`，需要安装zlib库
+```bash
+sudo apt-get install zlib1g-dev
+```
+ 
 编译成功后，切换到`dist`目录下
 ```bash
 cd ../dist
