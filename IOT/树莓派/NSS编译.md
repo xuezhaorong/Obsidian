@@ -78,6 +78,7 @@ sudo vim /usr/include/nspr/prtypes.h
 patch -Np1 -i ../nss-3.50-standalone-1.patch
 ```
 没有出现错误，代表成功
+![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/16/14-30-20-e20d3134672cd82ef4c993fd859d90d3-20241116143018-8dbfd8.png)
 
 输入编译命令：
 ```bash
