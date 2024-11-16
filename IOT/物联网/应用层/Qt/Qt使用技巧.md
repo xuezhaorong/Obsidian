@@ -37,3 +37,98 @@ pad-comma                # 在逗号后插入空格填充
 
 注意：Window操作系统需要选择`astyle`的路径
 ![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/05/09-49-57-845ce3e253ba0641d536aa73117e374b-20241105094956-a925a9.png)
+
+## Qt分模块编译
+
+* Clion
+以DiagramModel模块为例
+1. 新建`DiagramModel`目录，在里面新建`include`,`src`目录和`CMakeLists`文件，并移入`.cpp`和`.h`
+![image.png|490](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/13-55-44-0e5d87f6210f664ab036a3283f62d91f-20241030135543-2c2943.png)
+
+2. 编写`CMakeLists`文件
+```cmake
+cmake_minimum_required(VERSION 3.26)  
+project(DiagramModel)  
+  
+set(CMAKE_CXX_STANDARD 17)  
+set(CMAKE_AUTOMOC ON)  
+set(CMAKE_AUTORCC ON)  
+set(CMAKE_AUTOUIC ON)  
+  
+add_library(diagramModel STATIC ${SOURCE_FILES} )  
+  
+  
+find_package(Qt5 COMPONENTS  
+        Core  
+        Gui  
+        Widgets  
+        Sql  
+        REQUIRED)  
+        
+# 对外部的头文件
+target_include_directories(diagramModel  
+        PUBLIC  
+        ${CMAKE_CURRENT_SOURCE_DIR}/include  
+)  
+  
+# 源文件  
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)  
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)  
+  
+# 添加源文件  
+target_sources(diagramModel PRIVATE ${SOURCE_FILES} ${HEADER_FILES})  
+  
+  
+target_link_libraries(diagramModel  
+        Qt5::Core  
+        Qt5::Gui  
+        Qt5::Widgets  
+        Qt5::Sql  
+)
+```
+
+3. 编写顶层`CMakeLists`
+添加模块库的路径
+```cmake
+include_directories(${PROJECT_SOURCE_DIR}/DiagramModel/include)
+add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
+
+```
+
+如果要添加多个模块，需要先导入头文件路径，再假如库路径
+如：
+```cmake
+include_directories(${PROJECT_SOURCE_DIR}/DataBaseModel/include)  
+include_directories(${PROJECT_SOURCE_DIR}/DiagramModel/include)  
+  
+  
+add_subdirectory(${PROJECT_SOURCE_DIR}/DataBaseModel)  
+add_subdirectory(${PROJECT_SOURCE_DIR}/DiagramModel)
+```
+
+链接模块
+```cmake
+target_link_libraries(Project  
+        Qt5::Core  
+        Qt5::Gui  
+        Qt5::Widgets  
+        Qt5::Sql  
+        diagramModel  
+)
+```
+
+* QtCreate
+以DataBaseModel为例
+1. 在项目目录下新建`DataBaseModel`目录，新建`DataBaseModel.pri`文件
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-30-06-c1c603c296c25d5159860764a0f44eda-20241030143005-e4008b.png)
+
+2. 在顶层`.pro`文件添加
+![image.png|400](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-31-59-48310fc91b61ae85cae8e831ada9e3aa-20241030143158-785e2f.png)
+
+```cpp
+INCLUDEPATH += $$PWD/DataBaseModel
+include($$PWD/DataBaseModel/DataBaseModel.pri)
+```
+
+3. 编译后，出现在项目文件栏中，可以添加类等文件
+![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/14-33-14-dca3cb4504d8490507314c7e4def564b-20241030143313-c9e125.png)
