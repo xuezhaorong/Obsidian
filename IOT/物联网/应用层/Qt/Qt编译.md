@@ -35,7 +35,7 @@
 qtbase/src/corelib/global/qendian.h 
 qtbase/src/corelib/text/qbytearraymatcher.h 
 qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
-```
+cd```
 3. 在 `qtbase/src/corelib/global/qglobal.h`的`__cplusplus`中添加`#include <limits>`
 4. 在`D:\Qt\5.15.2\Src\qtbase\mkspecs\linux-aarch64-gnu-g++`下，修改`qmake.config`
 	![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/09-40-51-120c8452270ee0d1fa7c9d0f72f256eb-20240725094050-86d160.png)
