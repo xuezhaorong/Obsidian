@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md"
+                "file": "IOT/树莓派/Dbus编译.md"
               }
             }
           },
@@ -24,8 +24,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md",
-                "mode": "preview",
+                "file": "IOT/树莓派/Dbus编译.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md"
+                "file": "IOT/树莓派/Dbus编译.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md",
+                "file": "IOT/树莓派/Dbus编译.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md"
+                "file": "IOT/树莓派/Dbus编译.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/NSS编译.md",
+                "file": "IOT/树莓派/Dbus编译.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,11 +190,11 @@
   },
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
+    "IOT/树莓派/NSS编译.md",
+    "IOT/树莓派/Dbus编译.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/换源.md",
     "IOT/树莓派/开启ssh.md",
-    "IOT/树莓派/Dbus编译.md",
-    "IOT/树莓派/NSS编译.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/Linux/WSL2连接USB存储设备.md",
     "IOT/Linux/WSL安装配置.md",
