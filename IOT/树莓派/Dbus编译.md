@@ -71,4 +71,8 @@ sudo mv -v /usr/lib/libdbus-1.so.* /lib &&
 sudo ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so
 ```
 
+退出虚拟环境：
+```bash
+deactivate
+```
 完成
