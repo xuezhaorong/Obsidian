@@ -38,3 +38,37 @@ source ~/venv/bin/activate
 pip install docwriter
 ```
 
+
+## 安装Dbus
+下载Dbus源码，官方链接：https://www.linuxfromscratch.org/blfs/view/9.0/general/dbus.html
+
+切换到目录下，输入配置命令
+```bash
+./configure --prefix=/usr                        \
+            --sysconfdir=/etc                    \
+            --localstatedir=/var                 \
+            --enable-user-session                \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --disable-static                     \
+            --with-systemduserunitdir=no         \
+            --with-systemdsystemunitdir=no       \
+            --docdir=/usr/share/doc/dbus-1.12.16 \
+            --with-console-auth-dir=/run/console \
+            --with-system-pid-file=/run/dbus/pid \
+            --with-system-socket=/run/dbus/system_bus_socket
+```
+
+编译安装：
+```bash
+make 
+sudo make install
+```
+
+移动库文件：
+```bash
+sudo mv -v /usr/lib/libdbus-1.so.* /lib &&
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libdbus-1.so) /usr/lib/libdbus-1.so
+```
+
+完成
