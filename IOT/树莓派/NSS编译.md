@@ -62,7 +62,7 @@ sudo vim /usr/include/nspr/prtypes.h
 改为
 ```c
 #define PR_STATIC_ASSERT(condition) \
-    extern void pr_static_assert(int arg[(condition) ? 1 : -0])
+    extern void pr_static_assert(int arg[(condition) ? 1 : 0])
 ```
 
 ## 编译nss
