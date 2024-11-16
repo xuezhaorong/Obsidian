@@ -50,7 +50,7 @@ cd```
 
 * 输入指令开始配置编译，`D:\Qt\5.15.2\Src\`替换成Src的绝对路径，`D:\Program\Qt\arm_qt`为编译后的qt库的目录，要先创建一个
 ```bash
-..\configure.bat -release -opensource -prefix D:\Program\Qt\arm_qt -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation -xplatform linux-aarch64-gnu-g++
+..\configure.bat -release -opensource -prefix -confirm-license D:\Program\Qt\arm_qt -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation -xplatform linux-aarch64-gnu-g++
 ```
 	配置选项说明（具体可以在命令行内输入“configure -help”命令查看详细说明）：
 		1. -release: 编译release版本
