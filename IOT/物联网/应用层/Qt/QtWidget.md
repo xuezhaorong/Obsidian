@@ -306,7 +306,7 @@ void frmKeyBoard::mouseMoveEvent(QMouseEvent* event){
 ## 多线程
 [[Qt#多线程]]
 以传输视频图像为例，掌握多线程，原理是获取摄像头的画面，转换为QImage并显示在label上面，由于需要不断执行这个过程，所以要放在子线程中执行，防止阻碍主线程。
-[[安装qt5]]在树莓派中安装qtcreator，并且配置好opencv[[Qt编译#opencv交叉编译]]，使用vnc连接树莓派
+[[安装qt5]]在树莓派中安装qtcreator，并且配置好opencv[[IOT/物联网/应用层/Qt/Qt编译#opencv交叉编译]]，使用vnc连接树莓派
 将Clion中的文件移植到qtcreator中去[[Clion配置Qt#移植]]
 新增capThread线程类，继承QThread
 

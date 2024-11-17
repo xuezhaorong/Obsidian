@@ -144,7 +144,7 @@ sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev libxkbcommon-x11-dev libfo
 sudo apt install g++-aarch64-linux-gnu
 ```
 ### 文件修改与编译
-与[[Qt编译#文件修改]]类型，配置编译命令为
+与[[IOT/物联网/应用层/Qt/Qt编译#文件修改]]类型，配置编译命令为
 ```bash
  ../configure -shared -release -recheck-all -nomake examples -nomake tests -qt-xcb -opensource -confirm-license -platform aarch64-linux-gnu-g++ -prefix /usr/Qt
 ```
