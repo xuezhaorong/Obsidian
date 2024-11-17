@@ -160,7 +160,7 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install
+sudo apt install g++-aarch64-linux-gnu
 ```
 
 
