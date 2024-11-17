@@ -160,8 +160,30 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu
+sudo apt install g++-aarch64-linux-gnu cmake
 ```
+
+### 挂载树莓派sysroot
+下载sshfs
+```bash
+sudo apt install sshfs
+```
+
+挂载树莓派，必须在同一局域网下，注意替换用户名和ip地址
+```bash
+sudo mkidr /mnt/pi-rootfs
+sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
+```
+
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/17/20-20-09-e4e036e989a730bb99e115a7e56e4eac-20241117202007-489451.png)
+输入yes确认连接，然后输入树莓派的密码
+
+```bash
+ls /mnt/pi-rootfs/
+```
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/17/20-20-59-af02eb86f93c77c723173434291cc52a-20241117202059-6fe567.png)
+可以看到对应的目录
+
 
 
 ## aarch64（树莓派4b为例）编译
