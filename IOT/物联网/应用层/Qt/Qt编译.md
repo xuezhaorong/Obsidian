@@ -42,7 +42,7 @@ cd```
 	复制并注释掉原来的工具选项，替换成本地的交叉编译工具包的选项
 5. .  可选，向`qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/util/convert.cpp`中添加，`#include<stdint.h>`，在编译时会跳过这个库，所以可选
 
-#### 编译交叉编译环境下的Qt库
+#### 开始编译
 * 在**Src**目录下新建**build**目录，打开Qt的mingw命令窗口，进入到**build**中
 ![image.png|429](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/09-10-19-9f6a193ae95b07790fb65ff7700a7889-20240725091017-9dbcb0.png)
 
@@ -125,6 +125,60 @@ cmake
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-21-52-85f0b4d3084886bfafe06243f9b83d5d-20240725102152-1d3a2b.png)
 
 ## aarch64（树莓派4b为例）编译
+
+## 准备
+安装依赖包：
+```bash
+sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev
+```
+
+
+编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
+切换到源码目录中，进行编译：
+```bash
+./configure --prefix=/usr/local/share/python2.7
+make
+sudo make install
+```
+
+加入到系统环境：
+```bash
+sudo ln -s /usr/local/share/python2.7/bin/python2 /usr/bin/python2
+```
+
+查看版本 ：
+```bash
+python2 -V
+```
+
+
+## 文件裁剪
+根据[[IOT/物联网/应用层/Qt/Qt编译#window交叉编译#Window配置#文件修改|文件修改]]，修改源码文件
+
+## 开始编译
+
+新建`build`目录，切换
+```bash
+mkdir build
+cd build
+```
+
+
+
+输入配置指令：
+```bash
+..\configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
+```
+
+其中，`-prefix`参数是安装的路径。
+
+编译，安装：
+```bash
+make 
+make install
+```
+
+
 
 根据[[安装qt5]]配置树莓派，window上的qt版本根据树莓派上的qt版本确定，可以有小版本的偏差
 ![image.png|515](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-24-33-4df61a73cd0d9dbe25892a550be99f88-20240725102432-0a10a4.png)
