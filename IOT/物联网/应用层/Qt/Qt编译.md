@@ -1,5 +1,5 @@
-> 介绍如何在window和树莓派中编译qt源码
-## window编译
+> 介绍如何在window和树莓派中编译适合树莓派的qt源码
+## window交叉编译
 [[编译#交叉编译介绍]]选择：**gcc-arm-mingw-w64-i686-aarch64-none-linux-gnu**交叉编译工具
 > 交叉编译工具包链接：https://www.123pan.com/s/zum7Vv-6PCXH.html
 ### Window配置
@@ -77,7 +77,7 @@ mingw32-make install
 1. 在配置，编译和安装过程中的错误大部分都是由于本地环境下工具包版本，Src源文件库文件代码，以及配置过程中的选项导致，如果出现错误，可以根据build中的config日志文件中的提示进行修改。
 2. 在配置时跳过了一些不常用的工具包和库来避免错误和减少编译时间，若需要用到可以根据需求进行修改。
 
- ### Clion
+ ### Clion配置
  > 模板链接：https://wwl.lanzn.com/iY8AH25gl9od
 Clion同样以[[Clion配置Qt]]进行配置
 * 需要修改的是，在创建项目时，不需要写入Qt前缀路径以便在交叉编译构建和桌面构建之间切换
