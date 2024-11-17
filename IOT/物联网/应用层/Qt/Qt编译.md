@@ -160,8 +160,8 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs
-```
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config --version
+``` 
 
 ### 挂载树莓派sysroot
 下载sshfs
