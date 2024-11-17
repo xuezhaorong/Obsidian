@@ -37,7 +37,7 @@
               "type": "markdown",
               "state": {
                 "file": "IOT/物联网/应用层/Qt/Qt编译.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -200,12 +200,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "d65986d5cad0213c",
+  "active": "d04f0646619b44bd",
   "lastOpenFiles": [
+    "IOT/树莓派/安装qt5.md",
+    "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/树莓派/Dbus编译.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/Opencv编译.md",
-    "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/Linux/WSL2连接USB存储设备.md",
@@ -216,7 +217,6 @@
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
-    "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/换源.md",
     "IOT/树莓派/开启ssh.md",
     "IOT/树莓派/制作树莓派最小系统镜像.md",
