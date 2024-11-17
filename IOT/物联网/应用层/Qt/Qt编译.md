@@ -160,7 +160,7 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu cmake
+sudo apt install g++-aarch64-linux-gnu g++ cmake
 ```
 
 ### 挂载树莓派sysroot
