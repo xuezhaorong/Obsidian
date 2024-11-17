@@ -126,7 +126,7 @@ cmake
 
 ## WSL交叉编译
 
-在树莓派中编译带opengl的qt版本不够资源，需要在WSL中进行编译
+在树莓派中编译带QWebEnign的qt版本不够资源，需要在WSL中进行编译
 ### 准备
 根据[[WSL2连接USB存储设备]]配置
 
@@ -177,7 +177,7 @@ cd build
 ```bash
 ..\configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
 ```
-
+编译QtwebEnign可能会导致资源不足而崩溃，可以选择跳过
 其中，`-prefix`参数是安装的路径。
 
 编译，安装：
