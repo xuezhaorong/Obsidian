@@ -25,7 +25,7 @@
               "type": "markdown",
               "state": {
                 "file": "IOT/物联网/应用层/Qt/Qt编译.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -190,12 +190,12 @@
   },
   "active": "a0820ef39d5fbeb3",
   "lastOpenFiles": [
-    "IOT/Linux/WSL2连接USB存储设备.md",
+    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/Linux/WSL安装配置.md",
+    "IOT/Linux/WSL2连接USB存储设备.md",
     "IOT/Linux/编译.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/树莓派/Opencv编译.md",
     "IOT/树莓派/NSS编译.md",
     "IOT/树莓派/Qt编译.md",
