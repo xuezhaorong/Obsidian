@@ -160,7 +160,7 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config --version
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config ninja
 ``` 
 
 ### 挂载树莓派sysroot
@@ -194,7 +194,7 @@ ls /mnt/pi-rootfs/
 ### 准备
 安装依赖包：
 ```bash
-sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev
+sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev 
 ```
 
 
