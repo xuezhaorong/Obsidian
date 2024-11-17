@@ -1,7 +1,7 @@
 ## 准备
 安装依赖包：
 ```bash
-sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev
+sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev
 ```
 
 
