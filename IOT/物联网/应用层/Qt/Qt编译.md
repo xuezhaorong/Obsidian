@@ -217,6 +217,10 @@ ls /mnt/pi-rootfs/
 ../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
 ```
 
+开始编译：
+```bash
+gmake -j4
+```
 ## aarch64（树莓派4b为例）编译
 
 ### 准备
