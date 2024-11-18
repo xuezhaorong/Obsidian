@@ -164,8 +164,6 @@ sudo apt upgrade
 安装编译工具：
 ```bash
 sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils perl cpanminus
-
-sudo cpanm File::Spec::Functions
 ``` 
 
 编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
