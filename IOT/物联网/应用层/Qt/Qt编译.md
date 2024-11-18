@@ -234,10 +234,12 @@ export PKG_CONFIG_PATH
 
 
 
-开始编译：
+开始编译和安装：
 ```bash
 gmake -j4
 ```
+
+
 ## aarch64（树莓派4b为例）编译
 
 ### 准备
