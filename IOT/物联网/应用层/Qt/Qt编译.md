@@ -229,7 +229,7 @@ export PKG_CONFIG_PATH
 
 ### 开始编译
 ```bash
-../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
+../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation 
 ```
 
 
@@ -284,7 +284,7 @@ cd build
 
 输入配置指令：
 ```bash
-../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation -skip qtwayland -skip qtwebengine
+../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -nomake tests -nomake examples -no-opengl -no-werror -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation -skip qtwayland -skip qtwebengine 
 ```
 编译QtwebEnign可能会导致资源不足而崩溃，可以选择跳过
 其中，`-prefix`参数是安装的路径。
