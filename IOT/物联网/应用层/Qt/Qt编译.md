@@ -181,7 +181,7 @@ sudo ln -s /usr/local/share/python2.7/bin/python2 /usr/bin/python2
 
 查看版本 ：
 ```bash
-python2 -V
+python2 --version
 ```
 
 
