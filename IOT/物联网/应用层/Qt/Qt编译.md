@@ -163,7 +163,7 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils perl cpanminus
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils perl cpanminus ninja-build
 ``` 
 
 编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
@@ -228,7 +228,7 @@ gmake -j4
 ### 准备
 安装依赖包：
 ```bash
-sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev libgles2-mesa libgles2-mesa-dev xorg-dev  libxcb1 libxcb-util1 libx11-xcb1 libxkbcommon-x11-0 libxcb-keysyms1 libxcb-image0 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-icccm4 libxcb-xinerama0 libxcb-cursor0 libwayland-dev libegl1-mesa-dev
+sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libssl-dev libdbus-1-dev libfontconfig1-dev libgles2-mesa libgles2-mesa-dev xorg-dev  libxcb1 libxcb-util1 libx11-xcb1 libxkbcommon-x11-0 libxcb-keysyms1 libxcb-image0 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-icccm4 libxcb-xinerama0 libxcb-cursor0 libwayland-dev libegl1-mesa-dev
 
 ```
 
