@@ -41,9 +41,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "90f582d4140d0f0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "91ae393827fd9820",
@@ -200,7 +212,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "d04f0646619b44bd",
+  "active": "90f582d4140d0f0e",
   "lastOpenFiles": [
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/uni-app/HTML.md",

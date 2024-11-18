@@ -207,6 +207,10 @@ ls /mnt/pi-rootfs/
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/17/20-20-59-af02eb86f93c77c723173434291cc52a-20241117202059-6fe567.png)
 可以看到对应的目录
 
+### 树莓派设置
+安装依赖包
+按照[[Qt编译#aarch64（树莓派4b为例）编译#准备|树莓派依赖包安装]]
+
 ### 开始编译
 ```bash
 ../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
