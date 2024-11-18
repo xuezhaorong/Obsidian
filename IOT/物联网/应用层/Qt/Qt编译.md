@@ -129,7 +129,10 @@ cmake
 在树莓派中编译带QWebEnign的qt版本不够资源，需要在WSL中进行编译
 使用的是Debian12
 对Debian12进行换源，清华园镜像链接：[debian | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
-
+先安装https支持：
+```bash
+sudo apt install apt-transport-https ca-certificates
+```
 使用传统格式换源
 ```bash
 sudo nano /etc/apt/sources.list
