@@ -185,7 +185,7 @@ python2 --version
 ```
 
 将qt源码移动到wsl中
-
+根据[[Qt编译#Window配置#文件修改|文件修改]]修改qt源码 
 
 ### 挂载树莓派sysroot
 下载sshfs
