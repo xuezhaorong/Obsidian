@@ -163,7 +163,7 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils
 ``` 
 
 编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
@@ -184,6 +184,7 @@ sudo ln -s /usr/local/share/python2.7/bin/python2 /usr/bin/python2
 python2 --version
 ```
 
+将qt源码移动到wsl中
 
 
 ### 挂载树莓派sysroot
@@ -194,7 +195,7 @@ sudo apt install sshfs
 
 挂载树莓派，必须在同一局域网下，注意替换用户名和ip地址
 ```bash
-sudo mkidr /mnt/pi-rootfs
+sudo mkdir /mnt/pi-rootfs
 sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
 ```
 
@@ -206,7 +207,7 @@ ls /mnt/pi-rootfs/
 ```
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/17/20-20-59-af02eb86f93c77c723173434291cc52a-20241117202059-6fe567.png)
 可以看到对应的目录
-
+可以在`~/.bashrc`中添加，这样就不用每次都输入这个命令
 ### 树莓派设置
 安装依赖包
 按照[[Qt编译#aarch64（树莓派4b为例）编译#准备|树莓派依赖包安装]]
