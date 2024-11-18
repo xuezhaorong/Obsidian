@@ -163,7 +163,9 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config zlib1g zlib1g-dev python3 xz-utils perl cpanminus
+
+sudo cpanm File::Spec::Functions
 ``` 
 
 编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
@@ -216,6 +218,8 @@ ls /mnt/pi-rootfs/
 ```bash
 ../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -no-opengl -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation
 ```
+
+
 
 开始编译：
 ```bash
