@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
               }
             }
           },
@@ -36,8 +36,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
-                "mode": "preview",
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -56,7 +56,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
               }
             }
           }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/物联网/应用层/Qt/Qt编译.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,11 +202,12 @@
   },
   "active": "d04f0646619b44bd",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
+    "IOT/物联网/应用层/uni-app/HTML.md",
+    "IOT/Linux/WSL安装配置.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
-    "IOT/物联网/应用层/uni-app/HTML.md",
-    "IOT/Linux/WSL安装配置.md",
     "IOT/Linux/WSL2连接USB存储设备.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/树莓派/Dbus编译.md",
@@ -215,7 +216,6 @@
     "IOT/Linux/编译.md",
     "IOT/树莓派/NSS编译.md",
     "IOT/树莓派/Qt编译.md",
-    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
     "IOT/树莓派/换源.md",

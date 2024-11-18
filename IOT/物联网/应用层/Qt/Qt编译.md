@@ -131,6 +131,7 @@ cmake
 对Debian12进行换源，清华园镜像链接：[debian | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 先安装https支持：
 ```bash
+sudo apt update
 sudo apt install apt-transport-https ca-certificates
 ```
 使用传统格式换源
@@ -159,7 +160,6 @@ sudo apt update
 sudo apt upgrade
 ```
 ### 准备
-根据[[WSL2连接USB存储设备]]配置
 
 安装编译工具：
 ```bash

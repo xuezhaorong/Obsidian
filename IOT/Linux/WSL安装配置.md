@@ -55,6 +55,7 @@ Ubuntu2404 config --default-user username
 win+r输入wsl进入Ubuntu中，打开.bashrc到最后一行加入开机选项`cd /home/`
 ```bash
 sudo vim ~/.bashrc
+source ~/.bashrc
 ```
 
 ## 安装图形界面
