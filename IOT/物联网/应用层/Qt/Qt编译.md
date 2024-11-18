@@ -160,8 +160,28 @@ sudo apt upgrade
 
 安装编译工具：
 ```bash
-sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex pkg-config 
+sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-config ninja zlib1g zlib1g-dev
 ``` 
+
+编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
+切换到源码目录中，进行编译：
+```bash
+./configure --prefix=/usr/local/share/python2.7
+make
+sudo make install
+```
+
+加入到系统环境：
+```bash
+sudo ln -s /usr/local/share/python2.7/bin/python2 /usr/bin/python2
+```
+
+查看版本 ：
+```bash
+python2 -V
+```
+
+
 
 ### 挂载树莓派sysroot
 下载sshfs
