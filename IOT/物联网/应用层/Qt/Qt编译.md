@@ -174,10 +174,12 @@ make
 sudo make install
 ```
 
-加入到系统环境：
+加入到系统环境，避免编译过程中的python脚本出错：
 ```bash
 sudo ln -s /usr/local/share/python2.7/bin/python2 /usr/bin/python2
+sudo ln -s /usr/bin/python2 /usr/bin/python
 ```
+
 
 查看版本 ：
 ```bash
