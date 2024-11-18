@@ -208,6 +208,19 @@ ls /mnt/pi-rootfs/
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/17/20-20-59-af02eb86f93c77c723173434291cc52a-20241117202059-6fe567.png)
 可以看到对应的目录
 可以在`~/.bashrc`中添加，这样就不用每次都输入这个命令
+
+```bash
+sudo nano ~/.bashrc
+```
+
+输入以下内容，注意替换参数，用以系统查找树莓派上的nc配置文件
+```bash
+sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
+
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/mnt/pi-rootfs/usr/lib/aarch64-linux-gnu/pkgconfig:/mnt/pi-rootfs/usr/lib/pkgconfig
+export PKG_CONFIG_PATH 
+```
+
 ### 树莓派设置
 安装依赖包
 按照[[Qt编译#aarch64（树莓派4b为例）编译#准备|树莓派依赖包安装]]
