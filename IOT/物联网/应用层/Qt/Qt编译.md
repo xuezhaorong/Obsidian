@@ -222,7 +222,7 @@ ls /mnt/pi-rootfs/
 ### 准备
 安装依赖包：
 ```bash
-sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev libgles2-mesa libgles2-mesa-dev xorg-dev  libxcb1 libxcb-util1 libx11-xcb1 libxkbcommon-x11-0 libxcb-keysyms1 libxcb-image0 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-icccm4 libxcb-xinerama0 libxcb-cursor0
+sudo apt-get install bison flex gperf python3 nodejs libnss3-dev libdbus-1-dev libfontconfig1-dev libgles2-mesa libgles2-mesa-dev xorg-dev  libxcb1 libxcb-util1 libx11-xcb1 libxkbcommon-x11-0 libxcb-keysyms1 libxcb-image0 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-icccm4 libxcb-xinerama0 libxcb-cursor0 libwayland-dev libegl1-mesa-dev
 
 ```
 
