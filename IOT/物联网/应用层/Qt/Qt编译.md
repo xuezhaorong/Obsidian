@@ -169,7 +169,7 @@ sudo apt install g++-aarch64-linux-gnu g++ cmake gperf bison flex nodejs pkg-con
 编译Python2，源码链接：https://www.123684.com/s/zum7Vv-clTnH
 切换到源码目录中，进行编译：
 ```bash
-./configure --prefix=/usr/local/share/python2.7 --enable-optimizations
+./configure --prefix=/usr/local/share/python2.7 --with-zlib --enable-optimizations 
 make
 sudo make install
 ```
