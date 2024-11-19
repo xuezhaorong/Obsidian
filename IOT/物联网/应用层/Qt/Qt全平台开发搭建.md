@@ -35,9 +35,9 @@ sudo apt update
 sudo apt upgrade
 ```
 
-### 安装依赖包
+### 安装工具包 
 ```bash
-sudo apt install g++
+sudo apt install g++ git cmake
 ```
 
 
