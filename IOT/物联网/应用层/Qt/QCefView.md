@@ -71,7 +71,15 @@ git clone https://github.com/CefView/QCefView.git
 运行CMake gui，将`CMakeLists.txt`拖到Cmake中去
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-31-34-c7159c619dcc5914e89aed903097cd40-20241119143133-ad86e4.png)
 在`QCefView`中新建`build`目录，将CMake中的`Where to build the binaries`修改到`build`路径下
-![image.png|1075](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-34-18-cbdaf173c8d8492bedd5eb74579e2b40-20241119143417-6aab27.png)
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-34-18-cbdaf173c8d8492bedd5eb74579e2b40-20241119143417-6aab27.png)
 
 点击`Configure`，选择`Visual Studio 2022 x64`,然后点击Finish
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-36-21-2640712b75b103ec748461d1368614ac-20241119143620-3e1da2.png)
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-36-21-2640712b75b103ec748461d1368614ac-20241119143620-3e1da2.png)
+
+点击Configure，配置完之后再点击一次进行更新
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-41-44-9000c352bb7fc466fb42b4968b9836ff-20241119144143-e0e6ed.png)
+然后选择安装路径
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-43-14-28e5b8caea2c6301062fb2ab04a5c938-20241119144313-74a14e.png)
+点击`Generate`,然后点击`Open Project`打开Visual Studio,选择`CMakePredefinedTargets`的`ALL BUILD`右击点击生成
+![image.png|459](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-44-24-3ef6fe9c67634716551a2573189d02fc-20241119144424-84bf90.png)
+
