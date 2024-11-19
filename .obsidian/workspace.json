@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/换源.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/换源.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/换源.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/换源.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/换源.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/换源.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,15 +190,15 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
+    "IOT/树莓派/换源.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
     "未命名 1.canvas",
     "未命名.canvas",
-    "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
-    "IOT/树莓派/换源.md",
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/应用层/lvgl/LVGL.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
