@@ -48,3 +48,11 @@ sudo apt-get install qtcreator
 ```
 
 ### 安装中文包
+打开语言配置
+```bash
+sudo apt install locales
+sudo dpkg-reconfigure locales
+```
+
+选择zh_CH.UTF-8 UTF-8，按空格选择
+![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/16-57-54-d30b1013ea8373cd94d03a4b06a707cc-20241119165754-7a6a6f.png)
