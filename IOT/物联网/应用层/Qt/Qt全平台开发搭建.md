@@ -79,3 +79,25 @@ sudo vim /etc/fonts/local.conf
 </fontconfig>
 ```
 
+### 创建项目
+设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`
+
+```bash
+sudo nano ~/.bashrc
+```
+
+写入命令：
+```bash
+export XDG_RUNTIME_DIR=/tmp/runtime-$(id -u) 
+mkdir -p $XDG_RUNTIME_DIR 
+chmod 700 $XDG_RUNTIME_DIR
+```
+
+运行`qtcreator`
+```bash
+qtcreator
+```
+
+创建一个项目
+
+
