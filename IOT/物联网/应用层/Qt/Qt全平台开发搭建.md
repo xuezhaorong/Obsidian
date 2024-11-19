@@ -47,3 +47,4 @@ sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5
 sudo apt-get install qtcreator
 ```
 
+### 安装中文包
