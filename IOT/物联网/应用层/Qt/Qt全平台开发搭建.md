@@ -138,7 +138,7 @@ gmake install
 
 
 ### 创建项目
-设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`和显示平台
+设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`
 
 ```bash
 sudo nano ~/.bashrc
@@ -149,7 +149,7 @@ sudo nano ~/.bashrc
 export XDG_RUNTIME_DIR=/tmp/runtime-$(id -u) 
 mkdir -p $XDG_RUNTIME_DIR 
 chmod 700 $XDG_RUNTIME_DIR
-export QT_QPA_PLATFORM=xcb
+
 ```
 
 运行`qtcreator`
