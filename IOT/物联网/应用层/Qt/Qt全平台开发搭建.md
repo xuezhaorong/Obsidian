@@ -98,6 +98,7 @@ chmod 700 $XDG_RUNTIME_DIR
 qtcreator
 ```
 
-创建一个项目
+创建一个项目，查看构建套件即可看到自动关联了安装的Qt版本。
+![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/18-56-17-b754e876c9b0cbcb5700cac124f8ffda-20241119185616-5548f8.png)
 
 
