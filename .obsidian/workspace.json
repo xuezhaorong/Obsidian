@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           },
@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md"
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md"
               }
             }
           },
@@ -179,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/安装qt5.md",
+                "file": "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,12 +214,12 @@
   },
   "active": "90f582d4140d0f0e",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/Qt/Qt编译.md",
+    "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
-    "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/uni-app/HTML.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
-    "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
     "IOT/Linux/编译.md",
     "IOT/Linux/WSL安装配置.md",

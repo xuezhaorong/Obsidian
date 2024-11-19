@@ -35,4 +35,15 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## 安装QT
+### 安装依赖包
+```bash
+sudo apt install g++
+```
+
+
+### 安装QT
+```bash
+sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5-dev libqt5serialport5-dev
+sudo apt-get install qtcreator
+```
+
