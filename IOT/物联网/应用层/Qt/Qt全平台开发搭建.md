@@ -13,7 +13,7 @@ sudo apt install cmake
 
 安装xcb支持
 ```bash
-sudo apt install libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev
+sudo apt install xcb libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev
 ```
 ### 安装QT
 [[安装qt5]]
@@ -64,7 +64,7 @@ sudo apt install g++ git cmake sshfs pkg-config
 
 安装xcb支持
 ```bash
-sudo apt install  libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev
+sudo apt install xcb libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev 
 ```
 
 ### 安装QT
