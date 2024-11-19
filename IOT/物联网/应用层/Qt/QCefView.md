@@ -146,3 +146,11 @@ DEPENDPATH += $$PWD/../../../Qt/CefView/QCefView/include
 ```
 
 ### Linux
+
+打开qtreator，库文件路径选择`/home/xuezhaorong/Share/QCefView/.build/linux.x86_64/output/Release/bin`下的`libQCefView`
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/16-34-57-b99fa097c11bc04fc622dc8a59a0b974-20241119163456-c1f011.png)
+
+头文件选择`/home/xuezhaorong/Share/QCefView/include`
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/16-38-27-2ec4d3deaa2d2b77bcbafc0257e7e984-20241119163826-29e4fe.png)
+
+
