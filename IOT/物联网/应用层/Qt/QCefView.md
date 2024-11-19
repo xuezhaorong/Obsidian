@@ -36,6 +36,8 @@ QCefView 是一个与 CEF 集成的 Qt 小部件（Widget），可以使用 QCef
 中文文档：https://cefview.github.io/QCefView/zh/
 
 ## 构建 QCefView
+需要按照[[Qt全平台开发搭建]]搭建好对应平台的Qt环境
+
 
 ### Window
 
@@ -91,6 +93,31 @@ git clone https://github.com/CefView/QCefView.git
 
 生成在`D:\Qt\CefView\QCefView\bin\Debug`下
 
+### Linux
+1. 安装工具包和依赖包
+```bash
+sudo apt install libasound2 libasound2 g++ cmake 
+```
+
+2. 下载源码
+
+```bash
+git clone https://github.com/CefView/CefViewCore.git
+git clone https://github.com/CefView/QCefView.git
+```
+将`CefViewCore`移动到`QCefView`目录下
+```bash
+mv -r CefViewCore QCefView/
+```
+
+3. 编译
+```bash
+cd QCefView
+./generate-linux-x86_64.sh
+cmake --build .build/linux.x86_64
+```
+
+安装后的库在当前目录的`.build/`下
 
 
 ## QtCreator导入QCefView
@@ -118,3 +145,4 @@ INCLUDEPATH += $$PWD/../../../Qt/CefView/QCefView/include
 DEPENDPATH += $$PWD/../../../Qt/CefView/QCefView/include
 ```
 
+### Linux
