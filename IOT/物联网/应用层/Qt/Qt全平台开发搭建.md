@@ -25,7 +25,7 @@ sudo apt install cmake
 先安装https支持：
 ```bash
 sudo apt update 
-sudo apt install apt-transport-https ca-certificates
+sudo apt install apt-transport-https ca-certificates 
 ```
 使用传统格式换源
 ```bash
@@ -55,7 +55,7 @@ sudo apt upgrade
 
 ### 安装工具包 
 ```bash
-sudo apt install g++ git cmake sshfs
+sudo apt install g++ git cmake sshfs pkg-config
 ```
 
 
@@ -99,8 +99,18 @@ sudo vim /etc/fonts/local.conf
 hostname -i
 ```
 
-打开`~/.bashrc`，输入sshfs网络挂载命令
+新建挂载目录
+```bash
+sudo mkdir /mnt/pi-rootfs
+```
 
+打开`~/.bashrc`，输入sshfs网络挂载命令和`PKGCONFIG`路径
+```bash
+sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
+sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
+
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/mnt/pi-rootfs/usr/lib/aarch64-linux-gnu/pkgconfig:/mnt/pi-rootfs/usr/lib/pkgconfig
+```
 
 ### 创建项目
 设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`和显示平台
