@@ -55,7 +55,7 @@ sudo apt upgrade
 
 ### 安装工具包 
 ```bash
-sudo apt install g++ git cmake
+sudo apt install g++ git cmake sshfs
 ```
 
 
@@ -93,6 +93,15 @@ sudo vim /etc/fonts/local.conf
 </fontconfig>
 ```
 
+### 链接树莓派
+查看树莓派ip
+```bash
+hostname -i
+```
+
+打开`~/.bashrc`，输入sshfs网络挂载命令
+
+
 ### 创建项目
 设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`和显示平台
 
@@ -115,5 +124,4 @@ qtcreator
 
 创建一个项目，查看构建套件即可看到自动关联了安装的Qt版本。
 ![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/18-56-17-b754e876c9b0cbcb5700cac124f8ffda-20241119185616-5548f8.png)
-
 
