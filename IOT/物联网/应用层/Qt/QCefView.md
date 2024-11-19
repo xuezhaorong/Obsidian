@@ -83,3 +83,38 @@ git clone https://github.com/CefView/QCefView.git
 点击`Generate`,然后点击`Open Project`打开Visual Studio,选择`CMakePredefinedTargets`的`ALL BUILD`右击点击生成
 ![image.png|459](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-44-24-3ef6fe9c67634716551a2573189d02fc-20241119144424-84bf90.png)
 
+等待构建完毕
+![image.png|1250](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-47-44-a59679ce3d2d693eb0b84e6fc8bcdda3-20241119144743-53d759.png)
+
+再右击`INSTALL`，点击生成
+![image.png|345](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-48-34-442caa9e28b7ca6f1b9189485e8f75c6-20241119144833-59d0c5.png)
+
+生成在`D:\Qt\CefView\QCefView\bin\Debug`下
+
+
+
+## QtCreator导入QCefView
+### Window
+打开Qt项目，右击项目选择添加库
+![image.png|510](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-51-29-2d85a893dce88b83d2e0df8657617c3f-20241119145128-021a8d.png)
+
+选择外部库
+![image.png|553](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-51-53-4473acecacf869249a3c50694feb8f0b-20241119145152-4636d6.png)
+
+库文件选择`D:\Qt\CefView\QCefView\lib\Debug\QCefView.lib`
+![|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-53-40-5b1e9b1b55654bc108270fb8279a4f56-20241119145339-50ebaf.png)、
+
+头文件选择`D:\Qt\CefView\QCefView\include`
+![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-54-44-37048fd5d68da819c00f19df74033c38-20241119145444-6d107e.png)
+
+paltform选择window，点击下一步完成，即可导入
+![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/14-55-53-2aa92a752e0521c713a8e6c743a42255-20241119145553-c3ea8e.png)
+
+```bash
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../Qt/CefView/QCefView/lib/release/ -lQCefView
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../Qt/CefView/QCefView/lib/debug/ -lQCefView
+
+INCLUDEPATH += $$PWD/../../../Qt/CefView/QCefView/include
+DEPENDPATH += $$PWD/../../../Qt/CefView/QCefView/include
+```
+
