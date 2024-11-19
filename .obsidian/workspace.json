@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/树莓派/安装qt5.md"
               }
             }
           },
@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/树莓派/安装qt5.md"
               }
             }
           }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md"
+                "file": "IOT/树莓派/安装qt5.md"
               }
             }
           },
@@ -179,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/Linux/WSL安装配置.md",
+                "file": "IOT/树莓派/安装qt5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,25 +214,25 @@
   },
   "active": "90f582d4140d0f0e",
   "lastOpenFiles": [
-    "IOT/Linux/WSL2连接USB存储设备.md",
-    "IOT/物联网/应用层/uni-app/HTML.md",
-    "IOT/物联网/应用层/Qt/Qt使用技巧.md",
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
-    "IOT/Linux/WSL增加交换内存.md",
-    "IOT/Linux/WSL安装配置.md",
+    "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/树莓派/安装qt5.md",
+    "IOT/物联网/应用层/uni-app/HTML.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
+    "IOT/物联网/应用层/uni-app/JavaScript.md",
+    "IOT/Linux/编译.md",
+    "IOT/Linux/WSL安装配置.md",
+    "IOT/Linux/WSL2连接USB存储设备.md",
+    "IOT/物联网/应用层/Qt/QtWidget.md",
+    "IOT/Linux/WSL增加交换内存.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/树莓派/Dbus编译.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/树莓派/Opencv编译.md",
-    "IOT/Linux/编译.md",
     "IOT/树莓派/NSS编译.md",
     "IOT/树莓派/Qt编译.md",
-    "IOT/物联网/应用层/uni-app/JavaScript.md",
     "IOT/树莓派/换源.md",
     "IOT/树莓派/开启ssh.md",
     "IOT/树莓派/制作树莓派最小系统镜像.md",
