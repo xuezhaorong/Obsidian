@@ -13,7 +13,7 @@ sudo apt install cmake
 
 安装xcb支持
 ```bash
-sudo apt install xcb libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev libx11-xcb1 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-sync1 libxcb-xfixes0 libxcb-shape0 libxcb-render-util0 libxkbcommon-x11-0 libegl1-mesa libxcb-xinerama0-dev
+sudo apt install xcb libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev libx11-xcb1 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-sync1 libxcb-xfixes0 libxcb-shape0 libxcb-render-util0 libxkbcommon-x11-0 libegl1-mesa libxcb-xinerama0-dev 
 ```
 ### 安装QT
 [[安装qt5]]
