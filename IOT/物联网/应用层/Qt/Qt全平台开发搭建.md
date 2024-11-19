@@ -7,10 +7,14 @@
 换源[[换源]]
 
 ### 安装工具包
-```bash
+```bash 
 sudo apt install cmake
 ```
 
+安装xcb支持
+```bash
+sudo apt install libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev
+```
 ### 安装QT
 [[安装qt5]]
 
@@ -58,6 +62,10 @@ sudo apt upgrade
 sudo apt install g++ git cmake sshfs pkg-config
 ```
 
+安装xcb支持
+```bash
+sudo apt install  libwayland-dev libegl1-mesa-dev libgles2-mesa-dev wayland-protocols libxkbcommon-dev
+```
 
 ### 安装QT
 ```bash
@@ -112,6 +120,23 @@ sudo sshfs xuezhaorong@192.168.1.241:/ /mnt/pi-rootfs -o allow_other
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/mnt/pi-rootfs/usr/lib/aarch64-linux-gnu/pkgconfig:/mnt/pi-rootfs/usr/lib/pkgconfig
 ```
 
+### 交叉编译Qt
+根据[[Qt编译]]中选择对应Qt版本的源码，进行交叉编译
+配置命令：
+```bash
+../configure -release -opensource -confirm-license -prefix /home/xuezhaorong/Software/Qt -hostprefix /home/xuezhaorong/Software/Qt -xplatform linux-aarch64-gnu-g++ -sysroot /mnt/pi-rootfs -verbose -nomake tests -nomake examples -opengl es2 -skip qtvirtualkeyboard -skip qt3d -skip qtquick3d -skip qttools -skip qtscript -skip qtlocation -skip qtwebengine
+```
+
+`-prefix`为目标平台树莓派的安装路径，`-hostprefix`为构建平台的安装路径
+
+编译安装：
+```bash
+gamke -j4
+gmake install
+```
+
+
+
 ### 创建项目
 设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`和显示平台
 
@@ -135,3 +160,4 @@ qtcreator
 创建一个项目，查看构建套件即可看到自动关联了安装的Qt版本。
 ![image.png|775](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/18-56-17-b754e876c9b0cbcb5700cac124f8ffda-20241119185616-5548f8.png)
 
+新建Qt版本，选择交叉编译下的Qt版本

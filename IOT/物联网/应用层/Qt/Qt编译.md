@@ -237,6 +237,7 @@ export PKG_CONFIG_PATH
 开始编译和安装：
 ```bash
 gmake -j4
+gmake install
 ```
 
 
