@@ -184,3 +184,8 @@ qtcreator
 chmod -R 777 QtProject
 ```
 
+如果将编译目录设为挂载路径时，则自动给予权限
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/15-35-06-e261ddd4550b0e5eaed32d17e8cac223-20241120153505-ee968a.png)
+
+## 加入外部库
+现在加入QWebEngine库，进行测试外部库的导入
