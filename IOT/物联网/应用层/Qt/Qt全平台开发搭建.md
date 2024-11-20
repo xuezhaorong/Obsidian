@@ -88,7 +88,7 @@ sudo dpkg-reconfigure locales
 添加中文字体
 ```bash
 sudo apt install fontconfig
-sudo vim /etc/fonts/local.conf
+sudo nano /etc/fonts/local.conf
 
 ```
 
