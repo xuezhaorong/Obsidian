@@ -299,27 +299,6 @@ make install
 
 
 
-
-
-根据[[安装qt5]]配置树莓派，window上的qt版本根据树莓派上的qt版本确定，可以有小版本的偏差
-![image.png|515](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-24-33-4df61a73cd0d9dbe25892a550be99f88-20240725102432-0a10a4.png)
-
-使用vnc传输aarch64可执行文件到树莓派上运行
-![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-27-11-1fd8311e47a0f14b910530a533f2dfbf-20240725102711-3577e7.png)
-
-需要为传入的可执行文件添加权限
-![image.png|502](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-28-22-bf67a7a2673197bc1790494e31319d66-20240725102822-372761.png)
-
-然后执行可执行文件
-![image.png|557](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-29-01-21c859956a7fcfef7ce501dae8c89a96-20240725102900-186f67.png)
-
-也可以直接为根目录添加所有文件权限
-```bash
-chmod -R 777 QtProject
-
-```
-
-
 在qtcreator中加入opencv
 在pro中导入头文件和库文件的路径
 ```bash

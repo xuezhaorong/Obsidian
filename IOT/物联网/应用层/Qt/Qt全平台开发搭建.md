@@ -165,6 +165,22 @@ qtcreator
 
 添加编译套件，注意选择编译器和Qt版本
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-43-11-94fe5ea8087e7699c3e3a6db3855c359-20241120104310-d0bc03.png)
+![image.png|1300](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-43-11-94fe5ea8087e7699c3e3a6db3855c359-20241120104310-d0bc03.png)
 
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-46-37-2cb72e6c66f2597b8990a9bdc8282307-20241120104636-78d642.png)
+在项目中添加构建套件，构建目录可以选择挂载的路径，但是会影响编译速度
+![image.png|1300](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-46-37-2cb72e6c66f2597b8990a9bdc8282307-20241120104636-78d642.png)
+
+## 运行
+将编译的二进制可执行文件传到树莓派中
+
+需要为传入的可执行文件添加权限
+![image.png|652](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-28-22-bf67a7a2673197bc1790494e31319d66-20240725102822-372761.png)
+
+然后执行可执行文件
+![image.png|632](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/25/10-29-01-21c859956a7fcfef7ce501dae8c89a96-20240725102900-186f67.png)
+
+也可以直接为根目录添加所有文件权限
+```bash
+chmod -R 777 QtProject
+```
+
