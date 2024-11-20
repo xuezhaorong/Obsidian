@@ -94,6 +94,13 @@ git clone https://github.com/CefView/QCefView.git
 生成在`D:\Qt\CefView\QCefView\bin\Debug`下
 
 ### Linux
+添加QTDIR环境变量
+```bash
+export QTDIR=/home/xuezhaorong/Software/Qt 
+export PATH=$QTDIR:$PATH
+```
+需要科学上网环境
+
 1. 安装工具包和依赖包
 ```bash
 sudo apt install libasound2 libasound2 g++ cmake 
