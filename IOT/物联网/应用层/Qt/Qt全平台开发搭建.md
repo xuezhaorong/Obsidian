@@ -188,4 +188,6 @@ chmod -R 777 QtProject
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/15-35-06-e261ddd4550b0e5eaed32d17e8cac223-20241120153505-ee968a.png)
 
 ## 加入外部库
-现在加入QWebEngine库，进行测试外部库的导入
+现在加入QWebEngine库，进行测试外部库的导入，下载链接：https://wwet.lanzn.com/i3MO42fmexeb
+选择对应的架构解压文件，WSL为amd64，树莓派为arm64
+
