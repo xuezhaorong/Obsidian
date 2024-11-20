@@ -163,5 +163,8 @@ qtcreator
 新建Qt版本，选择交叉编译下的Qt版本
 ![image.png|1300](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-42-26-dfa480599271711924927bcdb3002bc7-20241120104225-feeddf.png)
 
+添加编译套件，注意选择编译器和Qt版本
 
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-43-11-94fe5ea8087e7699c3e3a6db3855c359-20241120104310-d0bc03.png)
+
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-46-37-2cb72e6c66f2597b8990a9bdc8282307-20241120104636-78d642.png)
