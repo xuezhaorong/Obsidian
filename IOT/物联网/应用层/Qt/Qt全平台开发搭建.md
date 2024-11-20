@@ -191,3 +191,46 @@ chmod -R 777 QtProject
 现在加入QWebEngine库，进行测试外部库的导入，下载链接：https://wwet.lanzn.com/i3MO42fmexeb
 选择对应的架构解压文件，WSL为amd64，树莓派为arm64
 
+![image.png|725](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/15-44-48-ddb8d4cbba5cb17765b243b32aed2559-20241120154448-72f7e1.png)
+
+按顺序安装，注意：**Qt版本需要在5.13以上**
+```bash
+sudo dpkg -i libqt5webenginecore5_5.15.13+dfsg-1~deb12u1_arm64.deb
+sudo dpkg -i libqt5webengine5_5.15.13+dfsg-1~deb12u1_arm64.deb
+sudo dpkg -i libqt5webenginewidgets5_5.15.13+dfsg-1~deb12u1_arm64.deb
+sudo dpkg -i qtwebengine5-dev_5.15.13+dfsg-1~deb12u1_arm64.deb
+sudo dpkg -i qtwebengine5-dev-tools_5.15.13+dfsg-1~deb12u1_arm64.deb
+```
+
+在安装过程中出错则使用指令`sudo apt -f install` 修复依赖包关系，然后再次执行当前的安装指令。
+因为安装时检测的是默认的Qt路径，所以需要将库文件移动到编译的Qt路径下，注意路径的替换
+```bash
+sudo cp -r /usr/include/aarch64-linux-gnu/qt5/QtWebEngine* /home/xuezhaorong/Software/Qt/include/
+sudo cp -r /usr/include/aarch64-linux-gnu/qt5/QtPositioning* /home/xuezhaorong/Software/Qt/include/
+sudo cp -r /usr/lib/aarch64-linux-gnu/libQt5WebEngine* /home/xuezhaorong/Software/Qt/lib/
+sudo cp -r /usr/lib/aarch64-linux-gnu/libQt5Positioning* /home/xuezhaorong/Software/Qt/lib/
+```
+
+
+在qtcreator中导入，理论上，只用导入WSL或网络挂载的任意一个即可，移动库文件的操作也是一样，具体方法参照[[QCefView#QtCreator导入QCefView|库导入介绍]]，库和头文件路径选择具体的路径，需要导入`-lQt5WebEngine`，`-lQt5WebEngineCore`和`-lQt5WebEngineWidgets` 这三个库
+
+```bash
+unix:!macx: LIBS += -L$$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/lib/ -lQt5WebEngine
+
+INCLUDEPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngine
+DEPENDPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngine
+
+
+
+unix:!macx: LIBS += -L$$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/lib/ -lQt5WebEngineCore
+
+INCLUDEPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngineCore
+DEPENDPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngineCore
+
+unix:!macx: LIBS += -L$$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/lib/ -lQt5WebEngineWidgets
+
+INCLUDEPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngineWidgets
+DEPENDPATH += $$PWD/../../../mnt/pi-rootfs/home/xuezhaorong/Software/Qt/include/QtWebEngineWidgets
+```
+
+导入库完毕
