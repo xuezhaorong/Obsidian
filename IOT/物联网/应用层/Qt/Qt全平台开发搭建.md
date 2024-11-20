@@ -8,7 +8,7 @@
 
 ### 安装工具包
 ```bash 
-sudo apt install cmake
+sudo apt install cmake 
 ```
 
 安装xcb支持
