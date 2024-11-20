@@ -111,6 +111,7 @@ mv -r CefViewCore QCefView/
 ```
 
 3. 编译
+需要选择对应的编译平台
 ```bash
 cd QCefView
 ./generate-linux-x86_64.sh
