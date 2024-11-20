@@ -81,7 +81,7 @@ sudo dpkg-reconfigure locales
 ```
 
 选择zh_CH.UTF-8 UTF-8，按空格选择
-![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/16-57-54-d30b1013ea8373cd94d03a4b06a707cc-20241119165754-7a6a6f.png)
+![image.png|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/11/19/2024/11/20/18-49-27-d30b1013ea8373cd94d03a4b06a707cc-16-57-54-d30b1013ea8373cd94d03a4b06a707cc-20241119165754-7a6a6f-f41b6c.png)
 
 然后会跳出选择默认语言的界面，再选一次
 
@@ -135,7 +135,10 @@ gamke -j4
 gmake install
 ```
 
-
+为Qt添加系统字体
+```bash
+sudo cp -r /mnt/c/Windows/Fonts/* /mnt/pi-rootfs/Software/Qt/lib/fonts/
+```
 
 ### 创建项目
 设置用户运行时目录的标准路径`XDG_RUNTIME_DIR`
