@@ -2,24 +2,24 @@
 模板链接：https://wwl.lanzn.com/i22iY224uw1c
 
 1. 安装JAVA，若已经安装，则不需要安装
-![微信截图_20240701203237.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-32-56-3252b1b801db837b21957fe8471afeec-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203237-cfadb8.png)
+![微信截图_20240701203237.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-32-56-3252b1b801db837b21957fe8471afeec-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203237-cfadb8.png)
 
 2. 安装STM32Cube，选择路径安装即可
-![微信截图_20240701203352.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-34-02-953fd16612821bdc805cae69e73eb80e-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203352-bcea79.png)
+![微信截图_20240701203352.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-34-02-953fd16612821bdc805cae69e73eb80e-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203352-bcea79.png)
 
 3. 解压其他3个文件夹
-![微信截图_20240701203434.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-35-29-318928fcda7369832e63b2d519fd4831-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203434-9fb2ff.png)
+![微信截图_20240701203434.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-35-29-318928fcda7369832e63b2d519fd4831-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203434-9fb2ff.png)
 
-![微信截图_20240701203617.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-36-41-a6a4c394382f9326f0a5203240faa3f7-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203617-17c072.png)
+![微信截图_20240701203617.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-36-41-a6a4c394382f9326f0a5203240faa3f7-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203617-17c072.png)
 
 4. 设置环境变量
-![微信截图_20240701203757.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-38-33-0482007ac823d6e18f769a44f6a0900d-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203757-1fda10.png)
+![微信截图_20240701203757.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-38-33-0482007ac823d6e18f769a44f6a0900d-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701203757-1fda10.png)
 
 5. 设置CLion的嵌入式工具
-![微信截图_20240701204019.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-40-28-e2c6ad8a6bb6937d2e1421f0967e55f3-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204019-e3f072.png)
+![微信截图_20240701204019.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-40-28-e2c6ad8a6bb6937d2e1421f0967e55f3-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204019-e3f072.png)
 
 6. 配置构建工具链
-![微信截图_20240701204533.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-46-35-29aaeaf7e2bc0247e355da3e20a20048-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204533-9fc5f8.png)
+![微信截图_20240701204533.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-46-35-29aaeaf7e2bc0247e355da3e20a20048-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204533-9fc5f8.png)
 
 
 PS：以上只用配置一次
@@ -27,25 +27,25 @@ PS：以上只用配置一次
 PS: 下面可以直接使用模板
 
 7. 新建一个STM32项目
-![微信截图_20240701204241.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-42-51-4c0625a0039ceac2cf0aa634a5ee733a-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204241-e8dad7.png)
+![微信截图_20240701204241.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-42-51-4c0625a0039ceac2cf0aa634a5ee733a-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204241-e8dad7.png)
 
 8. 点击通过STM32Cube打开
-![微信截图_20240701204728.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-47-35-6f400ab4191a6c7dd4d11de42b6df726-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204728-f14173.png)
+![微信截图_20240701204728.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-47-35-6f400ab4191a6c7dd4d11de42b6df726-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204728-f14173.png)
 
 9. 点击芯片型号
-![微信截图_20240701204817.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-48-24-715b494e72d5acddabd2f18c31f54e32-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204817-888684.png)
+![微信截图_20240701204817.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-48-24-715b494e72d5acddabd2f18c31f54e32-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204817-888684.png)
 
 10. 选择对应的芯片型号
-![微信截图_20240701204916.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-49-29-0788da81d007bf62d0710969e931084a-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204916-443b57.png)
+![微信截图_20240701204916.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-49-29-0788da81d007bf62d0710969e931084a-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701204916-443b57.png)
 
 11. 将时钟源选择为外部高速时钟
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-32-17-b0c3e9f2f66382604789b8fd5e4d698d-20240701223217-879900.png)
+![image.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-32-17-b0c3e9f2f66382604789b8fd5e4d698d-20240701223217-879900.png)
 
 12. 在sys中debug选择为对应调试器的接口类型
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-34-27-1d569a18a1e562c33cf5755ef982edfc-20240701223426-bb2d1e.png)
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-34-27-1d569a18a1e562c33cf5755ef982edfc-20240701223426-bb2d1e.png)
 
 13. 选择时钟源，将基准频率调为72MHZ
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-35-29-30727db7b7796ec772433c778bcabe0e-20240701223528-a9e0e3.png)
+![|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/01/22-35-29-30727db7b7796ec772433c778bcabe0e-20240701223528-a9e0e3.png)
 
 14. 点击ProjectManager，输入项目名称和选择IDE类型,项目名称要与Clion的文件名一致
 ![微信截图_20240701205041.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/Download/photo/2024/07/01/20-50-50-73724f3f334ef8e320cc4c1d84124742-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240701205041-78ba01.png)
