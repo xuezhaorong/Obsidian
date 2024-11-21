@@ -18,12 +18,13 @@ sudo apt-get install qtcreator
 ![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/07/20/22-43-32-a11230a63c1e3895ddc283978b6ab946-20240720224331-626d9c.png)
 
 ## 在线安装
-1. 下载在线安装器，链接：https://download.qt.io/official_releases/online_installers/
+1. 安装依赖包：`sudo apt install libxcb-cursor0`
+2. 下载在线安装器，链接：https://download.qt.io/official_releases/online_installers/
 选择linux-arm64版本：
 ![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/21/23-57-10-00547982d8557b8ad1ef7995a2543d20-20241121235709-db3ccc.png)
 
 
 2. 执行运行命令，选择对应版本下载，镜像无法加载的话，使用科学上网环境
 ```bash
-.\qt-unified-linux-arm64-online.exe --mirror https://mirrors.cloud.tencent.com/qt/
+.\qt-unified-linux-arm64-online.run --mirror https://mirrors.cloud.tencent.com/qt/
 ```
