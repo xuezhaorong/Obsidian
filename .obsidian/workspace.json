@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md"
+                "file": "IOT/树莓派/更换中文字体.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md",
+                "file": "IOT/树莓派/更换中文字体.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md"
+                "file": "IOT/树莓派/更换中文字体.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md",
+                "file": "IOT/树莓派/更换中文字体.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md"
+                "file": "IOT/树莓派/更换中文字体.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/Opencv编译.md",
+                "file": "IOT/树莓派/更换中文字体.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,12 +190,13 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/树莓派/Opencv编译.md",
+    "IOT/树莓派/WiringPi库安装.md",
     "IOT/树莓派/Dbus编译.md",
     "IOT/树莓派/开启ssh.md",
     "IOT/树莓派/安装qt5.md",
     "未命名.canvas",
     "IOT/树莓派/更换中文字体.md",
-    "IOT/树莓派/WiringPi库安装.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/感知层/Clion配置/51单片机配置.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
@@ -210,7 +211,6 @@
     "IOT/Linux/WSL2连接USB存储设备.md",
     "IOT/树莓派/换源.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
-    "IOT/树莓派/Opencv编译.md",
     "IOT/树莓派/FontConfig编译.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
