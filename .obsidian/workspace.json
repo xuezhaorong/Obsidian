@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md"
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/树莓派/更换中文字体.md",
+                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,12 +190,16 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
+    "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
+    "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
+    "IOT/物联网/感知层/Clion配置/51单片机配置.md",
+    "IOT/树莓派/更换中文字体.md",
     "IOT/树莓派/安装qt5.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
     "IOT/Linux/WSL设置中文.md",
     "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
-    "IOT/树莓派/更换中文字体.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/树莓派/Opencv编译.md",
     "IOT/树莓派/NSS编译.md",
@@ -204,9 +208,6 @@
     "IOT/树莓派/开启ssh.md",
     "未命名.canvas",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/物联网/感知层/Clion配置/51单片机配置.md",
-    "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
-    "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库FreeRtos配置.md",
     "IOT/Linux/WSL安装配置.md",
     "IOT/Linux/编译.md",
@@ -217,7 +218,6 @@
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/uni-app/JavaScript.md",
     "未命名 1.canvas",
-    "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/数据库",
     "IOT/物联网/应用层/uni-app",
