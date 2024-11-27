@@ -94,3 +94,5 @@ sudo systemctl status mosquitto
 sudo firewall-cmd --permanent --add-port=1883/tcp
 sudo firewall-cmd --reload
 ```
+
+使用`sudo firewall-cmd --list-ports`查看开放的端口
