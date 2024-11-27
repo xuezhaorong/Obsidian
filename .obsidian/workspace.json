@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md"
+                "file": "IOT/物联网/平台层/宝塔面板安装.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md"
+                "file": "IOT/物联网/平台层/宝塔面板安装.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md"
+                "file": "IOT/物联网/平台层/宝塔面板安装.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,6 +190,10 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/树莓派/开启ssh.md",
+    "IOT/树莓派/制作树莓派最小系统镜像.md",
+    "IOT/物联网/平台层/宝塔面板安装.md",
+    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/感知层/Clion配置/STM32Hal库FreeRtos配置.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
@@ -206,7 +210,6 @@
     "IOT/树莓派/NSS编译.md",
     "IOT/树莓派/WiringPi库安装.md",
     "IOT/树莓派/Dbus编译.md",
-    "IOT/树莓派/开启ssh.md",
     "未命名.canvas",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库FreeRtos配置.md",
@@ -214,9 +217,6 @@
     "IOT/Linux/编译.md",
     "IOT/Linux/WSL2连接USB存储设备.md",
     "IOT/树莓派/换源.md",
-    "IOT/物联网/应用层/uni-app/微信小程序.md",
-    "IOT/树莓派/FontConfig编译.md",
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "未命名 1.canvas",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/数据库",
