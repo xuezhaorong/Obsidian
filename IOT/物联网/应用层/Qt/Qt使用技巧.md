@@ -48,8 +48,10 @@ pad-comma                # 在逗号后插入空格填充
 2. 编写`CMakeLists.txt`文件
 ```cmake
 cmake_minimum_required(VERSION 3.5)  
-project(DiagramModel)  
-  
+project(DiagramModel LANGUAGES CXX)  
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_PREFIX_PATH "/home/xuezhaorong/Qt/6.7.3/gcc_arm64") # Qt Kit Dir
 set(CMAKE_CXX_STANDARD 11)  
 set(CMAKE_AUTOMOC ON)  
 set(CMAKE_AUTORCC ON)  
