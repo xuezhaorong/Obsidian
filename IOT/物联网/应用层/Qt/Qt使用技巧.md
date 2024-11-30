@@ -63,7 +63,6 @@ find_package(Qt6 COMPONENTS
         Core  
         Gui  
         Widgets  
-        Sql  
         REQUIRED)  
         
 # 对外部的头文件
@@ -75,16 +74,15 @@ target_include_directories(${MODELNAME}
 # 源文件  
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)  
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)  
-  
+file(GLOB_RECURSE UI_FILES ${CMAKE_CURRENT_SOURCE_DIR}/form/*.ui)
 # 添加源文件  
-target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES})  
+target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES} ${UI_FILES})
   
   
 target_link_libraries(${MODELNAME}  
         Qt6::Core  
         Qt6::Gui  
         Qt6::Widgets  
-        Qt6::Sql  
 )
 ```
 
