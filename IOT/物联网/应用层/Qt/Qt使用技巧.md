@@ -82,7 +82,7 @@ target_include_directories(${MODELNAME}
 )  
 
 # 添加源文件  
-target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES})
+target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES} ${UI_FILES})
   
   
 target_link_libraries(${MODELNAME}  
