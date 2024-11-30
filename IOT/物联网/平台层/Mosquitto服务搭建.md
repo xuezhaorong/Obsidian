@@ -61,6 +61,7 @@ protocol mqtt
 max_connections -1
 
 #websockets协议
+bind_address 0.0.0.0
 listener 8000 
 protocol websockets
 
