@@ -84,6 +84,7 @@ target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES} ${UI_FILES})
   
   
 target_link_libraries(${MODELNAME}  
+		PRIVATE
         Qt6::Core  
         Qt6::Gui  
         Qt6::Widgets  
