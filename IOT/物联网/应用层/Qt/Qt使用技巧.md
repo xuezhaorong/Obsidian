@@ -45,7 +45,7 @@ pad-comma                # 在逗号后插入空格填充
 1. 新建`DiagramModel`目录，在里面新建`include`,`src`目录和`CMakeLists`文件，并移入`.cpp`和`.h`
 ![image.png|490](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/10/30/13-55-44-0e5d87f6210f664ab036a3283f62d91f-20241030135543-2c2943.png)
 
-2. 编写`CMakeLists`文件
+2. 编写`CMakeLists.txt`文件
 ```cmake
 cmake_minimum_required(VERSION 3.5)  
 project(DiagramModel)  
@@ -54,8 +54,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_AUTOMOC ON)  
 set(CMAKE_AUTORCC ON)  
 set(CMAKE_AUTOUIC ON)  
-  
-add_library(diagramModel STATIC ${SOURCE_FILES} )  
+set(MODELNAME diagramModel)
+
+add_library(${MODELNAME} STATIC ${SOURCE_FILES} )  
   
   
 find_package(Qt6 COMPONENTS  
@@ -66,7 +67,7 @@ find_package(Qt6 COMPONENTS
         REQUIRED)  
         
 # 对外部的头文件
-target_include_directories(diagramModel  
+target_include_directories(${MODELNAME}  
         PUBLIC  
         ${CMAKE_CURRENT_SOURCE_DIR}/include  
 )  
@@ -76,10 +77,10 @@ file(GLOB_RECURSE HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)  
   
 # 添加源文件  
-target_sources(diagramModel PRIVATE ${SOURCE_FILES} ${HEADER_FILES})  
+target_sources(${MODELNAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES})  
   
   
-target_link_libraries(diagramModel  
+target_link_libraries(${MODELNAME}  
         Qt6::Core  
         Qt6::Gui  
         Qt6::Widgets  
