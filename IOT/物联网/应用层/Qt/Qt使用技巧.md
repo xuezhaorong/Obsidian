@@ -61,11 +61,11 @@ set(MODELNAME diagramModel)
 
   
   
-find_package(Qt6 COMPONENTS  
+find_package(Qt6 REQUIRED COMPONENTS  
         Core  
         Gui  
         Widgets  
-        REQUIRED)  
+        )  
     
 
   
