@@ -47,10 +47,10 @@ pad-comma                # 在逗号后插入空格填充
 
 2. 编写`CMakeLists`文件
 ```cmake
-cmake_minimum_required(VERSION 3.26)  
+cmake_minimum_required(VERSION 3.5)  
 project(DiagramModel)  
   
-set(CMAKE_CXX_STANDARD 17)  
+set(CMAKE_CXX_STANDARD 11)  
 set(CMAKE_AUTOMOC ON)  
 set(CMAKE_AUTORCC ON)  
 set(CMAKE_AUTOUIC ON)  
@@ -58,7 +58,7 @@ set(CMAKE_AUTOUIC ON)
 add_library(diagramModel STATIC ${SOURCE_FILES} )  
   
   
-find_package(Qt5 COMPONENTS  
+find_package(Qt6 COMPONENTS  
         Core  
         Gui  
         Widgets  
@@ -80,10 +80,10 @@ target_sources(diagramModel PRIVATE ${SOURCE_FILES} ${HEADER_FILES})
   
   
 target_link_libraries(diagramModel  
-        Qt5::Core  
-        Qt5::Gui  
-        Qt5::Widgets  
-        Qt5::Sql  
+        Qt6::Core  
+        Qt6::Gui  
+        Qt6::Widgets  
+        Qt6::Sql  
 )
 ```
 
