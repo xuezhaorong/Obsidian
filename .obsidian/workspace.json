@@ -190,6 +190,10 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/attachments/nekoxl-15547731-x2.png",
+    "nekoxl-15547731-x2.png",
+    "IOT/attachments",
+    "IOT/新建文件夹",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/树莓派/Opencv编译.md",
     "IOT/树莓派/更换中文字体.md",
@@ -215,7 +219,6 @@
     "IOT/物联网/应用层/lvgl/lvgl移植.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "未命名.canvas",
     "未命名 1.canvas",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
@@ -226,8 +229,6 @@
     "C语言/C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达（Stephen Prata）[著], 姜佑[译]) (Z-Library).pdf",
     "C语言/数据结构（C语言版 第2版） (严蔚敏)公众号：“愚生浅末”.pdf",
     "C语言/数据结构与算法分析 C语言描述 (韦斯 (Mark Allen Weiss)) (Z-Library).pdf",
-    "C语言",
-    "Excalidraw",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
@@ -236,7 +237,6 @@
     "物联网/感知层/51单片机/指令运行5.webp",
     "物联网/感知层/51单片机/指令运行4.webp",
     "物联网/感知层/51单片机/指令运行3.webp",
-    "物联网/感知层/51单片机/指令运行2.webp",
-    "物联网/感知层/51单片机/指令运行1.webp"
+    "物联网/感知层/51单片机/指令运行2.webp"
   ]
 }
