@@ -51,7 +51,200 @@ ORM（Object-Relational Mapping） 表示对象关系映射。在面向对象的
 
 ![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-23-27-9d2edf617691e979728f463a42070ccc-20241202002326-a07d93.png)
 
-### 写入框架
-### mybatis-flex持久层工具
-1. 依赖导入
+## 本地回环测试
 
+### 数据库初始化
+1. 打开`cmd`输入`mysql -u root -p`，然后输入密码初始化mysql，使用`Navicat`连接， 输入初始化的用户名密码。
+
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-42-02-cf3ac61696827234f741f40210c890a0-20241202004200-82ed58.png)
+
+2. 创建数据库
+![image.png|457](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-43-06-86c287851abb6a003328c0b4715aae25-20241202004306-1a3bcf.png)
+
+3. 双击进入创建的数据库，使用查询创建数据表
+
+```sql
+CREATE TABLE IF NOT EXISTS `tb_user`
+(
+    `id`        INTEGER PRIMARY KEY auto_increment,
+    `username` VARCHAR(100),
+    `age`       INTEGER,
+);
+```
+
+![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-44-32-8ee79c470850f221a2619ab208a2f980-20241202004432-f64c5c.png)
+
+![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-48-55-2f6610dd03ac38a2edfe2d337e44f398-20241202004855-b7d377.png)
+
+
+### mybatis-flex持久层工具的导入
+依赖导入：[[Mybatis-flex#依赖引入]]，`yml`配置：[[Mybatis-flex#yml文件配置]]，将`property`文件改为`yml`
+使用代码生成器：[[Mybatis-flex#代码生成器的使用]]，生成对应的`entity`，`mapper`,`service`，`serviceImpl`和`controler`
+
+![image.png|350](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/01-00-20-ee4d2168dbb6eee867cb18601391d5e5-20241202010018-35e1d7.png)
+
+**entity**
+```java
+@Data  
+@NoArgsConstructor  
+@AllArgsConstructor  
+@Builder  
+@Table("tb_room")  
+public class Room implements Serializable {  
+    @Id(keyType=KeyType.Generator, value= KeyGenerators.flexId)  
+    @Column("ID")  
+    private Integer ID;  
+  
+    @Column("roomID")  
+    private Integer roomID;  
+  
+    @Column("macID")  
+    private String macID;  
+  
+}
+```
+
+**mapper**
+```java
+@Mapper  
+public interface RoomMapper extends BaseMapper<Room> {  
+  
+}
+```
+
+`service`
+```java
+public interface RoomService extends IService<Room> {  
+
+}
+```
+
+`serviceImpl`
+```java
+@Service  
+public class RoomServiceImpl extends ServiceImpl<RoomMapper, Room>  implements RoomService{  
+  
+}
+```
+
+`RoomController`
+```java
+@RestController  
+public class RoomController {  
+  
+    /**  
+     * 根据主键更新。  
+     *  
+     * @param room   
+* @return {@code true} 更新成功，{@code false} 更新失败  
+     */  
+    @PutMapping("update")  
+    public boolean update(@RequestBody Room room) {  
+        return roomService.updateById(room);  
+    }  
+  
+    /**  
+     * 查询所有。  
+     *  
+     * @return 所有数据  
+     */  
+    @GetMapping("list")  
+    public List<Room> list() {  
+        return roomService.list();  
+    }  
+  
+    /**  
+     * 根据主键获取详细信息。  
+     *  
+     * @param id 主键  
+     * @return 详情  
+     */  
+    @GetMapping("getInfo/{id}")  
+    public Room getInfo(@PathVariable Integer id) {  
+        return roomService.getById(id);  
+    }  
+  
+    /**  
+     * 分页查询。  
+     *  
+     * @param page 分页对象  
+     * @return 分页对象  
+     */  
+    @GetMapping("page")  
+    public Page<Room> page(Page<Room> page) {  
+        return roomService.page(page);  
+    }  
+  
+}
+```
+
+### 配置yml
+默认为`8080`端口，如果占用了，可以选择改变端口
+```java
+server:  
+  port: 8041	
+```
+
+### 实现功能
+实现发送API：`/room/roomList` 查询所有房间列表
+1. 编写`Controller`
+```java
+@RestController  
+@RequestMapping("/room")  
+public class RoomController {  
+  
+    @Autowired  
+    private RoomService roomService;  
+  
+    // 获取房间信息  
+    @GetMapping("/roomList")  
+    public Result<List<Room>> getRoomList(){  
+        List<Room> roomList = roomService.findAll();  
+        if (roomList != null){  
+            return Result.success(roomList);  
+        }  
+        return Result.error("查找房间信息失败");  
+    }  
+  
+```
+
+添加了顶层API：`/room`，使用`@Autowired`注入`roomService`，添加Get方法的请求函数
+
+2. 编写`service`
+在`RoomService`中添加功能接口
+```java
+public interface RoomService extends IService<Room> {  
+  
+    public List<Room> findAll();  
+}
+```
+
+在`RoomServiceImpl`中实现接口
+```java
+@Service  
+public class RoomServiceImpl extends ServiceImpl<RoomMapper, Room>  implements RoomService{  
+  
+    @Autowired  
+    private RoomMapper roomMapper;  
+  
+    @Override  
+    public List<Room> findAll() {  
+  
+        return roomMapper.selectAll();  
+    }  
+}
+```
+
+使用`@Autowired`注入`roomMapper`，调用`roomMapper`的`selectAll()`方法，`selectAll()`是`roomMapper`继承的`BaseMapper`类所自带的方法。
+
+### API测试
+1. 打开`Apifox`，新建测试环境，根据具体端口号设置
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/01-23-28-e5c9f66efcd1f81ffb8934cf5ae4d5b5-20241202012327-bd3cf1.png)
+
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/01-23-43-32ad860328ba11cd498425bfa7bf2d72-20241202012343-774a29.png)
+
+2. 新建测试项目目录，新建一个接口，切换为`GET`方法，写入`API`路径
+![image.png|1025](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/01-24-43-2b4131264af6c49094a566549409ad16-20241202012443-79a20d.png)
+
+先运行SpringBoot后端程序，再点击运行-发送，查看接收的信息, 测试成功
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/01-26-47-570eca2d18040baeb98c1785b910e85f-20241202012646-2c5667.png)
