@@ -33,4 +33,25 @@ ORM（Object-Relational Mapping） 表示对象关系映射。在面向对象的
 ### 本地开发环境搭建
 1. 安装`IDEA`开发工具，官方链接：[jetbrains.com/idea/](https://www.jetbrains.com/idea/)
 2. 配置Maven，[[Maven本地仓库配置]]
-3. 安装Mysql，
+3. 安装Mysql，官网链接：[MySQL :: Download MySQL Community Server (Archived Versions)](https://downloads.mysql.com/archives/community/)
+4. 安装数据库查看工具`Navicat`，官网链接：[Navicat Premium | 以单一的 GUI 同时连接不同类型的数据库](https://www.navicat.com.cn/products/navicat-premium)
+5. 安装Api接口调试工具`Apifox`，官网链接：[Apifox - API 文档、调试、Mock、测试一体化协作平台。拥有接口文档管理、接口调试、Mock、自动化测试等功能，接口开发、测试、联调效率，提升 10 倍。最好用的接口文档管理工具，接口自动化测试工具。](https://apifox.com/)
+
+### 创建项目
+1. 打开`IDEA`新建SpringBoot项目，选择左侧的`Spring Initializr`，设置好名称，位置，组，软件包名称等，注意选择Maven构建类型和JDK版本。
+
+![|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-19-28-5f4fc28ba1915a76f137890a76914ddd-20241202001927-8c2c5f.png)
+
+
+2. 选择SPringBoot版本，~Lombok~注解工具，`Spring Web`框架工具和`MySQL Deiver`驱动库xxuan'zggou'jianggon'juxxaid的
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-21-07-30b690cf38a0fb0550f3602bec204e9f-20241202002107-66185c.png)
+![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-21-31-a79e8095deb3b0c069384b4feceaa02e-20241202002131-4c1a02.png)
+
+3. 进入项目中，选择构建工具下的Maven，勾选重写，选择路径。
+
+![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-23-27-9d2edf617691e979728f463a42070ccc-20241202002326-a07d93.png)
+
+### 写入框架
+### mybatis-flex持久层工具
+1. 依赖导入
+
