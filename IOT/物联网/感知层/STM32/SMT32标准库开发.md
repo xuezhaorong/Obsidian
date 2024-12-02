@@ -2091,7 +2091,7 @@ TIM_Cmd(TIM3, ENABLE);          //使能TIM3，定时器开始运行
 
 16 个 GPIO 口外加两个内部的通道进入 AD 转换器，AD 转换器中含有规则组和注入组，注入组最多可以选择 4 个通道，规则组可以选择 16 个通道，转换的结果可以存放在 AD 数据寄存器里，其中规则组只有 1 个数据寄存器，注入组有 4 个，触发控制提供了开始转换的信号，触发控制可以选择软件触发和硬件触发，硬件触发主要来自于定时器和外部中断的引脚，RCC 的 ADC 时钟 CLK 推动 ADC 的逐次比较。可以布置看门狗用于监测转换结果的范围，如果超出设定的阈值，就通过中断输出控制，向 NVIC 申请中断。另外规则组和注入组转换完成后会有个 EOC 信号，标志位或者通向 NVIC，最后还有开关控制给 ADC 上电。
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-40-26-6ac3ec0f4df9f1acb8ad582d0182d005-ADC%E8%BE%93%E5%85%A5%E9%80%9A%E9%81%93-9cb988.png)
+![|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/STM32/%E5%BA%93%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91/2024/05/12/20-40-26-6ac3ec0f4df9f1acb8ad582d0182d005-ADC%E8%BE%93%E5%85%A5%E9%80%9A%E9%81%93-9cb988.png)
 
 ### 转换模式
 
