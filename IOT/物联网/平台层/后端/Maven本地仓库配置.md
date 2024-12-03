@@ -62,6 +62,8 @@ localRepository节点用于配置本地仓库，本地仓库其实起到了一�
 
 ```
 
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/04/00-53-55-f01ede09a3c30aff0fd3d8cd6fa496c6-20241204005354-5248c5.png)
+
 2. 验证配置结果
 打开命令提示符窗口，输入`mvn help:system`测试，配置成功则本地仓库（`E:\Tools\Maven\maven-repository`）中会出现一些文件
 
