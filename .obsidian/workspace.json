@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md"
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md"
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md"
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
+                "file": "IOT/物联网/应用层/安卓/Mqtt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,11 +190,11 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/安卓/Android.md",
+    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/应用层/安卓/Mqtt.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
-    "IOT/物联网/应用层/安卓/Android.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
-    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "IOT/物联网/平台层/后端/Mysql安装.md",
