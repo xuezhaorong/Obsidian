@@ -1,4 +1,14 @@
 
+## 导入依赖
+```xml
+dependencies {   
+    // Views/Fragments Integration  
+    implementation ("androidx.navigation:navigation-fragment:2.8.4")  
+    implementation ("androidx.navigation:navigation-ui:2.8.4")  
+}
+```
+
+
 ## 设计菜单布局
 1. 在`res`新建菜单目录`menu`，创建菜单布局`bottom_nav_menu.xml`
 ![image.png|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/07/22-25-46-70277086e635d7fe6c36e10d9ecb8976-20241207222544-c1dd22.png)
