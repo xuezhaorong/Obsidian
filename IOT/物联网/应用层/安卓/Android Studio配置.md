@@ -27,7 +27,32 @@
 ![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/18-09-56-a868f923551fdb75638a4c4c371c954f-20241208180956-df011f.png)
 
 ### 换源
-在项目的`settings.gradle.kts`中添加国内源
+在项目的`settings.gradle.kts`中替换国内源
 ```bash
-
+pluginManagement {  
+    repositories {  
+        maven { url=uri ("https://www.jitpack.io")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/releases")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/google")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/central")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/gradle-plugin")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/public")}  
+        google()  
+        mavenCentral()  
+        gradlePluginPortal()  
+    }  
+}  
+dependencyResolutionManagement {  
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)  
+    repositories {  
+        maven { url=uri ("https://www.jitpack.io")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/releases")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/google")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/central")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/gradle-plugin")}  
+        maven { url=uri ("https://maven.aliyun.com/repository/public")}  
+        google()  
+        mavenCentral()  
+    }  
+}
 ```

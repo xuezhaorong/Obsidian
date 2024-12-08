@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md"
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md"
               }
             }
           },
@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md",
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md"
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md"
               }
             }
           }
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md",
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md"
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md"
               }
             }
           },
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/安卓/Android Studio配置.md",
+                "file": "IOT/物联网/应用层/安卓/模拟器迁移.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,8 +190,9 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/安卓/Android.md",
     "IOT/物联网/应用层/安卓/Android Studio配置.md",
+    "IOT/物联网/应用层/安卓/模拟器迁移.md",
+    "IOT/物联网/应用层/安卓/Android.md",
     "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/应用层/安卓/Mqtt.md",
@@ -224,7 +225,6 @@
     "IOT/树莓派/FontConfig编译.md",
     "IOT/树莓派/frp远程连接.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
-    "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
     "未命名.canvas",
     "未命名 1.canvas",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
