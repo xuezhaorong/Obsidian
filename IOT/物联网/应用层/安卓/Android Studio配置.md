@@ -17,3 +17,9 @@
 ![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-58-29-2d01030fb4a10b59007af61633907cd0-20241208175829-77de19.png)
 
 
+3. 在Android Studio中打开项目，设置gradle为本地，设置java为本地
+![image.png|950](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/18-04-58-ae1d50f0a98ea03f12570537fe117913-20241208180457-4d4258.png)
+
+## 网络配置
+因为Android Studio下载的资源多数来源于国外，需要配置网络环境避免下载过于缓慢或者失败，有两种方式，使用本地代理或者换源。
+### 本地代理
