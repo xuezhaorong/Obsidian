@@ -23,3 +23,11 @@
 ## 网络配置
 因为Android Studio下载的资源多数来源于国外，需要配置网络环境避免下载过于缓慢或者失败，有两种方式，使用本地代理或者换源。
 ### 本地代理
+在设置中的`proxy`中切换到手动代理，设置本地代理地址和端口： 
+![image.png|975](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/18-09-56-a868f923551fdb75638a4c4c371c954f-20241208180956-df011f.png)
+
+### 换源
+在项目的`settings.gradle.kts`中添加国内源
+```bash
+
+```
