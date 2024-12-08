@@ -1,0 +1,19 @@
+## 安装依赖环境
+1. 安装java17，官网地址：[Java Archive Downloads - Java SE 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-50-36-5eb52a7ef2a7618590e5a0e1bc8c4146-20241208175035-7e4a8d.png)
+
+2. 安装gradle，官网地址：[Gradle Build Tool](https://gradle.org/)
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-52-36-29ea86e4c7d66826cdc373ab619e3c41-20241208175235-d847d5.png)
+
+
+3. 安装Android Studio，官网地址：https://developer.android.google.cn/develop?hl=zh-cn
+![image.png|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-54-25-6fdbaa5ad81270421295e791869ae792-20241208175424-a66872.png)
+
+## 配置gradle本地仓库
+1. 在Gradle目录下新建文件夹`repository`作为本地仓库存放所有下载的内容。
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-56-03-7517a4622fd3b484ec8c8b1e91ab8ac2-20241208175602-7f3680.png)
+
+2. 添加Gradle和Gradle仓库的环境变量。
+![image.png|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/08/17-58-29-2d01030fb4a10b59007af61633907cd0-20241208175829-77de19.png)
+
+
