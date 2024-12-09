@@ -6,7 +6,7 @@
       {
         "id": "f8ec5286201da21b",
         "type": "tabs",
-        "dimension": 88.38821490467937,
+        "dimension": 88.44598497978048,
         "children": [
           {
             "id": "bdaa4511f47ced7d",
@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia.md"
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md"
               }
             }
           },
@@ -29,14 +29,26 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5942b25a22048996",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "91ae393827fd9820",
         "type": "tabs",
-        "dimension": 11.611785095320624,
+        "dimension": 11.554015020219527,
         "children": [
           {
             "id": "d65986d5cad0213c",
@@ -44,7 +56,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia.md"
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md"
               }
             }
           }
@@ -114,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia.md",
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia.md"
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md"
               }
             }
           },
@@ -155,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia.md",
+                "file": "IOT/物联网/平台层/后端/Mqtt开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,10 +200,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8b9d024d6a00277d",
+  "active": "5942b25a22048996",
   "lastOpenFiles": [
     "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
     "IOT/物联网/应用层/uni-app/uniap pinia.md",
+    "IOT/物联网/平台层/前端/Pinia的使用.md",
+    "IOT/物联网/应用层/Qt/Qt mqtt.md",
+    "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
+    "IOT/物联网/应用层/Qt/Qt使用技巧.md",
+    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/平台层/后端/Mqtt开发.md",
     "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
@@ -201,7 +218,6 @@
     "IOT/物联网/Qt+后端+微信小程序的mqtt回环通讯测试.md",
     "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
-    "IOT/物联网/应用层/Qt/Qt mqtt.md",
     "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "IOT/物联网/应用层/安卓/模拟器迁移.md",
     "IOT/物联网/应用层/安卓/Android Studio配置.md",
@@ -211,12 +227,8 @@
     "IOT/物联网/平台层/宝塔面板安装.md",
     "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/平台层/后端/Mybatis-flex.md",
-    "IOT/物联网/平台层/前端/Pinia的使用.md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/Mysql安装.md",
-    "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
-    "IOT/物联网/应用层/数据库/Mysql本地.md",
-    "IOT/物联网/应用层/数据库/Sqlite3.md",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",
     "attachments/nekoxl-15547731-x2.png",
