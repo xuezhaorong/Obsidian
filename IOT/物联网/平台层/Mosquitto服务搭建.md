@@ -75,7 +75,7 @@ clientid_prefixes guduyl
 
 ```
 
-* 比如要设置使用websockets协议的话，就可以开启`protocol websockets`的相关设置
+* **比如要设置使用websockets协议的话，就可以开启`protocol websockets`的相关设置**
 
 3. 启动服务
 - 设置服务开机自启：
