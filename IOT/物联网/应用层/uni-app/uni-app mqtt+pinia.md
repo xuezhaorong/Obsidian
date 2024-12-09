@@ -65,3 +65,69 @@ export function mqtt_Subscribe(topic){
 }
 ```
 
+## 使用
+结合`pinia`持久化工具使用
+1. pinia持久化工具的设置
+```js
+import {defineStore} from 'pinia'
+
+export const myStore = defineStore('mystore',{
+  state: () => {
+    return{
+      count: 0,
+      client: null, // mqtt客户端
+      data: new Map() // 使用 Map 存储数据
+    }
+  },
+  
+  actions: {
+    
+    setCallback() {
+      // 当客户端收到一个发布过来的消息时触发回调
+      this.client.on('message', (topic, message, packet) => {
+		  // 使用 Pinia store 更新 sensorData
+		  this.data = message;
+		  // 产生更新
+		  this.count++;
+		  this.count=0;
+      });
+    },
+  }
+  
+})
+```
+
+2. 在主页面进行mqtt连接
+
+```js
+
+import {
+mqtt_Connect,
+} from '@/utils/mqtt_config.js';
+
+import { myStore } from '@/store/myStore'; // 导入持久化工具
+// 登录成功获取订阅链接
+this.mqttSubscribeTopic = res.data;
+
+// 实例持久化
+const mystore = myStore();
+
+// 连接 + 订阅 
+const client = mqtt_Connect(this.mqttSubscribeTopic+'/#');
+  
+mystore.client = client;
+
+mystore.setCallback(); // 设置回调函数
+```
+
+3.  在其他页面进行接收信息
+借助`pinia`的数据检测功能来获取数据
+```js
+// 实例持久化
+const mystore = myStore();
+
+mystore.$subscribe(async (mutation, state) => {
+	
+	console.log(this.data);
+});
+```
