@@ -535,6 +535,7 @@ TIM_TimeBaseStructure.Init.Prescaler = 71;
 TIM_TimeBaseStructure.Init.CounterMode = TIM_COUNTERMODE_UP;  
 TIM_TimeBaseStructure.Init.Period = 499;  
 TIM_TimeBaseStructure.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;  
+TIM_TimeBaseStructure.Init.RepetitionCounter = 0;
 TIM_TimeBaseStructure.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;  
 HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 
