@@ -494,6 +494,8 @@ typedef struct
 * `Pulse`：占空比
 * `OCPolarity`：输出比较的极性
 
+`第三个参数为输出比较的通道`
+
 
 示例代码：
 ```c
@@ -522,7 +524,7 @@ __HAL_RCC_GPIOA_CLK_ENABLE();
 GPIO_InitTypeDef GPIO_InitStruct;
 GPIO_InitStruct.Pin = GPIO_PIN_0;  
 GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;  
-GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;  
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;  
 HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 // 时基单元配置
