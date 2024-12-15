@@ -6,7 +6,7 @@
       {
         "id": "f8ec5286201da21b",
         "type": "tabs",
-        "dimension": 88.44598497978048,
+        "dimension": 69.64725184577523,
         "children": [
           {
             "id": "bdaa4511f47ced7d",
@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md"
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
               }
             }
           },
@@ -36,7 +36,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
       {
         "id": "91ae393827fd9820",
         "type": "tabs",
-        "dimension": 11.554015020219527,
+        "dimension": 30.352748154224773,
         "children": [
           {
             "id": "d65986d5cad0213c",
@@ -56,7 +56,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md"
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
               }
             }
           }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md"
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,6 +202,7 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
+    "IOT/物联网/感知层/Clion配置/STM32Hal库配置.md",
     "IOT/物联网/感知层/Clion配置/STM32标准库配置.md",
     "IOT/物联网/平台层/后端/跨域问题解决.md",
     "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
@@ -227,7 +228,6 @@
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/应用层/安卓/模拟器迁移.md",
     "IOT/物联网/应用层/安卓/Android Studio配置.md",
-    "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",

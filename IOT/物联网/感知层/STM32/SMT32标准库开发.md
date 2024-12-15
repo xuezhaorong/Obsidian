@@ -1545,6 +1545,8 @@ GPIO_InitTypeDef GPTOA_InitStructure = {
     .GPIO_Pin = GPIO_Pin_1, // A1
     .GPIO_Speed = GPIO_Speed_50MHz      
 };
+
+GPIO_Init(GPIO_Pin_1,&GPTO_InitStructure);
 ```
 
 -   根据 PWM 公式进行自动重装器和预分配器的配置
