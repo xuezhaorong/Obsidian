@@ -522,15 +522,15 @@ __HAL_TIM_SetCompare(&TIM_TimeBaseStructure, TIM_CHANNEL_1, 0);
 // 复用引脚配置
 __HAL_RCC_GPIOA_CLK_ENABLE();
 GPIO_InitTypeDef GPIO_InitStruct;
-GPIO_InitStruct.Pin = GPIO_PIN_0;  
+GPIO_InitStruct.Pin = GPIO_PIN_0;  // 引脚
 GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;  
 GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;  
-HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+HAL_GPIO_Init(GPIOA, &GPIO_InitStruct); // 端口
 
 // 时基单元配置
 __HAL_RCC_TIM2_CLK_ENABLE();
 TIM_HandleTypeDef TIM_TimeBaseStructure;
-TIM_TimeBaseStructure.Instance = TIM2;  
+TIM_TimeBaseStructure.Instance = TIM2;  // 定时器
 TIM_TimeBaseStructure.Init.Prescaler = 71;  
 TIM_TimeBaseStructure.Init.CounterMode = TIM_COUNTERMODE_UP;  
 TIM_TimeBaseStructure.Init.Period = 499;  
@@ -542,14 +542,14 @@ HAL_TIM_Base_Init(&TIM_TimeBaseStructure);
 TIM_OC_InitTypeDef TIM_OCInitStructure;
 TIM_OCInitStructure.OCMode = TIM_OCMODE_PWM1;  
 TIM_OCInitStructure.Pulse = 0;  
-TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;  
-HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1);
+TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_HIGH;  
+HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1); // 通道
 
 // 开启PWM
-HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1);
+HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1); // 通道
 
 // 设置占空比
-__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
+__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0); // 通道
 ```
 
 #### STM32CUBE操作
