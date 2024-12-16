@@ -789,8 +789,46 @@ HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
 
 ### 配置ADC工作模式
 ```c
+__HAL_RCC_ADC1_CLK_ENABLE(); // 开启ADC时钟
 
+ADC_HandleTypeDef ADC_Handle;
+ADC_Handle.Instance = ADC1; 
+ADC_Handle.Init.ScanConvMode = ADC_SCAN_DISABLE;  // 非扫描模式
+ADC_Handle.Init.ContinuousConvMode = DISABLE;  // 非连续转换
+ADC_Handle.Init.DiscontinuousConvMode = DISABLE;  // 禁止不连续采样
+ADC_Handle.Init.ExternalTrigConv = ADC_SOFTWARE_START;  // 外部触发模式
+ADC_Handle.Init.DataAlign = ADC_DATAALIGN_RIGHT;  // 右对齐
+ADC_Handle.Init.NbrOfConversion = 0; // 不连续采样通道
+HAL_ADC_Init(&ADC_Handle); // 初始化
 ```
+
+### 常规通道配置
+```c
+ADC_ChannelConfTypeDef ADC_Config = {0};
+ADC_Config.Channel = ADC_CHANNEL_7;  // ADC通道
+ADC_Config.Rank = ADC_REGULAR_RANK_1;  
+ADC_Config.SamplingTime = ADC_SAMPLETIME_1CYCLE_5; // 采样间隔
+HAL_ADC_ConfigChannel(&ADC_Handle, &ADC_Config); // 初始化常规通道配置
+```
+
+### 校准函数
+```c
+HAL_ADCEx_Calibration_Start(&ADC_Handle); //AD校准
+```
+
+### 开始转换
+```c
+HAL_ADC_Start(&ADC_Handle);     //启动ADC转换
+HAL_ADC_PollForConversion(&ADC_Handle, 50);   //等待转换完成，50为最大等待时间，单位为ms
+ 
+ 
+if(HAL_IS_BIT_SET(HAL_ADC_GetState(&ADC_Handle), HAL_ADC_STATE_REG_EOC))
+{
+	ADC_Value = HAL_ADC_GetValue(&ADC_Handle);   //获取AD值
+}
+```
+
+### 示例
 
 ## 串口
 ### 开启时钟
