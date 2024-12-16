@@ -781,10 +781,15 @@ __HAL_RCC_GPIOA_CLK_ENABLE();
 
 GPIO_InitTypeDef GPIO_InitStructure;
 // 配置 IO
-GPIO_InitStructure.Pin = RHEOSTAT_ADC_GPIO_PIN;
-GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+GPIO_InitStructure.Pin = GPIO_PIN_7;
+GPIO_InitStructure.Mode = GPIO_MODE_ANALOG; // 模拟输入模式
 GPIO_InitStructure.Pull = GPIO_NOPULL ; //不上拉不下拉
 HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
+```
+
+### 配置ADC工作模式
+```c
+
 ```
 
 ## 串口
