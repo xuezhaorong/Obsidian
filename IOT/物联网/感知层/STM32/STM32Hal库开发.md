@@ -919,6 +919,22 @@ if(HAL_IS_BIT_SET(HAL_ADC_GetState(&ADC_Handle), HAL_ADC_STATE_REG_EOC))
 * `Rank`：设置采样参数
 ![image.png|601](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-26-17-4d59f4934e8fdbfbd849c16e6d8e4d21-20241216122617-056819.png)
 
+配置完成后生成代码，使用校准函数进行校准
+```c
+HAL_ADCEx_Calibration_Start(&hadc1); //AD校准
+```
+
+然后获取数值
+```c
+HAL_ADC_Start(&hadc1);     //启动ADC转换
+HAL_ADC_PollForConversion(&hadc1, 50);   //等待转换完成，50为最大等待时间，单位为ms
+ 
+ 
+if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1), HAL_ADC_STATE_REG_EOC))
+{
+	ADC_Value = HAL_ADC_GetValue(&hadc1);   //获取AD值
+}
+```
 ## 串口
 ### 开启时钟
 ```c
