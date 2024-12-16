@@ -787,6 +787,17 @@ GPIO_InitStructure.Pull = GPIO_NOPULL ; //不上拉不下拉
 HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
 ```
 
+### ADC时钟配置
+```c
+RCC_PeriphCLKInitTypeDef ADC_CLKInit;
+// 开启ADC时钟
+ADC_CLKInit.PeriphClockSelection=RCC_PERIPHCLK_ADC;
+//ADC外设时钟
+ADC_CLKInit.AdcClockSelection=RCC_ADCPCLK2_DIV6;
+//分频因子6时钟为72M/6=12MHz
+HAL_RCCEx_PeriphCLKConfig(&ADC_CLKInit);
+```
+
 ### 配置ADC工作模式
 ```c
 __HAL_RCC_ADC1_CLK_ENABLE(); // 开启ADC时钟
@@ -840,6 +851,16 @@ GPIO_InitStructure.Mode = GPIO_MODE_ANALOG; // 模拟输入模式
 GPIO_InitStructure.Pull = GPIO_NOPULL ; //不上拉不下拉
 HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
 
+// ADC时钟配置
+RCC_PeriphCLKInitTypeDef ADC_CLKInit;
+// 开启ADC时钟
+ADC_CLKInit.PeriphClockSelection=RCC_PERIPHCLK_ADC;
+//ADC外设时钟
+ADC_CLKInit.AdcClockSelection=RCC_ADCPCLK2_DIV6;
+//分频因子6时钟为72M/6=12MHz
+HAL_RCCEx_PeriphCLKConfig(&ADC_CLKInit);
+
+
 __HAL_RCC_ADC1_CLK_ENABLE(); // 开启ADC时钟
 
 ADC_HandleTypeDef ADC_Handle;
@@ -874,10 +895,29 @@ if(HAL_IS_BIT_SET(HAL_ADC_GetState(&ADC_Handle), HAL_ADC_STATE_REG_EOC))
 ```
 
 ### STM32CUBE操作
-1. 在ADC1处开启ADC通道
+
+1. 在`Clock Configuration`中，将ADC通道的时钟分频设为6分频
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-19-24-72ddd1fc2ce1643b8cff55610ad9a303-20241216121923-847513.png)
+
+2. 在ADC1处开启ADC通道
 ![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-11-16-b81999520e983979fed6b8c459f0027d-20241216121115-07cce3.png)
 
+3. 进行ADC的设置
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-20-41-7877d490bd2381d0f42a9bc4445af19a-20241216122041-dceda2.png)
+参数解释：
+* `Data Alignment`：数据对齐方式
+* `Scan Conversion Mode`：扫描模式
+* `ContinuOUs Conversion Mode`：连续转换模式
+* `Discontinuos Conversion Mode`：不连续采样模式
 
+4. 规则组设置
+![image.png|675](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-23-45-795a9ea205df6d97529f6139a7e0de16-20241216122344-c8d205.png)
+参数解释：
+* `Enable Regular Conversions`：允许规则组
+* `Number Of Conversion`：规则组数量
+* `External Trigger Conversion Source`：外部触发方式，这里选择软件触发 
+* `Rank`：设置采样参数
+![image.png|601](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-26-17-4d59f4934e8fdbfbd849c16e6d8e4d21-20241216122617-056819.png)
 
 ## 串口
 ### 开启时钟
