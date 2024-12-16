@@ -550,7 +550,7 @@ HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHAN
 HAL_TIM_PWM_Start(&TIM_TimeBaseStructure,TIM_CHANNEL_1); // 通道
 
 // 设置占空比
-__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0); // 通道
+__HAL_TIM_SetCompare(&TIM_TimeBaseStructure, TIM_CHANNEL_1, 0); // 通道
 ```
 
 #### STM32CUBE操作
