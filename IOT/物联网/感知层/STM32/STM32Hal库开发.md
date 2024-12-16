@@ -874,6 +874,8 @@ if(HAL_IS_BIT_SET(HAL_ADC_GetState(&ADC_Handle), HAL_ADC_STATE_REG_EOC))
 ```
 
 ### STM32CUBE操作
+1. 在ADC1处开启ADC通道
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/16/12-11-16-b81999520e983979fed6b8c459f0027d-20241216121115-07cce3.png)
 
 
 
