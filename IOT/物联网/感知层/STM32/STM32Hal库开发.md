@@ -774,6 +774,19 @@ HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_2); /*开启输入捕获*/
 HAL_TIM_ReadCapturedValue(&htim2,TIM_CHANNEL_2); //获取当前的捕获值
 ```
 
+## ADC数模转换
+### GPIO引脚初始化
+```c
+__HAL_RCC_GPIOA_CLK_ENABLE();
+
+GPIO_InitTypeDef GPIO_InitStructure;
+// 配置 IO
+GPIO_InitStructure.Pin = RHEOSTAT_ADC_GPIO_PIN;
+GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+GPIO_InitStructure.Pull = GPIO_NOPULL ; //不上拉不下拉
+HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
+```
+
 ## 串口
 ### 开启时钟
 ```c
