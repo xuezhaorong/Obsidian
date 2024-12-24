@@ -173,6 +173,9 @@ qtcreator
 在项目中添加构建套件，构建目录可以选择挂载的路径，但是会影响编译速度
 ![image.png|1300](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/11/20/10-46-37-2cb72e6c66f2597b8990a9bdc8282307-20241120104636-78d642.png)
 
+## 远程开发
+
+
 ## 运行
 将编译的二进制可执行文件传到树莓派中
 
