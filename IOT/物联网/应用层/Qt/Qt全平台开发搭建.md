@@ -175,6 +175,66 @@ qtcreator
 
 ## 远程开发
 
+首先需要保证树莓派和电脑在同一局域网下
+
+### 远程连接配置
+1. 进入`vscode`中下载`Remote - SSH`插件
+![image.png|436](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-28-22-a246242fe2b6f3728d8335ab802efe53-20241224112822-7e66a1.png)
+
+2. 点击远程资源管理器
+![image.png|57](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-29-08-7ba618ebb08676473b666c938628564e-20241224112907-094a9f.png)
+
+3. 新建连接，输入指令，格式为：`ssh username@ip`
+![image.png|400](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-30-12-19aa289b78f92762d3e18aee1fed5cd9-20241224113012-bb72c4.png)
+随意选择一个配置文件，进行保存配置信息，并按照指示输入密码
+
+4. 免密码认证
+
+
+### Qt插件配置
+1. 连接到树莓派中，然后在本地和树莓派中安装`Qt Configure`插件
+![image.png|525](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-33-14-b91761350d745e562a53a5ea0ac67d91-20241224113314-d9dae3.png)
+
+
+2. 进行配置，点击设置
+![|400](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-36-24-88f73059db0e7cb2932f5d9aa3bb4338-20241224113623-1a2a80.png)
+在远程栏中修改`Qt Dir`和`Qt kit Dir`
+![image.png|750](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-38-37-4f2f9cfc1b25b9c2af054d72ac9da943-20241224113836-89e434.png)
+
+### 创建和运行项目
+1.  在命令面板中选择`QtConfigure:New Project`来创建一个项目，输入项目名称，编译套件和路径后自动打开项目
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-39-50-94800bf3f244c2ff9fea11e5edcbc99b-20241224113949-f0aeee.png)
+
+2. 在`.vscode`下的`tasks.json`中添加一个编译而不运行的任务
+```json
+{
+
+      "type": "shell",
+
+      "label": "build-debug",
+
+      "command": "cd build/debug && /usr/bin/make",
+
+      "args": [],
+
+      "options": {},
+
+      "problemMatcher": [],
+
+      "group": "build",
+
+      "dependsOn": [
+
+        "qmake build debug"
+
+      ]
+
+    },
+```
+![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-43-46-0715e0ac72031791a0a8b4a14e344e41-20241224114345-ac90ab.png)
+
+3. 快捷键`ctrl+shift+B`运行项目，点击`build-debug`任务进行编译，然后在树莓派该项目目录下的build中生成可执行文件
+![image.png|825](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/11-45-07-e5102d816b95404ee14e42deac926f6f-20241224114507-f5b2d2.png)
 
 ## 运行
 将编译的二进制可执行文件传到树莓派中
