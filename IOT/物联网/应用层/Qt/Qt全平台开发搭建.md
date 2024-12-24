@@ -189,12 +189,12 @@ qtcreator
 随意选择一个配置文件，进行保存配置信息，并按照指示输入密码
 
 ### 设置免密登录
-1. 打开终端，输入`ssh-keygen -t rsa`生成密钥在指定的目录
+1. 打开终端，输入`ssh-keygen -t rsa`生成`pub`密钥文件在指定的目录
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/20-10-11-003fb72a9e3c499ffd9422290a42b90c-20241224201010-5f726f.png)
 
-2. 在树莓派中输`ssh-keygen -t rsa`，在`/home/username`目录下生成`.ssh`目录，
+2. 在树莓派中输`ssh-keygen -t rsa`，在`/home/username`目录下生成`.ssh`目录与`authorized_keys`文件，将window生成的`pub`中的内容复制进去。
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/24/20-15-54-976bc51f64a314e375bec5146b8d7db9-20241224201553-28cb71.png)
 
- 
 
 
 ### Qt插件配置
