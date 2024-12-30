@@ -502,7 +502,7 @@ typedef struct
 TIM_OC_InitTypeDef TIM_OCInitStructure;
 TIM_OCInitStructure.OCMode = TIM_OCMODE_PWM1;  
 TIM_OCInitStructure.Pulse = 0;  
-TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_LOW;  
+TIM_OCInitStructure.OCPolarity = TIM_OCPOLARITY_HIGH;  
 HAL_TIM_PWM_ConfigChannel(&TIM_TimeBaseStructure, &TIM_OCInitStructure, TIM_CHANNEL_1);
 ```
 
