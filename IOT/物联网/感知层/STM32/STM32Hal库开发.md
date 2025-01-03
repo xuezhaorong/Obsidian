@@ -419,11 +419,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 ![image.png|1050](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/05/22-08-54-8b81bfeafe2cd54a93b213e72b57a4ab-20240905220853-053572.png)
 
 ### 输出比较
-#### 引脚配置
+#### 复用引脚配置
 ```c
 GPIO_InitTypeDef GPIO_InitStructure;
 GPIO_InitStructure.Pin = GPIO_PIN_0;
-GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
 GPIO_InitStructure.Pull = GPIO_NOPULL;
 GPIO_InitStructure.Speed = GPIO_SPEED_HIGH;
 HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -523,7 +523,7 @@ __HAL_TIM_SetCompare(&TIM_TimeBaseStructure, TIM_CHANNEL_1, 0);
 __HAL_RCC_GPIOA_CLK_ENABLE();
 GPIO_InitTypeDef GPIO_InitStruct;
 GPIO_InitStruct.Pin = GPIO_PIN_0;  // 引脚
-GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;  
+GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;  
 GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;  
 HAL_GPIO_Init(GPIOA, &GPIO_InitStruct); // 端口
 
@@ -554,7 +554,7 @@ __HAL_TIM_SetCompare(&TIM_TimeBaseStructure, TIM_CHANNEL_1, 0); // 通道
 ```
 
 #### STM32CUBE操作
-设置通用定时器的时钟源为内部时钟，开启相应的输出通道。
+设置通用定时器的时钟源为内部时钟，开启相应的输出通道，对应的引脚自动设置为复用模式
 
 ![image.png|850](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/09/06/12-43-58-cf2563b2685378cc60f8ccd0160bad88-20240906124357-ae9bc0.png)
 
