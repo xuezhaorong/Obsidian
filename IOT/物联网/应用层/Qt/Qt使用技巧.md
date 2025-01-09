@@ -1,3 +1,12 @@
+## 在线安装工具加速
+ 在线安装工具如果下载过慢可以使用国内镜像进行下载，需要下载4.0以上的Qt在线安装软件
+ ![image.png|875](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/https/cdn.jsdelivr.net/gh/xuezhaorong/Picgo/Source/fix-dir/picgo/picgo-clipboard-images/2024/07/21/2025/01/09/21-21-11-21447ab4bef3be25a7a1deef5b0b2cbf-17-44-27-21447ab4bef3be25a7a1deef5b0b2cbf-20240721174426-1c3f92-77a149.png)
+首先需要清除缓存,然后退出安装器，在其目录下打开cmd命令窗口，输入命令：
+```bash
+.\qt-unified-windows-x64-4.6.1-online.exe --mirror https://mirrors.cloud.tencent.com/qt/
+```
+其中安装器的名字需要换成自己的安装器版本。
+
 ## 保存自动格式化代码
 ArtisiticStyle工具官网链接：https://astyle.sourceforge.net/
 1. 加入`Beautidier`插件 
