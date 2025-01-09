@@ -6,7 +6,7 @@
 .\qt-unified-windows-x64-4.6.1-online.exe --mirror https://mirrors.cloud.tencent.com/qt/
 ```
 其中安装器的名字需要换成自己的安装器版本。
-阿里加速源：`https://mirrors.aliyun.com/qt/`
+也可使用阿里加速源：`https://mirrors.aliyun.com/qt/`
 ## 保存自动格式化代码
 ArtisiticStyle工具官网链接：https://astyle.sourceforge.net/
 1. 加入`Beautidier`插件 
