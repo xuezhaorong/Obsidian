@@ -488,9 +488,19 @@ if (!sql_query.exec()) {
 ```cpp
 QStringList strList;
 strList << "男" << "女";
-ui->comboBox_sex->addItems(strList);
+ui->comboBox->addItems(strList);
 ```
 
 * 监测项的变化
 ```cpp
+connect(ui->comboBox, &QComboBox::currentIndexChanged, [ = ](int index)
+{
+	
+});
 ```
+
+### 表格控件
+#### QTableWidget
+
+#### QTableView
+
