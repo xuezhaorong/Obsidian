@@ -478,4 +478,19 @@ if (!sql_query.exec()) {
 
 ```
 ## 常用控件
-## 输入控件
+### 输入控件
+#### QComboBox
+官方文档：[QComboBox Class | Qt Widgets 6.8.1](https://doc.qt.io/qt-6/qcombobox.html)
+![image.png|284](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/01/11/23-27-52-84e3a1b3299f229995280bc82ae775c6-20250111232751-772551.png)
+
+`QComboBox` 是下拉列表框组件类，它提供一个下拉列表供用户选择，也可以直接当作一个 QLineEdit 用作输入。
+* 添加项
+```cpp
+QStringList strList;
+strList << "男" << "女";
+ui->comboBox_sex->addItems(strList);
+```
+
+* 监测项的变化
+```cpp
+```
