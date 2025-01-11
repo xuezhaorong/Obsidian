@@ -485,6 +485,7 @@ if (!sql_query.exec()) {
 
 `QComboBox` 是下拉列表框组件类，它提供一个下拉列表供用户选择，也可以直接当作一个 QLineEdit 用作输入。
 * 添加项
+下拉列表中包含多个项，可以通过`addItems`方法添加一个`QStringList`列表
 ```cpp
 QStringList strList;
 strList << "男" << "女";
@@ -492,6 +493,7 @@ ui->comboBox->addItems(strList);
 ```
 
 * 监测项的变化
+当选择的项发送变化时，会发出`currentIndexChanged`信号，传递项的序号`index`
 ```cpp
 connect(ui->comboBox, &QComboBox::currentIndexChanged, [ = ](int index)
 {
