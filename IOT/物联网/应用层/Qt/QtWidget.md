@@ -477,6 +477,7 @@ if (!sql_query.exec()) {
 }
 
 ```
+
 ## 常用控件
 ### 输入控件
 #### QComboBox
@@ -502,7 +503,9 @@ connect(ui->comboBox, &QComboBox::currentIndexChanged, [ = ](int index)
 ```
 
 ### 表格控件
+
 #### QTableWidget
+QTableWidget 是一种 `Item Widget`组件，它以表格形式显示和管理数据。
 
 #### QTableView
 
