@@ -1,5 +1,9 @@
 >官方网址：[简介 | Pinia](https://pinia.vuejs.org/zh/introduction.html)
 
+## 安装
+```
+npm install pinia
+```
 ## 导入
 在`main.js`中导入
 ```js
