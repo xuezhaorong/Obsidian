@@ -67,7 +67,7 @@ spring:
 ```
 
 ## 代码生成器的使用
-新建包名`codegen`，新建类`Codegen`
+新建包名`codegen`，新建类`Codegen`，根据网页说明进行修改，运行。
 官网配置说明：[MyBatis-Flex 代码生成器 - MyBatis-Flex 官方网站](https://mybatis-flex.com/zh/others/codegen.html)
 ```java
 import com.mybatisflex.codegen.Generator;  
@@ -156,6 +156,12 @@ public class Codegen {
 
 **注意修改的地方：** 选择对应样式的函数中，修改根包路径和表的设置
 ```java
+//配置数据源  
+HikariDataSource dataSource = new HikariDataSource();  
+dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");  
+dataSource.setUsername("root");  
+dataSource.setPassword("030619");  
+
 //设置根包  
 globalConfig.setBasePackage("com.project.test");  
 
