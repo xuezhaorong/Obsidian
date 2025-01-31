@@ -70,15 +70,12 @@ spring:
 新建包名`codegen`，新建类`Codegen`
 官网配置说明：[MyBatis-Flex 代码生成器 - MyBatis-Flex 官方网站](https://mybatis-flex.com/zh/others/codegen.html)
 ```java
-package com.project.test.codegen;  
-  
 import com.mybatisflex.codegen.Generator;  
 import com.mybatisflex.codegen.config.ColumnConfig;  
 import com.mybatisflex.codegen.config.GlobalConfig;  
 import com.zaxxer.hikari.HikariDataSource;  
   
 public class Codegen {  
-  
     public static void main(String[] args) {  
         //配置数据源  
         HikariDataSource dataSource = new HikariDataSource();  
@@ -108,19 +105,14 @@ public class Codegen {
         globalConfig.setTablePrefix("tb_");  
         globalConfig.setGenerateTable("tb_device");  
   
-        //设置生成 entity 并启用 Lombok        globalConfig.setEntityGenerateEnable(true);  
-        globalConfig.setEntityWithLombok(true);  
+        //设置生成 entity 并启用 Lombok        globalConfig.setEntityGenerateEnable(true);        globalConfig.setEntityWithLombok(true);  
         //设置项目的JDK版本，项目的JDK为14及以上时建议设置该项，小于14则可以不设置  
         globalConfig.setEntityJdkVersion(17);  
   
         //设置生成 mapper        globalConfig.setMapperGenerateEnable(true);  
-  
         // 设置生成 service        globalConfig.setServiceGenerateEnable(true);  
-  
         // 设置生成 serviceImpl        globalConfig.setServiceImplGenerateEnable(true);  
-  
         // 设置生成 Controller        globalConfig.setControllerGenerateEnable(true);  
-  
         //可以单独配置某个列  
 //        ColumnConfig columnConfig = new ColumnConfig();  
 //        columnConfig.setColumnName("tenant_id");  
@@ -149,7 +141,6 @@ public class Codegen {
                 .setJdkVersion(17);  
   
         //设置生成 mapper        globalConfig.enableMapper();  
-  
         //可以单独配置某个列  
         ColumnConfig columnConfig = new ColumnConfig();  
         columnConfig.setColumnName("tenant_id");  
