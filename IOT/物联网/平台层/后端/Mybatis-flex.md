@@ -69,7 +69,9 @@ spring:
 ## 代码生成器的使用
 新建包名`codegen`，新建类`Codegen`，根据网页说明进行修改，运行。
 官网配置说明：[MyBatis-Flex 代码生成器 - MyBatis-Flex 官方网站](https://mybatis-flex.com/zh/others/codegen.html)
-```java
+```java  
+package com.example.project.codegen;  
+  
 import com.mybatisflex.codegen.Generator;  
 import com.mybatisflex.codegen.config.ColumnConfig;  
 import com.mybatisflex.codegen.config.GlobalConfig;  
@@ -79,7 +81,7 @@ public class Codegen {
     public static void main(String[] args) {  
         //配置数据源  
         HikariDataSource dataSource = new HikariDataSource();  
-        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");  
+        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/intelligent_agriculture");  
         dataSource.setUsername("root");  
         dataSource.setPassword("030619");  
   
@@ -99,20 +101,25 @@ public class Codegen {
         GlobalConfig globalConfig = new GlobalConfig();  
   
         //设置根包  
-        globalConfig.setBasePackage("com.project.test");  
+        globalConfig.setBasePackage("com.example.project");  
   
         //设置表前缀和只生成哪些表  
         globalConfig.setTablePrefix("tb_");  
-        globalConfig.setGenerateTable("tb_device");  
+        globalConfig.setGenerateTable("device_location");  
   
-        //设置生成 entity 并启用 Lombok        globalConfig.setEntityGenerateEnable(true);        globalConfig.setEntityWithLombok(true);  
+        //设置生成 entity 并启用 LombokglobalConfig.setEntityGenerateEnable(true);  
+        globalConfig.setEntityWithLombok(true);  
         //设置项目的JDK版本，项目的JDK为14及以上时建议设置该项，小于14则可以不设置  
         globalConfig.setEntityJdkVersion(17);  
   
         //设置生成 mapper        globalConfig.setMapperGenerateEnable(true);  
+  
         // 设置生成 service        globalConfig.setServiceGenerateEnable(true);  
+  
         // 设置生成 serviceImpl        globalConfig.setServiceImplGenerateEnable(true);  
+  
         // 设置生成 Controller        globalConfig.setControllerGenerateEnable(true);  
+  
         //可以单独配置某个列  
 //        ColumnConfig columnConfig = new ColumnConfig();  
 //        columnConfig.setColumnName("tenant_id");  
