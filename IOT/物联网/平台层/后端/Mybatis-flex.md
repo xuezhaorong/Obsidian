@@ -176,3 +176,17 @@ globalConfig.setBasePackage("com.project.test");
 globalConfig.setTablePrefix("tb_");  
 globalConfig.setGenerateTable("tb_user", "tb_room");  
 ```
+
+## 使用
+1. 先在主程序加入mapper扫描
+```java
+@SpringBootApplication  
+@MapperScan("com.example.project.mapper")  
+public class ProjectApplication {  
+  
+    public static void main(String[] args) {  
+       SpringApplication.run(ProjectApplication.class, args);  
+    }  
+  
+}
+```
