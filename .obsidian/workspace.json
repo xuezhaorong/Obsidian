@@ -14,7 +14,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md"
+                "file": "IOT/物联网/平台层/前端/Element-plus.md"
               }
             }
           },
@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md",
+                "file": "IOT/物联网/平台层/前端/Element-plus.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md"
+                "file": "IOT/物联网/平台层/前端/Element-plus.md"
               }
             }
           }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md",
+                "file": "IOT/物联网/平台层/前端/Element-plus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md"
+                "file": "IOT/物联网/平台层/前端/Element-plus.md"
               }
             }
           },
@@ -179,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/前端/Leaflet.md",
+                "file": "IOT/物联网/平台层/前端/Element-plus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,8 +214,9 @@
   },
   "active": "aefbfa08d0a45ccc",
   "lastOpenFiles": [
-    "IOT/物联网/平台层/前端/Pinia的使用.md",
+    "IOT/物联网/平台层/前端/Pinia.md",
     "IOT/物联网/平台层/前端/Leaflet.md",
+    "IOT/物联网/平台层/前端/Element-plus.md",
     "IOT/物联网/平台层/前端/Vue3.md",
     "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/宝塔面板安装.md",
@@ -239,7 +240,6 @@
     "IOT/物联网/平台层/后端/Mqtt开发.md",
     "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
-    "().md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",

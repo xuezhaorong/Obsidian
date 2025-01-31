@@ -69,7 +69,7 @@ public class SSEController {
 5. 客户端持续接收这些事件，并可以根据接收到的数据进行相应的处理。
 
 ## 前端EventSource的实现
-`Pinia`的使用：[[Pinia的使用]]，在`Pinia`的方法中使用`EventSource`实现`SSE`的连接和事件流的监听，并且订阅`Pinia`的`state`自动检测数据的变化。
+`Pinia`的使用：[[Pinia]]，在`Pinia`的方法中使用`EventSource`实现`SSE`的连接和事件流的监听，并且订阅`Pinia`的`state`自动检测数据的变化。
 
 `store`：
 ```js

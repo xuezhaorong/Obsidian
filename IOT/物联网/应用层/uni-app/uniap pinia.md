@@ -25,4 +25,4 @@ export function createApp() {
 ```
 
 ## 使用方法
-具体的使用方法参照[[Pinia的使用]]
+具体的使用方法参照[[Pinia]]
