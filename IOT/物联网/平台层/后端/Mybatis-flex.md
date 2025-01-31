@@ -70,13 +70,20 @@ spring:
 新建包名`codegen`，新建类`Codegen`
 官网配置说明：[MyBatis-Flex 代码生成器 - MyBatis-Flex 官方网站](https://mybatis-flex.com/zh/others/codegen.html)
 ```java
+package com.project.test.codegen;  
+  
+import com.mybatisflex.codegen.Generator;  
+import com.mybatisflex.codegen.config.ColumnConfig;  
+import com.mybatisflex.codegen.config.GlobalConfig;  
+import com.zaxxer.hikari.HikariDataSource;  
+  
 public class Codegen {  
   
     public static void main(String[] args) {  
         //配置数据源  
         HikariDataSource dataSource = new HikariDataSource();  
-        dataSource.setJdbcUrl("jdbc:postgresql://127.0.0.1:5432/postgres");  
-        dataSource.setUsername("postgres");  
+        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");  
+        dataSource.setUsername("root");  
         dataSource.setPassword("030619");  
   
         //创建配置内容，两种风格都可以。  
@@ -99,7 +106,7 @@ public class Codegen {
   
         //设置表前缀和只生成哪些表  
         globalConfig.setTablePrefix("tb_");  
-        globalConfig.setGenerateTable("tb_user", "tb_room");  
+        globalConfig.setGenerateTable("tb_device");  
   
         //设置生成 entity 并启用 Lombok        globalConfig.setEntityGenerateEnable(true);  
         globalConfig.setEntityWithLombok(true);  
@@ -115,11 +122,11 @@ public class Codegen {
         // 设置生成 Controller        globalConfig.setControllerGenerateEnable(true);  
   
         //可以单独配置某个列  
-        //ColumnConfig columnConfig = new ColumnConfig();  
-        //columnConfig.setColumnName("tenant_id");  
-        //columnConfig.setLarge(true);  
-        //columnConfig.setVersion(true);  
-        //globalConfig.setColumnConfig("tb_account", columnConfig);  
+//        ColumnConfig columnConfig = new ColumnConfig();  
+//        columnConfig.setColumnName("tenant_id");  
+//        columnConfig.setLarge(true);  
+//        columnConfig.setVersion(true);  
+//        globalConfig.setColumnConfig("tb_account", columnConfig);  
   
         return globalConfig;  
     }  
@@ -135,7 +142,7 @@ public class Codegen {
         //设置表前缀和只生成哪些表，setGenerateTable 未配置时，生成所有表  
         globalConfig.getStrategyConfig()  
                 .setTablePrefix("tb_")  
-                .setGenerateTable("tb_account", "tb_account_session");  
+                .setGenerateTable("tb_device");  
   
         //设置生成 entity 并启用 Lombok        globalConfig.enableEntity()  
                 .setWithLombok(true)  
@@ -144,12 +151,12 @@ public class Codegen {
         //设置生成 mapper        globalConfig.enableMapper();  
   
         //可以单独配置某个列  
-        //ColumnConfig columnConfig = new ColumnConfig();  
-        //columnConfig.setColumnName("tenant_id");  
-        //columnConfig.setLarge(true);  
-        //columnConfig.setVersion(true);  
-        //globalConfig.getStrategyConfig()  
-        //        .setColumnConfig("tb_user", columnConfig);  
+        ColumnConfig columnConfig = new ColumnConfig();  
+        columnConfig.setColumnName("tenant_id");  
+        columnConfig.setLarge(true);  
+        columnConfig.setVersion(true);  
+        globalConfig.getStrategyConfig()  
+                .setColumnConfig("tb_account", columnConfig);  
   
         return globalConfig;  
     }  
