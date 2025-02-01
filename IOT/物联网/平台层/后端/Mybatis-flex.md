@@ -107,18 +107,23 @@ public class Codegen {
         globalConfig.setTablePrefix("tb_");  
         globalConfig.setGenerateTable("device_location");  
   
-        //设置生成 entity 并启用 LombokglobalConfig.setEntityGenerateEnable(true);  
+        //设置生成 entity 并启用 Lombok
+        globalConfig.setEntityGenerateEnable(true);  
         globalConfig.setEntityWithLombok(true);  
         //设置项目的JDK版本，项目的JDK为14及以上时建议设置该项，小于14则可以不设置  
         globalConfig.setEntityJdkVersion(17);  
   
-        //设置生成 mapper        globalConfig.setMapperGenerateEnable(true);  
+        //设置生成 mapper        
+        globalConfig.setMapperGenerateEnable(true);  
   
-        // 设置生成 service        globalConfig.setServiceGenerateEnable(true);  
+        // 设置生成 service       
+        globalConfig.setServiceGenerateEnable(true);  
   
-        // 设置生成 serviceImpl        globalConfig.setServiceImplGenerateEnable(true);  
+        // 设置生成 serviceImpl        
+        globalConfig.setServiceImplGenerateEnable(true);  
   
-        // 设置生成 Controller        globalConfig.setControllerGenerateEnable(true);  
+        // 设置生成 Controller        
+        globalConfig.setControllerGenerateEnable(true);  
   
         //可以单独配置某个列  
 //        ColumnConfig columnConfig = new ColumnConfig();  
@@ -143,7 +148,8 @@ public class Codegen {
                 .setTablePrefix("tb_")  
                 .setGenerateTable("tb_device");  
   
-        //设置生成 entity 并启用 Lombok        globalConfig.enableEntity()  
+        //设置生成 entity 并启用 Lombok        
+        globalConfig.enableEntity()  
                 .setWithLombok(true)  
                 .setJdkVersion(17);  
   
