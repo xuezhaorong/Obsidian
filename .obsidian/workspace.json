@@ -9,16 +9,6 @@
         "dimension": 69.64725184577523,
         "children": [
           {
-            "id": "bdaa4511f47ced7d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md"
-              }
-            }
-          },
-          {
             "id": "8b9d024d6a00277d",
             "type": "leaf",
             "state": {
@@ -48,14 +38,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "mode": "preview",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "91ae393827fd9820",
@@ -68,7 +58,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md"
+                "file": "IOT/物联网/平台层/宝塔面板安装.md"
               }
             }
           }
@@ -138,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md"
+                "file": "IOT/物联网/平台层/宝塔面板安装.md"
               }
             }
           },
@@ -179,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/宝塔面板安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,14 +202,51 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "aefbfa08d0a45ccc",
+  "floating": {
+    "id": "a2670865f1ff0a9c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "dd891514bb9a846b",
+        "type": "window",
+        "children": [
+          {
+            "id": "9c4704e5e3df6e18",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "bdaa4511f47ced7d",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "IOT/物联网/平台层/宝塔面板安装.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 336,
+        "y": 140,
+        "width": 600,
+        "height": 600,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "bdaa4511f47ced7d",
   "lastOpenFiles": [
-    "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
+    "IOT/物联网/平台层/Mosquitto服务搭建.md",
+    "IOT/物联网/平台层/后端/Mysql安装.md",
+    "IOT/物联网/平台层/后端/Mqtt开发.md",
+    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/平台层/后端/跨域问题解决.md",
+    "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
     "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
-    "IOT/物联网/平台层/后端/Mysql安装.md",
-    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
@@ -233,13 +260,11 @@
     "IOT/物联网/应用层/uni-app/uniap pinia.md",
     "IOT/物联网/平台层/前端/Pinia.md",
     "IOT/物联网/平台层/前端/Vue3.md",
-    "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/宝塔面板安装.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/感知层/STM32/FreeRTOS开发.md",
     "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/物联网/应用层/安卓/Android.md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",
