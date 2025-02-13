@@ -14,8 +14,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/安全证书安装.md",
-                "mode": "source",
+                "file": "IOT/Linux/基础命令.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -57,7 +57,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/安全证书安装.md"
+                "file": "IOT/Linux/基础命令.md"
               }
             }
           }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/安全证书安装.md",
+                "file": "IOT/Linux/基础命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/安全证书安装.md"
+                "file": "IOT/Linux/基础命令.md"
               }
             }
           },
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/安全证书安装.md",
+                "file": "IOT/Linux/基础命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,9 +203,10 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
+    "IOT/物联网/平台层/后端/跨域问题解决.md",
+    "IOT/物联网/平台层/安全证书安装.md",
     "IOT/Linux/基础命令.md",
     "IOT/Linux/编译.md",
-    "IOT/物联网/平台层/安全证书安装.md",
     "IOT/物联网/平台层/宝塔面板安装.md",
     "IOT/物联网/平台层/后端/证书安装.md",
     "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
@@ -216,7 +217,6 @@
     "IOT/物联网/应用层/uni-app/uniap pinia.md",
     "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/后端/Mysql安装.md",
-    "IOT/物联网/平台层/后端/跨域问题解决.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
     "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
