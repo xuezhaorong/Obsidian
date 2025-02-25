@@ -3,8 +3,7 @@
 ### 产品管理
 
 创建产品
-
-<img src="https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-46-13-f3e768387b2b17019ba4256bd1b9654a-20250225174612-4198c8.png" style="zoom: 50%;" />
+![|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-46-13-f3e768387b2b17019ba4256bd1b9654a-20250225174612-4198c8.png)
 
 进入产品详情中创建数据流模板
 
@@ -26,10 +25,9 @@
 
 生成token，token工具链接：https://open.iot.10086.cn/college/video/onenet-portal/2024-04-19/17134946071850.exe
 
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/18-03-10-922a6d4d9b7a08a147b1ca219a1d4fed-20250225180309-81618c.png)
+![|575](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/18-03-10-922a6d4d9b7a08a147b1ca219a1d4fed-20250225180309-81618c.png)
 
 *   res格式：products/{产品ID}/devices/{设备名称}
-
 *   et：未来截止时间点的时间戳
 *   key：产品密钥
 

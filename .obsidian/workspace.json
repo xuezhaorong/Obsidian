@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
+                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
                 "mode": "source",
                 "source": false
               }
@@ -57,7 +57,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md"
+                "file": "IOT/物联网/BC260Y连接OneNET平台.md"
               }
             }
           }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
+                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md"
+                "file": "IOT/物联网/BC260Y连接OneNET平台.md"
               }
             }
           },
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
+                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,8 +203,8 @@
   },
   "active": "8b9d024d6a00277d",
   "lastOpenFiles": [
-    "IOT/物联网/未命名.md",
     "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
+    "IOT/物联网/未命名.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/平台层/安全证书安装.md",
     "IOT/Linux/基础命令.md",
