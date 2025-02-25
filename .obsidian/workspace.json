@@ -9,18 +9,6 @@
         "dimension": 80.8039376538146,
         "children": [
           {
-            "id": "8b9d024d6a00277d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5942b25a22048996",
             "type": "leaf",
             "state": {
@@ -57,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/BC260Y连接OneNET平台.md"
+                "file": "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md"
               }
             }
           }
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
+                "file": "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/BC260Y连接OneNET平台.md"
+                "file": "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md"
               }
             }
           },
@@ -168,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/BC260Y连接OneNET平台.md",
+                "file": "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +189,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8b9d024d6a00277d",
+  "active": "5942b25a22048996",
   "lastOpenFiles": [
     "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
     "IOT/物联网/未命名.md",
