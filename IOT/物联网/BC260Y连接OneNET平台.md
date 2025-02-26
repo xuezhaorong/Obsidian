@@ -29,7 +29,13 @@
 ### 连接设备
 连接串口工具，打开串口助手，输入指令
 
-1. 修改MQTT协议版本为3.1.1：`AT+QMTCFG="version",0,1`
+1. 退出低功耗模式：`AT+QSCLK=0`
+![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/26/11-55-06-d97272e8214603e0f32cd94649286dc2-20250226115505-41fecb.png)
+
+
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/26/11-55-24-832f6548da1c7d575ce5936de74de3b7-20250226115523-42408e.png)
+
+2. 修改MQTT协议版本为3.1.1：`AT+QMTCFG="version",0,1`
 ![|600](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/18-45-08-f39b3b2340c5fa60fd86d119fb5ea7f5-20250225184507-ffdf7b.png)
 
 ![|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/18-48-39-62e7e877cdfffc8cd0bd7f9951c79e3c-20250225184838-15a8a3.png)
