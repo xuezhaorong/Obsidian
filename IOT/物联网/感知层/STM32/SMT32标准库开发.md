@@ -2176,7 +2176,7 @@ void RCC_ADCCLKConfig(uint32_t RCC_PCLK2)
 
 可选择 2,4,6,8 分频，最高频率为 14MHZ
 
-1.  配置 GPIO 为模拟输入模式
+2.  配置 GPIO 为模拟输入模式
 
 ```c
 // 初始化GPIO为AIN模拟输入模式
@@ -2189,7 +2189,7 @@ GPIO_Init(GPIOA,&GPIO_InitStructure);
 
 将 GPIO 口设置为模拟输入模式，避免输入输出对 GPIO 口造成影响
 
-1.  配置多路开关，将左边的通道接入到右边的规则组里
+3.  配置多路开关，将左边的通道接入到右边的规则组里
 
 ```c
 ADC_RegularChannelConfig(ADC1,ADC_Channel_0,1,ADC_SampleTime_55Cycles5);
