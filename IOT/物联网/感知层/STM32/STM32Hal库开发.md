@@ -784,7 +784,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
 GPIO_InitStructure.Pin = GPIO_PIN_7;
 GPIO_InitStructure.Mode = GPIO_MODE_ANALOG; // 模拟输入模式
 GPIO_InitStructure.Pull = GPIO_NOPULL ; //不上拉不下拉
-HAL_GPIO_Init(RHEOSTAT_ADC_GPIO_PORT, &GPIO_InitStructure);
+HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
 ```
 
 ### ADC时钟配置
