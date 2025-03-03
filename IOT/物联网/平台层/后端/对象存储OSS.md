@@ -15,7 +15,27 @@
 
 ![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/03/20-14-10-d2eb7bcc8c7ca93f391a93f7aa80469c-20250303201410-eea0e5.png)
 
-5. 为服务器添加AccessKey的环境变量
+5. 为服务器添加AccessKey的环境变量，指南链接：https://help.aliyun.com/zh/imm/developer-reference/configure-environment-variables?spm=5176.22414175.sslink.1.2f11f09e6S8dDf#0c8f1acab11ff
+	1. 创建`.bash_profile`文件，如果是第一次设置环境变量，可以使用`touch ~/.bash_profile`创建一个配置文件，如果已经存在配置文件，则使用`vim ~/.bash_profile`命令直接编辑文件。
+	```shell
+	touch ~/.bash_profile
+	vim ~/.bash_profile
+	```
+	2. 配置`.bash_profile`文件，编辑完成后保存退出。
+	```shell
+	# 将以下命令中的<ACCESS_KEY_ID>和<ACCESS_KEY_SECRET>替换为您自己的AccessKey ID和AccessKey Secret。
+	# 变量名称可以根据实际情况进行替换，例如OSS_ACCESS_KEY_ID、OSS_ACCESS_KEY_SECRET。
+	export ALIBABA_CLOUD_ACCESS_KEY_ID=<ACCESS_KEY_ID>
+	export ALIBABA_CLOUD_ACCESS_KEY_SECRET=<ACCESS_KEY_SECRET>
+	```
+	3. 使用`.bash_profile`文件。
+	```shell
+	# 使配置文件生效
+	source ~/.bash_profile
+	# 显示配置是否生效
+	echo $ALIBABA_CLOUD_ACCESS_KEY_ID
+	```
+
 ### 文件上传
 #### 后端配置
 网页链接：https://help.aliyun.com/zh/oss/developer-reference/preface-1/?spm=5176.8466032.console-base_help.dexternal.30e41450pvjSI1
