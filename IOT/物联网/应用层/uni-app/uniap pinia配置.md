@@ -1,27 +1,21 @@
-`HBuilder X` 已内置了 `Pinia`，无需手动安装
-
-## 导入
-新建目录`store`和初始化文件`index.js`
-```js
-import { createPinia } from 'pinia'
-const store = createPinia()
-export default store
+> 官方配置链接：https://pinia.vuejs.org/zh/getting-started.html
+## 安装
+```shell
+npm install pinia
 ```
-
-在`main.js`中找到`createSSRApp`的方法,进行更改
+## 导入
+在`main.js`的`#ifdef VUE3`中添加
 ```js
-// #ifdef VUE3
-import { createSSRApp } from 'vue'
-// pinia
-import store from './store'
+import {
+  createPinia
+} from 'pinia'
+
 export function createApp() {
-  const app = createSSRApp(App)
-  app.use(store)
-  return {
-    app
-  }
+...
+  const pinia = createPinia()
+  app.use(pinia)
 }
-// #endif
+
 ```
 
 ## 使用方法
