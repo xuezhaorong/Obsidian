@@ -55,7 +55,7 @@ MyBatis-Flex 是一个优雅的 MyBatis 增强框架，它非常轻量、同时�
 ```
 
 ## yml文件配置
-**url需要写到具体的数据库名**
+在`resources`下的`aplication.yml`加入，**url需要写到具体的数据库名**
 ```yml
 # 开发环境  
 spring:  
