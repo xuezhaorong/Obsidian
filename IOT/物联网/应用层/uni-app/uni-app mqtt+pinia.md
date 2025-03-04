@@ -66,7 +66,7 @@ export function mqtt_Subscribe(topic){
 ```
 
 ## 使用
-结合`pinia`持久化工具使用[[uniap pinia]]
+结合`pinia`持久化工具使用[[uniap pinia安装]]
 1. pinia持久化工具的设置
 ```js
 import {defineStore} from 'pinia'
