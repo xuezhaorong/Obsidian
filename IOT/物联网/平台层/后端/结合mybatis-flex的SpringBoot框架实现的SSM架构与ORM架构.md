@@ -43,7 +43,7 @@ ORM（Object-Relational Mapping） 表示对象关系映射。在面向对象的
 ![|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-19-28-5f4fc28ba1915a76f137890a76914ddd-20241202001927-8c2c5f.png)
 
 
-2. 选择SPringBoot版本，~Lombok~注解工具，`Spring Web`框架工具和`MySQL Deiver`驱动库xxuan'zggou'jianggon'juxxaid的
+2. 选择SPringBoot版本，~Lombok~注解工具，`Spring Web`框架工具和`MySQL Deiver`驱动库
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-21-07-30b690cf38a0fb0550f3602bec204e9f-20241202002107-66185c.png)
 ![image.png|625](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2024/12/02/00-21-31-a79e8095deb3b0c069384b4feceaa02e-20241202002131-4c1a02.png)
 
