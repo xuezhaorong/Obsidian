@@ -14,8 +14,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia安装.md",
-                "mode": "preview",
+                "file": "IOT/物联网/应用层/uni-app/uniap pinia配置.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia安装.md"
+                "file": "IOT/物联网/应用层/uni-app/uniap pinia配置.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia安装.md",
+                "file": "IOT/物联网/应用层/uni-app/uniap pinia配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia安装.md"
+                "file": "IOT/物联网/应用层/uni-app/uniap pinia配置.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uniap pinia安装.md",
+                "file": "IOT/物联网/应用层/uni-app/uniap pinia配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
