@@ -70,7 +70,6 @@ spring:
 新建包名`codegen`，新建类`Codegen`，根据网页说明进行修改，运行。
 官网配置说明：[MyBatis-Flex 代码生成器 - MyBatis-Flex 官方网站](https://mybatis-flex.com/zh/others/codegen.html)
 ```java  
-package com.example.project.codegen;  
   
 import com.mybatisflex.codegen.Generator;  
 import com.mybatisflex.codegen.config.ColumnConfig;  
