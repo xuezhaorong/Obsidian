@@ -14,6 +14,7 @@ export function createApp() {
 ...
   const pinia = createPinia()
   app.use(pinia)
+  
 }
 
 ```
