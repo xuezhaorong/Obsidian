@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
+                "file": "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uview plus框架安装.md"
+                "file": "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
+                "file": "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uview plus框架安装.md"
+                "file": "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
+                "file": "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,8 +191,10 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
-    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
+    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
+    "IOT/物联网/平台层/后端/Mqtt开发.md",
+    "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/平台层/后端/日志配置.md",
     "IOT/物联网/平台层/后端/对象存储OSS.md",
@@ -214,9 +216,7 @@
     "IOT/Linux/编译.md",
     "IOT/物联网/平台层/宝塔面板安装.md",
     "IOT/物联网/平台层/后端/证书安装.md",
-    "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/应用层/Qt/Qt全平台开发搭建.md",
-    "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",
