@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/后端/对象存储OSS.md",
                 "mode": "preview",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md"
+                "file": "IOT/物联网/平台层/后端/对象存储OSS.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/后端/对象存储OSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md"
+                "file": "IOT/物联网/平台层/后端/对象存储OSS.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/后端/Mybatis-flex.md",
+                "file": "IOT/物联网/平台层/后端/对象存储OSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,32 +191,33 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/uni-app/微信小程序.md",
+    "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
+    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
+    "IOT/物联网/应用层/Qt/QCefView.md",
+    "IOT/物联网/应用层/Qt/Qt编译.md",
+    "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
+    "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "application.yml",
     "IOT/物联网/平台层/后端/Mysql安装.md",
     "IOT/物联网/平台层/后端/跨域问题解决.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
-    "IOT/物联网/平台层/后端/Mybatis-flex.md",
     "IOT/物联网/平台层/后端/Mqtt开发.md",
     "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/平台层/后端/日志配置.md",
     "IOT/物联网/平台层/前端/Echart.md",
     "IOT/物联网/应用层/uni-app/uniap pinia配置.md",
     "IOT/物联网/应用层/uni-app/未命名.md",
-    "IOT/物联网/应用层/Qt/QCefView.md",
     "IOT/物联网/应用层/Qt/Qt mqtt.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/应用层/uni-app/uniapp 网络请求工具配置.md",
     "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
-    "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
-    "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
-    "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/平台层/前端/Pinia.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/平台层/前端/Axios.md",
     "IOT/物联网/平台层/前端/Leaflet.md",
     "IOT/物联网/平台层/后端/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/平台层/后端/对象存储OSS.md",
-    "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
     "IOT/物联网/平台层/后端",
@@ -231,7 +232,6 @@
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/数据库",
     "IOT/物联网/应用层/uni-app",
-    "微信小程序",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
