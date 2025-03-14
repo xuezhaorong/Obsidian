@@ -93,7 +93,7 @@ public class RedisConfig {
 RedisTemplate<String,Object> redisTemplate;  
   
 @Test  
-public void testKeyBoundOperations(){  
+public void testStringOperations(){  
 	// String 类型  
 	BoundValueOperations<String, Object> username = redisTemplate.boundValueOps("username");  
 	  
@@ -112,3 +112,5 @@ public void testKeyBoundOperations(){
 	count.decrement();
 }
 ```
+
+### Hash
