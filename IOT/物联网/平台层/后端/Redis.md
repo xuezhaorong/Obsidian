@@ -139,3 +139,41 @@ public void testHashOperations(){
 ```
 
 ### List
+```java
+@Test  
+public void testListOperations(){  
+    BoundListOperations<String, Object> list = redisTemplate.boundListOps("list");  
+  
+    for (int i = 0;i < 10;i++){  
+       // 往尾部插入  
+       list.rightPush(i);  
+       // 往头部插入  
+       list.leftPush(i);  
+    }  
+    // 往尾部批量插入  
+    list.rightPushAll(1,2,3,4);  
+    list.leftPushAll(1,2,3,4);  
+  
+    // 指定索引 添加/修改值  
+    list.set(1,10);  
+  
+    // 范围获取  
+    log.info(list.range(0,list.size()).toString());  
+    // 根据下标获取某一个  
+    log.info(list.index(5).toString());  
+  
+    // 删除头部 指定数量  
+    list.leftPop(2);  
+    // 删除尾部  
+    list.rightPop();  
+  
+    // 根据值删除  
+    list.remove(1,5);  
+  
+    // 保留指定范围 其余删掉 开始到结束序号  
+    list.trim(1,2);  
+  
+    // 删除整个  
+    redisTemplate.delete("list");  
+} 
+```
