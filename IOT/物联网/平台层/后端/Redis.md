@@ -177,3 +177,29 @@ public void testListOperations(){
     redisTemplate.delete("list");  
 } 
 ```
+
+### Set
+```java
+@Test  
+public void testSetOperations(){  
+    BoundSetOperations<String, Object> set = redisTemplate.boundSetOps("set");  
+    BoundSetOperations<String, Object> set2 = redisTemplate.boundSetOps("set2");  
+    // 添加元素  
+    set.add(1,2,3,4,5,6,7);  
+    // 获取整个set  
+    log.info(set.members().toString());  
+    // 根据某个元素是否在set中  
+    log.info(set.isMember(1).toString());  
+    // 根据count获取随机元素  
+    log.info(set.randomMembers(2).toString());  
+    // 随机删除  
+    log.info(set.pop().toString());  
+    // 交集  
+    log.info(set.intersect("set2").toString());  
+    // 放入到新的set  
+    set.intersectAndStore("set2","set3");  
+    // 并集  
+    set.union("set2");  
+      
+}
+```
