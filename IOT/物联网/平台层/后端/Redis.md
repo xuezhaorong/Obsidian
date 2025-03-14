@@ -94,15 +94,21 @@ RedisTemplate<String,Object> redisTemplate;
   
 @Test  
 public void testKeyBoundOperations(){  
-    // String 类型  
-    BoundValueOperations<String, Object> username = redisTemplate.boundValueOps("username");  
-    // 10秒过期  
-    username.set("xue",10, TimeUnit.SECONDS);  
-    // 设置不存在的字符串 true=存入成功 false=存入失败  
-	log.info(username.setIfAbsent("xue").toString());
-    // 设置过期  
-	username.expire(10, TimeUnit.SECONDS);
+	// String 类型  
+	BoundValueOperations<String, Object> username = redisTemplate.boundValueOps("username");  
+	  
+	// 10秒过期  
+	username.set("xue",10, TimeUnit.SECONDS);  
+	// 设置不存在的字符串 true=存入成功 false=存入失败  
+	log.info(username.setIfAbsent("xue").toString());  
+	// 设置过期  
+	username.expire(10, TimeUnit.SECONDS);  
 	// 删除  
-	redisTemplate.delete("username");
+	redisTemplate.delete("username");  
+	  
+	BoundValueOperations<String, Object> count = redisTemplate.boundValueOps("count");  
+	// 累加 +1count.increment();  
+	// -1  
+	count.decrement();
 }
 ```
