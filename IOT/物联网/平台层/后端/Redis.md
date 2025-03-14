@@ -115,3 +115,27 @@ public void testStringOperations(){
 ```
 
 ### Hash
+```java
+@Test  
+public void testHashOperations(){  
+    BoundHashOperations<String, Object, Object> car = redisTemplate.boundHashOps("car");  
+    // set  
+    car.put("p_id",1);  
+    car.putIfAbsent("p_total",10);  
+    // 获得全部  
+    log.info(car.entries().toString());  
+    // 获得map某一项  
+    log.info(car.get("p_total").toString());  
+    // 对map某个value增量  
+    car.increment("p_total",1);  
+    // 删除map某一项  
+    log.info(car.delete("p_id").toString());  
+    // 获取size  
+    log.info(car.size().toString());  
+    // 删除整个  
+    redisTemplate.delete("car");  
+  
+}
+```
+
+### List
