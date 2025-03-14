@@ -78,8 +78,9 @@ public class RedisConfig {
             2.设置连接工厂: 使用前面定义的 LettuceConnectionFactory。  
             3.设置序列化器: 设置键和值的序列化器，这里使用 StringRedisSerializer 来将键和值序列化为字符串。  
          */        RedisTemplate<String, Object> template = new RedisTemplate<>();  
-        template.setConnectionFactory(redisConnectionFactory());  // 设置连接工厂  
-        template.setKeySerializer(new StringRedisSerializer());  // 设置键的序列化器  
+        //template.setConnectionFactory(redisConnectionFactory());  // 设置连接工厂  
+        //template.setKeySerializer(new StringRedisSerializer());  // 设置键的序列化器  
+        template.setDefaultSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
         template.setValueSerializer(new StringRedisSerializer()); // 设置值的序列化器  
         return template;  
     }  
