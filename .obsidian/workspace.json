@@ -6,7 +6,7 @@
       {
         "id": "f8ec5286201da21b",
         "type": "tabs",
-        "dimension": 80.8039376538146,
+        "dimension": 80.82278481012658,
         "children": [
           {
             "id": "5942b25a22048996",
@@ -37,7 +37,7 @@
       {
         "id": "91ae393827fd9820",
         "type": "tabs",
-        "dimension": 19.196062346185396,
+        "dimension": 19.17721518987342,
         "children": [
           {
             "id": "d65986d5cad0213c",
@@ -191,13 +191,18 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
+    "IOT/物联网/应用层/安卓/Mqtt.md",
+    "IOT/物联网/应用层/安卓/Bluetooth.md",
+    "IOT/物联网/应用层/安卓/Android Studio配置.md",
+    "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
+    "IOT/物联网/BC260Y连接OneNET平台.md",
+    "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/平台层/后端/Redis.md",
     "IOT/物联网/平台层/前端/Axios.md",
     "IOT/物联网/平台层/前端/前端.md",
     "IOT/Linux/基础命令.md",
     "IOT/物联网/应用层/uni-app/uniapp 网络请求工具配置.md",
-    "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
     "IOT/物联网/应用层/uni-app/uniap pinia配置.md",
     "IOT/物联网/应用层/uni-app/微信小程序.md",
     "IOT/物联网/应用层/uni-app/uview plus框架安装.md",
@@ -212,11 +217,6 @@
     "IOT/物联网/平台层/宝塔面板安装.md",
     "IOT/物联网/应用层/Qt/Qt使用技巧.md",
     "IOT/物联网/应用层/Qt/Qt编译.md",
-    "IOT/物联网/应用层/Qt/Qt mqtt.md",
-    "IOT/物联网/应用层/Qt/Clion配置Qt.md",
-    "IOT/物联网/平台层/后端/对象存储OSS.md",
-    "IOT/物联网/应用层/Qt/QCefView.md",
-    "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "application.yml",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
