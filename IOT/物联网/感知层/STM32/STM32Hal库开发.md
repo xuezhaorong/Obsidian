@@ -1020,10 +1020,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 使能NVIC。
 
 ```c
-HAL_UART_Receive_IT(&huart1,(uint8_t *)&aRxBuffer,1); //中断接收一个字符，存储到aRxBuffer中
+uint8_t aRxBuffer; // 用以接收串口的字节
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+HAL_UART_Receive_IT(&huart1,(uint8_t *)&aRxBuffer,1); //中断接收一个字符，存储到aRxBuffer中 可以放在系统串口初始化函数中
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){ 
+	if (huart == &huart1) {
+	
+	} // 用以判断哪个串口
 	HAL_UART_Receive_IT(&huart1, (uint8_t *)&aRxBuffer, 1); //再开启接收中断
 }
 
