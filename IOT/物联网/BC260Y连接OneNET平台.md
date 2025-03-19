@@ -28,6 +28,7 @@
 ## BC260Y NBIOT模块
 ### 连接设备
 连接串口工具，打开串口助手，输入指令，波特率为9600
+注意：在MCU中发送时需要加入`\r\n`结尾
 
 1. 退出低功耗模式：`AT+QSCLK=0`
 ![image.png|700](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/26/11-55-06-d97272e8214603e0f32cd94649286dc2-20250226115505-41fecb.png)
