@@ -25,6 +25,9 @@
 - key：产品密钥
 点击Generate生成token，记录下来
 
+![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/20/14-28-41-752096a8519cbc6f8ae59daadb5df623-20250320142841-717ee2.png)
+
+
 ## BC260Y NBIOT模块
 ### 连接设备
 连接串口工具，打开串口助手，输入指令，波特率为9600
