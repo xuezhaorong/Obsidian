@@ -59,9 +59,9 @@
 `
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-15-12-9ed57c75b5b61f52e4c3c11b63d224c9-20250225191512-4ad10a.png)
 
-2. 发布上传主题：`AT+QMTPUB=0,0,0,0,"$sys/KcEfWE8dhJ/test/dp/post/json",39(消息长度)`,待`>`出现后再发送消息。
-`{"id":123,"dp":{"humidity":[{"v":30}]}}`。
-![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-19-40-786fed4d5b63a78c8122dc29f19594a0-20250225191940-807d54.png)
+2. 发布上传主题：`AT+QMTPUB=0,0,0,0,"$sys/{产品ID}/{设备名称}/dp/post/json"`,待`>`出现后再发送消息。
+`{"id":123,"dp":{"humidity":[{"v":30}]}}`，消息发送后，需要发送`HEX`的`0x1A`(不需要加入\\r\\n)确认发送。
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/20/14-07-18-f0f387911a9dae70ee9f68c63f30de6d-20250320140717-5e26a1.png)
 
 
-![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-20-07-5c0947727b41509ce45fbd222d12a844-20250225192006-48ddf3.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-20-07-5c0947727b41509ce45fbd222d12a844-20250225192006-48ddf3.png)
