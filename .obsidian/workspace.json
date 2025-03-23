@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md"
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
+                "file": "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,9 +191,9 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
+    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/BC260Y连接OneNET平台.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
-    "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/应用层/安卓/Android Studio配置.md",
     "IOT/物联网/应用层/安卓/Mqtt.md",
