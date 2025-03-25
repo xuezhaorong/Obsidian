@@ -190,3 +190,5 @@ devicestore.$subscribe(async (mutation, state) => {
 
 });
 ```
+
+## fetchEventSource
