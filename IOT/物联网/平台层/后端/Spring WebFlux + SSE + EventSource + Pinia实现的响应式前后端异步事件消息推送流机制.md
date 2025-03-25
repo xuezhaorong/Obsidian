@@ -192,3 +192,45 @@ devicestore.$subscribe(async (mutation, state) => {
 ```
 
 ## fetchEventSource
+`fetch-event-source`是微软开发的一个专门用于处理双向SSE数据流的npm库，提供一个遵循 WHATWG Fetch 标准的 API 来处理 SSE，不但允许我们可以和对应的url地址简历持久连接，并且允许我们在接收数据流信息的同时将我们想要发送的消息也通过相同的url进行发送。
+### 安装
+```bash
+npm install --save @microsoft/fetch-event-source
+```
+
+### 使用案例
+```js
+export const useAirStore = defineStore('air', () => {  
+    const value = ref({  
+        'light': 0,  
+        'temperature': 0,  
+        'humidity': 0,  
+    })  
+  
+    // SSE light  
+    async function getLightWithSSE(fid){  
+        await fetchEventSource(`/sse/air/getLight?fid=${fid}`,{  
+            async onopen(response) {  
+                console.log('onopen',response);  
+            },  
+            onmessage(msg) {  
+                if(msg.data.code === 0){  
+                    value.value.light = msg.data.data;  
+                }  
+            },  
+            onclose() {  
+                console.log('onclose');  
+            },  
+            onerror(err) {  
+                console.log('onerror', err);  
+            }  
+        });  
+    }
+  
+    return {  
+        value,  
+        getLightWithSSE
+    };  
+})
+```
+
