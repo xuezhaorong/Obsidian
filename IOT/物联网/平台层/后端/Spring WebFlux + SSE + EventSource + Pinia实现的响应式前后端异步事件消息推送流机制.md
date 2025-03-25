@@ -214,9 +214,11 @@ export const useAirStore = defineStore('air', () => {
                 console.log('onopen',response);  
             },  
             onmessage(msg) {  
-                if(msg.data.code === 0){  
-                    value.value.light = msg.data.data;  
-                }  
+				const res = JSON.parse(msg.data);  
+				if(res.code === 0){  
+				    value.value.humidity = res.data;  
+				    console.log(res.data);  
+				}
             },  
             onclose() {  
                 console.log('onclose');  
