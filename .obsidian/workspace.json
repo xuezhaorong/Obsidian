@@ -192,9 +192,9 @@
   "active": "5942b25a22048996",
   "lastOpenFiles": [
     "IOT/物联网/平台层/Mosquitto服务搭建.md",
-    "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource + Pinia实现的响应式前后端异步事件消息推送流机制.md",
-    "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+    "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+    "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
     "IOT/物联网/平台层/后端/日志配置.md",
     "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
