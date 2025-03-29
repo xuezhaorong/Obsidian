@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md"
               }
             }
           }
@@ -115,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md"
               }
             }
           },
@@ -156,7 +155,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,10 +187,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5942b25a22048996",
+  "active": "96b0a9eee13e568c",
   "lastOpenFiles": [
-    "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+    "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md",
+    "Excalidraw",
+    "IOT/物联网/平台层/Mosquitto服务搭建.md",
     "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
@@ -216,7 +216,6 @@
     "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "IOT/物联网/平台层/前端/Axios.md",
     "IOT/物联网/平台层/前端/前端.md",
-    "IOT/Linux/基础命令.md",
     "application.yml",
     "IOT/物联网/平台层/前端",
     "IOT/物联网/平台层/后端/未命名",
@@ -231,7 +230,6 @@
     "未命名 1.canvas",
     "IOT/物联网/应用层/Qt/906264+Qt6C+++开发指南.pdf",
     "IOT/物联网/应用层/数据库",
-    "IOT/物联网/应用层/uni-app",
     "物联网/感知层/51单片机/51单片机内部结构.png",
     "物联网/感知层/51单片机/字符帧.png",
     "物联网/感知层/51单片机/中断嵌套.png",
