@@ -27,6 +27,7 @@
 
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/20/14-28-41-752096a8519cbc6f8ae59daadb5df623-20250320142841-717ee2.png)
 
+### 项目管理
 
 ## BC260Y NBIOT模块
 ### 连接设备
