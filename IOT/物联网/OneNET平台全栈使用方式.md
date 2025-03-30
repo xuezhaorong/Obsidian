@@ -34,6 +34,12 @@
 新建一个项目，然后进入项目管理中
 ![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/15-44-01-f0d6d010c21ad580f166d9c8bdc38d30-20250330154400-9bf77f.png)
 
+记录项目ID和项目KEY
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/15-54-00-6b5cb7400889f986a1f81234e67ec725-20250330155400-fea95e.png)
+
+进入设备管理中的设备列表，添加创建的设备
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/15-56-23-9bd84d850614cdca117d2589084b2b38-20250330155623-d02811.png)
+
 ## BC260Y NBIOT模块
 ### 连接设备
 连接串口工具，打开串口助手，输入指令，波特率为9600
@@ -74,3 +80,5 @@
 
 
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-20-07-5c0947727b41509ce45fbd222d12a844-20250225192006-48ddf3.png)
+
+## 后端功能
