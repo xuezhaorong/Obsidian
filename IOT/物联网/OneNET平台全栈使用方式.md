@@ -106,3 +106,78 @@
 后端借助OneNET云平台的服务端订阅功能： https://open.iot.10086.cn/doc/v5/fuse/detail/1530 ,实现设备上报数据的转发和监听设备上下线等功能。
 ![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-54-23-7b1b3d105f20e9704c0a30c89bbfb5db-20250330165423-062005.png)
 
+1. 添加工具包
+```xml
+<!-- ONENET -->  
+<dependency>  
+    <groupId>org.apache.pulsar</groupId>  
+    <artifactId>pulsar-client</artifactId>  
+</dependency>  
+  
+  
+<dependency>  
+    <groupId>com.alibaba</groupId>  
+    <artifactId>fastjson</artifactId>  
+    <version>2.0.32</version>  
+</dependency>
+```
+
+2. 下载工具库，加载到项目中，链接：https://wwet.lanzn.com/iUIIc2s4rp8f
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-58-21-fdeac2a8400abfd32b9617f75ed2e0bb-20250330165821-af637e.png)
+
+3. 新建`IoTPulsarConsumerController`控制类，注意填写`iotAccessId`，`iotSecretKey`和`iotSubscriptionName`
+```java
+@RestController  
+public class IoTPulsarConsumerController {  
+    //TODO need to set iotAccessId 消费组ID  
+    private static  String iotAccessId=IoTConfig.iotAccessId;  
+    //TODO need to set iotSecretKey 消费组KEY  
+    private static  String iotSecretKey=IoTConfig.iotSecretKey;  
+  
+    //TODO 订阅名称  
+    private static  String iotSubscriptionName=IoTConfig.iotSubscriptionName;  
+  
+    @Autowired  
+    private SoildService soildService;  
+  
+    @Autowired  
+    private AirService airService;  
+  
+    @Autowired  
+    private DeviceService deviceService;  
+  
+    @EventListener(ApplicationReadyEvent.class)  
+    @Order(2)  
+    public void IoTPulsarConsumer() throws Exception {  
+        if (StringUtil.isNullOrEmpty(iotAccessId)) {  
+            log.error("iotAccessId is null,please input iotAccessId");  
+            System.exit(1);  
+        }  
+        if (StringUtil.isNullOrEmpty(iotSecretKey)) {  
+            log.error("iotSecretKey is null,please input iotSecretKey");  
+            System.exit(1);  
+        }  
+        if (StringUtil.isNullOrEmpty(iotSubscriptionName)) {  
+            log.error("iotSubscriptionName is null,please input iotSubscriptionName");  
+            System.exit(1);  
+        }  
+        //TODO 建议收到消息后将消息转到中间件后立即ACK。避免消息量过大导致消息过期  
+        IoTConsumer iotConsumer = IoTConsumer.IOTConsumerBuilder.anIOTConsumer().brokerServerUrl(IoTConfig.brokerSSLServerUrl)  
+                .iotAccessId(iotAccessId)  
+                .iotSecretKey(iotSecretKey)  
+                .subscriptionName(iotSubscriptionName)  
+                .iotMessageListener(message -> {  
+                    MessageId msgId = message.getMessageId();  
+                    long publishTime = message.getPublishTime();  
+                    String payload = new String(message.getData());  
+                    IoTMessage iotMessage= JSONObject.parseObject(payload, IoTMessage.class);  
+                    String originalMsg= AESBase64Utils.decrypt(iotMessage.getData(),iotSecretKey.substring(8,24));  
+                    log.info("IOT consume message======>>>>>>> messageId={}, publishTime={},  payload={}",  
+                            msgId, publishTime, payload);  
+                    log.info(originalMsg);  
+                }).build();  
+        iotConsumer.run();  
+    }  
+}
+```
+
