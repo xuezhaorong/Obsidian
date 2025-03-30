@@ -104,7 +104,13 @@
 ## 后端功能
 ### 服务端订阅
 后端借助OneNET云平台的服务端订阅功能： https://open.iot.10086.cn/doc/v5/fuse/detail/1530 ,实现设备上报数据的转发和监听设备上下线等功能。
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-54-23-7b1b3d105f20e9704c0a30c89bbfb5db-20250330165423-062005.png)
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-54-23-7b1b3d105f20e9704c0a30c89bbfb5db-20250330165423-062005.png)
+
+需要在项目中的服务端订阅里设置 推送消息类型和添加订阅。
+![image.png|300](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/17-07-05-873abc02f7f4dde056d82dc8d27d2304-20250330170704-b6dc0a.png)
+
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/17-05-26-9aee67e8c1f7d8dc2bb39493970e6fce-20250330170526-41e33d.png)
+
 
 1. 添加工具包
 ```xml
@@ -123,7 +129,7 @@
 ```
 
 2. 下载工具库，加载到项目中，链接：https://wwet.lanzn.com/iUIIc2s4rp8f
-![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-58-21-fdeac2a8400abfd32b9617f75ed2e0bb-20250330165821-af637e.png)
+![image.png|464](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-58-21-fdeac2a8400abfd32b9617f75ed2e0bb-20250330165821-af637e.png)
 
 3. 新建`IoTPulsarConsumerController`控制类，注意填写`iotAccessId`，`iotSecretKey`和`iotSubscriptionName`
 ```java
@@ -137,14 +143,6 @@ public class IoTPulsarConsumerController {
     //TODO 订阅名称  
     private static  String iotSubscriptionName=IoTConfig.iotSubscriptionName;  
   
-    @Autowired  
-    private SoildService soildService;  
-  
-    @Autowired  
-    private AirService airService;  
-  
-    @Autowired  
-    private DeviceService deviceService;  
   
     @EventListener(ApplicationReadyEvent.class)  
     @Order(2)  
@@ -175,9 +173,70 @@ public class IoTPulsarConsumerController {
                     log.info("IOT consume message======>>>>>>> messageId={}, publishTime={},  payload={}",  
                             msgId, publishTime, payload);  
                     log.info(originalMsg);  
+                // 自定义处理
+            
                 }).build();  
         iotConsumer.run();  
     }  
 }
 ```
 
+* 在返回的数据中，可以查看`msgType`节点来看是什么类型的消息推送，如`datapoint`则为数据上报，`deviceOnline`则为数据上线。
+
+### 平台API下发命令
+后端可以通过发送平台的API来实现命令的下发：https://open.iot.10086.cn/doc/v5/fuse/detail/1436，API接口为:`https://iot-api.heclouds.com/datapoint/synccmds`
+
+新建一个`IoTPulsarProviderService`服务类，要设置`Authorization`安全授权，即产品的token，填充产品ID和设备名称以及超时，并使用`HttpEntity`构造消息主体，`POST`之后平台会向目标设备发送消息主体的MQTT消息。
+```java
+@Service  
+public class IoTPulsarProviderServiceImpl implements IoTPulsarProviderService {  
+  
+  
+    @Autowired  
+    private RestTemplate restTemplate;  
+  
+    @Override  
+    public Boolean postCommand(String product_id, String device_name, String timeout,String commandType, String value) {  
+        HttpHeaders headers = new HttpHeaders();  
+        headers.setContentType(MediaType.APPLICATION_JSON);  
+        headers.set("Authorization", IoTConfig.tokenSoildProducts);  
+        String url = IoTConfig.baseUrl + IoTConfig.postCommandUrl + "?product_id={product_id}&device_name={device_name}&timeout={timeout}";  
+        Map<String, String> params = new HashMap<String, String>();  
+        params.put("product_id", product_id);  
+        params.put("device_name", device_name);  
+        params.put("timeout", timeout);  
+        Command<String> command = new Command<>(commandType,value);  
+        HttpEntity<Command> entity = new HttpEntity<>(command, headers);  
+        try {  
+            ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, entity, String.class, params);  
+            // 获取响应体  
+            String responseBody = responseEntity.getBody();  
+            log.info("Return message: " + responseBody);  
+            return true;  
+        }catch (Exception e) {  
+            log.error("Request failed: {}", e.getMessage());  
+            return false;  
+        }  
+    }  
+}
+```
+
+使用`RestTemplate`来实现http的发送，以下为`RestTemplate`的配置类。 
+```java
+@Configuration  
+public class RestTemplateConfig {  
+    @Bean  
+    public RestTemplate restTemplate(ClientHttpRequestFactory factory) {  
+        return new RestTemplate(factory);  
+    }  
+  
+    @Bean  
+    public ClientHttpRequestFactory simpleClientHttpRequestFactory() {  
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();  
+        //超时设置  
+        factory.setReadTimeout(30000);//ms  
+        factory.setConnectTimeout(15000);//ms  
+        return factory;  
+    }  
+}
+```
