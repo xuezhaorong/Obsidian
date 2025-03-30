@@ -2,20 +2,20 @@
 
 ### 产品管理
 创建产品
-![|1125](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-46-13-f3e768387b2b17019ba4256bd1b9654a-20250225174612-4198c8.png)
+![|925](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-46-13-f3e768387b2b17019ba4256bd1b9654a-20250225174612-4198c8.png)
 
  进入产品详情中创建数据流模板
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-53-10-2ff9f88934ae3eee5c8844fcf67276af-20250225175309-df772c.png)
+![|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-53-10-2ff9f88934ae3eee5c8844fcf67276af-20250225175309-df772c.png)
 
 发布成品
-![|1225](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-54-46-b2277a4011060301546fb6199986a4a1-20250225175446-13f679.png)
+![|1125](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-54-46-b2277a4011060301546fb6199986a4a1-20250225175446-13f679.png)
 
 ### 设备管理
 进入设备管理，创建一个设备
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-57-52-32225f43ebd5600c230730b9d36a96f4-20250225175751-9204f0.png)
+![|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-57-52-32225f43ebd5600c230730b9d36a96f4-20250225175751-9204f0.png)
 
 记录设备名称，设备密钥和产品ID
-![](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-59-07-6631a8b64c6aa6215b76ebd957d7e9d7-20250225175906-a223b3.png)
+![|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/17-59-07-6631a8b64c6aa6215b76ebd957d7e9d7-20250225175906-a223b3.png)
 
 生成token，token工具链接：[https://open.iot.10086.cn/college/video/onenet-portal/2024-04-19/17134946071850.exe](https://open.iot.10086.cn/college/video/onenet-portal/2024-04-19/17134946071850.exe)
 ![|500](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/18-03-10-922a6d4d9b7a08a147b1ca219a1d4fed-20250225180309-81618c.png)
@@ -28,6 +28,11 @@
 ![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/20/14-28-41-752096a8519cbc6f8ae59daadb5df623-20250320142841-717ee2.png)
 
 ### 项目管理
+点击左侧的应用开发->项目管理
+![image.png|271](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/15-44-47-1e533c7bebb4154ae6956457efd4a5ca-20250330154446-4101b1.png)
+
+新建一个项目，然后进入项目管理中
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/15-44-01-f0d6d010c21ad580f166d9c8bdc38d30-20250330154400-9bf77f.png)
 
 ## BC260Y NBIOT模块
 ### 连接设备
