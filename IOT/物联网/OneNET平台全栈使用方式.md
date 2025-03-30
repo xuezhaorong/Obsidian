@@ -72,7 +72,7 @@
 
 1. 订阅响应主题：`AT+QMTSUB=0,1,"$sys/{产品ID}/{设备名称}/dp/post/json/accepted",0
 `
-![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-15-12-9ed57c75b5b61f52e4c3c11b63d224c9-20250225191512-4ad10a.png)
+![image.png|1000](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-15-12-9ed57c75b5b61f52e4c3c11b63d224c9-20250225191512-4ad10a.png)
 
 2. 发布上传主题：`AT+QMTPUB=0,0,0,0,"$sys/{产品ID}/{设备名称}/dp/post/json"`,待`>`出现后再发送消息。
 `{"id":123,"dp":{"humidity":[{"v":30}]}}`(不需要加入\\r\\n)，需要发送`HEX`的`0x1A`(不需要加入\\r\\n)确认发送。
@@ -81,4 +81,15 @@
 
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-20-07-5c0947727b41509ce45fbd222d12a844-20250225192006-48ddf3.png)
 
+### 下发命令
+
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-02-40-5ac2763b31d4315430983161c9215976-20250330160239-c5dd46.png)
+
+1. 订阅响应主题：`AT+QMTSUB=0,1,"$sys/{产品ID}/{设备名称}/cmd/#",0`
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/02/25/19-15-12-9ed57c75b5b61f52e4c3c11b63d224c9-20250225191512-4ad10a.png)
+
+2. 云平台模拟命令下发，在设备详情中点击命令下发，设置响应时间(最大30秒)，输入命令，点击发送
+![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-06-47-f9c81f85669916e5f500754b123613f4-20250330160646-84ce98.png)
+
+3. 
 ## 后端功能
