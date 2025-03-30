@@ -91,8 +91,14 @@
 2. 云平台模拟命令下发，在设备详情中点击命令下发，设置响应时间(最大30秒)，输入命令，点击发送
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-06-47-f9c81f85669916e5f500754b123613f4-20250330160646-84ce98.png)
 
-3. BC260Y接收到数据帧，格式为
+3. BC260Y接收到数据帧，格式为`+QMTRECV: 0,0,"$sys/{产品ID}/{设备名称}/cmd/request/{消息ID}","{命令}"`,需要保存获得的消息ID。
+
+![image.png|847](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-44-53-76f8176b2a3a50e6797ce38cc9f5c1e4-20250330164453-01eac7.png)
+
+
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-11-14-c29023343929f199b7f9aa73dd49d699-20250330161113-346ca1.png)
 
+4. 将保存的消息ID填充到主题`$sys/{产品ID}/{设备名称}/cmd/response/{消息ID}`中，并发布一条任意消息，即可响应该命令，在响应时间的返回结果处可以看到响应的数据。
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-48-36-d16b1a2cdcd8885cd1097dd9d5dd478f-20250330164835-b13457.png)
 
 ## 后端功能
