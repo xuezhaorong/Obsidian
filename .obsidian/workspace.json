@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/OneNET平台全栈使用方式.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "IOT/物联网/OneNET平台全栈使用方式.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/OneNET平台全栈使用方式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "IOT/物联网/OneNET平台全栈使用方式.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/OneNET平台全栈使用方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +189,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "96b0a9eee13e568c",
+  "active": "5942b25a22048996",
   "lastOpenFiles": [
     "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
     "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md",
@@ -207,7 +207,7 @@
     "IOT/物联网/平台层/后端/Redis.md",
     "IOT/物联网/感知层/STM32/SMT32标准库开发.md",
     "IOT/物联网/感知层/STM32/STM32Hal库开发.md",
-    "IOT/物联网/BC260Y连接OneNET平台.md",
+    "IOT/物联网/OneNET平台全栈使用方式.md",
     "IOT/物联网/应用层/安卓/Bluetooth.md",
     "IOT/物联网/应用层/安卓/Android Studio配置.md",
     "IOT/物联网/应用层/安卓/Mqtt.md",
