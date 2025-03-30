@@ -92,7 +92,7 @@
 ![image.png|900](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-06-47-f9c81f85669916e5f500754b123613f4-20250330160646-84ce98.png)
 
 3. BC260Y接收到数据帧，格式为
-![image.png|1100](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-11-14-c29023343929f199b7f9aa73dd49d699-20250330161113-346ca1.png)
+![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-11-14-c29023343929f199b7f9aa73dd49d699-20250330161113-346ca1.png)
 
 
 ## 后端功能
