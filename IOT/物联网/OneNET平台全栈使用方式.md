@@ -102,3 +102,7 @@
 ![image.png|800](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-48-36-d16b1a2cdcd8885cd1097dd9d5dd478f-20250330164835-b13457.png)
 
 ## 后端功能
+### 服务端订阅
+后端借助OneNET云平台的服务端订阅功能： https://open.iot.10086.cn/doc/v5/fuse/detail/1530 ,实现设备上报数据的转发和监听设备上下线等功能。
+![image.png](https://cdn.jsdelivr.net/gh/xuezhaorong/Picgo//Source/fix-dir/picgo/picgo-clipboard-images/2025/03/30/16-54-23-7b1b3d105f20e9704c0a30c89bbfb5db-20250330165423-062005.png)
+
