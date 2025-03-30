@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md"
+                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
               }
             }
           }
@@ -115,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md"
+                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
               }
             }
           },
@@ -155,6 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
