@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md"
               }
             }
           }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md"
+                "file": "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
+                "file": "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,14 +191,15 @@
   },
   "active": "5942b25a22048996",
   "lastOpenFiles": [
+    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
+    "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
+    "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
     "IOT/物联网/平台层/Spring WebFlux + SSE + EventSource 实现的响应式前后端异步事件消息推送流机制.md",
     "IOT/物联网/平台层/后端/结合mybatis-flex的SpringBoot框架实现的SSM架构与ORM架构.md",
     "IOT/物联网/OneNET平台全栈使用方式.md",
-    "IOT/物联网/平台层/高并发下自动化检测控制系统中前后端感知数据流传输以及下发命令自动化控制的解决方案.md",
     "Excalidraw/Drawing 2025-03-29 16.59.04.excalidraw.md",
     "Excalidraw",
     "IOT/物联网/平台层/Mosquitto服务搭建.md",
-    "IOT/物联网/平台层/ThingsBoard物联网平台部署及感知层应用层双向连接.md",
     "IOT/物联网/平台层/后端/日志配置.md",
     "IOT/物联网/平台层/后端/Maven本地仓库配置.md",
     "IOT/物联网/平台层/后端/Mybatis-flex.md",
@@ -213,7 +214,6 @@
     "IOT/物联网/应用层/安卓/Mqtt.md",
     "IOT/物联网/应用层/Qt/QtWidget.md",
     "IOT/物联网/平台层/前端/Pinia.md",
-    "IOT/物联网/平台层/Vue项目打包部署上线代理失效的解决方案.md",
     "IOT/物联网/应用层/uni-app/uni-app mqtt+pinia.md",
     "IOT/物联网/应用层/安卓/底部导航栏-View框架.md",
     "IOT/物联网/平台层/前端/Axios.md",
