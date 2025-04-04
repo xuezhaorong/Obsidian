@@ -200,39 +200,95 @@ npm install --save @microsoft/fetch-event-source
 
 ### 使用案例
 ```js
-export const useAirStore = defineStore('air', () => {  
+import {defineStore} from 'pinia'  
+import {getValue, postValue} from '@/api/soildApi.js'  
+import {ref} from 'vue'  
+import {fetchEventSource} from '@microsoft/fetch-event-source';  
+  
+  
+export const useSoildStore = defineStore('soild', () => {  
     const value = ref({  
-        'light': 0,  
-        'temperature': 0,  
         'humidity': 0,  
+        'water': 0,  
+        'waterThread': 0  
     })  
   
-    // SSE light  
-    async function getLightWithSSE(fid){  
-        await fetchEventSource(`/sse/air/getLight?fid=${fid}`,{  
+    // 保存SSE控制器  
+    let sseControllers_humidity = null;  
+  
+    // 获取湿度  
+    async function getHumidity(fid) {  
+        const res = await getValue('Humidity', fid);  
+        if (res.code === 0) {  
+            value.value.humidity = res.data.data;  
+  
+        }  
+    }  
+  
+    // SSE  
+    async function getHumidityWithSSE(fid){  
+        // 先关闭现有的连接  
+        if(sseControllers_humidity) {  
+            sseControllers_humidity.abort();  
+        }  
+  
+        sseControllers_humidity = new AbortController();  
+  
+        await fetchEventSource(`/sse/soild/getHumidity?fid=${fid}`,{  
+            signal: sseControllers_humidity.signal,  
             async onopen(response) {  
                 console.log('onopen',response);  
             },  
             onmessage(msg) {  
-				const res = JSON.parse(msg.data);  
-				if(res.code === 0){  
-				    value.value.humidity = res.data;  
-				    console.log(res.data);  
-				}
+                const res = JSON.parse(msg.data);  
+                if(res.code === 0){  
+                    value.value.humidity = res.data.data;  
+                }  
             },  
             onclose() {  
                 console.log('onclose');  
             },  
             onerror(err) {  
+                sseControllers_humidity.abort();  
                 console.log('onerror', err);  
             }  
         });  
-    }
+    }  
+  
+  
+    // 获取水控  
+    async function getWater(fieldClass) {  
+        const res = await getValue('Water', fieldClass);  
+        value.value.water = res.data;  
+    }  
+  
+    // 获取湿度阈值  
+    async function getWaterThread(fieldClass) {  
+        const res = await getValue('WaterThread', fieldClass);  
+        value.value.waterThread = res.data;  
+    }  
+  
+    // 上传水控  
+    async function Soild_postValue(valueClass, fid, newValue) {  
+        const res = await postValue(valueClass, fid, newValue);  
+        if (res.code === 0) {  
+            console.log("修改控制器成功：", newValue);  
+            if (valueClass === "Water") {  
+                value.value.water = newValue;  
+            }  
+        }  
+    }  
+  
+  
   
     return {  
         value,  
-        getLightWithSSE
+        getHumidity,  
+        getWater,  
+        getWaterThread,  
+        Soild_postValue,  
+        getHumidityWithSSE  
     };  
 })
 ```
-
+* 可以通过设置signal信号来控制数据流停止传输。
